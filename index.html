@@ -37,7 +37,7 @@
     "@id":"https://mindfly.com.br/#organization",
     "name":"MindFly Digital",
     "url":"https://mindfly.com.br/",
-    "logo":"https://gleisondesign.github.io/MINDFLY/assets/logobranco.png",
+    "logo":"https://mindfly.com.br/assets/logobranco.png",
     "description":"Soluções digitais para sua empresa aparecer, atrair e vender.",
     "sameAs":["https://www.instagram.com/mindfly.com.br/"],
     "areaServed":{"@type":"Country","name":"Brasil"},
@@ -928,7 +928,7 @@
       <div class="inner">
         <a class="brand" href="#mf-solucoes" aria-label="MindFly Digital - Soluções" data-i18n-aria-label="brand.solutions">
           <img
-            src="https://gleisondesign.github.io/MINDFLY/assets/logobranco.png"
+            src="/assets/logobranco.png"
             alt="MindFly Digital"
             width="160"
             height="32"
@@ -1048,10 +1048,24 @@
     }
 
 #mfs-card-deck::before {
-content: none;
-}
+      content: "";
+      background: transparent;
+    }
+
+    #mfs-card-deck .mfs-bg-video {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+      opacity: .15; /* AJUSTE AQUI A VISIBILIDADE DO VIDEO DE FUNDO: 0 = invisivel, 1 = totalmente visivel */
+    }
 
     #mfs-card-deck::after {
+      z-index: 1;
       background:
         radial-gradient(720px 440px at 92% 4%, rgba(89, 69, 232, .20), transparent 62%),
         radial-gradient(560px 360px at 4% 14%, rgba(89, 69, 232, .10), transparent 66%),
@@ -1727,6 +1741,10 @@ content: none;
       }
     }
   </style>
+
+  <video class="mfs-bg-video" autoplay muted loop playsinline aria-hidden="true">
+    <source src="https://gleisondesign.github.io/MINDFLY/assets/fundo.mp4" type="video/mp4">
+  </video>
 
   <div class="mfs-intro">
     <h1 class="mfs-intro-title" data-i18n-html="mfs.intro.title">Tudo que seu negócio precisa para crescer no digital <span class="mfs-gradient-text">em um único hub de soluções </span>.</h1>
@@ -3997,7 +4015,7 @@ content: none;
         <div class="mf-footer-brand">
           <a class="mf-footer-logo" href="#mf-solucoes" aria-label="MindFly Digital - Soluções" data-i18n-aria-label="brand.solutions">
             <img
-              src="https://gleisondesign.github.io/MINDFLY/assets/logobranco.png"
+              src="/assets/logobranco.png"
               alt="MindFly Digital"
               width="168"
               height="34"
