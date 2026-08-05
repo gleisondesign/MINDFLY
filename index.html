@@ -1,1 +1,4566 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>MindFly Digital | Soluções digitais para sua empresa aparecer, atrair e vender</title>
+
+  <meta name="description" content="MindFly Digital: soluções digitais para sua empresa aparecer, atrair e vender." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="author" content="MindFly Digital" />
+  <meta name="theme-color" content="#090817" />
+  <link rel="canonical" href="https://mindfly.com.br/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://mindfly.com.br/" />
+  <link rel="alternate" hreflang="en" href="https://mindfly.com.br/" />
+  <link rel="alternate" hreflang="x-default" href="https://mindfly.com.br/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="MindFly Digital" />
+  <meta property="og:title" content="MindFly Digital | Soluções digitais para sua empresa aparecer, atrair e vender" />
+  <meta property="og:description" content="Soluções digitais para sua empresa aparecer, atrair e vender." />
+  <meta property="og:url" content="https://mindfly.com.br/" />
+  <meta property="og:image" content="https://mindfly.com.br/assets/og-image.jpg" />
+  <meta property="og:image:alt" content="MindFly Digital" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MindFly Digital" />
+  <meta name="twitter:description" content="Soluções digitais para sua empresa aparecer, atrair e vender." />
+  <meta name="twitter:image" content="https://mindfly.com.br/assets/og-image.jpg" />
+  <meta name="twitter:image:alt" content="MindFly Digital" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":["Organization","ProfessionalService"],
+    "@id":"https://mindfly.com.br/#organization",
+    "name":"MindFly Digital",
+    "url":"https://mindfly.com.br/",
+    "logo":"https://mindfly.com.br/assets/logobranco.png",
+    "description":"Soluções digitais para sua empresa aparecer, atrair e vender.",
+    "sameAs":["https://www.instagram.com/mindfly.com.br/"],
+    "areaServed":{"@type":"Country","name":"Brasil"},
+    "inLanguage":"pt-BR"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --mf-page:#F7F7FF;
+      --mf-page-2:#F7F7FF;
+      --mf-card:#F7F7FF;
+      --mf-card-soft:#F7F7FF;
+      --mf-ink:#151426;
+      --mf-muted:#211C4A;
+      --mf-purple:#5945E8;
+      --mf-purple-2:#3726AF;
+      --mf-purple-3:#E5E7FF;
+      --mf-purple-dark:#211C4A;
+      --mf-gold-soft:#00D9C8;
+      --mf-line:rgba(21,20,38,.10);
+      --mf-line-strong:rgba(33,28,74,.14);
+      --mf-shadow:0 24px 80px rgba(21,20,38,.12);
+      --mf-shadow-card:0 34px 110px rgba(21,20,38,.16);
+      --mf-radius:35px;
+      --mf-nav-h:78px;
+      --mf-nav-offset:122px;
+      --mf-shell:min(1344px, calc(100% - 32px));
+      --mf-menu-z:9999;
+      --mf-black:#090817;
+      --mf-dark-gradient:
+        radial-gradient(520px 260px at 88% 0%, rgba(89,69,232,.22), transparent 68%),
+        radial-gradient(440px 220px at 10% 120%, rgba(33,28,74,.22), transparent 72%),
+        linear-gradient(145deg, rgba(9,8,23,.96), rgba(21,20,38,.96));
+    }
+
+    *,
+    *::before,
+    *::after{
+      box-sizing:border-box;
+    }
+
+    html,
+    body{
+      margin:0;
+      padding:0;
+      width:100%;
+      min-height:100%;
+      overflow-x:hidden;
+    }
+
+    html{
+      scroll-behavior:smooth;
+      color:var(--mf-ink);
+      font-family:Manrope, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background:#F7F7FF;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      
+    }
+
+    body{
+      min-height:100%;
+      color:var(--mf-ink);
+      background:
+        radial-gradient(900px 520px at 85% -8%, rgba(89,69,232,.26), transparent 62%),
+        radial-gradient(740px 420px at 6% 12%, rgba(229,231,255,.82), transparent 68%),
+        radial-gradient(760px 460px at 72% 58%, rgba(89,69,232,.12), transparent 70%),
+        radial-gradient(620px 380px at 14% 92%, rgba(33,28,74,.10), transparent 72%),
+        repeating-linear-gradient(135deg, rgba(33,28,74,.035) 0 1px, transparent 1px 18px),
+        linear-gradient(135deg, #F7F7FF 0%, #F7F7FF 42%, #E5E7FF 100%);
+        
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-3;
+      pointer-events:none;
+      background:
+        linear-gradient(90deg, rgba(33,28,74,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(33,28,74,.035) 1px, transparent 1px);
+      background-size:64px 64px;
+      mask-image:linear-gradient(180deg, rgba(0,0,0,.78), rgba(0,0,0,.30) 58%, transparent 100%);
+      -webkit-mask-image:linear-gradient(180deg, rgba(0,0,0,.78), rgba(0,0,0,.30) 58%, transparent 100%);
+      opacity:.72;
+    }
+
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(247,247,255,.72), transparent 42%),
+        linear-gradient(135deg, rgba(247,247,255,.20), transparent 48%, rgba(89,69,232,.06));
+      mix-blend-mode:screen;
+      opacity:.8;
+    }
+
+    img,
+    svg,
+    video,
+    canvas,
+    iframe{
+      max-width:100%;
+    }
+
+    img,
+    video{
+      height:auto;
+    }
+
+    iframe{
+      border:0;
+    }
+
+    a{
+      color:inherit;
+    }
+
+    button,
+    input,
+    textarea,
+    select{
+      font:inherit;
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{
+        scroll-behavior:auto;
+      }
+
+      *,
+      *::before,
+      *::after{
+        animation-duration:.001ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.001ms !important;
+        scroll-behavior:auto !important;
+      }
+    }
+
+    body.mf-lock{
+      overflow:hidden;
+      touch-action:none;
+      overscroll-behavior:none;
+    }
+
+    section[id^="mf-"]{
+      scroll-margin-top:var(--mf-nav-offset);
+    }
+
+    #mf-page-main{
+      position:relative;
+      z-index:1;
+      min-height:0;
+      padding-top:calc(var(--mf-nav-offset) + 18px);
+      padding-bottom:0;
+      margin:0;
+      isolation:isolate;
+    }
+
+    #mf-page-main::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-2;
+      background:
+        radial-gradient(620px 280px at 100% 12%, rgba(89,69,232,.10), transparent 72%),
+        radial-gradient(540px 260px at 0% 44%, rgba(229,231,255,.36), transparent 72%),
+        linear-gradient(90deg, rgba(33,28,74,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(33,28,74,.035) 1px, transparent 1px);
+      background-size:auto, auto, 58px 58px, 58px 58px;
+      mask-image:linear-gradient(180deg, rgba(0,0,0,.82), rgba(0,0,0,.34) 74%, transparent 100%);
+      -webkit-mask-image:linear-gradient(180deg, rgba(0,0,0,.82), rgba(0,0,0,.34) 74%, transparent 100%);
+      opacity:.78;
+      pointer-events:none;
+    }
+
+    #mf-page-main::after{
+      content:"";
+      position:absolute;
+      top:5%;
+      right:max(18px, calc((100vw - 1344px) / 2));
+      width:clamp(240px, 30vw, 500px);
+      aspect-ratio:1;
+      border-radius:999px;
+      z-index:-1;
+      background:radial-gradient(circle, rgba(89,69,232,.20), rgba(55,38,175,.08) 48%, transparent 72%);
+      filter:blur(12px);
+      opacity:.9;
+      pointer-events:none;
+    }
+
+    /* =========================
+       MENU FLUTUANTE
+       ========================= */
+    #mf-menu{
+      position:relative;
+      z-index:var(--mf-menu-z);
+    }
+
+    #mf-menu .scrim{
+      display:none;
+      position:fixed;
+      inset:0;
+      width:100%;
+      min-height:100dvh;
+      border:0;
+      padding:0;
+      margin:0;
+      background:transparent;
+      z-index:9998;
+    }
+
+    #mf-menu .bar{
+      position:fixed;
+      top:18px;
+      left:50%;
+      width:var(--mf-shell);
+      transform:translateX(-50%);
+      opacity:1;
+      border:1px solid rgba(247,247,255,.16);
+      border-radius:45px;
+      background:
+        radial-gradient(520px 260px at 88% 0%, rgba(89,69,232,.14), transparent 68%),
+        radial-gradient(440px 220px at 10% 120%, rgba(33,28,74,.14), transparent 72%),
+        linear-gradient(145deg, rgba(21,20,38,.78), rgba(21,20,38,.78));
+      box-shadow:0 24px 80px rgba(21,20,38,.18);
+      z-index:9999;
+      overflow:visible;
+      transition:transform .24s ease, opacity .18s ease;
+    }
+
+    #mf-menu.mf-menu-hidden .bar{
+      transform:translate(-50%, calc(-100% - 32px));
+      opacity:0;
+      pointer-events:none;
+    }
+
+    @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))){
+      #mf-menu .bar{
+        -webkit-backdrop-filter:blur(6px) saturate(110%);
+        backdrop-filter:blur(6px) saturate(110%);
+      }
+    }
+
+    #mf-menu .inner{
+      min-height:var(--mf-nav-h);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:12px 14px 12px 22px;
+    }
+
+    #mf-menu .brand{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      flex:0 0 auto;
+      line-height:0;
+      text-decoration:none;
+    }
+
+    #mf-menu .brand img{
+      display:block;
+      width:160px;
+      height:auto;
+    }
+
+    #mf-menu .menu-side{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:10px;
+      min-width:0;
+    }
+
+    #mf-menu .links{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:4px;
+      min-width:0;
+    }
+
+    #mf-menu .menu-tools{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:8px;
+      flex:0 0 auto;
+    }
+
+    #mf-menu a,
+    #mf-menu button{
+      font:800 14px/1 Manrope, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      letter-spacing:-.01em;
+      text-decoration:none;
+    }
+
+    #mf-menu .links a{
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:42px;
+      padding:0 13px;
+      border-radius:999px;
+      color:rgba(247,247,255,.78);
+      white-space:nowrap;
+      transition:background .18s ease, color .18s ease, transform .18s ease;
+    }
+
+    #mf-menu .links a:not(.cta):hover,
+    #mf-menu .links a:not(.cta):focus-visible{
+      color:#F7F7FF;
+      background:rgba(247,247,255,.10);
+      transform:translateY(-1px);
+    }
+
+    #mf-menu .links a:not(.cta)[aria-current="true"]{
+      color:#F7F7FF;
+      background:rgba(247,247,255,.12);
+    }
+
+    #mf-menu .cta{
+      margin-left:7px;
+      min-height:46px;
+      padding:0 18px;
+      color:#F7F7FF;
+      background:linear-gradient(135deg, var(--mf-purple), #5945E8 58%, var(--mf-purple));
+      border:1px solid rgba(247,247,255,.16);
+      box-shadow:0 14px 36px rgba(89,69,232,.25);
+    }
+
+    #mf-menu .links a.cta,
+    #mf-menu .links a.cta[aria-current="true"]{
+      color:#F7F7FF;
+      background:linear-gradient(135deg, var(--mf-purple), #5945E8 58%, var(--mf-purple));
+      border:1px solid rgba(247,247,255,.16);
+      box-shadow:0 14px 36px rgba(89,69,232,.25);
+    }
+
+    #mf-menu .cta:hover,
+    #mf-menu .cta:focus-visible,
+    #mf-menu .links a.cta:hover,
+    #mf-menu .links a.cta:focus-visible{
+      color:#F7F7FF;
+      background:linear-gradient(135deg, #5945E8, #3726AF 58%, #5945E8);
+    }
+
+    #mf-menu .lang-toggle{
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:72px;
+      height:42px;
+      padding:0 12px;
+      border:1px solid rgba(247,247,255,.14);
+      border-radius:999px;
+      color:rgba(247,247,255,.62);
+      background:rgba(247,247,255,.075);
+      cursor:pointer;
+      box-shadow:none;
+      white-space:nowrap;
+      transition:background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    #mf-menu .lang-toggle:hover,
+    #mf-menu .lang-toggle:focus-visible{
+      background:rgba(247,247,255,.12);
+      border-color:rgba(247,247,255,.24);
+      transform:translateY(-1px);
+    }
+
+    #mf-menu .lang-toggle span{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    #mf-menu .lang-toggle .sep{
+      margin:0 6px;
+      color:rgba(247,247,255,.32);
+    }
+
+    #mf-menu .lang-toggle[data-current-lang="pt"] [data-lang-option="pt"],
+    #mf-menu .lang-toggle[data-current-lang="en"] [data-lang-option="en"]{
+      color:#F7F7FF;
+    }
+
+    #mf-menu .burger{
+      display:none;
+      position:relative;
+      width:48px;
+      height:48px;
+      flex:0 0 auto;
+      padding:0;
+      cursor:pointer;
+      border:1px solid rgba(247,247,255,.16);
+      border-radius:999px;
+      color:#F7F7FF;
+      background:rgba(247,247,255,.08);
+      box-shadow:0 10px 24px rgba(21,20,38,.08);
+    }
+
+    #mf-menu .burger .icon{
+      width:23px;
+      height:23px;
+      display:block !important;
+      position:absolute;
+      inset:50% auto auto 50%;
+      transform:translate(-50%,-50%);
+      pointer-events:none;
+    }
+
+    #mf-menu .burger path{
+      fill:none;
+      stroke:currentColor;
+      stroke-width:2.5;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    #mf-menu .burger .icon-close{
+      display:none !important;
+    }
+
+    #mf-menu .burger[aria-expanded="true"]{
+      color:#F7F7FF;
+      background:var(--mf-purple);
+      border-color:rgba(247,247,255,.18);
+    }
+
+    #mf-menu .burger[aria-expanded="true"] .icon-open{
+      display:none !important;
+    }
+
+    #mf-menu .burger[aria-expanded="true"] .icon-close{
+      display:block !important;
+    }
+
+    #mf-menu a:focus-visible,
+    #mf-menu button:focus-visible,
+    .mf-footer-shell a:focus-visible{
+      outline:3px solid rgba(89,69,232,.42);
+      outline-offset:3px;
+    }
+
+    /* =========================
+       ÁREAS PARA EMBEDS
+       ========================= */
+    .mf-embed-slot{
+      position:relative;
+      width:var(--mf-shell);
+      max-width:var(--mf-shell);
+      min-height:0;
+      height:auto;
+      margin:0 auto;
+      padding:0;
+      background:transparent;
+      border-radius:var(--mf-radius);
+      isolation:isolate;
+      overflow:visible;
+      content-visibility:visible;
+      contain:none;
+      contain-intrinsic-size:auto;
+    }
+
+    .mf-embed-slot > *{
+      width:100%;
+      max-width:100%;
+      margin-top:24px;
+      margin-bottom:24px;
+    }
+
+    .mf-embed-slot > :first-child{
+      margin-top:0;
+    }
+
+    .mf-embed-slot > :last-child{
+      margin-bottom:0;
+    }
+
+    .mf-embed-slot iframe,
+    .mf-embed-slot video,
+    .mf-embed-slot img,
+    .mf-embed-slot svg,
+    .mf-embed-slot canvas{
+      max-width:100%;
+    }
+
+    .mf-embed-slot iframe{
+      display:block;
+      width:100%;
+    }
+
+    #mf-solucoes{
+      min-height:0;
+    }
+
+    /* =========================
+       RODAPÉ
+       ========================= */
+    footer#mf-rodape{
+      display:block;
+      width:100%;
+      min-height:0;
+      height:auto;
+      margin:64px auto 0;
+      padding:0 0 28px;
+      background:transparent;
+      content-visibility:visible;
+      contain:none;
+      contain-intrinsic-size:auto;
+    }
+
+    .mf-footer-shell{
+      width:var(--mf-shell);
+      margin:0 auto;
+      overflow:hidden;
+      border:1px solid rgba(247,247,255,.78);
+      border-radius:var(--mf-radius);
+      background:var(--mf-dark-gradient);
+      box-shadow:0 24px 80px rgba(21,20,38,.16);
+      color:#F7F7FF;
+    }
+
+    .mf-footer-top{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:32px;
+      padding:38px;
+    }
+
+    .mf-footer-brand{
+      max-width:620px;
+    }
+
+    .mf-footer-logo{
+      display:inline-flex;
+      align-items:center;
+      line-height:0;
+      text-decoration:none;
+      margin-bottom:18px;
+    }
+
+    .mf-footer-logo img{
+      width:168px;
+      height:auto;
+      display:block;
+    }
+
+    .mf-footer-text{
+      margin:0;
+      color:rgba(247,247,255,.72);
+      font-size:14px;
+      line-height:1.75;
+      letter-spacing:-.01em;
+    }
+
+    .mf-footer-col h2{
+      margin:0 0 15px;
+      color:#F7F7FF;
+      font-size:15px;
+      line-height:1.2;
+      font-weight:900;
+      letter-spacing:-.02em;
+    }
+
+    .mf-footer-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:10px;
+    }
+
+    .mf-footer-list li{
+      color:rgba(247,247,255,.72);
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    .mf-footer-list a{
+      color:rgba(247,247,255,.72);
+      text-decoration:none;
+      transition:color .18s ease;
+    }
+
+    .mf-footer-list a:hover,
+    .mf-footer-list a:focus-visible{
+      color:#F7F7FF;
+    }
+
+    .mf-footer-social{
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .mf-footer-social-mobile{
+      display:none;
+    }
+
+    .mf-footer-social a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:42px;
+      height:42px;
+      border-radius:999px;
+      color:#F7F7FF;
+      background:linear-gradient(135deg, var(--mf-purple), var(--mf-purple-2));
+      border:1px solid rgba(247,247,255,.18);
+      box-shadow:0 14px 34px rgba(89,69,232,.28);
+      text-decoration:none;
+      transition:transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    }
+
+    .mf-footer-social a:hover,
+    .mf-footer-social a:focus-visible{
+      transform:translateY(-2px);
+      box-shadow:0 18px 42px rgba(89,69,232,.36);
+      filter:brightness(1.05);
+    }
+
+    .mf-footer-social svg{
+      display:block;
+      width:20px;
+      height:20px;
+      fill:currentColor;
+    }
+
+    .mf-footer-bottom{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:18px 38px 22px;
+      border-top:1px solid rgba(247,247,255,.10);
+      color:rgba(247,247,255,.62);
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    .mf-footer-bottom a{
+      color:rgba(247,247,255,.72);
+      text-decoration:none;
+    }
+
+    .mf-footer-bottom a:hover,
+    .mf-footer-bottom a:focus-visible{
+      color:#F7F7FF;
+    }
+
+    @media (max-width:1120px){
+      #mf-menu .inner{
+        gap:14px;
+      }
+
+      #mf-menu .links a{
+        padding:0 10px;
+        font-size:13px;
+      }
+
+      #mf-menu .cta{
+        padding:0 14px;
+      }
+
+      #mf-menu .lang-toggle{
+        min-width:68px;
+        padding:0 10px;
+        font-size:13px;
+      }
+    }
+
+    @media (max-width:940px){
+      :root{
+        --mf-nav-offset:104px;
+        --mf-shell:calc(100% - 24px);
+      }
+
+      #mf-menu .bar{
+        top:14px;
+        border-radius:var(--mf-radius);
+      }
+
+      #mf-menu .inner{
+        min-height:72px;
+        padding:10px 10px 10px 16px;
+      }
+
+      #mf-menu .brand img{
+        width:148px;
+      }
+
+      #mf-menu .menu-side{
+        gap:8px;
+      }
+
+      #mf-menu .burger{
+        display:inline-block;
+      }
+
+      #mf-menu .lang-toggle{
+        min-width:70px;
+        height:46px;
+        padding:0 11px;
+        font-size:13px;
+      }
+
+      #mf-menu.is-open .scrim{
+        display:block;
+        background:rgba(247,247,255,.88);
+      }
+
+      @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))){
+        #mf-menu.is-open .scrim{
+          -webkit-backdrop-filter:blur(12px) saturate(120%);
+          backdrop-filter:blur(12px) saturate(120%);
+        }
+      }
+
+      #mf-menu .links{
+        display:none;
+        position:absolute;
+        top:calc(100% + 10px);
+        left:0;
+        right:0;
+        padding:10px;
+        flex-direction:column;
+        align-items:stretch;
+        justify-content:flex-start;
+        gap:6px;
+        border:1px solid rgba(21,20,38,.10);
+        border-radius:var(--mf-radius);
+        background:rgba(247,247,255,.96);
+        box-shadow:0 20px 60px rgba(21,20,38,.15);
+      }
+
+      @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))){
+        #mf-menu .links{
+          -webkit-backdrop-filter:blur(12px) saturate(120%);
+          backdrop-filter:blur(12px) saturate(120%);
+        }
+      }
+
+      #mf-menu.is-open .links{
+        display:flex;
+      }
+
+      #mf-menu .links a{
+        width:100%;
+        min-height:48px;
+        padding:0 16px;
+        justify-content:flex-start;
+        color:var(--mf-ink);
+        font-size:14px;
+      }
+
+      #mf-menu .links a:not(.cta){
+        background:rgba(89,69,232,.045);
+      }
+
+      #mf-menu .links a:not(.cta):hover,
+      #mf-menu .links a:not(.cta):focus-visible,
+      #mf-menu .links a:not(.cta)[aria-current="true"]{
+        color:var(--mf-ink);
+        background:rgba(89,69,232,.09);
+      }
+
+      #mf-menu .links a.cta,
+      #mf-menu .links a.cta[aria-current="true"]{
+        justify-content:center;
+        margin:4px 0 0;
+        color:#F7F7FF;
+        background:linear-gradient(135deg, var(--mf-purple), #5945E8 58%, var(--mf-purple));
+        border:1px solid rgba(247,247,255,.16);
+        box-shadow:0 14px 36px rgba(89,69,232,.25);
+      }
+
+      #mf-menu .links a.cta:hover,
+      #mf-menu .links a.cta:focus-visible{
+        color:#F7F7FF;
+        background:linear-gradient(135deg, #5945E8, #3726AF 58%, #5945E8);
+      }
+
+      #mf-page-main{
+        padding-top:calc(var(--mf-nav-offset) + 12px);
+      }
+
+      .mf-footer-top{
+        grid-template-columns:1fr;
+        padding:30px 24px;
+      }
+
+      .mf-footer-brand{
+        max-width:620px;
+      }
+
+      .mf-footer-social-desktop{
+        display:none;
+      }
+
+      .mf-footer-social-mobile{
+        display:flex;
+      }
+
+      .mf-footer-bottom{
+        align-items:flex-start;
+        flex-direction:column;
+        padding:18px 24px 24px;
+      }
+    }
+
+    @media (max-width:560px){
+      #mf-menu .brand img{
+        width:136px;
+      }
+
+      #mf-menu .inner{
+        gap:10px;
+      }
+
+      #mf-menu .menu-tools{
+        gap:7px;
+      }
+
+      #mf-menu .lang-toggle{
+        min-width:66px;
+        height:44px;
+        padding:0 10px;
+        font-size:12px;
+      }
+
+      #mf-menu .burger{
+        width:46px;
+        height:46px;
+      }
+
+      .mf-embed-slot > *{
+        margin-top:18px;
+        margin-bottom:18px;
+      }
+
+      footer#mf-rodape{
+        margin-top:44px;
+        padding-bottom:20px;
+      }
+    }
+
+    @media (max-width:380px){
+      #mf-menu .brand img{
+        width:122px;
+      }
+
+      #mf-menu .lang-toggle{
+        min-width:60px;
+        padding:0 8px;
+      }
+
+      #mf-menu .lang-toggle .sep{
+        margin:0 4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mf-menu">
+    <div class="scrim" aria-hidden="true"></div>
+
+    <nav class="bar" aria-label="Menu principal" data-i18n-aria-label="nav.aria">
+      <div class="inner">
+        <a class="brand" href="#mf-solucoes" aria-label="MindFly Digital - Soluções" data-i18n-aria-label="brand.solutions">
+          <img
+            src="/assets/logobranco.png"
+            alt="MindFly Digital"
+            width="160"
+            height="32"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </a>
+
+        <div class="menu-side">
+          <div id="mf-menu-links" class="links" aria-label="Menu de navegação" data-i18n-aria-label="nav.links">
+            <a href="#mf-solucoes" data-i18n="nav.solutions">Soluções</a>
+            <a href="#mf-transformacao-digital" data-i18n="nav.digital">Transformação Digital</a>
+            <a href="#mf-metodo" data-i18n="nav.method">Método</a>
+            <a href="#mf-projetos" data-i18n="nav.projects">Projetos</a>
+            <a class="cta" href="#mf-contato" data-i18n="nav.contact">Contato</a>
+          </div>
+
+          <div class="menu-tools">
+            <button
+              class="lang-toggle"
+              type="button"
+              data-current-lang="pt"
+              aria-label="Alterar idioma para inglês"
+              title="Alterar idioma"
+            >
+              <span data-lang-option="pt">PT</span>
+              <span class="sep" aria-hidden="true">·</span>
+              <span data-lang-option="en">EN</span>
+            </button>
+
+            <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mf-menu-links">
+              <svg class="icon icon-open" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 7h16M4 12h16M4 17h16"></path>
+              </svg>
+              <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 6l12 12M18 6L6 18"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main id="mf-page-main">
+
+
+
+
+
+    <section id="mf-solucoes" class="mf-embed-slot" data-embed="hero"><div id="mfs-card-deck" class="mfs-embed" data-mf-solucoes-embed>
+  <style>
+    .mf-embed-slot.mf-embed-slot--full {
+      width: 100vw;
+      max-width: none;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      border-radius: 0;
+    }
+
+    .mf-embed-slot.mf-embed-slot--under-nav {
+      margin-top: calc((var(--mf-nav-offset, 122px) + 18px) * -1);
+    }
+
+    .mf-embed-slot.mf-embed-slot--under-nav > #mfs-card-deck {
+      padding-top: calc(var(--mf-nav-offset, 122px) + clamp(26px, 4.4vw, 58px));
+    }
+
+    @media (max-width: 940px) {
+      .mf-embed-slot.mf-embed-slot--under-nav {
+        margin-top: calc((var(--mf-nav-offset, 104px) + 12px) * -1);
+      }
+    }
+
+    #mfs-card-deck,
+    #mfs-card-deck * {
+      box-sizing: border-box;
+    }
+
+    #mfs-card-deck {
+      --mfs-ink: #F7F7FF;
+      --mfs-muted: rgba(247, 247, 255, .72);
+      --mfs-card-ink: #151426;
+      --mfs-card-muted: #211C4A;
+      --mfs-violet: #5945E8;
+      --mfs-violet-2: #3726AF;
+      --mfs-violet-3: #211C4A;
+      --mfs-gold: #E5E7FF;
+      position: relative;
+      z-index: 0;
+      width: 100%;
+      min-width: 0;
+      margin: 0;
+      padding: clamp(44px, 5.6vw, 76px) 0 clamp(54px, 6.2vw, 88px);
+      overflow: hidden;
+      isolation: isolate;
+      color: var(--mfs-ink);
+      font-family: Manrope, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      border: 0;
+      border-radius: 0;
+      background:
+        radial-gradient(720px 440px at 92% 4%, rgba(89, 69, 232, .48), transparent 62%),
+        radial-gradient(560px 360px at 4% 14%, rgba(89, 69, 232, .22), transparent 66%),
+        radial-gradient(660px 400px at 72% 96%, rgba(0, 217, 200, .14), transparent 68%),
+        linear-gradient(135deg, #090817 0%, #151426 48%, #211C4A 100%);
+    }
+
+    #mfs-card-deck::before,
+    #mfs-card-deck::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+#mfs-card-deck::before {
+content: none;
+}
+
+    #mfs-card-deck::after {
+      background:
+        radial-gradient(720px 440px at 92% 4%, rgba(89, 69, 232, .20), transparent 62%),
+        radial-gradient(560px 360px at 4% 14%, rgba(89, 69, 232, .10), transparent 66%),
+        linear-gradient(135deg, rgba(9, 8, 23, .30) 0%, rgba(21, 20, 38, .46) 48%, rgba(33, 28, 74, .58) 100%);
+      opacity: 1;
+    }
+
+    #mfs-card-deck .mfs-intro {
+      position: relative;
+      z-index: 2;
+      width: calc(100% - 32px);
+      max-width: 1344px;
+      width: min(1344px, calc(100% - 32px));
+      margin: 0 auto 58px;
+      text-align: center;
+    }
+
+    #mfs-card-deck .mfs-intro-title {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding-right: .14em;
+      overflow: visible;
+      color: #F7F7FF;
+      font-size: 58px;
+      font-size: clamp(38px, 5.4vw, 76px);
+      line-height: 1.03;
+      letter-spacing: -.055em;
+      font-weight: 900;
+      text-wrap: balance;
+    }
+
+    #mfs-card-deck .mfs-gradient-text {
+      display: inline;
+      padding-right: .11em;
+      margin-right: -.02em;
+      background: linear-gradient(135deg, #F7F7FF 0%, #E5E7FF 28%, #00D9C8 60%, #5945E8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
+    #mfs-card-deck .mfs-mark {
+      position: relative;
+      z-index: 0;
+      display: inline;
+      color: #F7F7FF;
+      font-weight: 900;
+      background: linear-gradient(90deg, rgba(89, 69, 232, .30), rgba(0, 217, 200, .70), rgba(89, 69, 232, .30)) left 86% / 100% .16em no-repeat;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
+    #mfs-card-deck .mfs-mark::after {
+      content: none;
+    }
+
+    #mfs-card-deck .mfs-intro-text {
+      max-width: 860px;
+      margin: 28px auto 0;
+      color: var(--mfs-muted);
+      font-size: 18px;
+      font-size: clamp(17.5px, 1.35vw, 19.5px);
+      line-height: 1.68;
+      font-weight: 700;
+      letter-spacing: -.02em;
+    }
+
+    #mfs-card-deck .mfs-stage {
+      position: relative;
+      z-index: 2;
+      width: calc(100% - 32px);
+      max-width: 1344px;
+      width: min(1344px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      overflow: visible;
+      transition: none;
+      touch-action: pan-y;
+    }
+
+    #mfs-card-deck .mfs-stage.is-marquee {
+      cursor: grab;
+    }
+
+    #mfs-card-deck .mfs-stage.is-user-dragging {
+      cursor: grabbing;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    #mfs-card-deck .mfs-stage.is-marquee [data-mfs-clone="true"] {
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    #mfs-card-deck .mfs-card {
+      --mfs-card-rgb: 21, 20, 38;
+      --mfs-card-rgb-2: 33, 28, 74;
+      position: relative;
+      flex: 0 0 calc((100% - 42px) / 3.35);
+      width: auto;
+      margin-right: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 292px;
+      padding: 26px;
+      border: 1px solid rgba(255, 255, 255, .20);
+      border-radius: 30px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .97), rgba(247, 247, 255, .92));
+      box-shadow:
+        0 16px 34px rgba(21, 20, 38, .13),
+        inset 0 1px 0 rgba(255, 255, 255, .72);
+      overflow: hidden;
+      transition: transform .22s ease, opacity .22s ease;
+    }
+
+    @media (min-width: 821px) and (hover: hover) {
+      #mfs-card-deck .mfs-card:hover,
+      #mfs-card-deck .mfs-card:focus-within {
+        transform: none;
+      }
+    }
+
+    #mfs-card-deck .mfs-card::before {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      top: -104px;
+      right: -104px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(21, 20, 38, .07), transparent 68%);
+      pointer-events: none;
+    }
+
+    #mfs-card-deck .mfs-card::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 4px;
+      background: linear-gradient(90deg, rgba(89, 69, 232, .78), #5945E8, rgba(0, 217, 200, .92));
+      opacity: .88;
+      pointer-events: none;
+    }
+
+    #mfs-card-deck .mfs-check {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+      width: 54px;
+      height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      color: #151426;
+      background: rgba(255, 255, 255, .84);
+      border: 1px solid rgba(21, 20, 38, .12);
+      box-shadow: none;
+      pointer-events: none;
+    }
+
+    #mfs-card-deck .mfs-check svg {
+      display: block;
+      flex: 0 0 auto;
+      width: 34px;
+      height: 34px;
+      overflow: visible;
+    }
+
+    #mfs-card-deck .mfs-check path,
+    #mfs-card-deck .mfs-check rect,
+    #mfs-card-deck .mfs-check circle,
+    #mfs-card-deck .mfs-check ellipse,
+    #mfs-card-deck .mfs-check line,
+    #mfs-card-deck .mfs-check polyline,
+    #mfs-card-deck .mfs-check polygon {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.15;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #mfs-card-deck .mfs-kicker {
+      position: relative;
+      z-index: 1;
+      width: fit-content;
+      min-width: 132px;
+      min-height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 11px;
+      border-radius: 999px;
+      background: rgba(21, 20, 38, .07);
+      color: #3726AF;
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    #mfs-card-deck .mfs-title {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 100%;
+      height: 1.96em;
+      margin: 24px 0 0;
+      color: var(--mfs-card-ink);
+      font-size: 29px;
+      font-size: clamp(24px, 2.1vw, 34px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      font-weight: 900;
+      white-space: nowrap;
+      text-wrap: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+    }
+
+    #mfs-card-deck .mfs-title br {
+      display: block;
+    }
+
+    #mfs-card-deck .mfs-text {
+      position: relative;
+      z-index: 1;
+      max-width: 35ch;
+      min-height: 92px;
+      margin: 16px 0 0;
+      color: var(--mfs-card-muted);
+      font-size: 14px;
+      line-height: 1.52;
+      font-weight: 700;
+      letter-spacing: -.018em;
+    }
+
+    #mfs-card-deck .mfs-card-progress {
+      display: none;
+    }
+
+    #mfs-card-deck .mfs-nav {
+      position: relative;
+      z-index: 3;
+      width: calc(100% - 32px);
+      max-width: 1344px;
+      width: min(1344px, calc(100% - 32px));
+      margin: 52px auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      pointer-events: auto;
+    }
+
+    #mfs-card-deck .mfs-arrow,
+    #mfs-card-deck .mfs-pause {
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .92);
+      color: #211C4A;
+      box-shadow: none;
+      cursor: pointer;
+      transition: transform .18s ease, opacity .18s ease, background .18s ease;
+    }
+
+    #mfs-card-deck .mfs-arrow:hover,
+    #mfs-card-deck .mfs-pause:hover,
+    #mfs-card-deck .mfs-arrow:focus-visible,
+    #mfs-card-deck .mfs-pause:focus-visible {
+      background: #F7F7FF;
+      opacity: 1;
+    }
+
+    #mfs-card-deck .mfs-arrow:active,
+    #mfs-card-deck .mfs-pause:active {
+      transform: scale(.96);
+    }
+
+    #mfs-card-deck .mfs-arrow svg,
+    #mfs-card-deck .mfs-pause svg {
+      width: 21px;
+      height: 21px;
+    }
+
+    #mfs-card-deck .mfs-arrow path,
+    #mfs-card-deck .mfs-pause path {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #mfs-card-deck .mfs-pause[data-mfs-paused="false"] .mfs-icon-play {
+      display: none;
+    }
+
+    #mfs-card-deck .mfs-pause[data-mfs-paused="true"] .mfs-icon-pause {
+      display: none;
+    }
+
+    #mfs-card-deck .mfs-nav .mfs-arrow,
+    #mfs-card-deck .mfs-nav .mfs-pause {
+      display: none;
+    }
+
+    #mfs-card-deck .mf-cta-neon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 58px;
+      padding: 0 25px;
+      border-radius: 999px;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      transition:
+        transform 0.22s ease,
+        background 0.22s ease,
+        box-shadow 0.22s ease,
+        filter 0.22s ease;
+    }
+
+    #mfs-card-deck .mf-cta-neon svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.22s ease;
+    }
+
+    #mfs-card-deck .mf-cta-neon:hover svg {
+      transform: translateX(3px);
+    }
+
+    #mfs-card-deck .mf-cta-neon:focus-visible {
+      outline: 3px solid rgba(89, 69, 232, 0.28);
+      outline-offset: 4px;
+    }
+
+    #mfs-card-deck .mf-cta-neon:active {
+      transform: scale(0.98);
+    }
+
+    #mfs-card-deck .mf-cta-neon--dark {
+      border: 1px solid rgba(0, 217, 200, 0.72);
+      color: #FFFFFF;
+      background: rgba(89, 69, 232, 0.13);
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.32);
+      box-shadow:
+        0 0 12px rgba(89, 69, 232, 0.54),
+        0 0 34px rgba(89, 69, 232, 0.28),
+        inset 0 0 18px rgba(89, 69, 232, 0.14);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    #mfs-card-deck .mf-cta-neon--dark:hover {
+      transform: translateY(-2px) scale(1.015);
+      background: rgba(89, 69, 232, 0.22);
+      box-shadow:
+        0 0 16px rgba(89, 69, 232, 0.72),
+        0 0 48px rgba(89, 69, 232, 0.40),
+        inset 0 0 22px rgba(89, 69, 232, 0.22);
+    }
+
+
+    @media (max-width: 1180px) {
+      #mfs-card-deck .mfs-card {
+        flex-basis: calc((100% - 28px) / 2.25);
+        min-height: 288px;
+      }
+    }
+
+    @media (max-width: 820px) {
+      #mfs-card-deck {
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 34px 0 46px;
+        border-radius: 0;
+        overflow: hidden;
+      }
+
+      .mf-embed-slot.mf-embed-slot--under-nav > #mfs-card-deck {
+        padding-top: calc(var(--mf-nav-offset, 104px) + 24px);
+      }
+
+      #mfs-card-deck .mfs-intro {
+        width: 88vw;
+        max-width: 360px;
+        width: min(88vw, 360px);
+        margin: 0 auto 12px;
+      }
+
+      #mfs-card-deck .mfs-intro-title {
+        max-width: 360px;
+        padding-right: .14em;
+        font-size: 40px;
+        font-size: clamp(33px, 9vw, 46px);
+        line-height: 1.05;
+        letter-spacing: -.048em;
+      }
+
+      #mfs-card-deck .mfs-intro-text {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.62;
+      }
+
+      #mfs-card-deck .mfs-stage {
+        position: relative;
+        width: 100%;
+        min-height: 430px;
+        margin: -8px 0 0;
+        display: block;
+        overflow: visible;
+        touch-action: pan-y;
+        user-select: none;
+        -webkit-user-select: none;
+        transform: none;
+        transition: none;
+        animation: none !important;
+      }
+
+      #mfs-card-deck .mfs-card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 87vw;
+        max-width: 344px;
+        width: min(87vw, 344px);
+        min-height: 350px;
+        margin-right: 0;
+        padding: 22px;
+        border-radius: 30px;
+        cursor: grab;
+        transform: translate(-50%, -50%);
+        transition: transform .46s cubic-bezier(.2, .8, .2, 1), opacity .28s ease;
+      }
+
+      #mfs-card-deck .mfs-card:hover,
+      #mfs-card-deck .mfs-card:focus-within {
+        transform: translate(-50%, -50%);
+      }
+
+      #mfs-card-deck .mfs-card:active {
+        cursor: grabbing;
+      }
+
+      #mfs-card-deck .mfs-check {
+        top: 17px;
+        right: 17px;
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+      }
+
+      #mfs-card-deck .mfs-check svg {
+        width: 31px;
+        height: 31px;
+      }
+
+      #mfs-card-deck .mfs-kicker {
+        min-height: 30px;
+        padding: 0 10px;
+        font-size: 9.4px;
+      }
+
+      #mfs-card-deck .mfs-title {
+        width: 100%;
+        max-width: 100%;
+        height: 2.1em;
+        margin-top: 20px;
+        font-size: 25px;
+        font-size: clamp(22px, 6.4vw, 27px);
+        line-height: 1.05;
+        letter-spacing: -.038em;
+        white-space: nowrap;
+        text-wrap: nowrap;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: none;
+      }
+
+      #mfs-card-deck .mfs-text {
+        max-width: 34ch;
+        min-height: 98px;
+        margin-top: 13px;
+        font-size: 14.4px;
+        line-height: 1.5;
+      }
+
+      #mfs-card-deck .mfs-card-progress {
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: 7px;
+        margin-top: auto;
+        overflow: hidden;
+        border-radius: 999px;
+        background: rgba(21, 20, 38, .08);
+        border: 1px solid rgba(21, 20, 38, .10);
+        opacity: 0;
+      }
+
+      #mfs-card-deck .mfs-card-progress span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, #3726AF, #151426);
+        transform: scaleX(0);
+        transform-origin: left center;
+      }
+
+      #mfs-card-deck .mfs-card.is-center .mfs-card-progress {
+        opacity: 1;
+      }
+
+      #mfs-card-deck .mfs-card.is-center {
+        z-index: 30;
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+      }
+
+      #mfs-card-deck .mfs-card.is-left {
+        z-index: 20;
+        opacity: .62;
+        transform: translate(calc(-50% - 48vw), calc(-50% + 24px)) rotate(-10deg) scale(.72);
+      }
+
+      #mfs-card-deck .mfs-card.is-right {
+        z-index: 20;
+        opacity: .62;
+        transform: translate(calc(-50% + 48vw), calc(-50% + 24px)) rotate(10deg) scale(.72);
+      }
+
+      #mfs-card-deck .mfs-card.is-stack {
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      #mfs-card-deck .mfs-card.is-dragging {
+        transition: none !important;
+      }
+
+      #mfs-card-deck .mfs-nav {
+        width: 100%;
+        justify-content: center;
+        gap: 14px;
+        margin-top: -42px;
+        height: 118px;
+      }
+
+      #mfs-card-deck .mfs-arrow,
+      #mfs-card-deck .mfs-pause {
+        width: 52px;
+        height: 52px;
+      }
+
+      #mfs-card-deck .mfs-arrow svg,
+      #mfs-card-deck .mfs-pause svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      #mfs-card-deck .mfs-nav .mfs-arrow,
+      #mfs-card-deck .mfs-nav .mfs-pause {
+        display: inline-flex;
+      }
+
+      #mfs-card-deck .mf-cta-neon {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      #mfs-card-deck .mfs-stage {
+        min-height: 410px;
+      }
+
+      #mfs-card-deck .mfs-card {
+        width: 87vw;
+        max-width: 322px;
+        width: min(87vw, 322px);
+        min-height: 336px;
+        padding: 21px;
+      }
+
+      #mfs-card-deck .mfs-title {
+        font-size: 24px;
+        font-size: clamp(21px, 6.3vw, 25.5px);
+      }
+
+      #mfs-card-deck .mfs-text {
+        min-height: 92px;
+        font-size: 14.2px;
+        line-height: 1.48;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) and (min-width: 821px) {
+      #mfs-card-deck .mfs-stage {
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: x proximity;
+        scrollbar-width: thin;
+        padding-bottom: 10px;
+      }
+
+      #mfs-card-deck .mfs-card {
+        scroll-snap-align: start;
+      }
+
+      #mfs-card-deck .mfs-nav .mfs-pause {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) and (max-width: 820px) {
+      #mfs-card-deck .mfs-nav .mfs-pause {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #mfs-card-deck .mfs-stage,
+      #mfs-card-deck .mfs-card,
+      #mfs-card-deck .mfs-arrow,
+      #mfs-card-deck .mfs-pause,
+      #mfs-card-deck .mfs-card-progress span,
+      #mfs-card-deck .mf-cta-neon,
+      #mfs-card-deck .mf-cta-neon svg {
+        transition: none !important;
+      }
+
+      #mfs-card-deck .mfs-stage {
+        animation: none !important;
+      }
+    }
+  </style>
+
+  <div class="mfs-intro">
+    <h1 class="mfs-intro-title" data-i18n-html="mfs.intro.title">Tudo que seu negócio precisa para crescer no digital <span class="mfs-gradient-text">em um único hub de soluções </span>.</h1>
+    <p class="mfs-intro-text" data-i18n-html="mfs.intro.text">Estratégia, marketing de impacto, conteúdo, design e tecnologia trabalhando juntos para <strong class="mfs-mark">fortalecer sua presença digital</strong>, gerar mais oportunidades e <strong class="mfs-mark">impulsionar suas vendas</strong></p>
+  </div>
+
+  <div class="mfs-stage" aria-label="Soluções digitais" data-i18n-aria-label="mfs.stage.aria_label">
+    <article class="mfs-card" data-mfs-card="0">
+      <span class="mfs-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <circle cx="12" cy="12" r="9"></circle>
+          <circle cx="12" cy="12" r="5.5"></circle>
+          <circle cx="12" cy="12" r="2"></circle>
+        </svg>
+      </span>
+      <span class="mfs-kicker" data-i18n="mfs.cards.trafego_pago.kicker">Aquisição de clientes</span>
+      <h3 class="mfs-title" data-i18n-html="mfs.cards.trafego_pago.title">Anúncios com<br>Tráfego Pago</h3>
+      <p class="mfs-text" data-i18n="mfs.cards.trafego_pago.text">Criamos e otimizamos campanhas no Google, Instagram, Facebook e TikTok para atrair público qualificado e gerar oportunidades reais de venda.</p>
+      <div class="mfs-card-progress" aria-hidden="true"><span></span></div>
+    </article>
+
+    <article class="mfs-card" data-mfs-card="1">
+      <span class="mfs-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <rect x="3" y="4" width="18" height="16" rx="3"></rect>
+          <path d="M3 9h18M7 6.5h.01M10 6.5h.01"></path>
+          <path d="M8 13l-2 2 2 2M16 13l2 2-2 2M13 12l-2 6"></path>
+        </svg>
+      </span>
+      <span class="mfs-kicker" data-i18n="mfs.cards.desenvolvimento_web.kicker">Tecnologia sob medida</span>
+      <h3 class="mfs-title" data-i18n-html="mfs.cards.desenvolvimento_web.title">Desenvolvimento<br>Web e Mobile</h3>
+      <p class="mfs-text" data-i18n="mfs.cards.desenvolvimento_web.text">Desenvolvemos sites, sistemas e experiências mobile com estrutura profissional, navegação clara e tecnologia pronta para crescer com sua operação.</p>
+      <div class="mfs-card-progress" aria-hidden="true"><span></span></div>
+    </article>
+
+    <article class="mfs-card" data-mfs-card="2">
+      <span class="mfs-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M4 5h16l-6 7v5l-4 2v-7L4 5z"></path>
+        </svg>
+      </span>
+      <span class="mfs-kicker" data-i18n="mfs.cards.paginas_venda_captura.kicker">Conversão estratégica</span>
+      <h3 class="mfs-title" data-i18n-html="mfs.cards.paginas_venda_captura.title">Páginas de Venda<br>e Captura</h3>
+      <p class="mfs-text" data-i18n="mfs.cards.paginas_venda_captura.text">Criamos páginas estratégicas para apresentar ofertas, captar leads qualificados e transformar visitantes em oportunidades reais para sua equipe comercial.</p>
+      <div class="mfs-card-progress" aria-hidden="true"><span></span></div>
+    </article>
+
+    <article class="mfs-card" data-mfs-card="3">
+      <span class="mfs-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <rect x="3" y="4" width="18" height="16" rx="3"></rect>
+          <path d="M10 9l5 3-5 3z"></path>
+        </svg>
+      </span>
+      <span class="mfs-kicker" data-i18n="mfs.cards.producao_audiovisual.kicker">Conteúdo que impacta</span>
+      <h3 class="mfs-title" data-i18n-html="mfs.cards.producao_audiovisual.title">Produção<br>Audiovisual</h3>
+      <p class="mfs-text" data-i18n="mfs.cards.producao_audiovisual.text">Captamos, gravamos e editamos vídeos profissionais para redes, anúncios e autoridade, com filmmaker dedicado para dar força visual à sua marca.</p>
+      <div class="mfs-card-progress" aria-hidden="true"><span></span></div>
+    </article>
+
+    <article class="mfs-card" data-mfs-card="4">
+      <span class="mfs-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <circle cx="9" cy="8" r="3"></circle>
+          <path d="M3 19c.5-4 2.5-6 6-6s5.5 2 6 6"></path>
+          <path d="M15 10l3-3 3 3M18 7v8"></path>
+        </svg>
+      </span>
+      <span class="mfs-kicker" data-i18n="mfs.cards.crescimento_perfil.kicker">Presença com consistência</span>
+      <h3 class="mfs-title" data-i18n-html="mfs.cards.crescimento_perfil.title">Crescimento de<br>Perfil nas Mídias</h3>
+      <p class="mfs-text" data-i18n="mfs.cards.crescimento_perfil.text">Organizamos rotina, conteúdo e análise para fortalecer seus perfis digitais, movimentar a audiência e construir presença com consistência e métrica.</p>
+      <div class="mfs-card-progress" aria-hidden="true"><span></span></div>
+    </article>
+
+    <article class="mfs-card" data-mfs-card="5">
+      <span class="mfs-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M4 8l4 4 4-7 4 7 4-4-2 10H6L4 8z"></path>
+          <path d="M7 21h10"></path>
+        </svg>
+      </span>
+      <span class="mfs-kicker" data-i18n="mfs.cards.posicionamento_marca.kicker">Autoridade e percepção</span>
+      <h3 class="mfs-title" data-i18n-html="mfs.cards.posicionamento_marca.title">Posicionamento<br>de Marca</h3>
+      <p class="mfs-text" data-i18n="mfs.cards.posicionamento_marca.text">Construímos uma comunicação clara para sua empresa ser percebida com mais valor, confiança e autoridade em todos os pontos de contato digitais.</p>
+      <div class="mfs-card-progress" aria-hidden="true"><span></span></div>
+    </article>
+
+    <article class="mfs-card" data-mfs-card="6">
+      <span class="mfs-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M12 3l9 5-9 5-9-5 9-5z"></path>
+          <path d="M3 12l9 5 9-5M3 16l9 5 9-5"></path>
+        </svg>
+      </span>
+      <span class="mfs-kicker" data-i18n="mfs.cards.identidade_visual.kicker">Criatividade para comunicar</span>
+      <h3 class="mfs-title" data-i18n-html="mfs.cards.identidade_visual.title">Estúdio de Design<br>e Criação</h3>
+      <p class="mfs-text" data-i18n="mfs.cards.identidade_visual.text">Atuamos como estúdio criativo para apresentações, materiais de comunicação e peças de design alinhadas à marca, com acabamento profissional.</p>
+      <div class="mfs-card-progress" aria-hidden="true"><span></span></div>
+    </article>
+
+    <article class="mfs-card" data-mfs-card="7">
+      <span class="mfs-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <circle cx="10" cy="10" r="6"></circle>
+          <path d="M14.5 14.5L21 21M7 12l2-2 2 1 2-3"></path>
+        </svg>
+      </span>
+      <span class="mfs-kicker" data-i18n="mfs.cards.estudo_concorrentes.kicker">Inteligência de mercado</span>
+      <h3 class="mfs-title" data-i18n-html="mfs.cards.estudo_concorrentes.title">Estudo de<br>Mercado</h3>
+      <p class="mfs-text" data-i18n="mfs.cards.estudo_concorrentes.text">Analisamos seu nicho, concorrentes e oportunidades de mercado para orientar decisões, ajustar mensagens e aplicar estratégias mais inteligentes.</p>
+      <div class="mfs-card-progress" aria-hidden="true"><span></span></div>
+    </article>
+
+    <article class="mfs-card" data-mfs-card="8">
+      <span class="mfs-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M4 13v-2a8 8 0 0 1 16 0v2"></path>
+          <rect x="3" y="12" width="4" height="6" rx="2"></rect>
+          <rect x="17" y="12" width="4" height="6" rx="2"></rect>
+          <path d="M17 18c0 2-2 3-5 3"></path>
+        </svg>
+      </span>
+      <span class="mfs-kicker" data-i18n="mfs.cards.suporte_estrategico.kicker">Direção contínua</span>
+      <h3 class="mfs-title" data-i18n-html="mfs.cards.suporte_estrategico.title">Suporte<br>Estratégico</h3>
+      <p class="mfs-text" data-i18n="mfs.cards.suporte_estrategico.text">Acompanhamos campanhas, conteúdos e oportunidades de forma contínua para ajustar ações, priorizar melhorias e acelerar o crescimento do negócio.</p>
+      <div class="mfs-card-progress" aria-hidden="true"><span></span></div>
+    </article>
+  </div>
+
+  <div class="mfs-nav" aria-label="Navegação dos cards" data-i18n-aria-label="mfs.nav.aria_label">
+    <button class="mfs-arrow mfs-prev" type="button" aria-label="Card anterior" data-i18n-aria-label="mfs.nav.prev.aria_label">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M15 5l-7 7 7 7"></path>
+      </svg>
+    </button>
+
+    <button class="mfs-pause" type="button" data-mfs-paused="false" aria-label="Pausar troca automática" title="Pausar troca automática" data-i18n-aria-label="mfs.nav.pause.aria_label" data-i18n-title="mfs.nav.pause.aria_label">
+      <svg class="mfs-icon-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M9 6v12M15 6v12"></path>
+      </svg>
+      <svg class="mfs-icon-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M9 6l9 6-9 6V6z"></path>
+      </svg>
+    </button>
+
+    <button class="mfs-arrow mfs-next" type="button" aria-label="Próximo card" data-i18n-aria-label="mfs.nav.next.aria_label">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+
+    <a
+      class="mf-cta-neon mf-cta-neon--dark"
+      href="#mf-contato"
+      aria-label="Agendar consultoria"
+      data-i18n-aria-label="mf.cta.aria_label"
+    >
+      <span data-i18n="mf.cta.text">AGENDAR CONSULTORIA</span>
+
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M5 12h14M13 6l6 6-6 6"></path>
+      </svg>
+    </a>
+  </div>
+
+  <script>
+    (() => {
+      const dictionary = {
+        "mfs.intro.title": {
+          pt: "Tudo que seu negócio precisa para crescer no digital <span class=\"mfs-gradient-text\">em um único hub de soluções </span>",
+          en: "Everything your business needs to grow digitally, <span class=\"mfs-gradient-text\">all in one solutions hub</span>"
+        },
+        "mfs.intro.text": {
+          pt: "Estratégia, marketing de impacto, conteúdo, design e tecnologia trabalhando juntos para <strong class=\"mfs-mark\">fortalecer sua presença digital</strong>, gerar mais oportunidades e <strong class=\"mfs-mark\">impulsionar suas vendas</strong>.",
+          en: "Strategy, high-impact marketing, content, design, and technology working together to <strong class=\"mfs-mark\">strengthen your digital presence</strong>, create more opportunities, and <strong class=\"mfs-mark\">drive your sales</strong>."
+        },
+        "mfs.stage.aria_label": {
+          pt: "Soluções digitais",
+          en: "Digital solutions"
+        },
+        "mfs.cards.trafego_pago.kicker": {
+          pt: "Aquisição de clientes",
+          en: "Customer acquisition"
+        },
+        "mfs.cards.desenvolvimento_web.kicker": {
+          pt: "Tecnologia sob medida",
+          en: "Tailored technology"
+        },
+        "mfs.cards.paginas_venda_captura.kicker": {
+          pt: "Conversão estratégica",
+          en: "Strategic conversion"
+        },
+        "mfs.cards.producao_audiovisual.kicker": {
+          pt: "Conteúdo que impacta",
+          en: "Content that makes an impact"
+        },
+        "mfs.cards.crescimento_perfil.kicker": {
+          pt: "Presença com consistência",
+          en: "Consistent presence"
+        },
+        "mfs.cards.posicionamento_marca.kicker": {
+          pt: "Autoridade e percepção",
+          en: "Authority and perception"
+        },
+        "mfs.cards.identidade_visual.kicker": {
+          pt: "Criatividade para comunicar",
+          en: "Creativity that communicates"
+        },
+        "mfs.cards.estudo_concorrentes.kicker": {
+          pt: "Inteligência de mercado",
+          en: "Market intelligence"
+        },
+        "mfs.cards.suporte_estrategico.kicker": {
+          pt: "Direção contínua",
+          en: "Ongoing direction"
+        },
+        "mfs.cards.trafego_pago.title": {
+          pt: "Anúncios com<br>Tráfego Pago",
+          en: "Ads with<br>Paid Traffic"
+        },
+        "mfs.cards.trafego_pago.text": {
+          pt: "Criamos e otimizamos campanhas no Google, Instagram, Facebook e TikTok para atrair público qualificado e gerar oportunidades reais de venda.",
+          en: "We create and optimize campaigns on Google, Instagram, Facebook, and TikTok to attract qualified audiences and generate real sales opportunities."
+        },
+        "mfs.cards.desenvolvimento_web.title": {
+          pt: "Desenvolvimento<br>Web e Mobile",
+          en: "Web and Mobile<br>Development"
+        },
+        "mfs.cards.desenvolvimento_web.text": {
+          pt: "Desenvolvemos sites, sistemas e experiências mobile com estrutura profissional, navegação clara e tecnologia pronta para crescer com sua operação.",
+          en: "We build websites, systems, and mobile experiences with professional structure, clear navigation, and technology ready to support growth."
+        },
+        "mfs.cards.paginas_venda_captura.title": {
+          pt: "Páginas de Venda<br>e Captura",
+          en: "Sales and Capture<br>Pages"
+        },
+        "mfs.cards.paginas_venda_captura.text": {
+          pt: "Criamos páginas estratégicas para apresentar ofertas, captar leads qualificados e transformar visitantes em oportunidades reais para sua equipe comercial.",
+          en: "We create strategic pages to present offers, capture qualified leads, and turn visitors into real opportunities for your sales team."
+        },
+        "mfs.cards.producao_audiovisual.title": {
+          pt: "Produção<br>Audiovisual",
+          en: "Audiovisual<br>Production"
+        },
+        "mfs.cards.producao_audiovisual.text": {
+          pt: "Captamos, gravamos e editamos vídeos profissionais para redes, anúncios e autoridade, com filmmaker dedicado para dar força visual à sua marca.",
+          en: "We capture, film, and edit professional videos for social media, ads, and authority, with a dedicated filmmaker to strengthen your brand visuals."
+        },
+        "mfs.cards.crescimento_perfil.title": {
+          pt: "Crescimento de<br>Perfil nas Mídias",
+          en: "Social Media Profile<br>Growth"
+        },
+        "mfs.cards.crescimento_perfil.text": {
+          pt: "Organizamos rotina, conteúdo e análise para fortalecer seus perfis digitais, movimentar a audiência e construir presença com consistência e métrica.",
+          en: "We organize routines, content, and analysis to strengthen your digital profiles, move your audience, and build presence with consistency and metrics."
+        },
+        "mfs.cards.posicionamento_marca.title": {
+          pt: "Posicionamento<br>de Marca",
+          en: "Brand<br>Positioning"
+        },
+        "mfs.cards.posicionamento_marca.text": {
+          pt: "Construímos uma comunicação clara para sua empresa ser percebida com mais valor, confiança e autoridade em todos os pontos de contato digitais.",
+          en: "We build clear communication so your company is perceived with more value, trust, and authority across every digital touchpoint."
+        },
+        "mfs.cards.identidade_visual.title": {
+          pt: "Estúdio de Design<br>e Criação",
+          en: "Design and Creative<br>Studio"
+        },
+        "mfs.cards.identidade_visual.text": {
+          pt: "Atuamos como estúdio criativo para apresentações, materiais de comunicação e peças de design alinhadas à marca, com acabamento profissional.",
+          en: "We act as a creative studio for presentations, communication materials, and brand-aligned design pieces with professional finishing."
+        },
+        "mfs.cards.estudo_concorrentes.title": {
+          pt: "Estudo de<br>Mercado",
+          en: "Market<br>Research"
+        },
+        "mfs.cards.estudo_concorrentes.text": {
+          pt: "Analisamos seu nicho, concorrentes e oportunidades de mercado para orientar decisões, ajustar mensagens e aplicar estratégias mais inteligentes.",
+          en: "We analyze your niche, competitors, and market opportunities to guide decisions, refine messages, and apply smarter strategies."
+        },
+        "mfs.cards.suporte_estrategico.title": {
+          pt: "Suporte<br>Estratégico",
+          en: "Strategic<br>Support"
+        },
+        "mfs.cards.suporte_estrategico.text": {
+          pt: "Acompanhamos campanhas, conteúdos e oportunidades de forma contínua para ajustar ações, priorizar melhorias e acelerar o crescimento do negócio.",
+          en: "We continuously monitor campaigns, content, and opportunities to adjust actions, prioritize improvements, and accelerate business growth."
+        },
+        "mfs.nav.aria_label": {
+          pt: "Navegação dos cards",
+          en: "Card navigation"
+        },
+        "mfs.nav.prev.aria_label": {
+          pt: "Card anterior",
+          en: "Previous card"
+        },
+        "mfs.nav.next.aria_label": {
+          pt: "Próximo card",
+          en: "Next card"
+        },
+        "mfs.nav.pause.aria_label": {
+          pt: "Pausar troca automática",
+          en: "Pause automatic rotation"
+        },
+        "mfs.nav.resume.aria_label": {
+          pt: "Retomar troca automática",
+          en: "Resume automatic rotation"
+        },
+        "mf.cta.text": {
+          pt: "AGENDAR CONSULTORIA",
+          en: "BOOK A CONSULTATION"
+        },
+        "mf.cta.aria_label": {
+          pt: "Agendar consultoria",
+          en: "Book a consultation"
+        },
+        "mfs.card.aria.active": {
+          pt: "Card ativo",
+          en: "Active card"
+        },
+        "mfs.card.aria.next": {
+          pt: "Próximo card",
+          en: "Next card"
+        },
+        "mfs.card.aria.prev": {
+          pt: "Card anterior",
+          en: "Previous card"
+        }
+      };
+
+      const register = () => {
+        if (typeof window.MF_REGISTER_I18N === "function") {
+          window.MF_REGISTER_I18N(dictionary);
+          return;
+        }
+
+        window.MF_I18N = Object.assign({}, window.MF_I18N || {}, dictionary);
+
+        if (typeof window.MF_APPLY_I18N === "function") {
+          window.MF_APPLY_I18N(document);
+        }
+      };
+
+      register();
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const currentScript = document.currentScript;
+      const root = currentScript
+        ? currentScript.closest("[data-mf-solucoes-embed]")
+        : document.getElementById("mfs-card-deck");
+
+      if (!root || root.dataset.mfsBound === "1") return;
+
+      const stage = root.querySelector(".mfs-stage");
+      const cards = Array.prototype.slice.call(root.querySelectorAll("[data-mfs-card]"));
+      const prev = root.querySelector(".mfs-prev");
+      const next = root.querySelector(".mfs-next");
+      const pause = root.querySelector(".mfs-pause");
+
+      if (!stage || cards.length < 2 || !prev || !next) return;
+
+      root.dataset.mfsBound = "1";
+
+      const host = root.closest(".mf-embed-slot");
+      if (host) {
+        host.classList.add("mf-embed-slot--full", "mf-embed-slot--under-nav");
+      }
+
+      const mq = window.matchMedia("(max-width: 820px)");
+      const motionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const AUTO_DELAY = 3000;
+      const DESKTOP_SPEED = 58;
+      const DESKTOP_MAX_FRAME = 64;
+
+      let destroyed = false;
+      let active = 0;
+      let mobileDown = false;
+      let mobileDragging = false;
+      let mobilePointerId = null;
+      let mobileStartX = 0;
+      let mobileStartY = 0;
+      let mobileLastX = 0;
+      let mobileDragCard = null;
+      let suppressClickUntil = 0;
+
+      let autoTimer = null;
+      let autoPaused = false;
+      let autoStartedAt = 0;
+      let autoDuration = AUTO_DELAY;
+      let autoRemaining = AUTO_DELAY;
+      let progressRaf = 0;
+
+      let resizeRaf = 0;
+      let desktopRaf = 0;
+      let desktopLastFrame = 0;
+      let desktopOffset = 0;
+      let desktopSequenceWidth = 0;
+      let desktopReady = false;
+      let desktopInView = true;
+      let desktopClones = [];
+      let desktopDown = false;
+      let desktopDragging = false;
+      let desktopGestureRejected = false;
+      let desktopPointerId = null;
+      let desktopStartX = 0;
+      let desktopStartY = 0;
+      let desktopDragBaseOffset = 0;
+      let intersectionObserver = null;
+
+      const cleanup = [];
+      const mobile = () => mq.matches;
+      const reduceMotion = () => motionMq.matches;
+      const norm = (i) => ((i % cards.length) + cards.length) % cards.length;
+      const dist = (i) => norm(i - active);
+      const isConnected = () => typeof root.isConnected === "boolean"
+        ? root.isConnected
+        : document.documentElement.contains(root);
+      const now = () => window.performance && typeof window.performance.now === "function"
+        ? window.performance.now()
+        : Date.now();
+
+      const listen = (target, type, handler, options) => {
+        if (!target || !target.addEventListener) return;
+        target.addEventListener(type, handler, options);
+        cleanup.push(() => target.removeEventListener(type, handler, options));
+      };
+
+      const listenMedia = (query, handler) => {
+        if (query.addEventListener) {
+          query.addEventListener("change", handler);
+          cleanup.push(() => query.removeEventListener("change", handler));
+        } else if (query.addListener) {
+          query.addListener(handler);
+          cleanup.push(() => query.removeListener(handler));
+        }
+      };
+
+      const applyI18n = () => {
+        if (typeof window.MF_APPLY_I18N === "function") {
+          window.MF_APPLY_I18N(root);
+        }
+      };
+
+      const getElement = (target) => {
+        if (!target) return null;
+        return target.nodeType === 1 ? target : target.parentElement;
+      };
+
+      const getCardFromTarget = (target) => {
+        const element = getElement(target);
+        return element && element.closest ? element.closest(".mfs-card") : null;
+      };
+
+      const wrapDesktopOffset = (value) => {
+        if (!desktopSequenceWidth) return 0;
+        const wrapped = value % desktopSequenceWidth;
+        return wrapped < 0 ? wrapped + desktopSequenceWidth : wrapped;
+      };
+
+      const getTrackSpacing = () => {
+        const stageStyles = window.getComputedStyle(stage);
+        const gap = parseFloat(stageStyles.columnGap || stageStyles.gap || "0");
+        const lastCard = cards[cards.length - 1];
+        const cardStyles = lastCard ? window.getComputedStyle(lastCard) : null;
+        const margin = cardStyles ? parseFloat(cardStyles.marginRight || "0") : 0;
+        const safeGap = Number.isFinite(gap) ? gap : 0;
+        const safeMargin = Number.isFinite(margin) ? margin : 0;
+        return Math.max(safeGap, safeMargin, 0);
+      };
+
+      const measureDesktopSequence = () => {
+        const first = cards[0];
+        const last = cards[cards.length - 1];
+        if (!first || !last) return 0;
+
+        const firstRect = first.getBoundingClientRect();
+        const lastRect = last.getBoundingClientRect();
+        const width = lastRect.right - firstRect.left + getTrackSpacing();
+
+        return Number.isFinite(width) && width > 0 ? width : 0;
+      };
+
+      const applyDesktopTransform = () => {
+        if (!desktopReady || !desktopSequenceWidth) return;
+        desktopOffset = wrapDesktopOffset(desktopOffset);
+        const pixelRatio = Math.max(1, Number(window.devicePixelRatio) || 1);
+        const rounded = Math.round(desktopOffset * pixelRatio) / pixelRatio;
+        stage.style.transform = `translate3d(${-rounded}px, 0, 0)`;
+      };
+
+      const cancelDesktopFrame = () => {
+        if (!desktopRaf) return;
+        window.cancelAnimationFrame(desktopRaf);
+        desktopRaf = 0;
+      };
+
+      const canRunDesktop = () => {
+        return !destroyed
+          && isConnected()
+          && !mobile()
+          && !reduceMotion()
+          && desktopReady
+          && desktopInView
+          && !desktopDragging
+          && !document.hidden;
+      };
+
+      const requestDesktopFrame = () => {
+        if (desktopRaf || !canRunDesktop()) return;
+        desktopRaf = window.requestAnimationFrame(runDesktopFrame);
+      };
+
+      function runDesktopFrame(timestamp) {
+        desktopRaf = 0;
+
+        if (!isConnected()) {
+          destroy();
+          return;
+        }
+
+        if (!canRunDesktop()) {
+          desktopLastFrame = 0;
+          return;
+        }
+
+        if (!desktopLastFrame) {
+          desktopLastFrame = timestamp;
+        }
+
+        const elapsed = Math.max(0, Math.min(DESKTOP_MAX_FRAME, timestamp - desktopLastFrame));
+        desktopLastFrame = timestamp;
+
+        if (elapsed > 0) {
+          desktopOffset = wrapDesktopOffset(desktopOffset + (DESKTOP_SPEED * elapsed / 1000));
+          applyDesktopTransform();
+        }
+
+        requestDesktopFrame();
+      }
+
+      const removeDesktopClones = ({ resetOffset = false } = {}) => {
+        desktopReady = false;
+        desktopLastFrame = 0;
+        cancelDesktopFrame();
+        stage.classList.remove("is-marquee", "is-user-dragging");
+        stage.style.removeProperty("transform");
+
+        desktopClones.forEach((clone) => clone.remove());
+        desktopClones = [];
+        desktopSequenceWidth = 0;
+
+        if (resetOffset) {
+          desktopOffset = 0;
+        }
+      };
+
+      const makeDesktopClone = (card) => {
+        const clone = card.cloneNode(true);
+        clone.removeAttribute("data-mfs-card");
+        clone.setAttribute("data-mfs-clone", "true");
+        clone.setAttribute("aria-hidden", "true");
+        clone.setAttribute("tabindex", "-1");
+        clone.removeAttribute("aria-current");
+        clone.removeAttribute("role");
+
+        clone.querySelectorAll("[id]").forEach((element) => {
+          element.removeAttribute("id");
+        });
+
+        clone.querySelectorAll("a, button, input, select, textarea, [tabindex]").forEach((element) => {
+          element.setAttribute("tabindex", "-1");
+        });
+
+        stage.appendChild(clone);
+        desktopClones.push(clone);
+      };
+
+      const clearProgress = () => {
+        if (progressRaf) {
+          window.cancelAnimationFrame(progressRaf);
+          progressRaf = 0;
+        }
+
+        cards.forEach((card) => {
+          const bar = card.querySelector(".mfs-card-progress span");
+          if (!bar) return;
+          bar.style.transition = "none";
+          bar.style.transform = "scaleX(0)";
+        });
+      };
+
+      const getActiveProgress = () => {
+        if (!mobile()) return null;
+        const card = cards[norm(active)];
+        return card ? card.querySelector(".mfs-card-progress span") : null;
+      };
+
+      const setProgress = (value, animate, duration) => {
+        const bar = getActiveProgress();
+        if (!bar) return;
+
+        bar.style.transition = animate ? `transform ${Math.max(0, duration)}ms linear` : "none";
+        bar.style.transform = `scaleX(${Math.max(0, Math.min(1, value))})`;
+      };
+
+      const startProgress = (duration) => {
+        if (!mobile() || reduceMotion()) return;
+        clearProgress();
+        setProgress(0, false, 0);
+
+        progressRaf = window.requestAnimationFrame(() => {
+          progressRaf = 0;
+          setProgress(1, true, duration);
+        });
+      };
+
+      const freezeProgress = () => {
+        if (!mobile() || reduceMotion() || !autoStartedAt) return;
+        const elapsed = Math.max(0, Date.now() - autoStartedAt);
+        const value = autoDuration ? Math.min(1, elapsed / autoDuration) : 0;
+        setProgress(value, false, 0);
+      };
+
+      const resumeProgress = (duration) => {
+        if (!mobile() || reduceMotion()) return;
+
+        if (progressRaf) {
+          window.cancelAnimationFrame(progressRaf);
+        }
+
+        progressRaf = window.requestAnimationFrame(() => {
+          progressRaf = 0;
+          setProgress(1, true, duration);
+        });
+      };
+
+      const canAuto = () => {
+        return mobile()
+          && !autoPaused
+          && !mobileDown
+          && !document.hidden
+          && !reduceMotion()
+          && isConnected();
+      };
+
+      const stopAuto = ({ freeze = false } = {}) => {
+        if (autoTimer) {
+          window.clearTimeout(autoTimer);
+          autoTimer = null;
+        }
+
+        if (freeze && autoStartedAt) {
+          const elapsed = Math.max(0, Date.now() - autoStartedAt);
+          autoRemaining = Math.max(0, autoDuration - elapsed);
+          freezeProgress();
+        }
+      };
+
+      const startAuto = (duration = AUTO_DELAY, { keepProgress = false } = {}) => {
+        stopAuto();
+        if (!canAuto()) return;
+
+        autoDuration = Math.max(0, duration || AUTO_DELAY);
+        autoRemaining = autoDuration;
+        autoStartedAt = Date.now();
+
+        keepProgress ? resumeProgress(autoDuration) : startProgress(autoDuration);
+
+        autoTimer = window.setTimeout(() => {
+          autoTimer = null;
+
+          if (!isConnected()) {
+            destroy();
+            return;
+          }
+
+          goNext({ manual: false });
+        }, autoDuration);
+      };
+
+      const updatePauseButton = () => {
+        if (!pause) return;
+
+        pause.dataset.mfsPaused = autoPaused ? "true" : "false";
+
+        const key = autoPaused ? "mfs.nav.resume.aria_label" : "mfs.nav.pause.aria_label";
+        const fallback = autoPaused ? "Retomar troca automática" : "Pausar troca automática";
+
+        pause.setAttribute("aria-label", fallback);
+        pause.setAttribute("title", fallback);
+        pause.setAttribute("data-i18n-aria-label", key);
+        pause.setAttribute("data-i18n-title", key);
+
+        applyI18n();
+      };
+
+      const resetCards = () => {
+        cards.forEach((card) => {
+          card.classList.remove("is-center", "is-left", "is-right", "is-stack", "is-dragging");
+          card.style.removeProperty("transform");
+          card.style.removeProperty("order");
+          card.removeAttribute("role");
+          card.removeAttribute("tabindex");
+          card.removeAttribute("aria-hidden");
+          card.removeAttribute("aria-current");
+          card.removeAttribute("aria-label");
+          card.removeAttribute("data-i18n-aria-label");
+        });
+      };
+
+      const setDesktop = ({ preserveOffset = true } = {}) => {
+        stopAuto();
+
+        const previousWidth = desktopSequenceWidth;
+        const previousRatio = preserveOffset && previousWidth
+          ? wrapDesktopOffset(desktopOffset) / previousWidth
+          : 0;
+
+        removeDesktopClones({ resetOffset: !preserveOffset });
+        resetCards();
+        clearProgress();
+        active = norm(active);
+        stage.style.removeProperty("height");
+        stage.style.removeProperty("transition");
+
+        cards.forEach((card) => {
+          card.setAttribute("aria-hidden", "false");
+        });
+
+        if (reduceMotion()) {
+          desktopOffset = 0;
+          return;
+        }
+
+        desktopSequenceWidth = measureDesktopSequence();
+        if (!desktopSequenceWidth) {
+          stage.style.removeProperty("transform");
+          return;
+        }
+
+        const viewportWidth = Math.max(root.clientWidth || 0, window.innerWidth || 0);
+        const stageWidth = stage.getBoundingClientRect().width || 0;
+        const copies = Math.max(
+          1,
+          Math.min(6, Math.ceil((viewportWidth + stageWidth) / desktopSequenceWidth))
+        );
+
+        for (let copyIndex = 0; copyIndex < copies; copyIndex += 1) {
+          cards.forEach(makeDesktopClone);
+        }
+
+        desktopOffset = wrapDesktopOffset(previousRatio * desktopSequenceWidth);
+        desktopReady = true;
+        stage.classList.add("is-marquee");
+        applyDesktopTransform();
+        desktopLastFrame = 0;
+        requestDesktopFrame();
+      };
+
+      const setMobile = () => {
+        removeDesktopClones({ resetOffset: false });
+        resetCards();
+        stage.style.removeProperty("transform");
+
+        cards.forEach((card, i) => {
+          const d = dist(i);
+          card.setAttribute("aria-hidden", "true");
+
+          if (d === 0) {
+            card.classList.add("is-center");
+            card.setAttribute("aria-current", "true");
+            card.removeAttribute("aria-hidden");
+            card.setAttribute("aria-label", "Card ativo");
+            card.setAttribute("data-i18n-aria-label", "mfs.card.aria.active");
+          } else if (d === 1) {
+            card.classList.add("is-right");
+            card.setAttribute("role", "button");
+            card.setAttribute("tabindex", "0");
+            card.removeAttribute("aria-hidden");
+            card.setAttribute("aria-label", "Próximo card");
+            card.setAttribute("data-i18n-aria-label", "mfs.card.aria.next");
+          } else if (d === cards.length - 1) {
+            card.classList.add("is-left");
+            card.setAttribute("role", "button");
+            card.setAttribute("tabindex", "0");
+            card.removeAttribute("aria-hidden");
+            card.setAttribute("aria-label", "Card anterior");
+            card.setAttribute("data-i18n-aria-label", "mfs.card.aria.prev");
+          } else {
+            card.classList.add("is-stack");
+          }
+        });
+      };
+
+      const render = ({ restart = true, preserveDesktop = true } = {}) => {
+        if (mobile()) {
+          setMobile();
+          updatePauseButton();
+
+          if (restart) {
+            startAuto(AUTO_DELAY);
+          }
+
+          return;
+        }
+
+        setDesktop({ preserveOffset: preserveDesktop });
+        updatePauseButton();
+      };
+
+      const goNext = ({ manual = true } = {}) => {
+        if (!mobile()) return;
+
+        stopAuto();
+        active = norm(active + 1);
+        render({ restart: false });
+        if (manual) autoRemaining = AUTO_DELAY;
+        startAuto(AUTO_DELAY);
+      };
+
+      const goPrev = ({ manual = true } = {}) => {
+        if (!mobile()) return;
+
+        stopAuto();
+        active = norm(active - 1);
+        render({ restart: false });
+        if (manual) autoRemaining = AUTO_DELAY;
+        startAuto(AUTO_DELAY);
+      };
+
+      const pauseCycle = () => {
+        if (!mobile()) return;
+        stopAuto({ freeze: true });
+      };
+
+      const resumeCycle = () => {
+        if (!mobile() || autoPaused) return;
+        startAuto(autoRemaining || AUTO_DELAY, { keepProgress: true });
+      };
+
+      const releasePointerCapture = (pointerId) => {
+        if (pointerId === null || pointerId === undefined) return;
+
+        try {
+          if (stage.hasPointerCapture && stage.hasPointerCapture(pointerId)) {
+            stage.releasePointerCapture(pointerId);
+          }
+        } catch (error) {}
+      };
+
+      const startMobileDrag = (event) => {
+        const card = getCardFromTarget(event.target);
+        if (!card || !card.classList.contains("is-center")) return;
+        if (event.isPrimary === false) return;
+        if (typeof event.button === "number" && event.button !== 0) return;
+
+        mobileDown = true;
+        mobileDragging = false;
+        mobilePointerId = event.pointerId;
+        mobileStartX = mobileLastX = event.clientX;
+        mobileStartY = event.clientY;
+        mobileDragCard = card;
+        card.classList.add("is-dragging");
+        pauseCycle();
+
+        try {
+          stage.setPointerCapture(mobilePointerId);
+        } catch (error) {}
+      };
+
+      const moveMobileDrag = (event) => {
+        if (!mobileDown || event.pointerId !== mobilePointerId || !mobileDragCard || !mobile()) return;
+
+        const dx = event.clientX - mobileStartX;
+        const dy = event.clientY - mobileStartY;
+        mobileLastX = event.clientX;
+
+        if (!mobileDragging && Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)) {
+          mobileDragging = true;
+        }
+
+        if (!mobileDragging) return;
+
+        event.preventDefault();
+
+        const limited = Math.max(-120, Math.min(120, dx));
+        mobileDragCard.style.transform = `translate(calc(-50% + ${limited}px), -50%) rotate(${limited * .035}deg) scale(.985)`;
+      };
+
+      const endMobileDrag = (event, cancelled = false) => {
+        if (!mobileDown || event.pointerId !== mobilePointerId) return;
+
+        const dx = mobileLastX - mobileStartX;
+        const pointerId = mobilePointerId;
+        mobileDown = false;
+        mobilePointerId = null;
+        releasePointerCapture(pointerId);
+
+        if (!cancelled && mobileDragging && Math.abs(dx) > 42) {
+          suppressClickUntil = Date.now() + 320;
+          dx < 0 ? goNext() : goPrev();
+        } else {
+          render({ restart: false });
+          resumeCycle();
+        }
+
+        mobileDragging = false;
+        mobileDragCard = null;
+      };
+
+      const startDesktopDrag = (event) => {
+        if (reduceMotion() || !desktopReady || event.isPrimary === false) return;
+        if (typeof event.button === "number" && event.button !== 0) return;
+
+        desktopDown = true;
+        desktopDragging = false;
+        desktopGestureRejected = false;
+        desktopPointerId = event.pointerId;
+        desktopStartX = event.clientX;
+        desktopStartY = event.clientY;
+        desktopDragBaseOffset = desktopOffset;
+
+        try {
+          stage.setPointerCapture(desktopPointerId);
+        } catch (error) {}
+      };
+
+      const moveDesktopDrag = (event) => {
+        if (!desktopDown || event.pointerId !== desktopPointerId || mobile() || !desktopReady) return;
+
+        const dx = event.clientX - desktopStartX;
+        const dy = event.clientY - desktopStartY;
+
+        if (!desktopDragging && !desktopGestureRejected) {
+          if (Math.abs(dy) > 9 && Math.abs(dy) > Math.abs(dx)) {
+            desktopGestureRejected = true;
+            return;
+          }
+
+          if (Math.abs(dx) > 6 && Math.abs(dx) > Math.abs(dy)) {
+            desktopDragging = true;
+            desktopDragBaseOffset = desktopOffset + dx;
+            stage.classList.add("is-user-dragging");
+            cancelDesktopFrame();
+          }
+        }
+
+        if (!desktopDragging) return;
+
+        event.preventDefault();
+        desktopOffset = wrapDesktopOffset(desktopDragBaseOffset - dx);
+        applyDesktopTransform();
+      };
+
+      const endDesktopDrag = (event) => {
+        if (!desktopDown || event.pointerId !== desktopPointerId) return;
+
+        const pointerId = desktopPointerId;
+        const wasDragging = desktopDragging;
+        desktopDown = false;
+        desktopDragging = false;
+        desktopGestureRejected = false;
+        desktopPointerId = null;
+        releasePointerCapture(pointerId);
+
+        if (wasDragging) {
+          suppressClickUntil = Date.now() + 260;
+        }
+
+        stage.classList.remove("is-user-dragging");
+        desktopLastFrame = 0;
+        requestDesktopFrame();
+      };
+
+      const cancelActivePointers = () => {
+        if (mobileDown) {
+          const pointerId = mobilePointerId;
+          mobileDown = false;
+          mobileDragging = false;
+          mobilePointerId = null;
+          mobileDragCard = null;
+          releasePointerCapture(pointerId);
+        }
+
+        if (desktopDown) {
+          const pointerId = desktopPointerId;
+          desktopDown = false;
+          desktopDragging = false;
+          desktopGestureRejected = false;
+          desktopPointerId = null;
+          stage.classList.remove("is-user-dragging");
+          releasePointerCapture(pointerId);
+        }
+      };
+
+      const onDesktopWheel = (event) => {
+        if (mobile() || reduceMotion() || !desktopReady || !desktopSequenceWidth) return;
+
+        const modeFactor = event.deltaMode === 1 ? 18 : event.deltaMode === 2 ? window.innerWidth : 1;
+        const deltaX = event.deltaX * modeFactor;
+        const deltaY = event.deltaY * modeFactor;
+        const horizontalIntent = Math.abs(deltaX) > Math.abs(deltaY)
+          || (event.shiftKey && Math.abs(deltaY) > 0);
+
+        if (!horizontalIntent) return;
+
+        const distance = Math.abs(deltaX) > 0 ? deltaX : deltaY;
+        if (Math.abs(distance) < .5) return;
+
+        event.preventDefault();
+        desktopOffset = wrapDesktopOffset(desktopOffset + distance);
+        applyDesktopTransform();
+        desktopLastFrame = now();
+        requestDesktopFrame();
+      };
+
+      const onPointerDown = (event) => {
+        mobile() ? startMobileDrag(event) : startDesktopDrag(event);
+      };
+
+      const onPointerMove = (event) => {
+        if (mobile()) {
+          moveMobileDrag(event);
+        } else {
+          moveDesktopDrag(event);
+        }
+      };
+
+      const onPointerUp = (event) => {
+        if (mobileDown) {
+          endMobileDrag(event, false);
+        }
+
+        if (desktopDown) {
+          endDesktopDrag(event);
+        }
+      };
+
+      const onPointerCancel = (event) => {
+        if (mobileDown) {
+          endMobileDrag(event, true);
+        }
+
+        if (desktopDown) {
+          endDesktopDrag(event);
+        }
+      };
+
+      const onStageClick = (event) => {
+        if (Date.now() < suppressClickUntil) {
+          event.preventDefault();
+          return;
+        }
+
+        if (!mobile()) return;
+
+        const card = getCardFromTarget(event.target);
+        if (!card) return;
+
+        if (card.classList.contains("is-right")) goNext();
+        if (card.classList.contains("is-left")) goPrev();
+      };
+
+      const onStageKeydown = (event) => {
+        if (!mobile()) return;
+
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          goNext();
+          return;
+        }
+
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          goPrev();
+          return;
+        }
+
+        const target = getElement(event.target);
+
+        if ((event.key === "Enter" || event.key === " ") && target && target.classList.contains("is-right")) {
+          event.preventDefault();
+          goNext();
+        }
+
+        if ((event.key === "Enter" || event.key === " ") && target && target.classList.contains("is-left")) {
+          event.preventDefault();
+          goPrev();
+        }
+      };
+
+      const onVisibilityChange = () => {
+        if (!isConnected()) {
+          destroy();
+          return;
+        }
+
+        if (mobile()) {
+          if (document.hidden) {
+            pauseCycle();
+          } else {
+            resumeCycle();
+          }
+          return;
+        }
+
+        if (document.hidden) {
+          desktopLastFrame = 0;
+          cancelDesktopFrame();
+        } else {
+          desktopLastFrame = 0;
+          requestDesktopFrame();
+        }
+      };
+
+      let lastMobile = mobile();
+      let lastWidth = window.innerWidth;
+
+      const onResize = () => {
+        window.cancelAnimationFrame(resizeRaf);
+        resizeRaf = window.requestAnimationFrame(() => {
+          resizeRaf = 0;
+
+          const currentMobile = mobile();
+          const currentWidth = window.innerWidth;
+          const modeChanged = currentMobile !== lastMobile;
+          const widthChanged = Math.abs(currentWidth - lastWidth) > 12;
+
+          if (!modeChanged && !widthChanged) return;
+
+          lastMobile = currentMobile;
+          lastWidth = currentWidth;
+          cancelActivePointers();
+          render({ restart: !autoPaused, preserveDesktop: !modeChanged });
+        });
+      };
+
+      const onMediaChange = () => {
+        lastMobile = mobile();
+        lastWidth = window.innerWidth;
+        cancelActivePointers();
+        render({ restart: !autoPaused, preserveDesktop: false });
+      };
+
+      const onWindowBlur = () => {
+        if (mobileDown) {
+          const fakeEvent = { pointerId: mobilePointerId };
+          endMobileDrag(fakeEvent, true);
+        }
+
+        if (desktopDown) {
+          const fakeEvent = { pointerId: desktopPointerId };
+          endDesktopDrag(fakeEvent);
+        }
+      };
+
+      function destroy() {
+        if (destroyed) return;
+        destroyed = true;
+
+        stopAuto();
+        clearProgress();
+        cancelDesktopFrame();
+        cancelActivePointers();
+
+        if (resizeRaf) {
+          window.cancelAnimationFrame(resizeRaf);
+          resizeRaf = 0;
+        }
+
+        if (intersectionObserver) {
+          intersectionObserver.disconnect();
+          intersectionObserver = null;
+        }
+
+        removeDesktopClones({ resetOffset: true });
+
+        while (cleanup.length) {
+          const remove = cleanup.pop();
+          try {
+            remove();
+          } catch (error) {}
+        }
+
+        if (host) {
+          host.classList.remove("mf-embed-slot--full", "mf-embed-slot--under-nav");
+        }
+
+        root.removeAttribute("data-mfs-bound");
+
+        if (root.__mfsDestroy === destroy) {
+          try {
+            delete root.__mfsDestroy;
+          } catch (error) {
+            root.__mfsDestroy = null;
+          }
+        }
+      }
+
+      root.__mfsDestroy = destroy;
+
+      listen(stage, "wheel", onDesktopWheel, { passive: false });
+      listen(stage, "pointerdown", onPointerDown);
+      listen(stage, "pointermove", onPointerMove, { passive: false });
+      listen(stage, "pointerup", onPointerUp);
+      listen(stage, "pointercancel", onPointerCancel);
+      listen(stage, "lostpointercapture", onPointerCancel);
+      listen(stage, "click", onStageClick);
+      listen(stage, "keydown", onStageKeydown);
+
+      listen(prev, "click", () => goPrev());
+      listen(next, "click", () => goNext());
+
+      if (pause) {
+        listen(pause, "click", () => {
+          if (!mobile()) return;
+
+          autoPaused = !autoPaused;
+          updatePauseButton();
+
+          if (autoPaused) {
+            pauseCycle();
+          } else {
+            resumeCycle();
+          }
+        });
+      }
+
+      listen(document, "visibilitychange", onVisibilityChange);
+      listen(window, "resize", onResize, { passive: true });
+      listen(window, "blur", onWindowBlur);
+      listenMedia(mq, onMediaChange);
+      listenMedia(motionMq, onMediaChange);
+
+      if ("IntersectionObserver" in window) {
+        intersectionObserver = new IntersectionObserver((entries) => {
+          const entry = entries && entries[0];
+          desktopInView = !entry || entry.isIntersecting || entry.intersectionRatio > 0;
+
+          if (desktopInView) {
+            desktopLastFrame = 0;
+            requestDesktopFrame();
+          } else {
+            desktopLastFrame = 0;
+            cancelDesktopFrame();
+          }
+        }, {
+          root: null,
+          rootMargin: "220px 0px",
+          threshold: 0
+        });
+
+        intersectionObserver.observe(root);
+      }
+
+      render({ restart: true, preserveDesktop: false });
+    })();
+  </script>
+</div></section>
+    <section id="mf-transformacao-digital" class="mf-embed-slot" data-embed="transformacao-digital"><section id="mf-transformacao-digital" class="mf-embed-slot" data-embed="transformacao-digital"><!-- EMBED: TRANSFORMAÇÃO DIGITAL -->
+<div id="mfr-results" class="mfr-embed" data-mf-results-embed>
+  <style>
+    #mf-transformacao-digital {
+      background-image:
+        linear-gradient(135deg, rgba(255, 255, 255, .88) 0%, rgba(247, 247, 255, .76) 48%, rgba(255, 255, 255, .82) 100%),
+        url("https://images.unsplash.com/photo-1765046255478-55efc763637c?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .mf-embed-slot.mf-embed-slot--mfr-full {
+      width: 100vw;
+      max-width: none;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      border-radius: 0;
+    }
+
+    #mfr-results,
+    #mfr-results * {
+      box-sizing: border-box;
+    }
+
+    #mfr-results {
+      --mfr-ink: #151426;
+      --mfr-muted: #211C4A;
+      --mfr-orange: #5945E8;
+      --mfr-orange-dark: #3726AF;
+      --mfr-paper: #F7F7FF;
+      --mfr-white: #FFFFFF;
+      --mfr-border: #E5E7FF;
+      position: relative;
+      z-index: 0;
+      width: 100%;
+      min-width: 0;
+      margin: 0;
+      padding: 64px 0 74px;
+      overflow: hidden;
+      color: var(--mfr-ink);
+      font-family: Manrope, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: transparent;
+    }
+
+    #mfr-results button,
+    #mfr-results a {
+      font: inherit;
+    }
+
+    #mfr-results .mfr-shell {
+      width: calc(100% - 32px);
+      max-width: 1344px;
+      margin: 0 auto;
+    }
+
+    #mfr-results .mfr-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas: "copy" "panel" "cta";
+      align-items: center;
+      gap: 36px;
+      min-width: 0;
+    }
+
+    #mfr-results .mfr-copy {
+      grid-area: copy;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #mfr-results .mfr-title {
+      margin: 0;
+      padding-right: .08em;
+      color: var(--mfr-ink);
+      font-size: 42px;
+      font-size: clamp(32px, 9.2vw, 58px);
+      line-height: 1.03;
+      letter-spacing: -.055em;
+      font-weight: 900;
+    }
+
+    #mfr-results .mfr-title .mfr-title-line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    #mfr-results .mfr-gradient-text {
+      display: inline;
+      padding-right: .08em;
+      color: var(--mfr-orange);
+      -webkit-text-fill-color: currentColor;
+    }
+
+    #mfr-results .mfr-text {
+      max-width: 660px;
+      margin: 24px auto 0;
+      color: var(--mfr-muted);
+      font-size: 17px;
+      font-size: clamp(16.5px, 4.2vw, 18.5px);
+      line-height: 1.68;
+      font-weight: 700;
+      letter-spacing: -.02em;
+    }
+
+    #mfr-results .mfr-mark {
+      color: var(--mfr-ink);
+      font-weight: 900;
+      border-bottom: 0;
+    }
+
+    #mfr-results .mfr-cta-wrap {
+      grid-area: cta;
+      margin: -6px 0 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    #mfr-results .mf-cta-neon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 58px;
+      padding: 0 25px;
+      border-radius: 999px;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      transition:
+        transform 0.22s ease,
+        background 0.22s ease,
+        box-shadow 0.22s ease,
+        filter 0.22s ease;
+    }
+
+    #mfr-results .mf-cta-neon svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.22s ease;
+    }
+
+    #mfr-results .mf-cta-neon:hover svg {
+      transform: translateX(3px);
+    }
+
+    #mfr-results .mf-cta-neon:focus-visible {
+      outline: 3px solid rgba(89, 69, 232, 0.28);
+      outline-offset: 4px;
+    }
+
+    #mfr-results .mf-cta-neon:active {
+      transform: scale(0.98);
+    }
+
+    #mfr-results .mf-cta-neon--light {
+      border: 1px solid #5945E8;
+      color: #FFFFFF;
+      background:
+        linear-gradient(
+          135deg,
+          #00D9C8 0%,
+          #5945E8 58%,
+          #3726AF 100%
+        );
+      text-shadow: 0 1px 10px rgba(55, 38, 175, 0.24);
+      box-shadow:
+        0 10px 24px rgba(89, 69, 232, 0.24),
+        0 0 0 rgba(89, 69, 232, 0);
+    }
+
+    #mfr-results .mf-cta-neon--light:hover {
+      transform: translateY(-2px) scale(1.015);
+      filter: saturate(1.08) brightness(1.03);
+      box-shadow:
+        0 14px 32px rgba(89, 69, 232, 0.30),
+        0 0 28px rgba(89, 69, 232, 0.18);
+    }
+
+    #mfr-results .mfr-state-icon path,
+    #mfr-results .mfr-state-icon circle {
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #mfr-results .mfr-state-icon path,
+    #mfr-results .mfr-state-icon circle { stroke-width: 2.3; }
+    #mfr-results .mfr-state-icon path,
+    #mfr-results .mfr-state-icon circle { stroke-width: 2.3; }
+
+    #mfr-results .mfr-panel {
+      grid-area: panel;
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 24px 18px 22px;
+      overflow: hidden;
+      border: 1px solid var(--mfr-border);
+      border-radius: 30px;
+      color: var(--mfr-ink);
+      background: rgba(255, 255, 255, .68);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: none;
+    }
+
+    #mfr-results .mfr-panel-head {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px 10px;
+    }
+
+    #mfr-results .mfr-active-metric {
+      width: 100%;
+      max-width: 440px;
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px;
+      color: var(--mfr-ink);
+      font-size: 20px;
+      font-size: clamp(18px, 4.8vw, 23px);
+      line-height: 1.14;
+      font-weight: 900;
+      letter-spacing: -.035em;
+      text-align: center;
+      text-transform: uppercase;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity .16s ease, transform .16s ease;
+    }
+
+    #mfr-results.is-metric-changing .mfr-active-metric,
+    #mfr-results.is-metric-changing .mfr-score-number {
+      opacity: .18;
+      transform: translateY(4px);
+    }
+
+    #mfr-results .mfr-compare {
+      width: 100%;
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 12px;
+    }
+
+    #mfr-results .mfr-state-card {
+      min-width: 0;
+      min-height: 236px;
+      display: flex;
+      flex-direction: column;
+      padding: 17px;
+      overflow: hidden;
+      border: 1px solid var(--mfr-border);
+      border-radius: 22px;
+      background: #FFFFFF;
+    }
+
+    #mfr-results .mfr-state-card--after {
+      border-color: rgba(89, 69, 232, .35);
+      background: #F7F7FF;
+    }
+
+    #mfr-results .mfr-state-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    #mfr-results .mfr-state-label {
+      min-height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+      border: 1px solid var(--mfr-border);
+      border-radius: 999px;
+      color: var(--mfr-muted);
+      background: #FFFFFF;
+      font-size: 9.5px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .085em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    #mfr-results .mfr-state-card--after .mfr-state-label {
+      color: var(--mfr-orange-dark);
+      border-color: rgba(89, 69, 232, .28);
+    }
+
+    #mfr-results .mfr-state-icon {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--mfr-border);
+      border-radius: 12px;
+      color: var(--mfr-ink);
+      background: #FFFFFF;
+    }
+
+    #mfr-results .mfr-state-card--after .mfr-state-icon {
+      color: #FFFFFF;
+      border-color: var(--mfr-orange);
+      background: var(--mfr-orange);
+    }
+
+    #mfr-results .mfr-state-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    #mfr-results .mfr-estimate-label,
+    #mfr-results .mfr-state-caption,
+    #mfr-results .mfr-data-note {
+      color: var(--mfr-muted);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    #mfr-results .mfr-estimate-label {
+      display: block;
+      width: 100%;
+      min-height: 17px;
+      margin-top: auto;
+      font-size: 10.5px;
+      line-height: 1.25;
+    }
+
+    #mfr-results .mfr-score-line {
+      width: 100%;
+      margin-top: 7px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 3px;
+      color: var(--mfr-ink);
+      text-align: center;
+    }
+
+    #mfr-results .mfr-state-card--after .mfr-score-line,
+    #mfr-results .mfr-state-card--after .mfr-score-unit {
+      color: var(--mfr-orange-dark);
+    }
+
+    #mfr-results .mfr-score-number {
+      display: inline-block;
+      font-size: 48px;
+      font-size: clamp(44px, 10vw, 64px);
+      line-height: .86;
+      font-weight: 900;
+      letter-spacing: -.075em;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity .16s ease, transform .16s ease;
+    }
+
+    #mfr-results .mfr-score-unit {
+      margin-bottom: 4px;
+      color: var(--mfr-ink);
+      font-size: 17px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -.03em;
+    }
+
+    #mfr-results .mfr-state-caption {
+      display: block;
+      width: 100%;
+      min-height: 17px;
+      margin: 8px 0 0;
+      font-size: 10.5px;
+      line-height: 1.25;
+    }
+
+    #mfr-results .mfr-state-progress {
+      position: relative;
+      width: 100%;
+      height: 8px;
+      margin-top: auto;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #E5E7FF;
+    }
+
+    #mfr-results .mfr-state-progress-fill {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      transform: scaleX(var(--mfr-scale, .20));
+      transform-origin: left center;
+      transition: transform .42s ease;
+    }
+
+    #mfr-results .mfr-state-progress-fill--without { background: #151426; }
+    #mfr-results .mfr-state-progress-fill--with { background: var(--mfr-orange); }
+
+    #mfr-results .mfr-metrics-viewport {
+      width: 100%;
+      margin-top: 15px;
+      overflow: hidden;
+    }
+
+    #mfr-results .mfr-metrics {
+      width: 100%;
+      display: flex;
+      align-items: stretch;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 2px 18px 8px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    #mfr-results .mfr-metrics::-webkit-scrollbar { display: none; }
+
+    #mfr-results .mfr-data-note {
+      width: 100%;
+      margin: 5px auto 0;
+      font-size: 9.5px;
+      line-height: 1.4;
+      letter-spacing: .005em;
+    }
+
+    #mfr-results .mfr-metric {
+      flex: 0 0 154px;
+      min-width: 154px;
+      min-height: 58px;
+      margin-right: 8px;
+      padding: 8px 11px;
+      border: 1px solid var(--mfr-border);
+      border-radius: 15px;
+      background: #FFFFFF;
+      color: var(--mfr-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10.5px;
+      line-height: 1.22;
+      font-weight: 900;
+      letter-spacing: -.012em;
+      text-align: center;
+      transition: transform .18s ease, opacity .18s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    #mfr-results .mfr-metric-label {
+      display: block;
+      width: 100%;
+      line-height: 1.22;
+      text-align: center;
+      white-space: normal;
+    }
+
+    #mfr-results .mfr-metric:last-child { margin-right: 0; }
+
+    #mfr-results .mfr-metric:hover,
+    #mfr-results .mfr-metric:focus {
+      color: var(--mfr-ink);
+      transform: translateY(-1px);
+    }
+
+    #mfr-results .mfr-metric[aria-selected="true"] {
+      border-color: var(--mfr-orange);
+      background: #E5E7FF;
+      color: var(--mfr-orange-dark);
+      transform: none;
+      box-shadow: none;
+    }
+
+    #mfr-results .mfr-metric[aria-selected="true"]:focus,
+    #mfr-results .mfr-metric[aria-selected="true"]:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
+
+    #mfr-results .mfr-metric:focus {
+      outline: 3px solid rgba(89, 69, 232, .20);
+      outline-offset: 2px;
+    }
+
+    #mfr-results .mfr-sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 959px) {
+      #mf-transformacao-digital {
+        background-position: 20% center;
+      }
+    }
+
+    @media (min-width: 520px) {
+      #mfr-results { padding-top: 74px; padding-bottom: 84px; }
+      #mfr-results .mfr-panel { padding: 23px 20px 19px; }
+      #mfr-results .mfr-compare { gap: 14px; }
+      #mfr-results .mfr-state-card { min-height: 246px; padding: 19px; }
+      #mfr-results .mfr-metric { flex-basis: 166px; min-width: 166px; min-height: 60px; }
+    }
+
+    @media (min-width: 960px) {
+      #mfr-results { padding-top: 96px; padding-bottom: 100px; }
+      #mfr-results .mfr-shell { width: calc(100% - 48px); }
+      #mfr-results .mfr-layout {
+        grid-template-columns: minmax(0, 1.08fr) minmax(450px, .92fr);
+        grid-template-areas: "copy panel" "cta panel";
+        column-gap: 70px;
+        row-gap: 30px;
+      }
+      #mfr-results .mfr-copy { margin: 0; text-align: left; }
+      #mfr-results .mfr-title { font-size: 64px; font-size: clamp(52px, 4.85vw, 72px); }
+      #mfr-results .mfr-text { margin-left: 0; margin-right: 0; font-size: 18px; font-size: clamp(17.5px, 1.35vw, 19.5px); }
+      #mfr-results .mfr-cta-wrap { align-self: start; justify-content: flex-start; margin-top: 0; }
+      #mfr-results .mfr-panel { max-width: 560px; margin: 0 0 0 auto; }
+      #mfr-results .mfr-active-metric { font-size: 22px; }
+    }
+
+    @media (max-width: 359px) {
+      #mfr-results .mfr-shell { width: calc(100% - 24px); }
+      #mfr-results .mfr-title { font-size: 29px; letter-spacing: -.06em; }
+      #mfr-results .mfr-panel { padding-left: 12px; padding-right: 12px; border-radius: 25px; }
+      #mfr-results .mfr-panel-head { min-height: 60px; padding: 0 6px 7px; }
+      #mfr-results .mfr-active-metric { font-size: 17px; }
+      #mfr-results .mfr-compare { gap: 8px; }
+      #mfr-results .mfr-state-card { min-height: 224px; padding: 13px 12px; border-radius: 20px; }
+      #mfr-results .mfr-state-label { min-height: 25px; padding: 0 8px; font-size: 8.5px; }
+      #mfr-results .mfr-state-icon { width: 30px; height: 30px; border-radius: 10px; }
+      #mfr-results .mfr-score-number { font-size: 40px; }
+      #mfr-results .mfr-metric { flex-basis: 146px; min-width: 146px; padding-left: 8px; padding-right: 8px; font-size: 10px; }
+      #mfr-results .mf-cta-neon { width: 100%; padding-left: 18px; padding-right: 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #mfr-results .mf-cta-neon,
+      #mfr-results .mf-cta-neon svg {
+        transition: none !important;
+      }
+
+      #mfr-results *,
+      #mfr-results *::before,
+      #mfr-results *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+
+
+  <div class="mfr-shell">
+    <section class="mfr-layout" aria-label="Transformação digital e resultados MindFly" data-i18n-aria-label="mfr.section.aria_label">
+      <div class="mfr-copy">
+        <h2 class="mfr-title" data-i18n-html="mfr.copy.title"><span class="mfr-title-line">Transformação digital</span><span class="mfr-title-line mfr-gradient-text">para crescer</span></h2>
+        <p class="mfr-text" data-i18n-html="mfr.copy.text">Sua empresa cresce quando <strong class="mfr-mark">estratégia, tecnologia, marketing, conteúdo e posicionamento</strong> avançam na mesma direção. Construímos uma transformação digital integrada, na qual <strong class="mfr-mark">cada frente fortalece a próxima</strong> e converte inovação em resultados reais, consistentes e mensuráveis.</p>
+      </div>
+
+      <div class="mfr-panel" data-mfr-panel aria-label="Comparativo interativo de desempenho" data-i18n-aria-label="mfr.chart.aria_label">
+        <div class="mfr-panel-head">
+          <div class="mfr-active-metric" data-mfr-active-metric data-i18n="mfr.metrics.0">Mensagens no WhatsApp</div>
+        </div>
+
+        <div class="mfr-compare" id="mfr-plot-panel" role="tabpanel" aria-live="off">
+          <article class="mfr-state-card mfr-state-card--before">
+            <div class="mfr-state-head">
+              <span class="mfr-state-label" data-i18n="mfr.compare.before">Antes</span>
+              <span class="mfr-state-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M5 8h14M5 12h9M5 16h6"></path>
+                </svg>
+              </span>
+            </div>
+
+            <span class="mfr-estimate-label" data-i18n="mfr.compare.approximately">Aproximadamente:</span>
+
+            <div class="mfr-score-line">
+              <strong class="mfr-score-number" data-mfr-value="without">18</strong>
+              <span class="mfr-score-unit">%</span>
+            </div>
+
+            <span class="mfr-state-caption" data-i18n="mfr.chart.without">Sem MindFly</span>
+
+            <div class="mfr-state-progress" role="progressbar" aria-label="Sem MindFly" data-i18n-aria-label="mfr.chart.without" aria-valuemin="0" aria-valuemax="100" aria-valuenow="18">
+              <span class="mfr-state-progress-fill mfr-state-progress-fill--without" data-mfr-bar="without" style="--mfr-scale:.18"></span>
+            </div>
+          </article>
+
+          <article class="mfr-state-card mfr-state-card--after">
+            <div class="mfr-state-head">
+              <span class="mfr-state-label" data-i18n="mfr.compare.after">Depois</span>
+              <span class="mfr-state-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M5 17l5-5 3 3 6-8"></path>
+                  <path d="M14 7h5v5"></path>
+                </svg>
+              </span>
+            </div>
+
+            <span class="mfr-estimate-label" data-i18n="mfr.compare.approximately">Aproximadamente:</span>
+
+            <div class="mfr-score-line">
+              <strong class="mfr-score-number" data-mfr-value="with">82</strong>
+              <span class="mfr-score-unit">%</span>
+            </div>
+
+            <span class="mfr-state-caption" data-i18n="mfr.chart.with">Com MindFly</span>
+
+            <div class="mfr-state-progress" role="progressbar" aria-label="Com MindFly" data-i18n-aria-label="mfr.chart.with" aria-valuemin="0" aria-valuemax="100" aria-valuenow="82">
+              <span class="mfr-state-progress-fill mfr-state-progress-fill--with" data-mfr-bar="with" style="--mfr-scale:.82"></span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="mfr-metrics-viewport">
+          <div class="mfr-metrics" data-mfr-strip role="tablist" aria-label="Indicadores do gráfico" data-i18n-aria-label="mfr.metrics.aria_label">
+            <button class="mfr-metric" type="button" role="tab" aria-controls="mfr-plot-panel" data-mfr-metric="0" aria-selected="true" tabindex="0"><span class="mfr-metric-label" data-i18n-html="mfr.metrics.nav.0">Mensagens no<br>WhatsApp</span></button>
+            <button class="mfr-metric" type="button" role="tab" aria-controls="mfr-plot-panel" data-mfr-metric="1" aria-selected="false" tabindex="-1"><span class="mfr-metric-label" data-i18n-html="mfr.metrics.nav.1">Geração de<br>leads</span></button>
+            <button class="mfr-metric" type="button" role="tab" aria-controls="mfr-plot-panel" data-mfr-metric="2" aria-selected="false" tabindex="-1"><span class="mfr-metric-label" data-i18n-html="mfr.metrics.nav.2">Agendamentos<br>de serviços</span></button>
+            <button class="mfr-metric" type="button" role="tab" aria-controls="mfr-plot-panel" data-mfr-metric="3" aria-selected="false" tabindex="-1"><span class="mfr-metric-label" data-i18n-html="mfr.metrics.nav.3">Conversões<br>no site</span></button>
+            <button class="mfr-metric" type="button" role="tab" aria-controls="mfr-plot-panel" data-mfr-metric="4" aria-selected="false" tabindex="-1"><span class="mfr-metric-label" data-i18n-html="mfr.metrics.nav.4">Tráfego<br>orgânico</span></button>
+            <button class="mfr-metric" type="button" role="tab" aria-controls="mfr-plot-panel" data-mfr-metric="5" aria-selected="false" tabindex="-1"><span class="mfr-metric-label" data-i18n-html="mfr.metrics.nav.5">Alcance de público<br>qualificado</span></button>
+            <button class="mfr-metric" type="button" role="tab" aria-controls="mfr-plot-panel" data-mfr-metric="6" aria-selected="false" tabindex="-1"><span class="mfr-metric-label" data-i18n-html="mfr.metrics.nav.6">Visibilidade em<br>pesquisas com IA</span></button>
+            <button class="mfr-metric" type="button" role="tab" aria-controls="mfr-plot-panel" data-mfr-metric="7" aria-selected="false" tabindex="-1"><span class="mfr-metric-label" data-i18n-html="mfr.metrics.nav.7">Avaliações<br>no Google</span></button>
+            <button class="mfr-metric" type="button" role="tab" aria-controls="mfr-plot-panel" data-mfr-metric="8" aria-selected="false" tabindex="-1"><span class="mfr-metric-label" data-i18n-html="mfr.metrics.nav.8">Oportunidades<br>comerciais</span></button>
+          </div>
+        </div>
+
+        <p class="mfr-data-note" data-i18n="mfr.data.note">dados baseados em nossos últimos clientes</p>
+
+        <span class="mfr-sr-only" aria-live="polite" data-mfr-status></span>
+      </div>
+
+      <div class="mfr-cta-wrap">
+        <a
+          class="mf-cta-neon mf-cta-neon--light"
+          href="#mf-contato"
+          aria-label="Agendar consultoria"
+          data-i18n-aria-label="mf.cta.aria_label"
+        >
+          <span data-i18n="mf.cta.text">AGENDAR CONSULTORIA</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (() => {
+      const dictionary = {
+        "mfr.section.aria_label": {
+          pt: "Transformação digital e resultados MindFly",
+          en: "MindFly digital transformation and results"
+        },
+        "mfr.copy.title": {
+          pt: "<span class=\"mfr-title-line\">Transformação digital</span><span class=\"mfr-title-line mfr-gradient-text\">para crescer</span>",
+          en: "<span class=\"mfr-title-line\">Digital transformation</span><span class=\"mfr-title-line mfr-gradient-text\">built for growth</span>"
+        },
+        "mfr.copy.text": {
+          pt: "Sua empresa cresce quando <strong class=\"mfr-mark\">estratégia, tecnologia, marketing, conteúdo e posicionamento</strong> avançam na mesma direção. Construímos uma transformação digital integrada, na qual <strong class=\"mfr-mark\">cada frente fortalece a próxima</strong> e converte inovação em resultados reais, consistentes e mensuráveis.",
+          en: "Your company grows when <strong class=\"mfr-mark\">strategy, technology, marketing, content, and positioning</strong> move in the same direction. We build an integrated digital transformation where <strong class=\"mfr-mark\">each capability strengthens the next</strong> and turns innovation into real, consistent, measurable results."
+        },
+        "mf.cta.text": {
+          pt: "AGENDAR CONSULTORIA",
+          en: "BOOK A CONSULTATION"
+        },
+        "mf.cta.aria_label": {
+          pt: "Agendar consultoria",
+          en: "Book a consultation"
+        },
+        "mfr.chart.aria_label": {
+          pt: "Comparativo interativo de desempenho",
+          en: "Interactive performance comparison"
+        },
+        "mfr.chart.without": {
+          pt: "Sem MindFly",
+          en: "Without MindFly"
+        },
+        "mfr.chart.with": {
+          pt: "Com MindFly",
+          en: "With MindFly"
+        },
+        "mfr.compare.before": {
+          pt: "Antes",
+          en: "Before"
+        },
+        "mfr.compare.after": {
+          pt: "Depois",
+          en: "After"
+        },
+        "mfr.compare.approximately": {
+          pt: "Aproximadamente:",
+          en: "Approximately:"
+        },
+        "mfr.metrics.aria_label": {
+          pt: "Indicadores do gráfico",
+          en: "Chart indicators"
+        },
+        "mfr.metrics.nav.0": { pt: "Mensagens no<br>WhatsApp", en: "WhatsApp<br>messages" },
+        "mfr.metrics.nav.1": { pt: "Geração de<br>leads", en: "Lead<br>generation" },
+        "mfr.metrics.nav.2": { pt: "Agendamentos<br>de serviços", en: "Service<br>bookings" },
+        "mfr.metrics.nav.3": { pt: "Conversões<br>no site", en: "Website<br>conversions" },
+        "mfr.metrics.nav.4": { pt: "Tráfego<br>orgânico", en: "Organic<br>traffic" },
+        "mfr.metrics.nav.5": { pt: "Alcance de público<br>qualificado", en: "Qualified audience<br>reach" },
+        "mfr.metrics.nav.6": { pt: "Visibilidade em<br>pesquisas com IA", en: "Visibility in<br>AI search" },
+        "mfr.metrics.nav.7": { pt: "Avaliações<br>no Google", en: "Google<br>reviews" },
+        "mfr.metrics.nav.8": { pt: "Oportunidades<br>comerciais", en: "Sales<br>opportunities" },
+        "mfr.data.note": {
+          pt: "dados baseados em nossos últimos clientes",
+          en: "data based on our most recent clients"
+        },
+        "mfr.metrics.0": { pt: "Mensagens no WhatsApp", en: "WhatsApp messages" },
+        "mfr.metrics.1": { pt: "Geração de leads", en: "Lead generation" },
+        "mfr.metrics.2": { pt: "Agendamentos de serviços", en: "Service bookings" },
+        "mfr.metrics.3": { pt: "Conversões no site", en: "Website conversions" },
+        "mfr.metrics.4": { pt: "Tráfego orgânico", en: "Organic traffic" },
+        "mfr.metrics.5": { pt: "Alcance de público qualificado", en: "Qualified audience reach" },
+        "mfr.metrics.6": { pt: "Visibilidade em pesquisas com IA", en: "Visibility in AI search" },
+        "mfr.metrics.7": { pt: "Avaliações no Google", en: "Google reviews" },
+        "mfr.metrics.8": { pt: "Oportunidades comerciais", en: "Sales opportunities" }
+      };
+
+      window.MFR_I18N = dictionary;
+
+      if (typeof window.MF_REGISTER_I18N === "function") {
+        window.MF_REGISTER_I18N(dictionary);
+      } else {
+        window.MF_I18N = Object.assign({}, window.MF_I18N || {}, dictionary);
+
+        if (typeof window.MF_APPLY_I18N === "function") {
+          window.MF_APPLY_I18N(document);
+        }
+      }
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var currentScript = document.currentScript;
+      var root = currentScript && currentScript.parentNode;
+
+      while (root && root.nodeType === 1) {
+        if (root.hasAttribute ? root.hasAttribute('data-mf-results-embed') : root.getAttribute('data-mf-results-embed') !== null) break;
+        root = root.parentNode;
+      }
+
+      if (!root || root.nodeType !== 1) root = document.getElementById('mfr-results');
+      if (!root || root.getAttribute('data-mfr-bound') === '1') return;
+
+      var metricButtons = root.querySelectorAll('[data-mfr-metric]');
+      var activeMetricLabel = root.querySelector('[data-mfr-active-metric]');
+      var withoutBar = root.querySelector('[data-mfr-bar="without"]');
+      var withBar = root.querySelector('[data-mfr-bar="with"]');
+      var withoutValue = root.querySelector('[data-mfr-value="without"]');
+      var withValue = root.querySelector('[data-mfr-value="with"]');
+      var progressTracks = root.querySelectorAll('[role="progressbar"]');
+      var metricStrip = root.querySelector('[data-mfr-strip]');
+      var panel = root.querySelector('[data-mfr-panel]');
+      var status = root.querySelector('[data-mfr-status]');
+
+      if (!metricButtons || metricButtons.length !== 9 || !activeMetricLabel || !withoutBar || !withBar || !withoutValue || !withValue || !progressTracks || progressTracks.length !== 2 || !metricStrip || !panel) return;
+
+      root.setAttribute('data-mfr-bound', '1');
+
+      var host = root.parentNode;
+      while (host && host.nodeType === 1 && String(host.className).indexOf('mf-embed-slot') === -1) {
+        host = host.parentNode;
+      }
+      if (host && String(host.className).indexOf('mf-embed-slot--mfr-full') === -1) {
+        host.className += ' mf-embed-slot--mfr-full';
+      }
+
+      var metrics = [
+        { without: 18, withMindFly: 82 },
+        { without: 20, withMindFly: 85 },
+        { without: 16, withMindFly: 76 },
+        { without: 22, withMindFly: 80 },
+        { without: 24, withMindFly: 78 },
+        { without: 28, withMindFly: 88 },
+        { without: 12, withMindFly: 69 },
+        { without: 18, withMindFly: 72 },
+        { without: 17, withMindFly: 84 }
+      ];
+
+      var AUTO_DELAY = 4000;
+      var activeMetric = 0;
+      var labelTimer = 0;
+      var autoTimer = 0;
+      var destroyed = false;
+      var cleanup = [];
+      var raf = window.requestAnimationFrame || function (callback) { return window.setTimeout(callback, 16); };
+
+      function listen(target, type, handler) {
+        if (!target || !target.addEventListener) return;
+        target.addEventListener(type, handler, false);
+        cleanup.push(function () { target.removeEventListener(type, handler, false); });
+      }
+
+      function getLanguage() {
+        var lang;
+        if (window.MF_ACTIVE_LANG === 'en') return 'en';
+        lang = String(document.documentElement.getAttribute('lang') || 'pt-BR').toLowerCase();
+        return lang.indexOf('en') === 0 ? 'en' : 'pt';
+      }
+
+      function translate(key) {
+        var dictionary = window.MFR_I18N || {};
+        var item = dictionary[key];
+        var lang = getLanguage();
+        return item && typeof item[lang] === 'string' ? item[lang] : key;
+      }
+
+      function applyTranslations() {
+        if (typeof window.MF_APPLY_I18N === 'function') window.MF_APPLY_I18N(root);
+      }
+
+      function clampIndex(index) {
+        var length = metrics.length;
+        index = Number(index) || 0;
+        return ((index % length) + length) % length;
+      }
+
+
+      function stopAuto() {
+        if (autoTimer) {
+          window.clearTimeout(autoTimer);
+          autoTimer = 0;
+        }
+      }
+
+      function canAutoRun() {
+        var reduceMotion = false;
+        if (window.matchMedia) {
+          try { reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (ignore) {}
+        }
+        return !destroyed && !document.hidden && !reduceMotion;
+      }
+
+      function scheduleAuto() {
+        stopAuto();
+        if (!canAutoRun()) return;
+        autoTimer = window.setTimeout(function () {
+          autoTimer = 0;
+          setMetric(activeMetric + 1, { announce: false, scroll: true });
+          scheduleAuto();
+        }, AUTO_DELAY);
+      }
+
+      function scrollMetricIntoView(index) {
+        var button = metricButtons[index];
+        var desired;
+        var maxScroll;
+        if (!button || !metricStrip) return;
+        desired = button.offsetLeft - ((metricStrip.clientWidth - button.offsetWidth) / 2);
+        maxScroll = Math.max(0, metricStrip.scrollWidth - metricStrip.clientWidth);
+        metricStrip.scrollLeft = Math.max(0, Math.min(maxScroll, desired));
+      }
+
+      function setMetric(index, options) {
+        var settings = options || {};
+        var safeIndex = clampIndex(index);
+        var metric = metrics[safeIndex];
+        var key = 'mfr.metrics.' + safeIndex;
+        var i;
+        var selected;
+
+        activeMetric = safeIndex;
+        if (labelTimer) window.clearTimeout(labelTimer);
+
+        root.className += root.className.indexOf('is-metric-changing') === -1 ? ' is-metric-changing' : '';
+        labelTimer = window.setTimeout(function () {
+          if (destroyed) return;
+          activeMetricLabel.setAttribute('data-i18n', key);
+          activeMetricLabel.innerHTML = '';
+          activeMetricLabel.appendChild(document.createTextNode(translate(key)));
+          withoutValue.innerHTML = String(metric.without);
+          withValue.innerHTML = String(metric.withMindFly);
+          if (withoutBar.style.setProperty) {
+            withoutBar.style.setProperty('--mfr-scale', String(metric.without / 100));
+            withBar.style.setProperty('--mfr-scale', String(metric.withMindFly / 100));
+          } else {
+            withoutBar.style.width = String(metric.without) + '%';
+            withBar.style.width = String(metric.withMindFly) + '%';
+            withoutBar.style.right = 'auto';
+            withBar.style.right = 'auto';
+          }
+          progressTracks[0].setAttribute('aria-valuenow', String(metric.without));
+          progressTracks[1].setAttribute('aria-valuenow', String(metric.withMindFly));
+          applyTranslations();
+          raf(function () {
+            root.className = root.className.replace(/\s*is-metric-changing/g, '');
+          });
+        }, 70);
+
+        for (i = 0; i < metricButtons.length; i += 1) {
+          selected = i === safeIndex;
+          metricButtons[i].setAttribute('aria-selected', selected ? 'true' : 'false');
+          metricButtons[i].setAttribute('tabindex', selected ? '0' : '-1');
+        }
+
+        if (settings.scroll !== false) raf(function () { scrollMetricIntoView(safeIndex); });
+        if (settings.announce && status) status.innerHTML = translate(key);
+        if (settings.focus && metricButtons[safeIndex] && metricButtons[safeIndex].focus) metricButtons[safeIndex].focus();
+      }
+
+      function bindButton(button) {
+        listen(button, 'click', function () {
+          setMetric(button.getAttribute('data-mfr-metric'), { announce: true, scroll: true });
+          scheduleAuto();
+        });
+
+        listen(button, 'keydown', function (event) {
+          var key = event.key || event.keyCode;
+          var nextIndex = null;
+          if (key === 'ArrowRight' || key === 'ArrowDown' || key === 39 || key === 40) nextIndex = activeMetric + 1;
+          if (key === 'ArrowLeft' || key === 'ArrowUp' || key === 37 || key === 38) nextIndex = activeMetric - 1;
+          if (key === 'Home' || key === 36) nextIndex = 0;
+          if (key === 'End' || key === 35) nextIndex = metrics.length - 1;
+          if (nextIndex === null) return;
+          if (event.preventDefault) event.preventDefault();
+          setMetric(nextIndex, { announce: true, focus: true, scroll: true });
+          scheduleAuto();
+        });
+      }
+
+      var i;
+      for (i = 0; i < metricButtons.length; i += 1) bindButton(metricButtons[i]);
+      listen(document, 'visibilitychange', function () {
+        if (document.hidden) stopAuto();
+        else scheduleAuto();
+      });
+
+      function destroy() {
+        var remove;
+        if (destroyed) return;
+        destroyed = true;
+        if (labelTimer) window.clearTimeout(labelTimer);
+        stopAuto();
+        while (cleanup.length) {
+          remove = cleanup.pop();
+          try { remove(); } catch (ignore) {}
+        }
+        root.removeAttribute('data-mfr-bound');
+        root.__mfrDestroy = null;
+      }
+
+      root.__mfrDestroy = destroy;
+      setMetric(0, { announce: false, scroll: false });
+      scheduleAuto();
+    }());
+  </script>
+
+
+</div>
+</section></section>
+    <section id="mf-metodo" class="mf-embed-slot" data-embed="metodo"><!-- EMBED: MÉTODO --></section>
+    <section id="mf-projetos" class="mf-embed-slot" data-embed="projetos"><!-- EMBED: PROJETOS --></section>
+    <section id="mf-contato" class="mf-embed-slot" data-embed="contato"><!-- EMBED: CONTATO --></section>
+
+
+
+
+  
+  </main>
+
+  <footer id="mf-rodape">
+    <div class="mf-footer-shell">
+      <div class="mf-footer-top">
+        <div class="mf-footer-brand">
+          <a class="mf-footer-logo" href="#mf-solucoes" aria-label="MindFly Digital - Soluções" data-i18n-aria-label="brand.solutions">
+            <img
+              src="/assets/logobranco.png"
+              alt="MindFly Digital"
+              width="168"
+              height="34"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+
+          <p class="mf-footer-text" data-i18n="footer.description">
+            Soluções digitais para sua empresa aparecer, atrair e vender. Estratégia, presença digital e tecnologia para marcas que querem crescer com consistência.
+          </p>
+
+          <div class="mf-footer-social mf-footer-social-desktop" aria-label="Redes sociais" data-i18n-aria-label="footer.social">
+            <a href="https://www.instagram.com/mindfly.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-i18n-aria-label="footer.instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.76 3.76 0 0 0 4 7.75v8.5A3.76 3.76 0 0 0 7.75 20h8.5A3.76 3.76 0 0 0 20 16.25v-8.5A3.76 3.76 0 0 0 16.25 4h-8.5ZM12 7.2A4.8 4.8 0 1 1 12 16.8 4.8 4.8 0 0 1 12 7.2Zm0 2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2Zm5.05-2.55a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"></path>
+              </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-i18n-aria-label="footer.linkedin">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.54V9H7.1v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"></path>
+              </svg>
+            </a>
+
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-i18n-aria-label="footer.whatsapp">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.51 0 .18 5.33.18 11.89c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.69 1.45h.01c6.56 0 11.89-5.33 11.89-11.89 0-3.18-1.23-6.16-3.45-8.43ZM12.08 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.38a9.82 9.82 0 0 1-1.51-5.27C2.19 6.43 6.63 2 12.09 2a9.83 9.83 0 0 1 6.99 2.9 9.82 9.82 0 0 1 2.9 7.01c0 5.46-4.44 9.89-9.9 9.89Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="mf-footer-col">
+          <h2 data-i18n="footer.info">Dados da MindFly:</h2>
+          <ul class="mf-footer-list">
+            <li><strong data-i18n="footer.address">Endereço:</strong> Rua Exemplo, 000</li>
+            <li><strong data-i18n="footer.city">Cidade:</strong> Cidade/UF</li>
+            <li><strong data-i18n="footer.email">E-mail:</strong> <a href="mailto:contato@mindfly.com.br">contato@mindfly.com.br</a></li>
+            <li><strong data-i18n="footer.phone">Celular:</strong> <a href="tel:+5500000000000">(00) 00000-0000</a></li>
+            <li><strong>CNPJ:</strong> 00.000.000/0000-00</li>
+          </ul>
+
+          <div class="mf-footer-social mf-footer-social-mobile" aria-label="Redes sociais" data-i18n-aria-label="footer.social">
+            <a href="https://www.instagram.com/mindfly.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-i18n-aria-label="footer.instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.76 3.76 0 0 0 4 7.75v8.5A3.76 3.76 0 0 0 7.75 20h8.5A3.76 3.76 0 0 0 20 16.25v-8.5A3.76 3.76 0 0 0 16.25 4h-8.5ZM12 7.2A4.8 4.8 0 1 1 12 16.8 4.8 4.8 0 0 1 12 7.2Zm0 2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2Zm5.05-2.55a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"></path>
+              </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-i18n-aria-label="footer.linkedin">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.54V9H7.1v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"></path>
+              </svg>
+            </a>
+
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-i18n-aria-label="footer.whatsapp">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.51 0 .18 5.33.18 11.89c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.69 1.45h.01c6.56 0 11.89-5.33 11.89-11.89 0-3.18-1.23-6.16-3.45-8.43ZM12.08 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.38a9.82 9.82 0 0 1-1.51-5.27C2.19 6.43 6.63 2 12.09 2a9.83 9.83 0 0 1 6.99 2.9 9.82 9.82 0 0 1 2.9 7.01c0 5.46-4.44 9.89-9.9 9.89Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mf-footer-bottom">
+        <span>© <span id="mf-footer-year">2026</span> <span data-i18n="footer.rights">MindFly Digital. Todos os direitos reservados.</span></span>
+        <span><a href="#mf-solucoes" data-i18n="footer.top">Voltar ao topo</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const baseDictionary = {
+        "nav.aria":{
+          pt:"Menu principal",
+          en:"Main menu"
+        },
+        "nav.links":{
+          pt:"Menu de navegação",
+          en:"Navigation menu"
+        },
+        "brand.solutions":{
+          pt:"MindFly Digital - Soluções",
+          en:"MindFly Digital - Solutions"
+        },
+        "nav.home":{
+          pt:"Início",
+          en:"Home"
+        },
+        "nav.solutions":{
+          pt:"Soluções",
+          en:"Solutions"
+        },
+        "nav.digital":{
+          pt:"Transformação Digital",
+          en:"Digital Transformation"
+        },
+        "nav.method":{
+          pt:"Método",
+          en:"Method"
+        },
+        "nav.projects":{
+          pt:"Projetos",
+          en:"Projects"
+        },
+        "nav.contact":{
+          pt:"Contato",
+          en:"Contact"
+        },
+        "footer.description":{
+          pt:"Soluções digitais para sua empresa aparecer, atrair e vender. Estratégia, presença digital e tecnologia para marcas que querem crescer com consistência.",
+          en:"Digital solutions to help your business be seen, attract customers, and sell more. Strategy, digital presence, and technology for brands that want consistent growth."
+        },
+        "footer.info":{
+          pt:"Dados da MindFly:",
+          en:"MindFly Details:"
+        },
+        "footer.address":{
+          pt:"Endereço:",
+          en:"Address:"
+        },
+        "footer.city":{
+          pt:"Cidade:",
+          en:"City:"
+        },
+        "footer.email":{
+          pt:"E-mail:",
+          en:"Email:"
+        },
+        "footer.phone":{
+          pt:"Celular:",
+          en:"Mobile:"
+        },
+        "footer.social":{
+          pt:"Redes sociais",
+          en:"Social media"
+        },
+        "footer.instagram":{
+          pt:"Instagram",
+          en:"Instagram"
+        },
+        "footer.linkedin":{
+          pt:"LinkedIn",
+          en:"LinkedIn"
+        },
+        "footer.whatsapp":{
+          pt:"WhatsApp",
+          en:"WhatsApp"
+        },
+        "footer.rights":{
+          pt:"MindFly Digital. Todos os direitos reservados.",
+          en:"MindFly Digital. All rights reserved."
+        },
+        "footer.top":{
+          pt:"Voltar ao topo",
+          en:"Back to top"
+        }
+      };
+
+      window.MF_I18N = Object.assign({}, baseDictionary, window.MF_I18N || {});
+      window.MF_ACTIVE_LANG = "pt";
+
+      const getSavedLang = () => {
+        try {
+          const saved = localStorage.getItem("mf-lang");
+          if (saved === "en" || saved === "pt") return saved;
+        } catch (error) {}
+
+        const browserLanguages = Array.isArray(navigator.languages) && navigator.languages.length
+          ? navigator.languages
+          : [navigator.language || navigator.userLanguage || "pt-BR"];
+
+        const browserLang = String(browserLanguages[0] || "pt-BR").toLowerCase();
+
+        return browserLang.startsWith("pt") ? "pt" : "en";
+      };
+
+      const saveLang = (lang) => {
+        try {
+          localStorage.setItem("mf-lang", lang);
+        } catch (error) {}
+      };
+
+      const getTranslation = (key, lang) => {
+        const item = window.MF_I18N && window.MF_I18N[key];
+        if (!item) return null;
+        return typeof item[lang] === "string" ? item[lang] : null;
+      };
+
+      const updateLangToggle = (lang) => {
+        const toggle = document.querySelector(".lang-toggle");
+        if (!toggle) return;
+
+        toggle.dataset.currentLang = lang;
+
+        if (lang === "pt") {
+          toggle.setAttribute("aria-label", "Alterar idioma para inglês");
+          toggle.setAttribute("title", "Alterar idioma para inglês");
+        } else {
+          toggle.setAttribute("aria-label", "Switch language to Portuguese");
+          toggle.setAttribute("title", "Switch language to Portuguese");
+        }
+      };
+
+      const applyTranslations = (root = document) => {
+        const lang = window.MF_ACTIVE_LANG === "en" ? "en" : "pt";
+
+        document.documentElement.setAttribute("lang", lang === "en" ? "en" : "pt-BR");
+
+        root.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          const translated = getTranslation(key, lang);
+
+          if (translated !== null && element.textContent !== translated) {
+            element.textContent = translated;
+          }
+        });
+
+        root.querySelectorAll("[data-i18n-html]").forEach((element) => {
+          const key = element.getAttribute("data-i18n-html");
+          const translated = getTranslation(key, lang);
+
+          if (translated !== null && element.innerHTML !== translated) {
+            element.innerHTML = translated;
+          }
+        });
+
+        const attrMap = [
+          ["data-i18n-aria-label", "aria-label"],
+          ["data-i18n-title", "title"],
+          ["data-i18n-alt", "alt"],
+          ["data-i18n-placeholder", "placeholder"]
+        ];
+
+        attrMap.forEach(([dataAttr, realAttr]) => {
+          root.querySelectorAll(`[${dataAttr}]`).forEach((element) => {
+            const key = element.getAttribute(dataAttr);
+            const translated = getTranslation(key, lang);
+
+            if (translated !== null && element.getAttribute(realAttr) !== translated) {
+              element.setAttribute(realAttr, translated);
+            }
+          });
+        });
+
+        updateLangToggle(lang);
+      };
+
+      const setLanguage = (lang) => {
+        window.MF_ACTIVE_LANG = lang === "en" ? "en" : "pt";
+        saveLang(window.MF_ACTIVE_LANG);
+        applyTranslations(document);
+      };
+
+      window.MF_APPLY_I18N = applyTranslations;
+      window.MF_SET_LANG = setLanguage;
+      window.MF_REGISTER_I18N = (dictionary = {}) => {
+        window.MF_I18N = Object.assign({}, window.MF_I18N || {}, dictionary);
+        applyTranslations(document);
+      };
+
+      const root = document.getElementById("mf-menu");
+      if (!root || root.dataset.mfBound === "1") return;
+      root.dataset.mfBound = "1";
+
+      const bar = root.querySelector(".bar");
+      const button = root.querySelector(".burger");
+      const links = root.querySelector(".links");
+      const scrim = root.querySelector(".scrim");
+      const brand = root.querySelector('.brand[href^="#"]');
+      const footerLogo = document.querySelector('.mf-footer-logo[href^="#"]');
+      const footerYear = document.getElementById("mf-footer-year");
+      const langToggle = root.querySelector(".lang-toggle");
+      const hashLinks = Array.from(root.querySelectorAll('.links a[href^="#"]'));
+      const mq = window.matchMedia("(max-width: 940px)");
+
+      if (footerYear) {
+        footerYear.textContent = String(new Date().getFullYear());
+      }
+
+      if (!bar || !button || !links) return;
+
+      const isMobile = () => mq.matches;
+      const isOpen = () => button.getAttribute("aria-expanded") === "true";
+
+      const setButtonLabel = (open) => {
+        button.setAttribute("aria-expanded", open ? "true" : "false");
+        button.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+        button.setAttribute("title", open ? "Fechar menu" : "Abrir menu");
+      };
+
+      const syncMenuA11y = () => {
+        if (isMobile()) {
+          links.setAttribute("aria-hidden", isOpen() ? "false" : "true");
+        } else {
+          links.removeAttribute("aria-hidden");
+        }
+      };
+
+      const setNavOffset = () => {
+        const top = parseFloat(window.getComputedStyle(bar).top) || 0;
+        const offset = Math.ceil(bar.offsetHeight + top + 26);
+        document.documentElement.style.setProperty("--mf-nav-offset", `${offset}px`);
+      };
+
+      const openMenu = () => {
+        showFloatingMenu();
+        root.classList.add("is-open");
+        setButtonLabel(true);
+        if (isMobile()) document.body.classList.add("mf-lock");
+        syncMenuA11y();
+        setNavOffset();
+      };
+
+      const closeMenu = ({ focusButton = false } = {}) => {
+        root.classList.remove("is-open");
+        setButtonLabel(false);
+        document.body.classList.remove("mf-lock");
+        syncMenuA11y();
+        setNavOffset();
+
+        if (focusButton) {
+          requestAnimationFrame(() => button.focus({ preventScroll:true }));
+        }
+      };
+
+      const showFloatingMenu = () => {
+        root.classList.remove("mf-menu-hidden");
+      };
+
+      const hideFloatingMenu = () => {
+        if (isOpen()) return;
+        root.classList.add("mf-menu-hidden");
+      };
+
+      const toggleMenu = () => {
+        showFloatingMenu();
+        isOpen() ? closeMenu({ focusButton:true }) : openMenu();
+      };
+
+      const getTargetFromHash = (hash) => {
+        if (!hash || hash === "#") return null;
+
+        try {
+          return document.querySelector(hash);
+        } catch (error) {
+          return null;
+        }
+      };
+
+      const goToHash = (hash) => {
+        const target = getTargetFromHash(hash);
+        if (!target) return;
+
+        const top = target.getBoundingClientRect().top + window.scrollY;
+
+        window.scrollTo({
+          top:Math.max(0, top),
+          behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+        });
+      };
+
+      const setCurrentLink = (hash) => {
+        hashLinks.forEach((link) => {
+          link.removeAttribute("aria-current");
+
+          if (link.getAttribute("href") === hash) {
+            link.setAttribute("aria-current", "true");
+          }
+        });
+      };
+
+      const handleHashLink = (event, anchor) => {
+        const href = anchor.getAttribute("href");
+        if (!href || href === "#") return;
+
+        event.preventDefault();
+
+        if (window.location.hash !== href) {
+          history.pushState(null, "", href);
+        }
+
+        setCurrentLink(href);
+        closeMenu();
+        requestAnimationFrame(() => goToHash(href));
+      };
+
+      const syncCurrentSectionOnScroll = () => {
+        const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--mf-nav-offset"), 10) || 110;
+        let currentHash = "";
+
+        for (const link of hashLinks) {
+          const hash = link.getAttribute("href");
+          const section = getTargetFromHash(hash);
+
+          if (!section) continue;
+
+          const rect = section.getBoundingClientRect();
+
+          if (rect.top - offset <= 24) {
+            currentHash = hash;
+          }
+        }
+
+        if (currentHash) {
+          setCurrentLink(currentHash);
+        }
+      };
+
+      button.addEventListener("click", toggleMenu);
+
+      if (langToggle) {
+        langToggle.addEventListener("click", () => {
+          setLanguage(window.MF_ACTIVE_LANG === "pt" ? "en" : "pt");
+        });
+      }
+
+      if (scrim) {
+        scrim.addEventListener("click", () => closeMenu({ focusButton:true }));
+      }
+
+      links.addEventListener("click", (event) => {
+        const anchor = event.target.closest('a[href^="#"]');
+        if (!anchor) return;
+        handleHashLink(event, anchor);
+      });
+
+      if (brand) {
+        brand.addEventListener("click", (event) => handleHashLink(event, brand));
+      }
+
+      if (footerLogo) {
+        footerLogo.addEventListener("click", (event) => handleHashLink(event, footerLogo));
+      }
+
+      document.addEventListener("click", (event) => {
+        if (!isMobile() || !isOpen()) return;
+        if (root.contains(event.target)) return;
+        closeMenu();
+      }, { passive:true });
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && isOpen()) {
+          closeMenu({ focusButton:true });
+        }
+      });
+
+      const onMqChange = () => {
+        document.body.classList.remove("mf-lock");
+        if (!isMobile()) closeMenu();
+        syncMenuA11y();
+        setNavOffset();
+        syncCurrentSectionOnScroll();
+      };
+
+      if (mq.addEventListener) {
+        mq.addEventListener("change", onMqChange);
+      } else if (mq.addListener) {
+        mq.addListener(onMqChange);
+      }
+
+      let resizeRaf = 0;
+      window.addEventListener("resize", () => {
+        cancelAnimationFrame(resizeRaf);
+        resizeRaf = requestAnimationFrame(() => {
+          syncMenuA11y();
+          setNavOffset();
+          syncCurrentSectionOnScroll();
+        });
+      }, { passive:true });
+
+      let lastScrollY = Math.max(0, window.scrollY || window.pageYOffset || 0);
+      let downDistance = 0;
+      let upDistance = 0;
+
+      const updateMenuVisibility = () => {
+        const currentY = Math.max(0, window.scrollY || window.pageYOffset || 0);
+        const delta = currentY - lastScrollY;
+        const viewportHeight = Math.max(1, window.innerHeight || document.documentElement.clientHeight || 1);
+        const hideThreshold = viewportHeight * .20;
+        const showThreshold = viewportHeight * .40;
+
+        if (currentY <= 8) {
+          downDistance = 0;
+          upDistance = 0;
+          showFloatingMenu();
+        } else if (delta > 0) {
+          downDistance += delta;
+          upDistance = 0;
+
+          if (downDistance >= hideThreshold) {
+            hideFloatingMenu();
+            downDistance = 0;
+          }
+        } else if (delta < 0) {
+          upDistance += Math.abs(delta);
+          downDistance = 0;
+
+          if (upDistance >= showThreshold) {
+            showFloatingMenu();
+            upDistance = 0;
+          }
+        }
+
+        lastScrollY = currentY;
+      };
+
+      let scrollRaf = 0;
+      window.addEventListener("scroll", () => {
+        cancelAnimationFrame(scrollRaf);
+        scrollRaf = requestAnimationFrame(() => {
+          updateMenuVisibility();
+          syncCurrentSectionOnScroll();
+        });
+      }, { passive:true });
+
+      let translateRaf = 0;
+      const observer = new MutationObserver(() => {
+        cancelAnimationFrame(translateRaf);
+        translateRaf = requestAnimationFrame(() => applyTranslations(document));
+      });
+
+      observer.observe(document.body, {
+        childList:true,
+        subtree:true
+      });
+
+      window.addEventListener("load", () => {
+        syncMenuA11y();
+        setNavOffset();
+
+        if (window.location.hash) {
+          setTimeout(() => goToHash(window.location.hash), 0);
+          setCurrentLink(window.location.hash);
+        } else {
+          setCurrentLink("#mf-solucoes");
+        }
+
+        syncCurrentSectionOnScroll();
+        applyTranslations(document);
+      }, { once:true });
+
+      window.addEventListener("popstate", () => {
+        if (window.location.hash) {
+          setCurrentLink(window.location.hash);
+          goToHash(window.location.hash);
+        }
+      });
+
+      setButtonLabel(false);
+      showFloatingMenu();
+      syncMenuA11y();
+      setNavOffset();
+      setLanguage(getSavedLang());
+
+      if (window.location.hash) {
+        setCurrentLink(window.location.hash);
+      } else {
+        setCurrentLink("#mf-solucoes");
+      }
+    })();
+  </script>
+</body>
+</html>
