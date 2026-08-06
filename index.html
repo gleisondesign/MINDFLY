@@ -10,6 +10,9 @@
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="author" content="MindFly Digital" />
   <meta name="theme-color" content="#090817" />
+  <meta name="color-scheme" content="light" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
   <link rel="canonical" href="https://mindfly.com.br/" />
   <link rel="alternate" hreflang="pt-BR" href="https://mindfly.com.br/" />
   <link rel="alternate" hreflang="en" href="https://mindfly.com.br/" />
@@ -37,11 +40,23 @@
     "@id":"https://mindfly.com.br/#organization",
     "name":"MindFly Digital",
     "url":"https://mindfly.com.br/",
-    "logo":"https://mindfly.com.br/assets/logobranco.png",
+    "logo":"https://gleisondesign.github.io/MINDFLY/assets/logobranco.png",
     "description":"Soluções digitais para sua empresa aparecer, atrair e vender.",
     "sameAs":["https://www.instagram.com/mindfly.com.br/"],
     "areaServed":{"@type":"Country","name":"Brasil"},
     "inLanguage":"pt-BR"
+  }
+  </script>
+
+  <script type="application/ld+json" id="mf-website-schema">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "@id":"https://mindfly.com.br/#website",
+    "url":"https://mindfly.com.br/",
+    "name":"MindFly Digital",
+    "publisher":{"@id":"https://mindfly.com.br/#organization"},
+    "inLanguage":["pt-BR","en"]
   }
   </script>
 
@@ -928,7 +943,7 @@
       <div class="inner">
         <a class="brand" href="#mf-solucoes" aria-label="MindFly Digital - Soluções" data-i18n-aria-label="brand.solutions">
           <img
-            src="/assets/logobranco.png"
+            src="https://gleisondesign.github.io/MINDFLY/assets/logobranco.png"
             alt="MindFly Digital"
             width="160"
             height="32"
@@ -980,7 +995,14 @@
 
 
 
-    <section id="mf-solucoes" class="mf-embed-slot" data-embed="hero"><div id="mfs-card-deck" class="mfs-embed" data-mf-solucoes-embed>
+    <!--
+      CONTRATO DOS EMBEDS
+      1. Cole somente o conteúdo do arquivo de embed DENTRO do slot correspondente.
+      2. O embed não deve repetir a <section>, o id do slot ou a classe .mf-embed-slot.
+      3. Cada embed deve possuir uma raiz única, CSS escopado e inicialização protegida.
+    -->
+    <section id="mf-solucoes" class="mf-embed-slot" data-embed="solucoes"><!-- EMBED: SOLUÇÕES | cole dentro de #mf-solucoes -->
+<div id="mfs-card-deck" class="mfs-embed" data-mf-solucoes-embed>
   <style>
     .mf-embed-slot.mf-embed-slot--full {
       width: 100vw;
@@ -1742,12 +1764,12 @@
     }
   </style>
 
-  <video class="mfs-bg-video" autoplay muted loop playsinline aria-hidden="true">
+  <video class="mfs-bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
     <source src="https://gleisondesign.github.io/MINDFLY/assets/fundo.mp4" type="video/mp4">
   </video>
 
   <div class="mfs-intro">
-    <h1 class="mfs-intro-title" data-i18n-html="mfs.intro.title">Tudo que seu negócio precisa para crescer no digital <span class="mfs-gradient-text">em um único hub de soluções </span>.</h1>
+    <h1 class="mfs-intro-title" data-i18n-html="mfs.intro.title">Tudo que seu negócio precisa para crescer no digital <span class="mfs-gradient-text">em um único hub de soluções </span></h1>
     <p class="mfs-intro-text" data-i18n-html="mfs.intro.text">Estratégia, marketing de impacto, conteúdo, design e tecnologia trabalhando juntos para <strong class="mfs-mark">fortalecer sua presença digital</strong>, gerar mais oportunidades e <strong class="mfs-mark">impulsionar suas vendas</strong></p>
   </div>
 
@@ -1910,6 +1932,7 @@
     </a>
   </div>
 
+  <!-- Dicionário exclusivo do embed; registrado no núcleo i18n da página-base. -->
   <script>
     (() => {
       const dictionary = {
@@ -2092,6 +2115,7 @@
     })();
   </script>
 
+  <!-- Comportamento do carrossel: desktop contínuo e mobile em pilha. -->
   <script>
     (() => {
       const currentScript = document.currentScript;
@@ -3007,7 +3031,7 @@
     })();
   </script>
 </div></section>
-    <section id="mf-transformacao-digital" class="mf-embed-slot" data-embed="transformacao-digital"><section id="mf-transformacao-digital" class="mf-embed-slot" data-embed="transformacao-digital"><!-- EMBED: TRANSFORMAÇÃO DIGITAL -->
+    <section id="mf-transformacao-digital" class="mf-embed-slot" data-embed="transformacao-digital"><!-- EMBED: TRANSFORMAÇÃO DIGITAL | cole dentro de #mf-transformacao-digital -->
 <div id="mfr-results" class="mfr-embed" data-mf-results-embed>
   <style>
     #mf-transformacao-digital {
@@ -3207,9 +3231,9 @@
     }
 
     #mfr-results .mfr-state-icon path,
-    #mfr-results .mfr-state-icon circle { stroke-width: 2.3; }
-    #mfr-results .mfr-state-icon path,
-    #mfr-results .mfr-state-icon circle { stroke-width: 2.3; }
+    #mfr-results .mfr-state-icon circle {
+      stroke-width: 2.3;
+    }
 
     #mfr-results .mfr-panel {
       grid-area: panel;
@@ -3691,6 +3715,7 @@
     </section>
   </div>
 
+  <!-- Dicionário exclusivo do embed; registrado no núcleo i18n da página-base. -->
   <script>
     (() => {
       const dictionary = {
@@ -3780,17 +3805,13 @@
     })();
   </script>
 
+  <!-- Comparativo interativo, navegação por teclado e rotação automática consciente da viewport. -->
   <script>
     (function () {
       var currentScript = document.currentScript;
-      var root = currentScript && currentScript.parentNode;
-
-      while (root && root.nodeType === 1) {
-        if (root.hasAttribute ? root.hasAttribute('data-mf-results-embed') : root.getAttribute('data-mf-results-embed') !== null) break;
-        root = root.parentNode;
-      }
-
-      if (!root || root.nodeType !== 1) root = document.getElementById('mfr-results');
+      var root = currentScript && currentScript.closest
+        ? currentScript.closest('[data-mf-results-embed]')
+        : document.getElementById('mfr-results');
       if (!root || root.getAttribute('data-mfr-bound') === '1') return;
 
       var metricButtons = root.querySelectorAll('[data-mfr-metric]');
@@ -3808,13 +3829,8 @@
 
       root.setAttribute('data-mfr-bound', '1');
 
-      var host = root.parentNode;
-      while (host && host.nodeType === 1 && String(host.className).indexOf('mf-embed-slot') === -1) {
-        host = host.parentNode;
-      }
-      if (host && String(host.className).indexOf('mf-embed-slot--mfr-full') === -1) {
-        host.className += ' mf-embed-slot--mfr-full';
-      }
+      var host = root.closest ? root.closest('.mf-embed-slot') : null;
+      if (host && host.classList) host.classList.add('mf-embed-slot--mfr-full');
 
       var metrics = [
         { without: 18, withMindFly: 82 },
@@ -3833,6 +3849,8 @@
       var labelTimer = 0;
       var autoTimer = 0;
       var destroyed = false;
+      var inView = true;
+      var intersectionObserver = null;
       var cleanup = [];
       var raf = window.requestAnimationFrame || function (callback) { return window.setTimeout(callback, 16); };
 
@@ -3879,7 +3897,7 @@
         if (window.matchMedia) {
           try { reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (ignore) {}
         }
-        return !destroyed && !document.hidden && !reduceMotion;
+        return !destroyed && inView && !document.hidden && !reduceMotion;
       }
 
       function scheduleAuto() {
@@ -3976,16 +3994,31 @@
         else scheduleAuto();
       });
 
+      if ('IntersectionObserver' in window) {
+        intersectionObserver = new IntersectionObserver(function (entries) {
+          var entry = entries && entries[0];
+          inView = !entry || entry.isIntersecting || entry.intersectionRatio > 0;
+          if (inView) scheduleAuto();
+          else stopAuto();
+        }, { root: null, rootMargin: '220px 0px', threshold: 0 });
+        intersectionObserver.observe(root);
+      }
+
       function destroy() {
         var remove;
         if (destroyed) return;
         destroyed = true;
         if (labelTimer) window.clearTimeout(labelTimer);
         stopAuto();
+        if (intersectionObserver) {
+          intersectionObserver.disconnect();
+          intersectionObserver = null;
+        }
         while (cleanup.length) {
           remove = cleanup.pop();
           try { remove(); } catch (ignore) {}
         }
+        if (host && host.classList) host.classList.remove('mf-embed-slot--mfr-full');
         root.removeAttribute('data-mfr-bound');
         root.__mfrDestroy = null;
       }
@@ -3995,13 +4028,3618 @@
       scheduleAuto();
     }());
   </script>
+</div>
+</section>
+    <section id="mf-metodo" class="mf-embed-slot" data-embed="metodo"><!-- EMBED: MÉTODO MINDFLY | cole somente este conteúdo dentro do slot #mf-metodo -->
+<div id="mf-method-cycle" class="mfc-embed" data-mf-method-cycle-embed role="region" aria-labelledby="mfc-title">
+  <style>
 
+    /* Quando inserida no slot da pagina principal, a secao ocupa toda a viewport. */
+    .mf-embed-slot.mf-embed-slot--mfc-full{
+      width:100vw;
+      max-width:none;
+      margin-left:calc(50% - 50vw);
+      margin-right:calc(50% - 50vw);
+      padding:0;
+      border-radius:0;
+      background:transparent;
+      overflow:visible;
+    }
+
+    .mf-embed-slot.mf-embed-slot--mfc-full > #mf-method-cycle{
+      margin:0!important;
+      border-radius:0;
+    }
+
+    #mf-method-cycle,
+    #mf-method-cycle::before,
+    #mf-method-cycle::after,
+    #mf-method-cycle *,
+    #mf-method-cycle *::before,
+    #mf-method-cycle *::after{
+      box-sizing:border-box;
+    }
+
+    #mf-method-cycle button,
+    #mf-method-cycle a{
+      font:inherit;
+    }
+
+
+    #mf-method-cycle{
+      --mfc-white:#f7f7ff;
+      --mfc-muted:rgba(247,247,255,.69);
+      --mfc-muted-strong:rgba(247,247,255,.84);
+      --mfc-purple:#5945e8;
+      --mfc-purple-2:#3726af;
+      --mfc-teal:#00d9c8;
+      --mfc-dark:#090817;
+      --mfc-dark-2:#151426;
+      --mfc-dark-3:#211c4a;
+      --mfc-shell:min(1344px,calc(100% - 32px));
+      position:relative;
+      width:100%;
+      min-height:0;
+      margin:0;
+      padding:96px 0 100px;
+      overflow:hidden;
+      isolation:isolate;
+      color:var(--mfc-white);
+      font-family:Manrope,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      background:
+        radial-gradient(720px 440px at 92% 4%,rgba(89,69,232,.48),transparent 62%),
+        radial-gradient(560px 360px at 4% 14%,rgba(89,69,232,.22),transparent 66%),
+        radial-gradient(660px 400px at 72% 96%,rgba(0,217,200,.14),transparent 68%),
+        linear-gradient(135deg,#090817 0%,#151426 48%,#211c4a 100%);
+    }
+
+    #mf-method-cycle .mfc-bg-video{
+      position:absolute;
+      inset:0;
+      z-index:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      pointer-events:none;
+      opacity:.15;
+    }
+
+    #mf-method-cycle::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:1;
+      pointer-events:none;
+      background:
+        radial-gradient(720px 440px at 92% 4%,rgba(89,69,232,.20),transparent 62%),
+        radial-gradient(560px 360px at 4% 14%,rgba(89,69,232,.10),transparent 66%),
+        linear-gradient(135deg,rgba(9,8,23,.30) 0%,rgba(21,20,38,.46) 48%,rgba(33,28,74,.58) 100%);
+    }
+
+    #mf-method-cycle::after{
+      content:none;
+    }
+
+    #mf-method-cycle .mfc-shell{
+      position:relative;
+      z-index:2;
+      width:var(--mfc-shell);
+      margin:0 auto;
+    }
+
+    #mf-method-cycle .mfc-layout{
+      display:grid;
+      grid-template-columns:minmax(500px,.92fr) minmax(0,1.08fr);
+      grid-template-areas:"stage copy";
+      align-items:center;
+      gap:clamp(36px,4vw,64px);
+    }
+
+    #mf-method-cycle .mfc-copy-area{
+      grid-area:copy;
+      max-width:720px;
+    }
+
+
+
+    #mf-method-cycle .mfc-title{
+      max-width:720px;
+      margin:0;
+      color:var(--mfc-white);
+      font-size:clamp(38px,5.4vw,72px);
+      line-height:1.02;
+      letter-spacing:-.058em;
+      font-weight:900;
+      text-wrap:balance;
+    }
+
+    #mf-method-cycle .mfc-gradient{
+      display:inline;
+      padding-right:.08em;
+      background:linear-gradient(135deg,#f7f7ff 0%,#00d9c8 42%,#5945e8 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    #mf-method-cycle .mfc-copy{
+      max-width:700px;
+      margin:24px 0 0;
+      color:var(--mfc-muted);
+      font-size:clamp(16.5px,1.35vw,19px);
+      line-height:1.72;
+      font-weight:700;
+      letter-spacing:-.018em;
+      transition:opacity .18s ease,transform .18s ease;
+    }
+
+    #mf-method-cycle .mfc-copy strong{
+      color:var(--mfc-white);
+      font-weight:900;
+    }
+
+    #mf-method-cycle .mfc-copy.is-changing{
+      opacity:.18;
+      transform:translateY(4px);
+    }
+
+    #mf-method-cycle .mfc-cta{
+      display:inline-flex;
+      min-height:58px;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      margin-top:32px;
+      padding:0 25px;
+      border:1px solid rgba(0,217,200,.70);
+      border-radius:999px;
+      color:#fff;
+      background:rgba(89,69,232,.14);
+      box-shadow:
+        0 0 14px rgba(89,69,232,.48),
+        0 0 38px rgba(89,69,232,.24),
+        inset 0 0 18px rgba(89,69,232,.13);
+      text-decoration:none;
+      font-size:14px;
+      line-height:1;
+      font-weight:900;
+      transition:transform .22s ease,background .22s ease,box-shadow .22s ease;
+      -webkit-tap-highlight-color:transparent;
+    }
+
+    #mf-method-cycle .mfc-cta:hover,
+    #mf-method-cycle .mfc-cta:focus-visible{
+      transform:translateY(-2px);
+      background:rgba(89,69,232,.24);
+      box-shadow:
+        0 0 18px rgba(89,69,232,.72),
+        0 0 50px rgba(89,69,232,.38),
+        inset 0 0 22px rgba(89,69,232,.20);
+    }
+
+    #mf-method-cycle .mfc-cta:focus-visible{
+      outline:3px solid rgba(0,217,200,.34);
+      outline-offset:4px;
+    }
+
+    #mf-method-cycle .mfc-cta svg{
+      width:18px;
+      height:18px;
+      flex:0 0 auto;
+      fill:none;
+      stroke:currentColor;
+      stroke-width:2;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      transition:transform .22s ease;
+    }
+
+    #mf-method-cycle .mfc-cta:hover svg{transform:translateX(3px)}
+    #mf-method-cycle .mfc-cta-mobile{display:none}
+
+    #mf-method-cycle .mfc-stage-wrap{
+      grid-area:stage;
+      min-width:0;
+    }
+
+    #mf-method-cycle .mfc-stage{
+      position:relative;
+      width:min(610px,100%);
+      aspect-ratio:1;
+      margin:0 auto;
+      display:grid;
+      place-items:center;
+      isolation:isolate;
+    }
+
+    #mf-method-cycle .mfc-stage-glow{
+      position:absolute;
+      inset:12%;
+      z-index:-1;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(89,69,232,.22),transparent 66%);
+      filter:blur(28px);
+      pointer-events:none;
+    }
+
+    #mf-method-cycle .mfc-ring,
+    #mf-method-cycle .mfc-ring::before,
+    #mf-method-cycle .mfc-ring::after{
+      position:absolute;
+      border-radius:50%;
+      pointer-events:none;
+    }
+
+    #mf-method-cycle .mfc-ring{
+      inset:4%;
+      border:1px solid rgba(247,247,255,.12);
+      background:
+        radial-gradient(circle at center,rgba(9,8,23,.94) 0 35%,transparent 35.5%),
+        conic-gradient(from -36deg,
+          #00d9c8 0deg,
+          #5945e8 84deg,
+          #3726af 156deg,
+          #5945e8 228deg,
+          #00d9c8 300deg,
+          #00d9c8 360deg);
+      box-shadow:
+        inset 0 0 0 clamp(44px,7vw,78px) rgba(9,8,23,.88),
+        0 38px 90px rgba(0,0,0,.34),
+        0 0 80px rgba(89,69,232,.18);
+      animation:mfc-spin 22s linear infinite;
+    }
+
+    #mf-method-cycle .mfc-ring::before{
+      content:none;
+      display:none;
+    }
+
+    #mf-method-cycle .mfc-ring::after{
+      content:"";
+      inset:31%;
+      border:1px solid rgba(247,247,255,.10);
+      background:
+        radial-gradient(circle at 50% 35%,rgba(89,69,232,.18),transparent 58%),
+        rgba(9,8,23,.95);
+      box-shadow:inset 0 0 45px rgba(89,69,232,.12);
+    }
+
+    #mf-method-cycle .mfc-center{
+      position:relative;
+      z-index:5;
+      width:43%;
+      min-height:190px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:20px 10px;
+      text-align:center;
+    }
+
+    #mf-method-cycle .mfc-center strong{
+      display:block;
+      color:var(--mfc-white);
+      font-size:clamp(24px,3vw,42px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:900;
+      text-wrap:balance;
+    }
+
+    #mf-method-cycle .mfc-center-mobile{display:none!important}
+
+    #mf-method-cycle .mfc-node{
+      position:absolute;
+      z-index:7;
+      width:218px;
+      min-height:82px;
+      display:flex;
+      align-items:center;
+      gap:13px;
+      padding:12px 15px;
+      border:1px solid rgba(247,247,255,.15);
+      border-radius:24px;
+      color:var(--mfc-white);
+      background:rgba(21,20,38,.88);
+      box-shadow:0 18px 44px rgba(0,0,0,.25);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      cursor:pointer;
+      text-align:left;
+      -webkit-tap-highlight-color:transparent;
+      transition:
+        transform .22s ease,
+        border-color .22s ease,
+        background .22s ease,
+        box-shadow .22s ease,
+        opacity .22s ease;
+    }
+
+    #mf-method-cycle .mfc-node::after{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      z-index:-1;
+      border-radius:inherit;
+      opacity:0;
+      background:linear-gradient(135deg,rgba(0,217,200,.28),rgba(89,69,232,.24));
+      transition:opacity .22s ease;
+    }
+
+    #mf-method-cycle .mfc-node:hover,
+    #mf-method-cycle .mfc-node:focus-visible,
+    #mf-method-cycle .mfc-node[aria-pressed="true"]{
+      border-color:rgba(0,217,200,.58);
+      background:rgba(33,28,74,.95);
+      box-shadow:
+        0 22px 54px rgba(0,0,0,.34),
+        0 0 32px rgba(89,69,232,.20);
+      outline:none;
+    }
+
+    #mf-method-cycle .mfc-node:hover::after,
+    #mf-method-cycle .mfc-node:focus-visible::after,
+    #mf-method-cycle .mfc-node[aria-pressed="true"]::after{opacity:1}
+
+    #mf-method-cycle .mfc-node b{
+      width:36px;
+      height:36px;
+      flex:0 0 auto;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      color:var(--mfc-white);
+      background:linear-gradient(135deg,var(--mfc-teal),var(--mfc-purple));
+      box-shadow:0 8px 20px rgba(89,69,232,.22);
+      font-size:12px;
+      line-height:1;
+      font-weight:900;
+      transition:transform .22s ease,box-shadow .22s ease;
+    }
+
+    #mf-method-cycle .mfc-node:hover b,
+    #mf-method-cycle .mfc-node:focus-visible b,
+    #mf-method-cycle .mfc-node[aria-pressed="true"] b{
+      transform:rotate(-7deg) scale(1.07);
+      box-shadow:0 10px 24px rgba(0,217,200,.24);
+    }
+
+    #mf-method-cycle .mfc-node span{
+      display:block;
+      min-width:0;
+      font-size:17px;
+      line-height:1.08;
+      letter-spacing:-.035em;
+      overflow-wrap:normal;
+      word-break:normal;
+      font-weight:900;
+    }
+
+
+    #mf-method-cycle .mfc-node[data-mfc-kind="planning"] span,
+    #mf-method-cycle .mfc-node[data-mfc-kind="development"] span,
+    #mf-method-cycle .mfc-node[data-mfc-kind="optimization"] span{
+      font-size:15.5px;
+      letter-spacing:-.05em;
+    }
+
+    #mf-method-cycle .mfc-node small{
+      display:block;
+      margin-top:4px;
+      color:var(--mfc-muted);
+      font-size:12px;
+      line-height:1.35;
+      font-weight:700;
+    }
+
+    #mf-method-cycle .mfc-node:nth-of-type(1){top:0;left:50%;transform:translateX(-50%)}
+    #mf-method-cycle .mfc-node:nth-of-type(1):hover,
+    #mf-method-cycle .mfc-node:nth-of-type(1):focus-visible,
+    #mf-method-cycle .mfc-node:nth-of-type(1)[aria-pressed="true"]{transform:translateX(-50%) translateY(-4px) scale(1.02)}
+
+    #mf-method-cycle .mfc-node:nth-of-type(2){top:25%;right:-1%}
+    #mf-method-cycle .mfc-node:nth-of-type(2):hover,
+    #mf-method-cycle .mfc-node:nth-of-type(2):focus-visible,
+    #mf-method-cycle .mfc-node:nth-of-type(2)[aria-pressed="true"]{transform:translateY(-4px) scale(1.02)}
+
+    #mf-method-cycle .mfc-node:nth-of-type(3){bottom:5%;right:10%}
+    #mf-method-cycle .mfc-node:nth-of-type(3):hover,
+    #mf-method-cycle .mfc-node:nth-of-type(3):focus-visible,
+    #mf-method-cycle .mfc-node:nth-of-type(3)[aria-pressed="true"]{transform:translateY(-4px) scale(1.02)}
+
+    #mf-method-cycle .mfc-node:nth-of-type(4){bottom:5%;left:10%}
+    #mf-method-cycle .mfc-node:nth-of-type(4):hover,
+    #mf-method-cycle .mfc-node:nth-of-type(4):focus-visible,
+    #mf-method-cycle .mfc-node:nth-of-type(4)[aria-pressed="true"]{transform:translateY(-4px) scale(1.02)}
+
+    #mf-method-cycle .mfc-node:nth-of-type(5){top:25%;left:-1%}
+    #mf-method-cycle .mfc-node:nth-of-type(5):hover,
+    #mf-method-cycle .mfc-node:nth-of-type(5):focus-visible,
+    #mf-method-cycle .mfc-node:nth-of-type(5)[aria-pressed="true"]{transform:translateY(-4px) scale(1.02)}
+
+    @keyframes mfc-spin{to{transform:rotate(360deg)}}
+    @keyframes mfc-spin-reverse{to{transform:rotate(-360deg)}}
+
+    @media(max-width:1080px){
+      #mf-method-cycle .mfc-layout{
+        grid-template-columns:1fr;
+        grid-template-areas:"copy" "stage";
+        gap:56px;
+      }
+
+      #mf-method-cycle .mfc-copy-area{
+        max-width:780px;
+        margin:0 auto;
+        text-align:center;
+      }
+
+      #mf-method-cycle .mfc-copy{
+        margin-left:auto;
+        margin-right:auto;
+      }
+    }
+
+    @media(max-width:680px){
+      #mf-method-cycle{--mfc-shell:100%}
+
+      #mf-method-cycle{
+        min-height:0;
+        margin:0;
+        padding:0;
+      }
+
+      #mf-method-cycle .mfc-layout{
+        grid-template-areas:"copy" "stage" "cta";
+        gap:34px;
+        padding:64px 10px 58px;
+      }
+
+      #mf-method-cycle .mfc-copy{
+        max-width:100%;
+        font-size:clamp(14.5px,4.05vw,16px);
+        line-height:1.56;
+        letter-spacing:-.025em;
+      }
+
+      #mf-method-cycle .mfc-copy-area .mfc-cta{display:none}
+      #mf-method-cycle .mfc-cta-mobile{
+        grid-area:cta;
+        display:inline-flex;
+        width:auto;
+        margin:0 auto;
+      }
+
+      #mf-method-cycle .mfc-stage{
+        width:min(390px,94vw);
+        margin-top:4px;
+      }
+
+      #mf-method-cycle .mfc-ring{
+        inset:7%;
+        box-shadow:
+          inset 0 0 0 38px rgba(9,8,23,.90),
+          0 26px 68px rgba(0,0,0,.34),
+          0 0 54px rgba(89,69,232,.16);
+      }
+
+      #mf-method-cycle .mfc-ring::before{inset:18%}
+      #mf-method-cycle .mfc-ring::after{inset:31%}
+
+      #mf-method-cycle .mfc-center{
+        width:42%;
+        min-height:145px;
+        padding:12px 4px;
+      }
+
+      #mf-method-cycle .mfc-center-desktop{display:none!important}
+      #mf-method-cycle .mfc-center-mobile{display:block!important;font-size:clamp(13px,3.8vw,17px);line-height:1.25;max-width:132px;text-wrap:balance}
+
+      #mf-method-cycle .mfc-node{
+        width:140px;
+        min-height:58px;
+        padding:8px 10px;
+        border-radius:18px;
+      }
+
+      #mf-method-cycle .mfc-node b{
+        width:29px;
+        height:29px;
+        border-radius:11px;
+        font-size:10px;
+      }
+
+      #mf-method-cycle .mfc-node span{font-size:12.5px;letter-spacing:-.045em}
+      #mf-method-cycle .mfc-node[data-mfc-kind="planning"] span,
+      #mf-method-cycle .mfc-node[data-mfc-kind="development"] span,
+      #mf-method-cycle .mfc-node[data-mfc-kind="optimization"] span{font-size:11.5px;letter-spacing:-.06em}
+      #mf-method-cycle .mfc-node[data-mfc-kind="planning"] span,
+      #mf-method-cycle .mfc-node[data-mfc-kind="development"] span{white-space:nowrap}
+      #mf-method-cycle .mfc-node small{display:none}
+      #mf-method-cycle .mfc-node[data-mfc-kind="planning"]{width:158px}
+      #mf-method-cycle .mfc-node[data-mfc-kind="development"]{width:176px}
+      #mf-method-cycle .mfc-node:nth-of-type(2){right:-1%}
+      #mf-method-cycle .mfc-node:nth-of-type(5){left:-4%}
+    }
+
+    @media(max-width:430px){
+      #mf-method-cycle .mfc-stage{
+        width:340px;
+        max-width:100%;
+      }
+
+      #mf-method-cycle .mfc-node{
+        width:126px;
+        min-height:54px;
+      }
+
+      #mf-method-cycle .mfc-node[data-mfc-kind="planning"]{width:148px}
+      #mf-method-cycle .mfc-node[data-mfc-kind="development"]{width:164px}
+      #mf-method-cycle .mfc-node:nth-of-type(1){top:-1%}
+      #mf-method-cycle .mfc-node:nth-of-type(2){top:24%;right:0}
+      #mf-method-cycle .mfc-node:nth-of-type(3){bottom:2%;right:1%}
+      #mf-method-cycle .mfc-node:nth-of-type(4){bottom:2%;left:7%}
+      #mf-method-cycle .mfc-node:nth-of-type(5){top:24%;left:-3%}
+    }
+
+    @media(max-width:360px){
+      #mf-method-cycle .mfc-stage{width:318px}
+      #mf-method-cycle .mfc-node{width:116px;min-height:52px;padding:7px 8px}
+      #mf-method-cycle .mfc-node b{width:27px;height:27px}
+      #mf-method-cycle .mfc-node span{font-size:12px}
+      #mf-method-cycle .mfc-node[data-mfc-kind="planning"]{width:140px}
+      #mf-method-cycle .mfc-node[data-mfc-kind="development"]{width:154px;right:0}
+      #mf-method-cycle .mfc-center-mobile{font-size:12px!important;line-height:1.22;max-width:112px}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      #mf-method-cycle *,
+      #mf-method-cycle *::before,
+      #mf-method-cycle *::after{
+        animation:none!important;
+        transition:none!important;
+        scroll-behavior:auto!important;
+      }
+    }
+
+
+  </style>
+
+    <video class="mfc-bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+      <source src="https://gleisondesign.github.io/MINDFLY/assets/fundo.mp4" type="video/mp4">
+    </video>
+
+    <div class="mfc-shell mfc-layout">
+      <div class="mfc-copy-area">
+        <h2 class="mfc-title" id="mfc-title" data-i18n-html="mfc.title">
+          Crescimento digital não é uma entrega. É um
+          <span class="mfc-gradient">ciclo de evolução</span>.
+        </h2>
+
+        <p
+          class="mfc-copy"
+          data-mfc-description
+          data-i18n-html="mfc.steps.0.description_html"
+          aria-live="polite"
+          aria-atomic="true"
+        ><strong>Análise:</strong> Entendemos o cenário, o mercado, os dados e os desafios para identificar onde estão as oportunidades de crescimento.</p>
+
+        <a
+          class="mfc-cta"
+          href="#mf-contato"
+          aria-label="Agendar consultoria"
+          data-i18n-aria-label="mfc.cta.aria_label"
+        >
+          <span data-i18n="mfc.cta.text">AGENDAR CONSULTORIA</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="mfc-stage-wrap">
+        <div
+          class="mfc-stage"
+          data-mfc-stage
+          aria-label="Ciclo contínuo do Método MindFly"
+          data-i18n-aria-label="mfc.stage.aria_label"
+        >
+          <div class="mfc-stage-glow" aria-hidden="true"></div>
+          <div class="mfc-ring" aria-hidden="true"></div>
+
+          <div class="mfc-center">
+            <strong class="mfc-center-desktop" data-i18n="mfc.center.desktop">Crescimento digital contínuo</strong>
+            <strong class="mfc-center-mobile" data-mfc-center-text data-i18n="mfc.steps.0.short">Cenário, mercado e dados</strong>
+          </div>
+
+          <button class="mfc-node" type="button" aria-pressed="true" data-mfc-step="0" data-mfc-kind="analysis">
+            <b aria-hidden="true">01</b>
+            <span data-i18n-html="mfc.steps.0.node_html">Análise<small>Cenário, mercado e dados</small></span>
+          </button>
+
+          <button class="mfc-node" type="button" aria-pressed="false" data-mfc-step="1" data-mfc-kind="planning">
+            <b aria-hidden="true">02</b>
+            <span data-i18n-html="mfc.steps.1.node_html">Planejamento<small>Prioridades e direção</small></span>
+          </button>
+
+          <button class="mfc-node" type="button" aria-pressed="false" data-mfc-step="2" data-mfc-kind="development">
+            <b aria-hidden="true">03</b>
+            <span data-i18n-html="mfc.steps.2.node_html">Desenvolvimento<small>Conteúdo, design e tecnologia</small></span>
+          </button>
+
+          <button class="mfc-node" type="button" aria-pressed="false" data-mfc-step="3" data-mfc-kind="activation">
+            <b aria-hidden="true">04</b>
+            <span data-i18n-html="mfc.steps.3.node_html">Ativação<small>Visibilidade no digital</small></span>
+          </button>
+
+          <button class="mfc-node" type="button" aria-pressed="false" data-mfc-step="4" data-mfc-kind="optimization">
+            <b aria-hidden="true">05</b>
+            <span data-i18n-html="mfc.steps.4.node_html">Otimização<small>Métricas, testes e evolução</small></span>
+          </button>
+        </div>
+      </div>
+
+      <a
+        class="mfc-cta mfc-cta-mobile"
+        href="#mf-contato"
+        aria-label="Agendar consultoria"
+        data-i18n-aria-label="mfc.cta.aria_label"
+      >
+        <span data-i18n="mfc.cta.text">AGENDAR CONSULTORIA</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M5 12h14M13 6l6 6-6 6"></path>
+        </svg>
+      </a>
+    </div>
+
+
+  <!-- Dicionario bilingue do embed, integrado ao nucleo i18n da pagina-base. -->
+  <script>
+    (() => {
+      const dictionary = {
+        "mfc.title": {
+          pt: "Crescimento digital não é uma entrega. É um <span class=\"mfc-gradient\">ciclo de evolução</span>.",
+          en: "Digital growth is not a one-time delivery. It is a <span class=\"mfc-gradient\">cycle of evolution</span>."
+        },
+        "mfc.center.desktop": {
+          pt: "Crescimento digital contínuo",
+          en: "Continuous digital growth"
+        },
+        "mfc.stage.aria_label": {
+          pt: "Ciclo contínuo do Método MindFly",
+          en: "Continuous cycle of the MindFly Method"
+        },
+        "mfc.cta.text": {
+          pt: "AGENDAR CONSULTORIA",
+          en: "BOOK A CONSULTATION"
+        },
+        "mfc.cta.aria_label": {
+          pt: "Agendar consultoria",
+          en: "Book a consultation"
+        },
+        "mfc.steps.0.node_html": {
+          pt: "Análise<small>Cenário, mercado e dados</small>",
+          en: "Analysis<small>Scenario, market, and data</small>"
+        },
+        "mfc.steps.0.short": {
+          pt: "Cenário, mercado e dados",
+          en: "Scenario, market, and data"
+        },
+        "mfc.steps.0.description_html": {
+          pt: "<strong>Análise:</strong> Entendemos o cenário, o mercado, os dados e os desafios para identificar onde estão as oportunidades de crescimento.",
+          en: "<strong>Analysis:</strong> We understand the scenario, market, data, and challenges to identify the best growth opportunities."
+        },
+        "mfc.steps.1.node_html": {
+          pt: "Planejamento<small>Prioridades e direção</small>",
+          en: "Planning<small>Priorities and direction</small>"
+        },
+        "mfc.steps.1.short": {
+          pt: "Prioridades e direção",
+          en: "Priorities and direction"
+        },
+        "mfc.steps.1.description_html": {
+          pt: "<strong>Planejamento:</strong> Transformamos a análise em prioridades, metas e uma direção estratégica clara para orientar cada ação e investimento.",
+          en: "<strong>Planning:</strong> We turn the analysis into priorities, goals, and a clear strategic direction to guide every action and investment."
+        },
+        "mfc.steps.2.node_html": {
+          pt: "Desenvolvimento<small>Conteúdo, design e tecnologia</small>",
+          en: "Development<small>Content, design, and technology</small>"
+        },
+        "mfc.steps.2.short": {
+          pt: "Conteúdo, design e tecnologia",
+          en: "Content, design, and technology"
+        },
+        "mfc.steps.2.description_html": {
+          pt: "<strong>Desenvolvimento:</strong> Desenvolvemos conteúdo, design, campanhas e tecnologia integrados, sempre conectados aos objetivos do negócio.",
+          en: "<strong>Development:</strong> We develop content, design, campaigns, and technology in an integrated way, aligned with business goals."
+        },
+        "mfc.steps.3.node_html": {
+          pt: "Ativação<small>Visibilidade no digital</small>",
+          en: "Activation<small>Digital visibility</small>"
+        },
+        "mfc.steps.3.short": {
+          pt: "Visibilidade no digital",
+          en: "Digital visibility"
+        },
+        "mfc.steps.3.description_html": {
+          pt: "<strong>Ativação:</strong> Colocamos canais, campanhas e experiências em movimento para alcançar o público certo e gerar oportunidades reais.",
+          en: "<strong>Activation:</strong> We put channels, campaigns, and experiences into motion to reach the right audience and generate real opportunities."
+        },
+        "mfc.steps.4.node_html": {
+          pt: "Otimização<small>Métricas, testes e evolução</small>",
+          en: "Optimization<small>Metrics, testing, and evolution</small>"
+        },
+        "mfc.steps.4.short": {
+          pt: "Métricas, testes e evolução",
+          en: "Metrics, testing, and evolution"
+        },
+        "mfc.steps.4.description_html": {
+          pt: "<strong>Otimização:</strong> Acompanhamos resultados, testamos melhorias e usamos os dados para tornar o próximo ciclo mais preciso e eficiente.",
+          en: "<strong>Optimization:</strong> We monitor results, test improvements, and use data to make the next cycle more precise and efficient."
+        }
+      };
+
+      window.MFC_I18N = dictionary;
+
+      if (typeof window.MF_REGISTER_I18N === "function") {
+        window.MF_REGISTER_I18N(dictionary);
+      } else {
+        window.MF_I18N = Object.assign({}, window.MF_I18N || {}, dictionary);
+
+        if (typeof window.MF_APPLY_I18N === "function") {
+          window.MF_APPLY_I18N(document);
+        }
+      }
+    })();
+  </script>
+
+  <!-- Interacao isolada, troca automatica e sincronizacao com o idioma da base. -->
+  <script>
+    (() => {
+      const currentScript = document.currentScript;
+      const root = currentScript && currentScript.closest
+        ? currentScript.closest("[data-mf-method-cycle-embed]")
+        : document.getElementById("mf-method-cycle");
+
+      if (!root || root.dataset.mfcBound === "1") return;
+
+      const stage = root.querySelector("[data-mfc-stage]");
+      const nodes = stage ? Array.from(stage.querySelectorAll("[data-mfc-step]")) : [];
+      const descriptionBox = root.querySelector("[data-mfc-description]");
+      const centerText = root.querySelector("[data-mfc-center-text]");
+
+      if (!stage || nodes.length !== 5 || !descriptionBox || !centerText) return;
+
+      root.dataset.mfcBound = "1";
+
+      const host = root.closest ? root.closest(".mf-embed-slot") : null;
+      if (host && host.classList) host.classList.add("mf-embed-slot--mfc-full");
+
+      const motionMedia = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const AUTO_DELAY = 7000;
+      const cleanup = [];
+
+      let descriptionTimer = 0;
+      let autoTimer = 0;
+      let activeIndex = 0;
+      let inView = true;
+      let destroyed = false;
+      let intersectionObserver = null;
+
+      const listen = (target, type, handler, options) => {
+        if (!target || !target.addEventListener) return;
+        target.addEventListener(type, handler, options);
+        cleanup.push(() => target.removeEventListener(type, handler, options));
+      };
+
+      const listenMedia = (query, handler) => {
+        if (query.addEventListener) {
+          query.addEventListener("change", handler);
+          cleanup.push(() => query.removeEventListener("change", handler));
+        } else if (query.addListener) {
+          query.addListener(handler);
+          cleanup.push(() => query.removeListener(handler));
+        }
+      };
+
+      const getLanguage = () => {
+        if (window.MF_ACTIVE_LANG === "en") return "en";
+        const lang = String(document.documentElement.lang || "pt-BR").toLowerCase();
+        return lang.startsWith("en") ? "en" : "pt";
+      };
+
+      const applyTranslations = () => {
+        if (typeof window.MF_APPLY_I18N === "function") {
+          window.MF_APPLY_I18N(root);
+          return;
+        }
+
+        const dictionary = window.MFC_I18N || {};
+        const lang = getLanguage();
+
+        root.querySelectorAll("[data-i18n]").forEach((element) => {
+          const entry = dictionary[element.getAttribute("data-i18n")];
+          if (entry && typeof entry[lang] === "string") element.textContent = entry[lang];
+        });
+
+        root.querySelectorAll("[data-i18n-html]").forEach((element) => {
+          const entry = dictionary[element.getAttribute("data-i18n-html")];
+          if (entry && typeof entry[lang] === "string") element.innerHTML = entry[lang];
+        });
+
+        root.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+          const entry = dictionary[element.getAttribute("data-i18n-aria-label")];
+          if (entry && typeof entry[lang] === "string") element.setAttribute("aria-label", entry[lang]);
+        });
+      };
+
+      const normalizeIndex = (index) => ((Number(index) % nodes.length) + nodes.length) % nodes.length;
+
+      const stopAuto = () => {
+        if (!autoTimer) return;
+        window.clearTimeout(autoTimer);
+        autoTimer = 0;
+      };
+
+      const canAutoRun = () => {
+        return !destroyed
+          && root.isConnected
+          && inView
+          && !document.hidden
+          && !motionMedia.matches;
+      };
+
+      const scheduleAuto = () => {
+        stopAuto();
+        if (!canAutoRun()) return;
+
+        autoTimer = window.setTimeout(() => {
+          autoTimer = 0;
+          selectNode(activeIndex + 1, { animate: true });
+          scheduleAuto();
+        }, AUTO_DELAY);
+      };
+
+      const selectNode = (index, { focus = false, animate = true } = {}) => {
+        if (destroyed) return;
+
+        activeIndex = normalizeIndex(index);
+        const selected = nodes[activeIndex];
+        const descriptionKey = `mfc.steps.${activeIndex}.description_html`;
+        const shortKey = `mfc.steps.${activeIndex}.short`;
+
+        nodes.forEach((node, nodeIndex) => {
+          node.setAttribute("aria-pressed", nodeIndex === activeIndex ? "true" : "false");
+        });
+
+        window.clearTimeout(descriptionTimer);
+        if (animate) descriptionBox.classList.add("is-changing");
+
+        descriptionTimer = window.setTimeout(() => {
+          if (destroyed) return;
+
+          descriptionBox.setAttribute("data-i18n-html", descriptionKey);
+          centerText.setAttribute("data-i18n", shortKey);
+          applyTranslations();
+          descriptionBox.classList.remove("is-changing");
+        }, animate ? 120 : 0);
+
+        if (focus && selected && typeof selected.focus === "function") {
+          try {
+            selected.focus({ preventScroll: true });
+          } catch (error) {
+            selected.focus();
+          }
+        }
+      };
+
+      nodes.forEach((node, index) => {
+        listen(node, "click", () => {
+          selectNode(index);
+          scheduleAuto();
+        });
+      });
+
+      listen(stage, "keydown", (event) => {
+        const keys = ["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "Home", "End"];
+        if (!keys.includes(event.key)) return;
+
+        event.preventDefault();
+
+        if (event.key === "Home") {
+          selectNode(0, { focus: true });
+          scheduleAuto();
+          return;
+        }
+
+        if (event.key === "End") {
+          selectNode(nodes.length - 1, { focus: true });
+          scheduleAuto();
+          return;
+        }
+
+        const direction = event.key === "ArrowRight" || event.key === "ArrowDown" ? 1 : -1;
+        selectNode(activeIndex + direction, { focus: true });
+        scheduleAuto();
+      });
+
+      listen(document, "visibilitychange", () => {
+        if (document.hidden) stopAuto();
+        else scheduleAuto();
+      });
+
+      listenMedia(motionMedia, () => {
+        if (motionMedia.matches) stopAuto();
+        else scheduleAuto();
+      });
+
+      if ("IntersectionObserver" in window) {
+        intersectionObserver = new IntersectionObserver((entries) => {
+          const entry = entries && entries[0];
+          inView = !entry || entry.isIntersecting || entry.intersectionRatio > 0;
+          if (inView) scheduleAuto();
+          else stopAuto();
+        }, {
+          root: null,
+          rootMargin: "160px 0px",
+          threshold: 0
+        });
+
+        intersectionObserver.observe(root);
+      }
+
+      const destroy = () => {
+        if (destroyed) return;
+        destroyed = true;
+
+        window.clearTimeout(descriptionTimer);
+        stopAuto();
+
+        if (intersectionObserver) {
+          intersectionObserver.disconnect();
+          intersectionObserver = null;
+        }
+
+        while (cleanup.length) {
+          const remove = cleanup.pop();
+          try { remove(); } catch (error) {}
+        }
+
+        if (host && host.classList) host.classList.remove("mf-embed-slot--mfc-full");
+        root.removeAttribute("data-mfc-bound");
+
+        if (root.__mfcDestroy === destroy) {
+          try { delete root.__mfcDestroy; } catch (error) { root.__mfcDestroy = null; }
+        }
+      };
+
+      root.__mfcDestroy = destroy;
+      selectNode(0, { animate: false });
+      applyTranslations();
+      scheduleAuto();
+    })();
+  </script>
 
 </div>
-</section></section>
-    <section id="mf-metodo" class="mf-embed-slot" data-embed="metodo"><!-- EMBED: MÉTODO --></section>
-    <section id="mf-projetos" class="mf-embed-slot" data-embed="projetos"><!-- EMBED: PROJETOS --></section>
-    <section id="mf-contato" class="mf-embed-slot" data-embed="contato"><!-- EMBED: CONTATO --></section>
+</section>
+    <section id="mf-projetos" class="mf-embed-slot" data-embed="projetos"><!-- EMBED: PROJETOS MINDFLY | cole somente este conteúdo dentro do slot #mf-projetos -->
+<div id="mf-projects-showcase" class="mfp-embed" data-mf-projects-embed role="region" aria-labelledby="mfp-title">
+  <style>
+    /* O slot da base passa a ocupar toda a largura sem alterar body, html ou :root. */
+    .mf-embed-slot.mf-embed-slot--mfp-full{
+      width:100vw;
+      max-width:none;
+      margin-left:calc(50% - 50vw);
+      margin-right:calc(50% - 50vw);
+      padding:0;
+      border-radius:0;
+      background:transparent;
+      overflow:visible;
+    }
+
+    .mf-embed-slot.mf-embed-slot--mfp-full > #mf-projects-showcase{
+      margin:0!important;
+      border-radius:0;
+    }
+
+    #mf-projects-showcase,
+    #mf-projects-showcase::before,
+    #mf-projects-showcase::after,
+    #mf-projects-showcase *,
+    #mf-projects-showcase *::before,
+    #mf-projects-showcase *::after{
+      box-sizing:border-box;
+    }
+
+    #mf-projects-showcase button,
+    #mf-projects-showcase a{
+      font:inherit;
+    }
+
+    #mf-projects-showcase{
+      --mfp-ink:#151426;
+      --mfp-muted:#211C4A;
+      --mfp-purple:#5945E8;
+      --mfp-purple-2:#3726AF;
+      --mfp-purple-soft:#E5E7FF;
+      --mfp-teal:#00D9C8;
+      --mfp-paper:#F7F7FF;
+      --mfp-white:#FFFFFF;
+      --mfp-line:rgba(33,28,74,.13);
+      --mfp-shell:min(1344px,calc(100% - 32px));
+      position:relative;
+      width:100%;
+      min-width:0;
+      min-height:0;
+      margin:0;
+      padding:96px 0 100px;
+      overflow:hidden;
+      isolation:isolate;
+      color:var(--mfp-ink);
+      font-family:Manrope,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+      -webkit-font-smoothing:antialiased;
+      background-image:
+        linear-gradient(135deg,rgba(255,255,255,.88) 0%,rgba(247,247,255,.76) 48%,rgba(255,255,255,.82) 100%),
+        url("https://images.unsplash.com/photo-1765046255478-55efc763637c?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-position:center center;
+      background-repeat:no-repeat;
+      background-size:cover;
+    }
+
+    /* Sem textura ou camada decorativa: mantém o mesmo fundo limpo da seção Transformação. */
+    #mf-projects-showcase::before,
+    #mf-projects-showcase::after{
+      content:none;
+      display:none;
+    }
+
+    #mf-projects-showcase .mfp-shell{
+      width:var(--mfp-shell);
+      margin:0 auto;
+    }
+
+    #mf-projects-showcase .mfp-head{
+      max-width:880px;
+      margin:0 auto 48px;
+      text-align:center;
+    }
+
+    #mf-projects-showcase .mfp-title{
+      margin:0;
+      padding-right:.08em;
+      color:var(--mfp-ink);
+      font-size:clamp(40px,5.15vw,72px);
+      line-height:1.02;
+      letter-spacing:-.058em;
+      font-weight:900;
+      text-wrap:balance;
+    }
+
+    #mf-projects-showcase .mfp-gradient{
+      display:inline;
+      padding-right:.08em;
+      background:linear-gradient(135deg,var(--mfp-purple-2) 0%,var(--mfp-purple) 54%,var(--mfp-teal) 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      -webkit-box-decoration-break:clone;
+      box-decoration-break:clone;
+    }
+
+    #mf-projects-showcase .mfp-intro{
+      max-width:760px;
+      margin:24px auto 0;
+      color:var(--mfp-muted);
+      font-size:clamp(16.5px,1.35vw,19px);
+      line-height:1.7;
+      font-weight:700;
+      letter-spacing:-.018em;
+    }
+
+    #mf-projects-showcase .mfp-intro strong{
+      color:var(--mfp-ink);
+      font-weight:900;
+    }
+
+    #mf-projects-showcase .mfp-carousel{
+      position:relative;
+      width:100%;
+      min-width:0;
+    }
+
+    #mf-projects-showcase .mfp-viewport{
+      width:100%;
+      overflow:hidden;
+      touch-action:pan-y;
+      cursor:grab;
+    }
+
+    #mf-projects-showcase .mfp-viewport.is-dragging{
+      cursor:grabbing;
+      user-select:none;
+      -webkit-user-select:none;
+    }
+
+    #mf-projects-showcase .mfp-track{
+      display:flex;
+      align-items:stretch;
+      gap:16px;
+      width:max-content;
+      max-width:none;
+      transform:translate3d(0,0,0);
+      transition:transform .48s cubic-bezier(.2,.8,.2,1);
+      will-change:transform;
+    }
+
+    #mf-projects-showcase .mfp-viewport.is-dragging .mfp-track{
+      transition:none;
+    }
+
+    #mf-projects-showcase .mfp-card{
+      position:relative;
+      flex:0 0 clamp(340px,calc((100vw - 64px) / 3),437.333px);
+      width:clamp(340px,calc((100vw - 64px) / 3),437.333px);
+      min-width:0;
+      min-height:382px;
+      display:flex;
+      flex-direction:column;
+      padding:22px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.82);
+      border-radius:30px;
+      color:var(--mfp-ink);
+      background:rgba(255,255,255,.76);
+      backdrop-filter:blur(10px) saturate(112%);
+      -webkit-backdrop-filter:blur(10px) saturate(112%);
+      transition:transform .22s ease,border-color .22s ease;
+    }
+
+    #mf-projects-showcase .mfp-card::before{
+      content:"";
+      position:absolute;
+      inset:0 0 auto;
+      height:4px;
+      pointer-events:none;
+      background:linear-gradient(90deg,var(--mfp-purple-2),var(--mfp-purple),var(--mfp-teal));
+    }
+
+    #mf-projects-showcase .mfp-card::after{
+      content:"";
+      position:absolute;
+      top:-88px;
+      right:-88px;
+      width:210px;
+      height:210px;
+      border-radius:50%;
+      pointer-events:none;
+      background:radial-gradient(circle,rgba(89,69,232,.09),transparent 68%);
+    }
+
+    @media (hover:hover) and (min-width:821px){
+      #mf-projects-showcase .mfp-card:hover{
+        transform:translateY(-5px);
+        border-color:rgba(89,69,232,.24);
+      }
+    }
+
+    #mf-projects-showcase .mfp-card-top{
+      position:relative;
+      z-index:1;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+    }
+
+    #mf-projects-showcase .mfp-logo-box{
+      width:100%;
+      min-height:58px;
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      padding:0;
+      overflow:hidden;
+      border:0;
+      border-radius:0;
+      background:transparent;
+    }
+
+    #mf-projects-showcase .mfp-logo{
+      display:block;
+      width:auto;
+      max-width:172px;
+      max-height:54px;
+      object-fit:contain;
+      object-position:left center;
+      filter:grayscale(1) contrast(1.05);
+    }
+
+
+    #mf-projects-showcase .mfp-card-title{
+      position:relative;
+      z-index:1;
+      margin:24px 0 0;
+      color:var(--mfp-ink);
+      font-size:clamp(24px,2vw,31px);
+      line-height:1.05;
+      letter-spacing:-.045em;
+      font-weight:900;
+      text-wrap:balance;
+    }
+
+    #mf-projects-showcase .mfp-card-text{
+      position:relative;
+      z-index:1;
+      margin:15px 0 0;
+      color:var(--mfp-muted);
+      font-size:14.5px;
+      line-height:1.58;
+      font-weight:700;
+      letter-spacing:-.014em;
+    }
+
+    #mf-projects-showcase .mfp-divider{
+      position:relative;
+      z-index:1;
+      width:100%;
+      height:1px;
+      margin:auto 0 18px;
+      border:0;
+      background:linear-gradient(90deg,rgba(33,28,74,.18),rgba(89,69,232,.18),transparent);
+    }
+
+    #mf-projects-showcase .mfp-links-label{
+      position:relative;
+      z-index:1;
+      display:block;
+      margin:0 0 10px;
+      color:var(--mfp-muted);
+      font-size:10px;
+      line-height:1;
+      font-weight:900;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    #mf-projects-showcase .mfp-links{
+      position:relative;
+      z-index:1;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    #mf-projects-showcase .mfp-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:7px;
+      min-height:38px;
+      padding:0 12px;
+      border:1px solid rgba(89,69,232,.18);
+      border-radius:999px;
+      color:var(--mfp-purple-2);
+      background:rgba(229,231,255,.68);
+      text-decoration:none;
+      font-size:11px;
+      line-height:1;
+      font-weight:900;
+      transition:transform .18s ease,background .18s ease,border-color .18s ease;
+    }
+
+    #mf-projects-showcase .mfp-link:hover,
+    #mf-projects-showcase .mfp-link:focus-visible{
+      transform:translateY(-1px);
+      border-color:rgba(89,69,232,.42);
+      background:var(--mfp-purple-soft);
+    }
+
+    #mf-projects-showcase .mfp-link:focus-visible,
+    #mf-projects-showcase .mfp-control:focus-visible,
+    #mf-projects-showcase .mfp-dot:focus-visible{
+      outline:3px solid rgba(89,69,232,.25);
+      outline-offset:3px;
+    }
+
+    #mf-projects-showcase .mfp-link svg{
+      width:14px;
+      height:14px;
+      flex:0 0 auto;
+      fill:none;
+      stroke:currentColor;
+      stroke-width:2;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    #mf-projects-showcase .mfp-navigation{
+      width:100%;
+      margin:34px 0 0;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:18px;
+    }
+
+    #mf-projects-showcase .mfp-controls{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    #mf-projects-showcase .mfp-control{
+      width:50px;
+      height:50px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0;
+      border:1px solid rgba(89,69,232,.18);
+      border-radius:999px;
+      color:var(--mfp-ink);
+      background:rgba(255,255,255,.82);
+      box-shadow:0 12px 28px rgba(21,20,38,.08);
+      cursor:pointer;
+      transition:transform .18s ease,opacity .18s ease,background .18s ease;
+    }
+
+    #mf-projects-showcase .mfp-control:hover:not(:disabled),
+    #mf-projects-showcase .mfp-control:focus-visible:not(:disabled){
+      transform:translateY(-2px);
+      background:#fff;
+    }
+
+    #mf-projects-showcase .mfp-control:disabled{
+      opacity:.34;
+      cursor:not-allowed;
+    }
+
+    #mf-projects-showcase .mfp-control svg{
+      width:22px;
+      height:22px;
+      fill:none;
+      stroke:currentColor;
+      stroke-width:2.5;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    #mf-projects-showcase .mfp-pause{
+      display:none;
+    }
+
+    #mf-projects-showcase .mfp-pause[data-mfp-paused="false"] .mfp-icon-play{
+      display:none;
+    }
+
+    #mf-projects-showcase .mfp-pause[data-mfp-paused="true"] .mfp-icon-pause{
+      display:none;
+    }
+
+    #mf-projects-showcase .mfp-dots{
+      min-width:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+    }
+
+    #mf-projects-showcase .mfp-dot{
+      width:9px;
+      height:9px;
+      padding:0;
+      border:0;
+      border-radius:999px;
+      background:rgba(33,28,74,.20);
+      cursor:pointer;
+      transition:width .2s ease,background .2s ease;
+    }
+
+    #mf-projects-showcase .mfp-dot[aria-current="true"]{
+      width:30px;
+      background:linear-gradient(90deg,var(--mfp-purple),var(--mfp-teal));
+    }
+
+    #mf-projects-showcase .mfp-position{
+      min-width:72px;
+      color:var(--mfp-muted);
+      font-size:12px;
+      line-height:1;
+      font-weight:900;
+      letter-spacing:.03em;
+      text-align:right;
+    }
+
+
+    /* Janela de navegador simulada para visualizar os links sem sair da página. */
+    #mfp-project-browser-modal[hidden]{
+      display:none!important;
+    }
+
+    #mfp-project-browser-modal{
+      --mfp-ink:#151426;
+      --mfp-muted:#211C4A;
+      --mfp-purple:#5945E8;
+      --mfp-purple-2:#3726AF;
+      --mfp-purple-soft:#E5E7FF;
+      --mfp-teal:#00D9C8;
+      position:fixed;
+      inset:0;
+      z-index:2147483647;
+      display:grid;
+      place-items:center;
+      padding:clamp(12px,2.4vw,30px);
+      isolation:isolate;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-backdrop{
+      position:absolute;
+      inset:0;
+      border:0;
+      padding:0;
+      background:rgba(9,8,23,.72);
+      cursor:pointer;
+    }
+
+    @supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+      #mfp-project-browser-modal .mfp-browser-backdrop{
+        -webkit-backdrop-filter:blur(12px) saturate(110%);
+        backdrop-filter:blur(12px) saturate(110%);
+      }
+    }
+
+    #mfp-project-browser-modal .mfp-browser-window{
+      position:relative;
+      z-index:1;
+      width:min(1180px,100%);
+      height:min(780px,calc(100dvh - clamp(24px,4.8vw,60px)));
+      min-height:420px;
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.26);
+      border-radius:26px;
+      background:#fff;
+      box-shadow:0 34px 110px rgba(9,8,23,.38);
+    }
+
+    #mfp-project-browser-modal .mfp-browser-toolbar{
+      min-height:62px;
+      display:grid;
+      grid-template-columns:auto minmax(0,1fr) auto auto;
+      align-items:center;
+      gap:12px;
+      padding:10px 12px 10px 16px;
+      border-bottom:1px solid rgba(33,28,74,.12);
+      background:#F7F7FF;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-lights{
+      display:flex;
+      gap:7px;
+      align-items:center;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-lights span{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:rgba(33,28,74,.18);
+    }
+
+    #mfp-project-browser-modal .mfp-browser-lights span:nth-child(1){background:#ff6b67}
+    #mfp-project-browser-modal .mfp-browser-lights span:nth-child(2){background:#f6c453}
+    #mfp-project-browser-modal .mfp-browser-lights span:nth-child(3){background:#35c86f}
+
+    #mfp-project-browser-modal .mfp-browser-address{
+      min-width:0;
+      min-height:40px;
+      display:flex;
+      align-items:center;
+      gap:9px;
+      padding:0 14px;
+      overflow:hidden;
+      border:1px solid rgba(33,28,74,.10);
+      border-radius:999px;
+      background:#fff;
+      color:var(--mfp-muted);
+      font-size:12px;
+      line-height:1;
+      font-weight:700;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-address svg{
+      width:15px;
+      height:15px;
+      flex:0 0 auto;
+      fill:none;
+      stroke:currentColor;
+      stroke-width:2;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-address span{
+      min-width:0;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-external,
+    #mfp-project-browser-modal .mfp-browser-close{
+      min-height:40px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(89,69,232,.18);
+      border-radius:999px;
+      color:var(--mfp-purple-2);
+      background:#fff;
+      text-decoration:none;
+      cursor:pointer;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-external{
+      gap:7px;
+      padding:0 14px;
+      font-size:11px;
+      line-height:1;
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-close{
+      width:40px;
+      padding:0;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-external:hover,
+    #mfp-project-browser-modal .mfp-browser-external:focus-visible,
+    #mfp-project-browser-modal .mfp-browser-close:hover,
+    #mfp-project-browser-modal .mfp-browser-close:focus-visible{
+      background:var(--mfp-purple-soft);
+      border-color:rgba(89,69,232,.38);
+    }
+
+    #mfp-project-browser-modal .mfp-browser-external:focus-visible,
+    #mfp-project-browser-modal .mfp-browser-close:focus-visible{
+      outline:3px solid rgba(89,69,232,.25);
+      outline-offset:2px;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-external svg,
+    #mfp-project-browser-modal .mfp-browser-close svg{
+      width:17px;
+      height:17px;
+      fill:none;
+      stroke:currentColor;
+      stroke-width:2.2;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-content{
+      position:relative;
+      flex:1 1 auto;
+      min-height:0;
+      background:#fff;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-frame{
+      display:block;
+      width:100%;
+      height:100%;
+      border:0;
+      background:#fff;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-loading{
+      position:absolute;
+      inset:0;
+      z-index:2;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      padding:24px;
+      color:var(--mfp-muted);
+      background:#fff;
+      text-align:center;
+      font-size:13px;
+      line-height:1.5;
+      font-weight:800;
+      transition:opacity .18s ease,visibility .18s ease;
+    }
+
+    #mfp-project-browser-modal.is-loaded .mfp-browser-loading{
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-loading-note{
+      max-width:420px;
+      color:rgba(33,28,74,.68);
+      font-size:11px;
+      line-height:1.45;
+      font-weight:700;
+    }
+
+    #mfp-project-browser-modal .mfp-browser-spinner{
+      width:34px;
+      height:34px;
+      border:3px solid rgba(89,69,232,.16);
+      border-top-color:var(--mfp-purple);
+      border-radius:50%;
+      animation:mfp-browser-spin .8s linear infinite;
+    }
+
+    @keyframes mfp-browser-spin{
+      to{transform:rotate(360deg)}
+    }
+
+
+    @media(max-width:1080px){
+      #mf-projects-showcase .mfp-card{
+        flex-basis:calc((100vw - 48px) / 2);
+        width:calc((100vw - 48px) / 2);
+      }
+    }
+
+    @media(max-width:680px){
+      #mf-projects-showcase{
+        --mfp-shell:calc(100% - 20px);
+        padding:64px 0 62px;
+        background-position:20% center;
+      }
+
+      #mf-projects-showcase .mfp-head{
+        max-width:390px;
+        margin-bottom:32px;
+      }
+
+      #mf-projects-showcase .mfp-title{
+        font-size:clamp(34px,10.2vw,46px);
+        line-height:1.04;
+        letter-spacing:-.052em;
+      }
+
+      #mf-projects-showcase .mfp-intro{
+        margin-top:18px;
+        font-size:14.5px;
+        line-height:1.62;
+      }
+
+      #mf-projects-showcase .mfp-track{gap:12px}
+
+      #mf-projects-showcase .mfp-card{
+        flex-basis:min(87vw,344px);
+        width:min(87vw,344px);
+        min-height:366px;
+        padding:19px;
+        border-radius:26px;
+      }
+
+      #mf-projects-showcase .mfp-logo-box{
+        min-height:52px;
+        padding:0;
+      }
+
+      #mf-projects-showcase .mfp-logo{
+        max-width:154px;
+        max-height:48px;
+      }
+
+      #mf-projects-showcase .mfp-card-title{
+        margin-top:21px;
+        font-size:25px;
+      }
+
+      #mf-projects-showcase .mfp-card-text{
+        font-size:14px;
+        line-height:1.54;
+      }
+
+
+
+      #mf-projects-showcase .mfp-links{
+        flex-wrap:nowrap;
+        gap:4px;
+      }
+
+      #mf-projects-showcase .mfp-link{
+        flex:1 1 0;
+        min-width:0;
+        min-height:32px;
+        gap:3px;
+        padding:0 5px;
+        font-size:9px;
+        letter-spacing:-.02em;
+        white-space:nowrap;
+      }
+
+      #mf-projects-showcase .mfp-link svg{
+        width:11px;
+        height:11px;
+      }
+
+      #mfp-project-browser-modal{
+        padding:
+          max(8px,env(safe-area-inset-top))
+          max(8px,env(safe-area-inset-right))
+          max(8px,env(safe-area-inset-bottom))
+          max(8px,env(safe-area-inset-left));
+      }
+
+      #mfp-project-browser-modal .mfp-browser-window{
+        width:100%;
+        height:100%;
+        max-height:100%;
+        min-height:360px;
+        border-radius:20px;
+      }
+
+      #mfp-project-browser-modal .mfp-browser-toolbar{
+        min-height:56px;
+        grid-template-columns:auto minmax(0,1fr) auto;
+        gap:8px;
+        padding:8px;
+      }
+
+      #mfp-project-browser-modal .mfp-browser-lights{
+        display:none;
+      }
+
+      #mfp-project-browser-modal .mfp-browser-address{
+        min-height:38px;
+        padding:0 11px;
+        font-size:10px;
+      }
+
+      #mfp-project-browser-modal .mfp-browser-external{
+        width:38px;
+        min-height:38px;
+        padding:0;
+      }
+
+      #mfp-project-browser-modal .mfp-browser-external span{
+        position:absolute;
+        width:1px;
+        height:1px;
+        padding:0;
+        margin:-1px;
+        overflow:hidden;
+        clip:rect(0,0,0,0);
+        white-space:nowrap;
+        border:0;
+      }
+
+      #mfp-project-browser-modal .mfp-browser-close{
+        width:38px;
+        min-height:38px;
+      }
+
+
+      #mf-projects-showcase .mfp-navigation{
+        margin-top:26px;
+        grid-template-columns:auto 1fr;
+        gap:14px;
+      }
+
+      #mf-projects-showcase .mfp-dots{
+        justify-content:flex-end;
+      }
+
+      #mf-projects-showcase .mfp-position{display:none}
+
+      #mf-projects-showcase .mfp-control{
+        width:48px;
+        height:48px;
+      }
+
+      #mf-projects-showcase .mfp-pause{
+        display:inline-flex;
+      }
+    }
+
+    @media(max-width:360px){
+      #mf-projects-showcase .mfp-card{
+        flex-basis:min(88vw,316px);
+        width:min(88vw,316px);
+        min-height:356px;
+        padding:18px;
+      }
+
+      #mf-projects-showcase .mfp-link{font-size:8.2px;padding:0 3px}
+      #mf-projects-showcase .mfp-link svg{width:10px;height:10px}
+
+      #mf-projects-showcase .mfp-controls{gap:8px}
+      #mf-projects-showcase .mfp-control{width:46px;height:46px}
+      #mf-projects-showcase .mfp-dot[aria-current="true"]{width:24px}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      #mf-projects-showcase *,
+      #mf-projects-showcase *::before,
+      #mf-projects-showcase *::after{
+        animation:none!important;
+        transition:none!important;
+        scroll-behavior:auto!important;
+      }
+    }
+  </style>
+
+  <div class="mfp-shell">
+    <header class="mfp-head">
+      <h2 class="mfp-title" id="mfp-title" data-i18n-html="mfp.title">
+        Veja quem já fez parte da <span class="mfp-gradient">MindFly</span>
+      </h2>
+      <p class="mfp-intro" data-i18n-html="mfp.intro">
+        Da primeira ideia à evolução contínua, criamos experiências digitais para <strong>fortalecer marcas</strong>, gerar oportunidades e transformar presença em crescimento.
+      </p>
+    </header>
+
+    <div class="mfp-carousel" data-mfp-carousel>
+      <div
+        class="mfp-viewport"
+        data-mfp-viewport
+        tabindex="0"
+        aria-label="Projetos em destaque"
+        data-i18n-aria-label="mfp.carousel.aria_label"
+      >
+        <div class="mfp-track" data-mfp-track>
+          <!-- PROJETO 01: substitua logo, textos e hrefs pelos dados reais. -->
+          <article class="mfp-card" data-mfp-card>
+            <div class="mfp-card-top">
+              <div class="mfp-logo-box">
+                <img
+                  class="mfp-logo"
+                  src="https://imagensfree.com.br/wp-content/uploads/2021/11/spotify-logo-preto-png-2048x614.png"
+                  alt="Logo temporário do projeto"
+                  data-i18n-alt="mfp.logo.alt"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+            </div>
+            <h3 class="mfp-card-title" data-i18n="mfp.cards.0.title">Aquisição e performance</h3>
+            <p class="mfp-card-text" data-i18n="mfp.cards.0.text">Estruturamos campanhas, páginas e conteúdo para atrair públicos mais qualificados e transformar atenção em oportunidades comerciais.</p>
+            <hr class="mfp-divider">
+            <span class="mfp-links-label" data-i18n="mfp.links.label">Links do projeto</span>
+            <div class="mfp-links">
+              <a class="mfp-link" href="https://example.com/projeto-xxx" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_xxx">Projeto XXX</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-yyy" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_yyy">Projeto YYY</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-qqq" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_qqq">Projeto QQQ</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJETO 02: substitua logo, textos e hrefs pelos dados reais. -->
+          <article class="mfp-card" data-mfp-card>
+            <div class="mfp-card-top">
+              <div class="mfp-logo-box">
+                <img
+                  class="mfp-logo"
+                  src="https://imagensfree.com.br/wp-content/uploads/2021/11/spotify-logo-preto-png-2048x614.png"
+                  alt="Logo temporário do projeto"
+                  data-i18n-alt="mfp.logo.alt"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+            </div>
+            <h3 class="mfp-card-title" data-i18n="mfp.cards.1.title">Presença digital integrada</h3>
+            <p class="mfp-card-text" data-i18n="mfp.cards.1.text">Planejamos arquitetura, interface e conteúdo para construir uma presença profissional, clara e preparada para crescer com a operação.</p>
+            <hr class="mfp-divider">
+            <span class="mfp-links-label" data-i18n="mfp.links.label">Links do projeto</span>
+            <div class="mfp-links">
+              <a class="mfp-link" href="https://example.com/projeto-xxx" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_xxx">Projeto XXX</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-yyy" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_yyy">Projeto YYY</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-qqq" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_qqq">Projeto QQQ</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJETO 03: substitua logo, textos e hrefs pelos dados reais. -->
+          <article class="mfp-card" data-mfp-card>
+            <div class="mfp-card-top">
+              <div class="mfp-logo-box">
+                <img
+                  class="mfp-logo"
+                  src="https://imagensfree.com.br/wp-content/uploads/2021/11/spotify-logo-preto-png-2048x614.png"
+                  alt="Logo temporário do projeto"
+                  data-i18n-alt="mfp.logo.alt"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+            </div>
+            <h3 class="mfp-card-title" data-i18n="mfp.cards.2.title">Marca e conteúdo</h3>
+            <p class="mfp-card-text" data-i18n="mfp.cards.2.text">Organizamos posicionamento, identidade e linguagem visual para comunicar valor com consistência em todos os pontos de contato digitais.</p>
+            <hr class="mfp-divider">
+            <span class="mfp-links-label" data-i18n="mfp.links.label">Links do projeto</span>
+            <div class="mfp-links">
+              <a class="mfp-link" href="https://example.com/projeto-xxx" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_xxx">Projeto XXX</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-yyy" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_yyy">Projeto YYY</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-qqq" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_qqq">Projeto QQQ</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJETO 04: substitua logo, textos e hrefs pelos dados reais. -->
+          <article class="mfp-card" data-mfp-card>
+            <div class="mfp-card-top">
+              <div class="mfp-logo-box">
+                <img
+                  class="mfp-logo"
+                  src="https://imagensfree.com.br/wp-content/uploads/2021/11/spotify-logo-preto-png-2048x614.png"
+                  alt="Logo temporário do projeto"
+                  data-i18n-alt="mfp.logo.alt"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+            </div>
+            <h3 class="mfp-card-title" data-i18n="mfp.cards.3.title">Conversão comercial</h3>
+            <p class="mfp-card-text" data-i18n="mfp.cards.3.text">Criamos jornadas mais objetivas para captar contatos, apresentar ofertas e aproximar marketing, atendimento e processo comercial.</p>
+            <hr class="mfp-divider">
+            <span class="mfp-links-label" data-i18n="mfp.links.label">Links do projeto</span>
+            <div class="mfp-links">
+              <a class="mfp-link" href="https://example.com/projeto-xxx" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_xxx">Projeto XXX</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-yyy" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_yyy">Projeto YYY</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-qqq" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_qqq">Projeto QQQ</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJETO 05: substitua logo, textos e hrefs pelos dados reais. -->
+          <article class="mfp-card" data-mfp-card>
+            <div class="mfp-card-top">
+              <div class="mfp-logo-box">
+                <img
+                  class="mfp-logo"
+                  src="https://imagensfree.com.br/wp-content/uploads/2021/11/spotify-logo-preto-png-2048x614.png"
+                  alt="Logo temporário do projeto"
+                  data-i18n-alt="mfp.logo.alt"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+            </div>
+            <h3 class="mfp-card-title" data-i18n="mfp.cards.4.title">Escala e otimização</h3>
+            <p class="mfp-card-text" data-i18n="mfp.cards.4.text">Conectamos métricas, testes e melhorias contínuas para identificar gargalos e tornar cada novo ciclo mais preciso e eficiente.</p>
+            <hr class="mfp-divider">
+            <span class="mfp-links-label" data-i18n="mfp.links.label">Links do projeto</span>
+            <div class="mfp-links">
+              <a class="mfp-link" href="https://example.com/projeto-xxx" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_xxx">Projeto XXX</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-yyy" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_yyy">Projeto YYY</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-qqq" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_qqq">Projeto QQQ</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJETO 06: substitua logo, textos e hrefs pelos dados reais. -->
+          <article class="mfp-card" data-mfp-card>
+            <div class="mfp-card-top">
+              <div class="mfp-logo-box">
+                <img
+                  class="mfp-logo"
+                  src="https://imagensfree.com.br/wp-content/uploads/2021/11/spotify-logo-preto-png-2048x614.png"
+                  alt="Logo temporário do projeto"
+                  data-i18n-alt="mfp.logo.alt"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+            </div>
+            <h3 class="mfp-card-title" data-i18n="mfp.cards.5.title">Lançamento digital</h3>
+            <p class="mfp-card-text" data-i18n="mfp.cards.5.text">Planejamos estratégia, comunicação e ativos digitais para apresentar novas ofertas com clareza e gerar tração desde o lançamento.</p>
+            <hr class="mfp-divider">
+            <span class="mfp-links-label" data-i18n="mfp.links.label">Links do projeto</span>
+            <div class="mfp-links">
+              <a class="mfp-link" href="https://example.com/projeto-xxx" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_xxx">Projeto XXX</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-yyy" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_yyy">Projeto YYY</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-qqq" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_qqq">Projeto QQQ</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJETO 07: substitua logo, textos e hrefs pelos dados reais. -->
+          <article class="mfp-card" data-mfp-card>
+            <div class="mfp-card-top">
+              <div class="mfp-logo-box">
+                <img
+                  class="mfp-logo"
+                  src="https://imagensfree.com.br/wp-content/uploads/2021/11/spotify-logo-preto-png-2048x614.png"
+                  alt="Logo temporário do projeto"
+                  data-i18n-alt="mfp.logo.alt"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+            </div>
+            <h3 class="mfp-card-title" data-i18n="mfp.cards.6.title">Conteúdo e audiovisual</h3>
+            <p class="mfp-card-text" data-i18n="mfp.cards.6.text">Desenvolvemos conteúdos e materiais audiovisuais para fortalecer autoridade, ampliar alcance e manter uma presença visual consistente.</p>
+            <hr class="mfp-divider">
+            <span class="mfp-links-label" data-i18n="mfp.links.label">Links do projeto</span>
+            <div class="mfp-links">
+              <a class="mfp-link" href="https://example.com/projeto-xxx" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_xxx">Projeto XXX</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-yyy" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_yyy">Projeto YYY</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-qqq" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_qqq">Projeto QQQ</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJETO 08: substitua logo, textos e hrefs pelos dados reais. -->
+          <article class="mfp-card" data-mfp-card>
+            <div class="mfp-card-top">
+              <div class="mfp-logo-box">
+                <img
+                  class="mfp-logo"
+                  src="https://imagensfree.com.br/wp-content/uploads/2021/11/spotify-logo-preto-png-2048x614.png"
+                  alt="Logo temporário do projeto"
+                  data-i18n-alt="mfp.logo.alt"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+            </div>
+            <h3 class="mfp-card-title" data-i18n="mfp.cards.7.title">Tecnologia e automação</h3>
+            <p class="mfp-card-text" data-i18n="mfp.cards.7.text">Integramos páginas, automações e ferramentas para simplificar processos, melhorar o atendimento e apoiar o crescimento da operação.</p>
+            <hr class="mfp-divider">
+            <span class="mfp-links-label" data-i18n="mfp.links.label">Links do projeto</span>
+            <div class="mfp-links">
+              <a class="mfp-link" href="https://example.com/projeto-xxx" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_xxx">Projeto XXX</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-yyy" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_yyy">Projeto YYY</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+              <a class="mfp-link" href="https://example.com/projeto-qqq" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="mfp.links.project_qqq">Projeto QQQ</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="mfp-navigation" aria-label="Navegação dos projetos" data-i18n-aria-label="mfp.nav.aria_label">
+        <div class="mfp-controls">
+          <button class="mfp-control mfp-prev" type="button" aria-label="Projeto anterior" data-i18n-aria-label="mfp.nav.prev">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"></path></svg>
+          </button>
+          <button class="mfp-control mfp-pause" type="button" data-mfp-paused="false" aria-label="Pausar troca automática" title="Pausar troca automática" data-i18n-aria-label="mfp.nav.pause" data-i18n-title="mfp.nav.pause">
+            <svg class="mfp-icon-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6v12M15 6v12"></path></svg>
+            <svg class="mfp-icon-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l9 6-9 6V6z"></path></svg>
+          </button>
+          <button class="mfp-control mfp-next" type="button" aria-label="Próximo projeto" data-i18n-aria-label="mfp.nav.next">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"></path></svg>
+          </button>
+        </div>
+
+        <div class="mfp-dots" data-mfp-dots aria-label="Selecionar projeto" data-i18n-aria-label="mfp.dots.aria_label"></div>
+        <div class="mfp-position" data-mfp-position aria-live="polite">01 / 08</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="mfp-project-browser-modal" class="mfp-browser-modal" data-mfp-modal hidden>
+    <button
+      class="mfp-browser-backdrop"
+      type="button"
+      data-mfp-close
+      aria-label="Fechar visualização"
+      data-i18n-aria-label="mfp.browser.close"
+    ></button>
+
+    <section
+      class="mfp-browser-window"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mfp-browser-title"
+      tabindex="-1"
+      data-mfp-window
+    >
+      <h3 id="mfp-browser-title" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0" data-i18n="mfp.browser.title">Visualização do projeto</h3>
+
+      <div class="mfp-browser-toolbar">
+        <div class="mfp-browser-lights" aria-hidden="true"><span></span><span></span><span></span></div>
+
+        <div class="mfp-browser-address" aria-label="Endereço do projeto" data-i18n-aria-label="mfp.browser.address">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+          <span data-mfp-address>https://example.com/</span>
+        </div>
+
+        <a class="mfp-browser-external" href="https://example.com/" target="_blank" rel="noopener noreferrer" data-mfp-external>
+          <span data-i18n="mfp.browser.new_tab">Abrir em nova aba</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 5h5v5M19 5l-9 9"></path><path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path></svg>
+        </a>
+
+        <button class="mfp-browser-close" type="button" data-mfp-close aria-label="Fechar visualização" title="Fechar visualização" data-i18n-aria-label="mfp.browser.close" data-i18n-title="mfp.browser.close">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
+      </div>
+
+      <div class="mfp-browser-content">
+        <div class="mfp-browser-loading" data-mfp-loading>
+          <span class="mfp-browser-spinner" aria-hidden="true"></span>
+          <span data-i18n="mfp.browser.loading">Carregando visualização do projeto…</span>
+          <small class="mfp-browser-loading-note" data-i18n="mfp.browser.loading_note">Se o site bloquear a visualização incorporada, use “Abrir em nova aba”.</small>
+        </div>
+        <iframe
+          class="mfp-browser-frame"
+          data-mfp-frame
+          src="about:blank"
+          title="Visualização do projeto"
+          data-i18n-title="mfp.browser.frame_title"
+          loading="eager"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="fullscreen"
+        ></iframe>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- Dicionário bilíngue integrado ao núcleo i18n da página-base. -->
+  <script>
+    (() => {
+      const dictionary = {
+        "mfp.title": {
+          pt: "Veja quem já fez parte da <span class=\"mfp-gradient\">MindFly</span>",
+          en: "See who has been part of <span class=\"mfp-gradient\">MindFly</span>"
+        },
+        "mfp.intro": {
+          pt: "Da primeira ideia à evolução contínua, criamos experiências digitais para <strong>fortalecer marcas</strong>, gerar oportunidades e transformar presença em crescimento.",
+          en: "From the first idea to continuous evolution, we create digital experiences to <strong>strengthen brands</strong>, generate opportunities, and turn presence into growth."
+        },
+        "mfp.carousel.aria_label": { pt:"Projetos em destaque", en:"Featured projects" },
+        "mfp.nav.aria_label": { pt:"Navegação dos projetos", en:"Project navigation" },
+        "mfp.nav.prev": { pt:"Projeto anterior", en:"Previous project" },
+        "mfp.nav.next": { pt:"Próximo projeto", en:"Next project" },
+        "mfp.nav.pause": { pt:"Pausar troca automática", en:"Pause automatic rotation" },
+        "mfp.nav.resume": { pt:"Retomar troca automática", en:"Resume automatic rotation" },
+        "mfp.dots.aria_label": { pt:"Selecionar projeto", en:"Select project" },
+        "mfp.logo.alt": { pt:"Logo temporário do projeto", en:"Temporary project logo" },
+        "mfp.links.label": { pt:"Links do projeto", en:"Project links" },
+        "mfp.links.project_xxx": { pt:"Projeto XXX", en:"Project XXX" },
+        "mfp.links.project_yyy": { pt:"Projeto YYY", en:"Project YYY" },
+        "mfp.links.project_qqq": { pt:"Projeto QQQ", en:"Project QQQ" },
+        "mfp.browser.title": { pt:"Visualização do projeto", en:"Project preview" },
+        "mfp.browser.close": { pt:"Fechar visualização", en:"Close preview" },
+        "mfp.browser.address": { pt:"Endereço do projeto", en:"Project address" },
+        "mfp.browser.new_tab": { pt:"Abrir em nova aba", en:"Open in new tab" },
+        "mfp.browser.loading": { pt:"Carregando visualização do projeto…", en:"Loading project preview…" },
+        "mfp.browser.loading_note": { pt:"Se o site bloquear a visualização incorporada, use “Abrir em nova aba”.", en:"If the site blocks embedded viewing, use “Open in new tab”." },
+        "mfp.browser.frame_title": { pt:"Visualização do projeto", en:"Project preview" },
+
+        "mfp.cards.0.title": { pt:"Aquisição e performance", en:"Acquisition and performance" },
+        "mfp.cards.0.text": {
+          pt:"Estruturamos campanhas, páginas e conteúdo para atrair públicos mais qualificados e transformar atenção em oportunidades comerciais.",
+          en:"We structured campaigns, pages, and content to attract more qualified audiences and turn attention into business opportunities."
+        },
+        "mfp.cards.1.title": { pt:"Presença digital integrada", en:"Integrated digital presence" },
+        "mfp.cards.1.text": {
+          pt:"Planejamos arquitetura, interface e conteúdo para construir uma presença profissional, clara e preparada para crescer com a operação.",
+          en:"We planned architecture, interface, and content to build a professional, clear presence prepared to grow with the operation."
+        },
+        "mfp.cards.2.title": { pt:"Marca e conteúdo", en:"Brand and content" },
+        "mfp.cards.2.text": {
+          pt:"Organizamos posicionamento, identidade e linguagem visual para comunicar valor com consistência em todos os pontos de contato digitais.",
+          en:"We organized positioning, identity, and visual language to communicate value consistently across every digital touchpoint."
+        },
+        "mfp.cards.3.title": { pt:"Conversão comercial", en:"Sales conversion" },
+        "mfp.cards.3.text": {
+          pt:"Criamos jornadas mais objetivas para captar contatos, apresentar ofertas e aproximar marketing, atendimento e processo comercial.",
+          en:"We created clearer journeys to capture contacts, present offers, and connect marketing, service, and the sales process."
+        },
+        "mfp.cards.4.title": { pt:"Escala e otimização", en:"Scale and optimization" },
+        "mfp.cards.4.text": {
+          pt:"Conectamos métricas, testes e melhorias contínuas para identificar gargalos e tornar cada novo ciclo mais preciso e eficiente.",
+          en:"We connected metrics, testing, and continuous improvements to identify bottlenecks and make every new cycle more precise and efficient."
+        },
+        "mfp.cards.5.title": { pt:"Lançamento digital", en:"Digital launch" },
+        "mfp.cards.5.text": {
+          pt:"Planejamos estratégia, comunicação e ativos digitais para apresentar novas ofertas com clareza e gerar tração desde o lançamento.",
+          en:"We planned strategy, communication, and digital assets to present new offers clearly and generate traction from launch."
+        },
+        "mfp.cards.6.title": { pt:"Conteúdo e audiovisual", en:"Content and audiovisual" },
+        "mfp.cards.6.text": {
+          pt:"Desenvolvemos conteúdos e materiais audiovisuais para fortalecer autoridade, ampliar alcance e manter uma presença visual consistente.",
+          en:"We developed content and audiovisual assets to strengthen authority, expand reach, and maintain a consistent visual presence."
+        },
+        "mfp.cards.7.title": { pt:"Tecnologia e automação", en:"Technology and automation" },
+        "mfp.cards.7.text": {
+          pt:"Integramos páginas, automações e ferramentas para simplificar processos, melhorar o atendimento e apoiar o crescimento da operação.",
+          en:"We integrated pages, automations, and tools to simplify processes, improve service, and support operational growth."
+        },
+
+        "mfp.dot.0": { pt:"Abrir projeto 1", en:"Open project 1" },
+        "mfp.dot.1": { pt:"Abrir projeto 2", en:"Open project 2" },
+        "mfp.dot.2": { pt:"Abrir projeto 3", en:"Open project 3" },
+        "mfp.dot.3": { pt:"Abrir projeto 4", en:"Open project 4" },
+        "mfp.dot.4": { pt:"Abrir projeto 5", en:"Open project 5" },
+        "mfp.dot.5": { pt:"Abrir projeto 6", en:"Open project 6" },
+        "mfp.dot.6": { pt:"Abrir projeto 7", en:"Open project 7" },
+        "mfp.dot.7": { pt:"Abrir projeto 8", en:"Open project 8" }
+      };
+
+      window.MFP_I18N = dictionary;
+
+      if (typeof window.MF_REGISTER_I18N === "function") {
+        window.MF_REGISTER_I18N(dictionary);
+      } else {
+        window.MF_I18N = Object.assign({}, window.MF_I18N || {}, dictionary);
+        if (typeof window.MF_APPLY_I18N === "function") window.MF_APPLY_I18N(document);
+      }
+    })();
+  </script>
+
+  <!-- Carrossel responsivo, arraste, teclado e ciclo de vida protegido. -->
+  <script>
+    (() => {
+      const currentScript = document.currentScript;
+      const root = currentScript && currentScript.closest
+        ? currentScript.closest("[data-mf-projects-embed]")
+        : document.getElementById("mf-projects-showcase");
+
+      if (!root || root.dataset.mfpBound === "1") return;
+
+      const viewport = root.querySelector("[data-mfp-viewport]");
+      const track = root.querySelector("[data-mfp-track]");
+      const cards = Array.from(root.querySelectorAll("[data-mfp-card]"));
+      const prev = root.querySelector(".mfp-prev");
+      const next = root.querySelector(".mfp-next");
+      const pause = root.querySelector(".mfp-pause");
+      const dotsBox = root.querySelector("[data-mfp-dots]");
+      const position = root.querySelector("[data-mfp-position]");
+      const projectLinks = Array.from(root.querySelectorAll(".mfp-link"));
+      const modal = root.querySelector("[data-mfp-modal]");
+      const modalWindow = root.querySelector("[data-mfp-window]");
+      const modalFrame = root.querySelector("[data-mfp-frame]");
+      const modalAddress = root.querySelector("[data-mfp-address]");
+      const modalExternal = root.querySelector("[data-mfp-external]");
+      const modalCloseButtons = Array.from(root.querySelectorAll("[data-mfp-close]"));
+
+      if (!viewport || !track || cards.length < 2 || !prev || !next || !pause || !dotsBox || !modal || !modalWindow || !modalFrame || !modalAddress || !modalExternal || !modalCloseButtons.length) return;
+
+      root.dataset.mfpBound = "1";
+
+      const modalOriginParent = modal.parentNode;
+      const modalOriginNextSibling = modal.nextSibling;
+      if (document.body && modal.parentNode !== document.body) {
+        document.body.appendChild(modal);
+      }
+
+      const host = root.closest ? root.closest(".mf-embed-slot") : null;
+      if (host && host.classList) host.classList.add("mf-embed-slot--mfp-full");
+
+      const AUTO_DELAY = 7000;
+      const motionMq = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
+      let active = 0;
+      let maxIndex = cards.length - 1;
+      let resizeRaf = 0;
+      let destroyed = false;
+      let pointerDown = false;
+      let dragging = false;
+      let pointerId = null;
+      let startX = 0;
+      let startY = 0;
+      let lastX = 0;
+      let baseOffset = 0;
+      let suppressClickUntil = 0;
+      let autoTimer = 0;
+      let autoPaused = false;
+      let inView = true;
+      let intersectionObserver = null;
+      let modalOpen = false;
+      let modalLoadTimer = 0;
+      let modalLastFocus = null;
+      let previousDocumentOverflow = "";
+      let previousBodyOverflow = "";
+      const cleanup = [];
+      const dots = [];
+
+      const listen = (target,type,handler,options) => {
+        if (!target || !target.addEventListener) return;
+        target.addEventListener(type,handler,options);
+        cleanup.push(() => target.removeEventListener(type,handler,options));
+      };
+
+      const listenMedia = (query,handler) => {
+        if (!query) return;
+        if (query.addEventListener) {
+          query.addEventListener("change",handler);
+          cleanup.push(() => query.removeEventListener("change",handler));
+        } else if (query.addListener) {
+          query.addListener(handler);
+          cleanup.push(() => query.removeListener(handler));
+        }
+      };
+
+      const clamp = (value,min,max) => Math.max(min,Math.min(max,value));
+      const reduceMotion = () => Boolean(motionMq && motionMq.matches);
+
+      const getPerView = () => {
+        const width = window.innerWidth;
+        if (width <= 680) return 1;
+        if (width <= 1080) return 2;
+        return 3;
+      };
+
+      const calculateMaxIndex = () => {
+        const previous = maxIndex;
+        maxIndex = Math.max(0,cards.length - getPerView());
+        active = clamp(active,0,maxIndex);
+        return previous !== maxIndex;
+      };
+
+      const getCardOffset = (index) => {
+        const card = cards[clamp(index,0,cards.length - 1)];
+        return card ? card.offsetLeft : 0;
+      };
+
+      const applyTranslations = () => {
+        if (typeof window.MF_APPLY_I18N !== "function") return;
+        window.MF_APPLY_I18N(root);
+        window.MF_APPLY_I18N(modal);
+      };
+
+      const updatePauseButton = () => {
+        const key = autoPaused ? "mfp.nav.resume" : "mfp.nav.pause";
+        const fallback = autoPaused ? "Retomar troca automática" : "Pausar troca automática";
+        pause.dataset.mfpPaused = autoPaused ? "true" : "false";
+        pause.setAttribute("aria-label",fallback);
+        pause.setAttribute("title",fallback);
+        pause.setAttribute("data-i18n-aria-label",key);
+        pause.setAttribute("data-i18n-title",key);
+        applyTranslations();
+      };
+
+      const stopAuto = () => {
+        if (!autoTimer) return;
+        window.clearTimeout(autoTimer);
+        autoTimer = 0;
+      };
+
+      const canAutoRun = () => {
+        return !destroyed
+          && !autoPaused
+          && !pointerDown
+          && !document.hidden
+          && inView
+          && !modalOpen
+          && !reduceMotion()
+          && maxIndex > 0;
+      };
+
+      const scheduleAuto = () => {
+        stopAuto();
+        if (!canAutoRun()) return;
+        autoTimer = window.setTimeout(() => {
+          autoTimer = 0;
+          active = active >= maxIndex ? 0 : active + 1;
+          render({animate:true});
+          scheduleAuto();
+        },AUTO_DELAY);
+      };
+
+      const buildDots = () => {
+        dotsBox.innerHTML = "";
+        dots.length = 0;
+
+        for (let index = 0; index <= maxIndex; index += 1) {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "mfp-dot";
+          dot.setAttribute("aria-label",`Abrir projeto ${index + 1}`);
+          dot.setAttribute("data-i18n-aria-label",`mfp.dot.${index}`);
+          dot.addEventListener("click",() => goTo(index));
+          dotsBox.appendChild(dot);
+          dots.push(dot);
+        }
+
+        applyTranslations();
+      };
+
+      const updateA11y = () => {
+        cards.forEach((card,index) => {
+          const visible = index >= active && index < active + getPerView();
+          card.setAttribute("aria-hidden",visible ? "false" : "true");
+        });
+
+        dots.forEach((dot,index) => {
+          dot.setAttribute("aria-current",index === active ? "true" : "false");
+        });
+
+        prev.disabled = active <= 0;
+        next.disabled = active >= maxIndex;
+
+        if (position) {
+          position.textContent = `${String(active + 1).padStart(2,"0")} / ${String(cards.length).padStart(2,"0")}`;
+        }
+      };
+
+      const render = ({animate = true} = {}) => {
+        if (destroyed) return;
+        calculateMaxIndex();
+        viewport.classList.toggle("is-dragging",!animate && dragging);
+        track.style.transition = animate ? "" : "none";
+        track.style.transform = `translate3d(${-getCardOffset(active)}px,0,0)`;
+        updateA11y();
+      };
+
+      const goTo = (index,{restart = true} = {}) => {
+        active = clamp(Number(index) || 0,0,maxIndex);
+        render({animate:true});
+        if (restart) scheduleAuto();
+      };
+
+      const goPrev = () => goTo(active - 1);
+      const goNext = () => goTo(active + 1);
+
+      const releaseCapture = (id) => {
+        try {
+          if (id !== null && viewport.hasPointerCapture && viewport.hasPointerCapture(id)) {
+            viewport.releasePointerCapture(id);
+          }
+        } catch (error) {}
+      };
+
+      const onPointerDown = (event) => {
+        if (event.isPrimary === false) return;
+        if (typeof event.button === "number" && event.button !== 0) return;
+
+        const eventTarget = event.target && event.target.nodeType === 1
+          ? event.target
+          : event.target && event.target.parentElement;
+        if (eventTarget && eventTarget.closest && eventTarget.closest(
+          "a,button,input,select,textarea,label,[role='button']"
+        )) return;
+
+        pointerDown = true;
+        dragging = false;
+        pointerId = event.pointerId;
+        startX = lastX = event.clientX;
+        startY = event.clientY;
+        baseOffset = getCardOffset(active);
+        stopAuto();
+
+        try { viewport.setPointerCapture(pointerId); } catch (error) {}
+      };
+
+      const onPointerMove = (event) => {
+        if (!pointerDown || event.pointerId !== pointerId) return;
+
+        const dx = event.clientX - startX;
+        const dy = event.clientY - startY;
+        lastX = event.clientX;
+
+        if (!dragging && Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)) {
+          dragging = true;
+          viewport.classList.add("is-dragging");
+          track.style.transition = "none";
+        }
+
+        if (!dragging) return;
+        event.preventDefault();
+
+        const maxOffset = getCardOffset(maxIndex);
+        const offset = clamp(baseOffset - dx,0,maxOffset);
+        track.style.transform = `translate3d(${-offset}px,0,0)`;
+      };
+
+      const endPointer = (event,cancelled = false) => {
+        if (!pointerDown || event.pointerId !== pointerId) return;
+
+        const dx = lastX - startX;
+        const id = pointerId;
+        pointerDown = false;
+        pointerId = null;
+        releaseCapture(id);
+
+        if (!cancelled && dragging && Math.abs(dx) > 42) {
+          suppressClickUntil = Date.now() + 320;
+          dx < 0 ? goNext() : goPrev();
+        } else {
+          render({animate:true});
+          scheduleAuto();
+        }
+
+        dragging = false;
+        viewport.classList.remove("is-dragging");
+      };
+
+      const onResize = () => {
+        window.cancelAnimationFrame(resizeRaf);
+        resizeRaf = window.requestAnimationFrame(() => {
+          resizeRaf = 0;
+          const positionsChanged = calculateMaxIndex();
+          if (positionsChanged) buildDots();
+          render({animate:false});
+          scheduleAuto();
+        });
+      };
+
+      const onVisibilityChange = () => {
+        if (document.hidden) stopAuto();
+        else scheduleAuto();
+      };
+
+      const getFocusableInModal = () => Array.from(modal.querySelectorAll(
+        'a[href],button:not([disabled]),iframe,[tabindex]:not([tabindex="-1"])'
+      )).filter((element) => !element.hidden && element.getAttribute("aria-hidden") !== "true");
+
+      const openBrowser = (url, trigger) => {
+        if (!url || destroyed) return;
+
+        modalLastFocus = trigger || document.activeElement;
+        modalOpen = true;
+        stopAuto();
+        modal.classList.remove("is-loaded");
+        modal.hidden = false;
+        modalAddress.textContent = url;
+        modalExternal.href = url;
+
+        if (modalLoadTimer) window.clearTimeout(modalLoadTimer);
+        modalFrame.src = "about:blank";
+        window.requestAnimationFrame(() => {
+          if (!modalOpen) return;
+          modalFrame.src = url;
+          modalLoadTimer = window.setTimeout(() => {
+            modalLoadTimer = 0;
+            if (modalOpen) modal.classList.add("is-loaded");
+          },5000);
+        });
+
+        previousDocumentOverflow = document.documentElement.style.overflow;
+        previousBodyOverflow = document.body ? document.body.style.overflow : "";
+        document.documentElement.style.overflow = "hidden";
+        if (document.body) document.body.style.overflow = "hidden";
+
+        window.requestAnimationFrame(() => {
+          try { modalWindow.focus({preventScroll:true}); }
+          catch (error) { modalWindow.focus(); }
+        });
+      };
+
+      const closeBrowser = ({restoreFocus = true} = {}) => {
+        if (!modalOpen) return;
+
+        modalOpen = false;
+        if (modalLoadTimer) {
+          window.clearTimeout(modalLoadTimer);
+          modalLoadTimer = 0;
+        }
+        modal.hidden = true;
+        modal.classList.remove("is-loaded");
+        modalFrame.src = "about:blank";
+        document.documentElement.style.overflow = previousDocumentOverflow;
+        if (document.body) document.body.style.overflow = previousBodyOverflow;
+
+        if (restoreFocus && modalLastFocus && typeof modalLastFocus.focus === "function") {
+          try { modalLastFocus.focus({preventScroll:true}); }
+          catch (error) { modalLastFocus.focus(); }
+        }
+
+        modalLastFocus = null;
+        scheduleAuto();
+      };
+
+      const onModalKeydown = (event) => {
+        if (!modalOpen) return;
+
+        if (event.key === "Escape") {
+          event.preventDefault();
+          closeBrowser();
+          return;
+        }
+
+        if (event.key !== "Tab") return;
+        const focusable = getFocusableInModal();
+        if (!focusable.length) {
+          event.preventDefault();
+          modalWindow.focus();
+          return;
+        }
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      };
+
+      const destroy = () => {
+        if (destroyed) return;
+        destroyed = true;
+
+        stopAuto();
+        if (resizeRaf) window.cancelAnimationFrame(resizeRaf);
+        releaseCapture(pointerId);
+        if (modalOpen) closeBrowser({restoreFocus:false});
+        document.documentElement.style.overflow = previousDocumentOverflow;
+        if (document.body) document.body.style.overflow = previousBodyOverflow;
+
+        if (modalOriginParent && modalOriginParent.isConnected) {
+          const reference = modalOriginNextSibling && modalOriginNextSibling.parentNode === modalOriginParent
+            ? modalOriginNextSibling
+            : null;
+          modalOriginParent.insertBefore(modal,reference);
+        } else if (modal.parentNode) {
+          modal.parentNode.removeChild(modal);
+        }
+
+        if (intersectionObserver) {
+          intersectionObserver.disconnect();
+          intersectionObserver = null;
+        }
+
+        while (cleanup.length) {
+          const remove = cleanup.pop();
+          try { remove(); } catch (error) {}
+        }
+
+        if (host && host.classList) host.classList.remove("mf-embed-slot--mfp-full");
+        root.removeAttribute("data-mfp-bound");
+
+        if (root.__mfpDestroy === destroy) {
+          try { delete root.__mfpDestroy; } catch (error) { root.__mfpDestroy = null; }
+        }
+      };
+
+      root.__mfpDestroy = destroy;
+
+      listen(prev,"click",goPrev);
+      listen(next,"click",goNext);
+      listen(pause,"click",() => {
+        autoPaused = !autoPaused;
+        updatePauseButton();
+        autoPaused ? stopAuto() : scheduleAuto();
+      });
+      listen(viewport,"pointerdown",onPointerDown);
+      listen(viewport,"pointermove",onPointerMove,{passive:false});
+      listen(viewport,"pointerup",(event) => endPointer(event,false));
+      listen(viewport,"pointercancel",(event) => endPointer(event,true));
+      listen(viewport,"lostpointercapture",(event) => endPointer(event,true));
+      listen(viewport,"click",(event) => {
+        if (Date.now() < suppressClickUntil) event.preventDefault();
+      });
+      listen(viewport,"keydown",(event) => {
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          goNext();
+        }
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          goPrev();
+        }
+        if (event.key === "Home") {
+          event.preventDefault();
+          goTo(0);
+        }
+        if (event.key === "End") {
+          event.preventDefault();
+          goTo(maxIndex);
+        }
+      });
+      projectLinks.forEach((link) => listen(link,"click",(event) => {
+        if (event.defaultPrevented || Date.now() < suppressClickUntil) return;
+        event.preventDefault();
+        openBrowser(link.href,link);
+      }));
+      modalCloseButtons.forEach((button) => listen(button,"click",() => closeBrowser()));
+      listen(modalFrame,"load",() => {
+        if (!modalOpen || modalFrame.src === "about:blank") return;
+        if (modalLoadTimer) {
+          window.clearTimeout(modalLoadTimer);
+          modalLoadTimer = 0;
+        }
+        modal.classList.add("is-loaded");
+      });
+      listen(modal,"keydown",onModalKeydown);
+      listen(document,"visibilitychange",onVisibilityChange);
+      listen(window,"resize",onResize,{passive:true});
+      listenMedia(motionMq,() => scheduleAuto());
+
+      if ("IntersectionObserver" in window) {
+        intersectionObserver = new IntersectionObserver((entries) => {
+          const entry = entries && entries[0];
+          inView = !entry || entry.isIntersecting || entry.intersectionRatio > 0;
+          inView ? scheduleAuto() : stopAuto();
+        },{root:null,rootMargin:"220px 0px",threshold:0});
+        intersectionObserver.observe(root);
+      }
+
+      calculateMaxIndex();
+      buildDots();
+      updatePauseButton();
+      render({animate:false});
+      window.requestAnimationFrame(() => {
+        render({animate:false});
+        scheduleAuto();
+      });
+    })();
+  </script>
+</div></section>
+    <section id="mf-contato" class="mf-embed-slot" data-embed="contato"><div id="mf-contact-booking" class="mfcnt" data-mf-contact-booking-embed>
+  <style>
+    #mf-contact-booking,
+    #mf-contact-booking *,
+    #mf-contact-booking *::before,
+    #mf-contact-booking *::after {
+      box-sizing: border-box;
+    }
+
+    .mf-embed-slot.mf-embed-slot--mfcnt-full {
+      width: 100%;
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+      border-radius: 0;
+    }
+
+    #mf-contact-booking {
+      --mfcnt-white: #f7f7ff;
+      --mfcnt-ink: #151426;
+      --mfcnt-muted: rgba(247, 247, 255, .74);
+      --mfcnt-purple: #5945e8;
+      --mfcnt-purple-dark: #3726af;
+      --mfcnt-soft: #e5e7ff;
+      --mfcnt-teal: #00d9c8;
+      position: relative;
+      z-index: 0;
+      isolation: isolate;
+      width: 100%;
+      margin: 0;
+      padding: clamp(58px, 7vw, 94px) 0;
+      overflow: hidden;
+      color: var(--mfcnt-white);
+      font-family: Manrope, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(720px 440px at 92% 4%, rgba(89, 69, 232, .48), transparent 62%),
+        radial-gradient(560px 360px at 4% 14%, rgba(89, 69, 232, .22), transparent 66%),
+        radial-gradient(660px 400px at 72% 96%, rgba(0, 217, 200, .14), transparent 68%),
+        linear-gradient(135deg, #090817 0%, #151426 48%, #211C4A 100%);
+    }
+
+    #mf-contact-booking::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        radial-gradient(720px 440px at 92% 4%, rgba(89, 69, 232, .20), transparent 62%),
+        radial-gradient(560px 360px at 4% 14%, rgba(89, 69, 232, .10), transparent 66%),
+        linear-gradient(135deg, rgba(9, 8, 23, .30) 0%, rgba(21, 20, 38, .46) 48%, rgba(33, 28, 74, .58) 100%);
+    }
+
+    #mf-contact-booking .mfcnt-bg-video {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+      opacity: .15;
+    }
+
+    #mf-contact-booking button,
+    #mf-contact-booking a {
+      font: inherit;
+    }
+
+    #mf-contact-booking .mfcnt-shell {
+      position: relative;
+      z-index: 2;
+      width: min(1344px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    #mf-contact-booking .mfcnt-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(500px, 1.1fr);
+      align-items: center;
+      gap: clamp(42px, 7vw, 96px);
+    }
+
+    #mf-contact-booking .mfcnt-copy {
+      min-width: 0;
+      max-width: 600px;
+    }
+
+    #mf-contact-booking .mfcnt-title {
+      margin: 0;
+      color: var(--mfcnt-white);
+      font-size: clamp(40px, 5vw, 70px);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+      font-weight: 900;
+      text-wrap: balance;
+    }
+
+    #mf-contact-booking .mfcnt-gradient {
+      background: linear-gradient(135deg, #fff 0%, var(--mfcnt-teal) 46%, #8b7cff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    #mf-contact-booking .mfcnt-text {
+      max-width: 610px;
+      margin: 24px 0 0;
+      color: var(--mfcnt-muted);
+      font-size: clamp(16px, 1.3vw, 19px);
+      line-height: 1.7;
+      font-weight: 700;
+      letter-spacing: -.015em;
+    }
+
+    #mf-contact-booking .mfcnt-list {
+      display: grid;
+      gap: 15px;
+      margin: 30px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #mf-contact-booking .mfcnt-contact-item {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      align-items: center;
+      gap: 13px;
+      min-width: 0;
+    }
+
+    #mf-contact-booking .mfcnt-contact-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--mfcnt-teal), var(--mfcnt-purple));
+    }
+
+    #mf-contact-booking .mfcnt-contact-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #mf-contact-booking .mfcnt-contact-value,
+    #mf-contact-booking .mfcnt-contact-value a {
+      color: var(--mfcnt-white);
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 800;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    #mf-contact-booking .mfcnt-contact-value a:hover,
+    #mf-contact-booking .mfcnt-contact-value a:focus-visible {
+      color: var(--mfcnt-teal);
+    }
+
+    #mf-contact-booking .mfcnt-calendar {
+      min-width: 0;
+      padding: clamp(20px, 3vw, 28px);
+      border: 1px solid rgba(247, 247, 255, .8);
+      border-radius: 30px;
+      color: var(--mfcnt-ink);
+      background: rgba(247, 247, 255, .98);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, .24);
+    }
+
+    #mf-contact-booking .mfcnt-calendar-title {
+      margin: 0;
+      color: var(--mfcnt-ink);
+      font-size: clamp(25px, 2.4vw, 34px);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+      font-weight: 900;
+    }
+
+    #mf-contact-booking .mfcnt-fieldset {
+      min-width: 0;
+      margin: 25px 0 0;
+      padding: 0;
+      border: 0;
+    }
+
+    #mf-contact-booking .mfcnt-legend {
+      display: block;
+      width: 100%;
+      margin: 0 0 11px;
+      color: var(--mfcnt-ink);
+      font-size: 12px;
+      line-height: 1.3;
+      font-weight: 900;
+    }
+
+    #mf-contact-booking .mfcnt-days,
+    #mf-contact-booking .mfcnt-times {
+      display: grid;
+      gap: 8px;
+    }
+
+    #mf-contact-booking .mfcnt-days {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    #mf-contact-booking .mfcnt-times {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    #mf-contact-booking .mfcnt-day,
+    #mf-contact-booking .mfcnt-time {
+      appearance: none;
+      border: 1px solid rgba(21, 20, 38, .11);
+      color: #211c4a;
+      background: #fff;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    #mf-contact-booking .mfcnt-day {
+      min-width: 0;
+      min-height: 76px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 9px 5px;
+      border-radius: 17px;
+    }
+
+    #mf-contact-booking .mfcnt-time {
+      min-height: 44px;
+      padding: 0 8px;
+      border-radius: 13px;
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    #mf-contact-booking .mfcnt-day:hover,
+    #mf-contact-booking .mfcnt-day:focus-visible,
+    #mf-contact-booking .mfcnt-time:hover,
+    #mf-contact-booking .mfcnt-time:focus-visible {
+      border-color: rgba(89, 69, 232, .56);
+      outline: 3px solid rgba(89, 69, 232, .14);
+      outline-offset: 1px;
+    }
+
+    #mf-contact-booking .mfcnt-day[aria-pressed="true"],
+    #mf-contact-booking .mfcnt-time[aria-pressed="true"] {
+      border-color: var(--mfcnt-purple);
+      color: #fff;
+      background: linear-gradient(135deg, var(--mfcnt-purple), var(--mfcnt-purple-dark));
+    }
+
+    #mf-contact-booking .mfcnt-time:disabled {
+      color: rgba(33, 28, 74, .34);
+      background: rgba(229, 231, 255, .52);
+      cursor: not-allowed;
+    }
+
+    #mf-contact-booking .mfcnt-day-week {
+      font-size: 9px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .72;
+    }
+
+    #mf-contact-booking .mfcnt-day-number {
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -.05em;
+    }
+
+    #mf-contact-booking .mfcnt-day-month {
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    #mf-contact-booking .mfcnt-selection {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 23px;
+      padding: 12px 14px;
+      border: 1px solid rgba(89, 69, 232, .16);
+      border-radius: 18px;
+      background: var(--mfcnt-soft);
+    }
+
+    #mf-contact-booking .mfcnt-selection-copy {
+      min-width: 0;
+    }
+
+    #mf-contact-booking .mfcnt-selection-label {
+      display: block;
+      color: var(--mfcnt-purple);
+      font-size: 9px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    #mf-contact-booking .mfcnt-selection-value {
+      display: block;
+      margin-top: 5px;
+      color: var(--mfcnt-ink);
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 900;
+    }
+
+    #mf-contact-booking .mfcnt-book {
+      flex: 0 0 auto;
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 20px;
+      border: 1px solid var(--mfcnt-purple);
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--mfcnt-teal), var(--mfcnt-purple) 58%, var(--mfcnt-purple-dark));
+      box-shadow: 0 12px 26px rgba(89, 69, 232, .22);
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 900;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #mf-contact-booking .mfcnt-book:hover,
+    #mf-contact-booking .mfcnt-book:focus-visible {
+      filter: brightness(1.04);
+      outline: 3px solid rgba(89, 69, 232, .2);
+      outline-offset: 3px;
+    }
+
+    #mf-contact-booking .mfcnt-book[aria-disabled="true"] {
+      opacity: .45;
+      pointer-events: none;
+    }
+
+    #mf-contact-booking .mfcnt-book svg {
+      width: 17px;
+      height: 17px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #mf-contact-booking .mfcnt-note {
+      margin: 13px 0 0;
+      color: rgba(33, 28, 74, .66);
+      font-size: 10px;
+      line-height: 1.5;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    #mf-contact-booking .mfcnt-sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 1080px) {
+      #mf-contact-booking .mfcnt-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      #mf-contact-booking .mfcnt-copy,
+      #mf-contact-booking .mfcnt-calendar {
+        width: min(760px, 100%);
+        max-width: none;
+        margin-inline: auto;
+      }
+
+      #mf-contact-booking .mfcnt-copy {
+        text-align: center;
+      }
+
+      #mf-contact-booking .mfcnt-list {
+        width: min(720px, 100%);
+        margin-inline: auto;
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 680px) {
+      #mf-contact-booking {
+        padding: 58px 0 52px;
+      }
+
+      #mf-contact-booking .mfcnt-shell {
+        width: calc(100% - 20px);
+      }
+
+      #mf-contact-booking .mfcnt-title {
+        font-size: clamp(35px, 11vw, 48px);
+      }
+
+      #mf-contact-booking .mfcnt-text {
+        font-size: 15px;
+      }
+
+      #mf-contact-booking .mfcnt-calendar {
+        padding: 21px 15px 17px;
+        border-radius: 26px;
+      }
+
+      #mf-contact-booking .mfcnt-days {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        scrollbar-width: none;
+        scroll-snap-type: x proximity;
+      }
+
+      #mf-contact-booking .mfcnt-days::-webkit-scrollbar {
+        display: none;
+      }
+
+      #mf-contact-booking .mfcnt-day {
+        flex: 0 0 76px;
+        scroll-snap-align: start;
+      }
+
+      #mf-contact-booking .mfcnt-list {
+        display: none;
+      }
+
+      #mf-contact-booking .mfcnt-times {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      #mf-contact-booking .mfcnt-selection {
+        display: block;
+      }
+
+      #mf-contact-booking .mfcnt-book {
+        width: 100%;
+        margin-top: 12px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      #mf-contact-booking .mfcnt-times {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #mf-contact-booking *,
+      #mf-contact-booking *::before,
+      #mf-contact-booking *::after {
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+
+  <video class="mfcnt-bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="https://gleisondesign.github.io/MINDFLY/assets/fundo.mp4" type="video/mp4">
+  </video>
+
+  <div class="mfcnt-shell">
+    <div class="mfcnt-layout">
+      <div class="mfcnt-copy">
+        <h2 class="mfcnt-title" data-i18n-html="mfcnt.title">
+          Agende sua <span class="mfcnt-gradient">consultoria grátis</span>
+        </h2>
+
+        <p class="mfcnt-text" data-i18n="mfcnt.text">
+          Conte um pouco sobre o seu momento e escolha um horário para conversar com a MindFly. Vamos entender seus objetivos e identificar os próximos passos para sua marca crescer com estratégia, criatividade e tecnologia.
+        </p>
+
+        <ul class="mfcnt-list" aria-label="Informações de contato" data-i18n-aria-label="mfcnt.info.aria">
+          <li class="mfcnt-contact-item">
+            <span class="mfcnt-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s7-5.2 7-12A7 7 0 1 0 5 9c0 6.8 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+            </span>
+            <span class="mfcnt-contact-value">
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Paulista+125+Sao+Paulo+SP+Brasil" target="_blank" rel="noopener noreferrer">Av. Paulista, 125 — São Paulo, SP, Brasil</a>
+            </span>
+          </li>
+
+          <li class="mfcnt-contact-item">
+            <span class="mfcnt-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="m4 7 8 6 8-6"></path></svg>
+            </span>
+            <span class="mfcnt-contact-value">
+              <a href="mailto:comercial@mindfly.com.br">comercial@mindfly.com.br</a>
+            </span>
+          </li>
+
+          <li class="mfcnt-contact-item">
+            <span class="mfcnt-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.8 2 2 0 0 1 3.1 1.6h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L7 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c1 .3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"></path></svg>
+            </span>
+            <span class="mfcnt-contact-value">
+              <a href="https://wa.me/5511986912169" target="_blank" rel="noopener noreferrer">+55 11 98691-2169</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mfcnt-calendar">
+        <h3 class="mfcnt-calendar-title" data-i18n="mfcnt.calendar.title">Call estratégica</h3>
+
+        <fieldset class="mfcnt-fieldset">
+          <legend class="mfcnt-legend" data-i18n="mfcnt.days.legend">1. Escolha o dia</legend>
+          <div class="mfcnt-days" data-mfcnt-days></div>
+        </fieldset>
+
+        <fieldset class="mfcnt-fieldset">
+          <legend class="mfcnt-legend" data-i18n="mfcnt.times.legend">2. Escolha o horário</legend>
+          <div class="mfcnt-times" data-mfcnt-times></div>
+        </fieldset>
+
+        <div class="mfcnt-selection">
+          <div class="mfcnt-selection-copy">
+            <span class="mfcnt-selection-label" data-i18n="mfcnt.selection.label">Horário selecionado</span>
+            <strong class="mfcnt-selection-value" data-mfcnt-selection></strong>
+          </div>
+
+          <a class="mfcnt-book" data-mfcnt-book aria-disabled="true" target="_blank" rel="noopener noreferrer">
+            <span data-i18n="mfcnt.book">AGENDAR CALL</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+
+        <p class="mfcnt-note" data-i18n="mfcnt.note">O Agendamento e confirmado apos envio no whatsapp</p>
+        <span class="mfcnt-sr-only" aria-live="polite" data-mfcnt-status></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const script = document.currentScript;
+      const root = script?.closest("[data-mf-contact-booking-embed]") || document.getElementById("mf-contact-booking");
+      if (!root || root.dataset.mfcntBound === "1") return;
+
+      const I18N = {
+        "mfcnt.title": {
+          pt: "Agende sua <span class=\"mfcnt-gradient\">consultoria grátis</span>",
+          en: "Book your <span class=\"mfcnt-gradient\">free consultation</span>"
+        },
+        "mfcnt.text": {
+          pt: "Conte um pouco sobre o seu momento e escolha um horário para conversar com a MindFly. Vamos entender seus objetivos e identificar os próximos passos para sua marca crescer com estratégia, criatividade e tecnologia.",
+          en: "Tell us about your current situation and choose a time to talk with MindFly. We will understand your goals and identify the next steps to help your brand grow through strategy, creativity, and technology."
+        },
+        "mfcnt.info.aria": { pt: "Informações de contato", en: "Contact information" },
+        "mfcnt.calendar.title": { pt: "Call estratégica", en: "Strategy call" },
+        "mfcnt.days.legend": { pt: "1. Escolha o dia", en: "1. Choose a day" },
+        "mfcnt.times.legend": { pt: "2. Escolha o horário", en: "2. Choose a time" },
+        "mfcnt.selection.label": { pt: "Horário selecionado", en: "Selected time" },
+        "mfcnt.book": { pt: "AGENDAR CALL", en: "BOOK A CALL" },
+        "mfcnt.note": {
+          pt: "O Agendamento e confirmado apos envio no whatsapp",
+          en: "The appointment will only be confirmed after you send the WhatsApp message."
+        },
+        "mfcnt.selection.empty": { pt: "Escolha e confirme pelo whatsapp", en: "Choose and confirm via WhatsApp" },
+        "mfcnt.status.selected": { pt: "Horário selecionado", en: "Time selected" },
+        "mfcnt.message": {
+          pt: "Olá, gostaria de confirmar uma conversa sobre os serviços da MindFly no dia {date}, às {time} (horário de São Paulo).\n\n*O agendamento será confirmado após o envio desta mensagem.*",
+          en: "Hello, I would like to confirm a conversation about MindFly's services on {date} at {time} (São Paulo time).\n\n*The appointment will be confirmed after this message is sent.*"
+        }
+      };
+
+      window.MF_I18N = Object.assign({}, window.MF_I18N || {}, I18N);
+      if (typeof window.MF_REGISTER_I18N === "function") window.MF_REGISTER_I18N(I18N);
+
+      const daysBox = root.querySelector("[data-mfcnt-days]");
+      const timesBox = root.querySelector("[data-mfcnt-times]");
+      const selectionBox = root.querySelector("[data-mfcnt-selection]");
+      const bookLink = root.querySelector("[data-mfcnt-book]");
+      const statusBox = root.querySelector("[data-mfcnt-status]");
+      if (!daysBox || !timesBox || !selectionBox || !bookLink) return;
+
+      const host = root.closest ? root.closest(".mf-embed-slot") : null;
+      if (host && host.classList) host.classList.add("mf-embed-slot--mfcnt-full");
+
+      root.dataset.mfcntBound = "1";
+
+      const TIME_ZONE = "America/Sao_Paulo";
+      const WHATSAPP_NUMBER = "5511986912169";
+      const HOURS = [11, 12, 13, 14, 15, 16, 17, 18];
+      const pad = value => String(value).padStart(2, "0");
+      let availableDays = [];
+      let selectedDateKey = "";
+      let selectedHour = null;
+
+      const getLang = () => {
+        if (window.MF_ACTIVE_LANG === "en") return "en";
+        return document.documentElement.lang.toLowerCase().startsWith("en") ? "en" : "pt";
+      };
+
+      const t = key => I18N[key]?.[getLang()] || key;
+
+      const applyOwnTranslations = () => {
+        const lang = getLang();
+        root.querySelectorAll("[data-i18n]").forEach(element => {
+          const value = I18N[element.dataset.i18n]?.[lang];
+          if (typeof value === "string") element.textContent = value;
+        });
+        root.querySelectorAll("[data-i18n-html]").forEach(element => {
+          const value = I18N[element.dataset.i18nHtml]?.[lang];
+          if (typeof value === "string") element.innerHTML = value;
+        });
+        root.querySelectorAll("[data-i18n-aria-label]").forEach(element => {
+          const value = I18N[element.dataset.i18nAriaLabel]?.[lang];
+          if (typeof value === "string") element.setAttribute("aria-label", value);
+        });
+      };
+
+      const getSaoPauloNow = () => {
+        const parts = new Intl.DateTimeFormat("en-CA", {
+          timeZone: TIME_ZONE,
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          hourCycle: "h23"
+        }).formatToParts(new Date());
+        const values = Object.fromEntries(parts.filter(part => part.type !== "literal").map(part => [part.type, Number(part.value)]));
+        return values;
+      };
+
+      const dateKey = date => `${date.getUTCFullYear()}-${pad(date.getUTCMonth() + 1)}-${pad(date.getUTCDate())}`;
+
+      const createAvailableDays = () => {
+        const now = getSaoPauloNow();
+        const cursor = new Date(Date.UTC(now.year, now.month - 1, now.day + 1));
+        const days = [];
+
+        while (days.length < 5) {
+          if (cursor.getUTCDay() !== 0) {
+            days.push({ key: dateKey(cursor), date: new Date(cursor) });
+          }
+          cursor.setUTCDate(cursor.getUTCDate() + 1);
+        }
+        return days;
+      };
+
+      const getSelectedDay = () => availableDays.find(day => day.key === selectedDateKey) || null;
+
+      const isPastHour = (day, hour) => {
+        const now = getSaoPauloNow();
+        const today = `${now.year}-${pad(now.month)}-${pad(now.day)}`;
+        return day.key === today && (hour < now.hour || (hour === now.hour && now.minute > 0));
+      };
+
+      const dayParts = date => {
+        const locale = getLang() === "en" ? "en-US" : "pt-BR";
+        const format = options => new Intl.DateTimeFormat(locale, { ...options, timeZone: "UTC" }).format(date).replace(".", "");
+        return { week: format({ weekday: "short" }), day: format({ day: "2-digit" }), month: format({ month: "short" }) };
+      };
+
+      const fullDate = day => {
+        const locale = getLang() === "en" ? "en-US" : "pt-BR";
+        return new Intl.DateTimeFormat(locale, {
+          weekday: "long",
+          day: "2-digit",
+          month: "long",
+          year: "numeric",
+          timeZone: "UTC"
+        }).format(day.date);
+      };
+
+      const messageDate = day => getLang() === "en"
+        ? new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(day.date)
+        : `${pad(day.date.getUTCDate())}/${pad(day.date.getUTCMonth() + 1)}/${day.date.getUTCFullYear()}`;
+
+      const formattedTime = hour => getLang() === "en"
+        ? new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", hour12: true, timeZone: "UTC" }).format(new Date(Date.UTC(2020, 0, 1, hour)))
+        : `${pad(hour)}h00`;
+
+      const renderDays = () => {
+        daysBox.replaceChildren(...availableDays.map(day => {
+          const parts = dayParts(day.date);
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "mfcnt-day";
+          button.dataset.dateKey = day.key;
+          button.setAttribute("aria-pressed", String(day.key === selectedDateKey));
+          button.setAttribute("aria-label", fullDate(day));
+          button.innerHTML = `<span class="mfcnt-day-week">${parts.week}</span><strong class="mfcnt-day-number">${parts.day}</strong><span class="mfcnt-day-month">${parts.month}</span>`;
+          return button;
+        }));
+      };
+
+      const renderTimes = () => {
+        const day = getSelectedDay();
+        timesBox.replaceChildren(...HOURS.map(hour => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "mfcnt-time";
+          button.dataset.hour = String(hour);
+          button.textContent = formattedTime(hour);
+          button.disabled = !day || isPastHour(day, hour);
+          button.setAttribute("aria-pressed", String(selectedHour === hour));
+          return button;
+        }));
+      };
+
+      const updateBooking = () => {
+        const day = getSelectedDay();
+        if (!day || !Number.isInteger(selectedHour)) {
+          selectionBox.textContent = t("mfcnt.selection.empty");
+          bookLink.removeAttribute("href");
+          bookLink.setAttribute("aria-disabled", "true");
+          return;
+        }
+
+        const connector = getLang() === "en" ? " at " : " às ";
+        const summary = `${fullDate(day)}${connector}${formattedTime(selectedHour)}`;
+        const message = t("mfcnt.message")
+          .replace("{date}", messageDate(day))
+          .replace("{time}", formattedTime(selectedHour));
+
+        selectionBox.textContent = summary;
+        bookLink.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+        bookLink.setAttribute("aria-disabled", "false");
+        if (statusBox) statusBox.textContent = `${t("mfcnt.status.selected")}: ${summary}`;
+      };
+
+      const selectDay = key => {
+        if (!availableDays.some(day => day.key === key)) return;
+        selectedDateKey = key;
+        selectedHour = null;
+        renderDays();
+        renderTimes();
+        updateBooking();
+      };
+
+      const selectHour = hour => {
+        const day = getSelectedDay();
+        if (!day || !HOURS.includes(hour) || isPastHour(day, hour)) return;
+        selectedHour = hour;
+        renderTimes();
+        updateBooking();
+      };
+
+      root.addEventListener("click", event => {
+        const dayButton = event.target.closest(".mfcnt-day");
+        if (dayButton && daysBox.contains(dayButton)) {
+          event.preventDefault();
+          selectDay(dayButton.dataset.dateKey);
+          return;
+        }
+
+        const timeButton = event.target.closest(".mfcnt-time");
+        if (timeButton && timesBox.contains(timeButton) && !timeButton.disabled) {
+          event.preventDefault();
+          selectHour(Number(timeButton.dataset.hour));
+        }
+      });
+
+      let renderedLang = getLang();
+
+      const rerender = () => {
+        renderedLang = getLang();
+        applyOwnTranslations();
+        renderDays();
+        renderTimes();
+        updateBooking();
+      };
+
+      availableDays = createAvailableDays();
+      selectedDateKey = "";
+      selectedHour = null;
+      rerender();
+
+      if ("MutationObserver" in window) {
+        new MutationObserver(() => {
+          if (getLang() !== renderedLang) rerender();
+        }).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+      }
+    })();
+  </script>
+</div></section>
 
 
 
@@ -4015,7 +7653,7 @@
         <div class="mf-footer-brand">
           <a class="mf-footer-logo" href="#mf-solucoes" aria-label="MindFly Digital - Soluções" data-i18n-aria-label="brand.solutions">
             <img
-              src="/assets/logobranco.png"
+              src="https://gleisondesign.github.io/MINDFLY/assets/logobranco.png"
               alt="MindFly Digital"
               width="168"
               height="34"
@@ -4127,6 +7765,22 @@
           pt:"Contato",
           en:"Contact"
         },
+        "nav.menu.open":{
+          pt:"Abrir menu",
+          en:"Open menu"
+        },
+        "nav.menu.close":{
+          pt:"Fechar menu",
+          en:"Close menu"
+        },
+        "seo.title":{
+          pt:"MindFly Digital | Soluções digitais para sua empresa aparecer, atrair e vender",
+          en:"MindFly Digital | Digital solutions to help your business be seen, attract customers, and sell"
+        },
+        "seo.description":{
+          pt:"MindFly Digital: soluções digitais para sua empresa aparecer, atrair e vender.",
+          en:"MindFly Digital: digital solutions to help your business be seen, attract customers, and sell."
+        },
         "footer.description":{
           pt:"Soluções digitais para sua empresa aparecer, atrair e vender. Estratégia, presença digital e tecnologia para marcas que querem crescer com consistência.",
           en:"Digital solutions to help your business be seen, attract customers, and sell more. Strategy, digital presence, and technology for brands that want consistent growth."
@@ -4207,6 +7861,33 @@
         return typeof item[lang] === "string" ? item[lang] : null;
       };
 
+      // Mantém título e metadados sociais alinhados ao idioma visível.
+      const updateMetadata = (lang) => {
+        const title = getTranslation("seo.title", lang);
+        const description = getTranslation("seo.description", lang);
+
+        if (title) {
+          document.title = title;
+          document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]').forEach((meta) => {
+            meta.setAttribute("content", title);
+          });
+        }
+
+        if (description) {
+          const selectors = [
+            'meta[name="description"]',
+            'meta[property="og:description"]',
+            'meta[name="twitter:description"]'
+          ];
+          document.querySelectorAll(selectors.join(",")).forEach((meta) => {
+            meta.setAttribute("content", description);
+          });
+        }
+
+        const locale = document.querySelector('meta[property="og:locale"]');
+        if (locale) locale.setAttribute("content", lang === "en" ? "en_US" : "pt_BR");
+      };
+
       const updateLangToggle = (lang) => {
         const toggle = document.querySelector(".lang-toggle");
         if (!toggle) return;
@@ -4224,10 +7905,16 @@
 
       const applyTranslations = (root = document) => {
         const lang = window.MF_ACTIVE_LANG === "en" ? "en" : "pt";
+        const collect = (selector) => {
+          const elements = Array.from(root.querySelectorAll ? root.querySelectorAll(selector) : []);
+          if (root.nodeType === 1 && root.matches && root.matches(selector)) elements.unshift(root);
+          return elements;
+        };
 
         document.documentElement.setAttribute("lang", lang === "en" ? "en" : "pt-BR");
+        updateMetadata(lang);
 
-        root.querySelectorAll("[data-i18n]").forEach((element) => {
+        collect("[data-i18n]").forEach((element) => {
           const key = element.getAttribute("data-i18n");
           const translated = getTranslation(key, lang);
 
@@ -4236,7 +7923,7 @@
           }
         });
 
-        root.querySelectorAll("[data-i18n-html]").forEach((element) => {
+        collect("[data-i18n-html]").forEach((element) => {
           const key = element.getAttribute("data-i18n-html");
           const translated = getTranslation(key, lang);
 
@@ -4253,7 +7940,7 @@
         ];
 
         attrMap.forEach(([dataAttr, realAttr]) => {
-          root.querySelectorAll(`[${dataAttr}]`).forEach((element) => {
+          collect(`[${dataAttr}]`).forEach((element) => {
             const key = element.getAttribute(dataAttr);
             const translated = getTranslation(key, lang);
 
@@ -4270,6 +7957,17 @@
         window.MF_ACTIVE_LANG = lang === "en" ? "en" : "pt";
         saveLang(window.MF_ACTIVE_LANG);
         applyTranslations(document);
+
+        const menuButton = document.querySelector("#mf-menu .burger");
+        if (menuButton) {
+          const open = menuButton.getAttribute("aria-expanded") === "true";
+          const key = open ? "nav.menu.close" : "nav.menu.open";
+          const label = getTranslation(key, window.MF_ACTIVE_LANG);
+          if (label) {
+            menuButton.setAttribute("aria-label", label);
+            menuButton.setAttribute("title", label);
+          }
+        }
       };
 
       window.MF_APPLY_I18N = applyTranslations;
@@ -4304,9 +8002,14 @@
       const isOpen = () => button.getAttribute("aria-expanded") === "true";
 
       const setButtonLabel = (open) => {
+        const key = open ? "nav.menu.close" : "nav.menu.open";
+        const lang = window.MF_ACTIVE_LANG === "en" ? "en" : "pt";
+        const fallback = open ? "Fechar menu" : "Abrir menu";
+        const label = getTranslation(key, lang) || fallback;
+
         button.setAttribute("aria-expanded", open ? "true" : "false");
-        button.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
-        button.setAttribute("title", open ? "Fechar menu" : "Abrir menu");
+        button.setAttribute("aria-label", label);
+        button.setAttribute("title", label);
       };
 
       const syncMenuA11y = () => {
