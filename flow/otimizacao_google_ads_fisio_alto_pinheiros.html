@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Otimização de campanha Google Ads | Clinica Fisio Alto De Pinheiros</title>
+  <meta name="theme-color" content="#090817" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --page:#F7F7FF;
+      --ink:#151426;
+      --muted:#5c5877;
+      --purple:#5945E8;
+      --purple2:#3726AF;
+      --purpleDark:#211C4A;
+      --teal:#00D9C8;
+      --black:#090817;
+      --line:rgba(21,20,38,.10);
+      --card:#FFFFFF;
+      --radius:30px;
+      --shadow:0 22px 64px rgba(21,20,38,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--page)}
+    body{margin:0;background:var(--page);color:var(--ink);font-family:Manrope,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    .shell{width:min(1160px,calc(100% - 32px));margin:0 auto}
+    .hero{position:relative;overflow:hidden;background:
+      radial-gradient(760px 430px at 95% 0%,rgba(89,69,232,.48),transparent 62%),
+      radial-gradient(620px 380px at 8% 108%,rgba(0,217,200,.13),transparent 68%),
+      linear-gradient(135deg,#090817 0%,#151426 52%,#211C4A 100%);color:#F7F7FF;padding:28px 0 78px;border-bottom-left-radius:42px;border-bottom-right-radius:42px}
+    .hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(247,247,255,.025) 1px,transparent 1px),linear-gradient(180deg,rgba(247,247,255,.018) 1px,transparent 1px);background-size:62px 62px;mask-image:linear-gradient(180deg,#000,transparent 90%)}
+    .topbar,.hero-copy{position:relative;z-index:1}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;min-height:48px}
+    .brand img{display:block;width:154px;height:auto}
+    .brand-fallback{display:none;font-weight:900;letter-spacing:-.04em;font-size:24px}
+    .tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(247,247,255,.16);background:rgba(247,247,255,.08);padding:10px 14px;border-radius:999px;color:rgba(247,247,255,.78);font-size:12px;font-weight:800;letter-spacing:.01em}
+    .dot{width:8px;height:8px;border-radius:99px;background:var(--teal);box-shadow:0 0 16px rgba(0,217,200,.7)}
+    .hero-copy{max-width:1120px;padding:78px 0 0}
+    .eyebrow{margin:0 0 16px;color:#b9b2ff;font-size:12px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+    h1{margin:0;font-size:clamp(38px,5vw,64px);line-height:1.01;letter-spacing:-.058em;font-weight:900;text-wrap:balance}
+    .gradient{color:transparent;background:linear-gradient(90deg,#8a79ff 0%,#5945E8 25%,#00D9C8 86%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .lead{max-width:790px;margin:24px 0 0;padding-left:20px;border-left:3px solid var(--teal);color:rgba(247,247,255,.73);font-size:clamp(16px,2vw,19px);line-height:1.65;font-weight:700;letter-spacing:-.02em}
+    main{padding:76px 0 90px}
+    section{margin:0 0 78px}
+    .section-head{display:block;margin-bottom:30px}
+    .section-num{margin:0 0 13px;font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--purple)}
+    .section-head h2{margin:0;width:100%;max-width:none;font-size:clamp(30px,4vw,48px);line-height:1.03;letter-spacing:-.05em;font-weight:900}
+    .section-head p{margin:14px 0 0;width:100%;max-width:none;color:var(--muted);font-size:16px;line-height:1.68;font-weight:700;letter-spacing:-.015em}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .keyword-card{position:relative;min-height:170px;padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,#fff,#f9f9ff);box-shadow:var(--shadow);overflow:hidden}
+    .keyword-card:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--purple),var(--teal))}
+    .badge{display:inline-flex;align-items:center;min-height:30px;padding:0 10px;border-radius:999px;background:rgba(89,69,232,.08);color:var(--purple2);font-size:10px;line-height:1;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    .keyword{margin:28px 0 0;font-size:clamp(19px,2.2vw,25px);line-height:1.12;letter-spacing:-.04em;font-weight:900;overflow-wrap:anywhere}
+    .reason{margin:13px 0 0;color:var(--muted);font-size:13px;line-height:1.5;font-weight:700}
+    .test-card{min-height:156px;background:#fff}
+    .test-card:before{background:linear-gradient(90deg,var(--teal),var(--purple))}
+    .test-card .badge{background:rgba(0,217,200,.12);color:#087d73}
+    .discard-wrap{padding:34px;border-radius:36px;background:linear-gradient(145deg,#151426,#211C4A);color:#F7F7FF;box-shadow:0 28px 82px rgba(21,20,38,.18)}
+    .discard-wrap .section-head{margin-bottom:24px}
+    .discard-wrap .section-num{color:#8b7dff;margin-bottom:13px}
+    .discard-wrap .section-head h2{font-size:clamp(28px,3.6vw,42px)}
+    .discard-wrap .section-head p{color:rgba(247,247,255,.62)}
+    .discard-groups{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .discard-group{padding:22px;border:1px solid rgba(247,247,255,.10);border-radius:24px;background:rgba(247,247,255,.045)}
+    .discard-group h3{margin:0 0 16px;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#c9c3ff}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{display:inline-flex;align-items:center;padding:9px 11px;border:1px solid rgba(247,247,255,.11);border-radius:999px;background:rgba(247,247,255,.055);color:rgba(247,247,255,.76);font-size:11px;line-height:1.25;font-weight:700}
+    .footer-callout{position:relative;overflow:hidden;padding:34px;border-radius:34px;border:1px solid rgba(89,69,232,.13);background:#fff;box-shadow:var(--shadow)}
+    .footer-callout:after{content:"";position:absolute;width:260px;height:260px;border-radius:999px;right:-110px;top:-120px;background:radial-gradient(circle,rgba(89,69,232,.18),transparent 68%)}
+    .footer-callout .eyebrow{color:var(--purple);margin-bottom:10px}
+    .footer-callout h2{position:relative;z-index:1;margin:0;width:100%;max-width:none;font-size:clamp(28px,4vw,46px);line-height:1.05;letter-spacing:-.05em;font-weight:900}
+    .footer-callout p{position:relative;z-index:1;margin:18px 0 0;width:100%;max-width:none;color:var(--muted);font-size:15px;line-height:1.7;font-weight:700}
+    .sources{margin:20px 0 0;font-size:10px;line-height:1.55;color:#8b879f;font-weight:600}
+    .data-wrap{padding:36px;border:1px solid rgba(89,69,232,.12);border-radius:34px;background:#fff;box-shadow:var(--shadow)}
+        .table-scroll{width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:22px}
+    .performance-table{width:100%;min-width:820px;border-collapse:collapse;background:#fff}
+    .performance-table th{padding:14px 16px;background:#f1f0ff;color:var(--purple2);font-size:10px;line-height:1.2;font-weight:900;letter-spacing:.08em;text-transform:uppercase;text-align:right;white-space:nowrap}
+    .performance-table th:first-child{text-align:left}
+    .performance-table td{padding:16px;border-top:1px solid var(--line);color:var(--ink);font-size:12px;line-height:1.35;font-weight:700;text-align:right;white-space:nowrap}
+    .performance-table td:first-child{text-align:left;white-space:normal;min-width:280px}
+    .performance-table td:first-child strong{font-size:13px;letter-spacing:-.02em}
+    .future-block{position:relative;overflow:hidden;min-height:430px;padding:48px 50px;border-radius:34px;background:linear-gradient(135deg,#090817 0%,#151426 58%,#211C4A 100%);color:#F7F7FF;box-shadow:0 28px 80px rgba(21,20,38,.17)}
+    .future-block:after{content:"";position:absolute;width:340px;height:340px;right:-130px;top:-160px;border-radius:999px;background:radial-gradient(circle,rgba(0,217,200,.16),transparent 68%)}
+    .future-block .section-num{position:relative;z-index:1;color:#8b7dff;margin-bottom:18px}
+    .future-block h2{position:relative;z-index:1;margin:0;width:100%;max-width:none;font-size:clamp(28px,3.8vw,44px);line-height:1.08;letter-spacing:-.05em;font-weight:900}
+    .future-block p{position:relative;z-index:1;margin:22px 0 0;width:100%;max-width:none;color:rgba(247,247,255,.70);font-size:15px;line-height:1.75;font-weight:700}
+    .future-ideas{position:relative;z-index:1;margin-top:30px;padding-top:26px;border-top:1px solid rgba(247,247,255,.12)}
+    .future-ideas h3{margin:0 0 14px;color:#F7F7FF;font-size:12px;line-height:1.2;font-weight:900;letter-spacing:.10em;text-transform:uppercase}
+    .future-chips{display:flex;flex-wrap:wrap;gap:9px}
+    .future-chip{display:inline-flex;align-items:center;padding:10px 12px;border:1px solid rgba(0,217,200,.24);border-radius:999px;background:rgba(247,247,255,.055);color:rgba(247,247,255,.82);font-size:11px;line-height:1.25;font-weight:800}
+    .future-tag{position:relative;z-index:1;display:inline-flex;margin-top:28px;padding:10px 13px;border:1px solid rgba(0,217,200,.35);border-radius:999px;background:rgba(0,217,200,.08);color:#76f2e8;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    .hero-line{display:block}
+    @media(min-width:861px){
+      .hero-line{white-space:nowrap}
+    }
+    .access-gate{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px;background:
+      radial-gradient(760px 430px at 92% 0%,rgba(89,69,232,.48),transparent 62%),
+      radial-gradient(620px 380px at 8% 108%,rgba(0,217,200,.14),transparent 68%),
+      linear-gradient(135deg,#090817 0%,#151426 52%,#211C4A 100%);color:#F7F7FF}
+    .access-gate:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(247,247,255,.025) 1px,transparent 1px),linear-gradient(180deg,rgba(247,247,255,.018) 1px,transparent 1px);background-size:62px 62px;mask-image:linear-gradient(180deg,#000,transparent 92%)}
+    .access-card{position:relative;z-index:1;width:min(470px,100%);padding:42px;border:1px solid rgba(247,247,255,.15);border-radius:34px;background:rgba(247,247,255,.075);box-shadow:0 34px 110px rgba(0,0,0,.32);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);text-align:center}
+    .access-logo{display:block;width:178px;max-width:70%;height:auto;margin:0 auto 26px}
+    .access-title{margin:0;color:#F7F7FF;font-size:clamp(24px,4vw,32px);line-height:1.08;letter-spacing:-.045em;font-weight:900}
+    .access-subtitle{margin:11px 0 24px;color:rgba(247,247,255,.62);font-size:13px;line-height:1.55;font-weight:700}
+    .access-form{display:grid;gap:12px;text-align:left}
+    .access-label{font-size:11px;line-height:1.2;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#c9c3ff}
+    .access-input{width:100%;height:56px;border:1px solid rgba(247,247,255,.16);border-radius:18px;padding:0 17px;background:rgba(247,247,255,.09);color:#fff;outline:none;font-size:16px;font-weight:700;transition:border-color .18s ease,background .18s ease,box-shadow .18s ease}
+    .access-input::placeholder{color:rgba(247,247,255,.34)}
+    .access-input:focus{border-color:rgba(0,217,200,.7);background:rgba(247,247,255,.12);box-shadow:0 0 0 4px rgba(0,217,200,.08)}
+    .access-button{height:56px;border:0;border-radius:999px;margin-top:4px;color:#fff;background:linear-gradient(135deg,var(--purple),var(--purple2));font-size:14px;font-weight:900;letter-spacing:-.01em;cursor:pointer;box-shadow:0 18px 44px rgba(89,69,232,.34);transition:transform .18s ease,filter .18s ease}
+    .access-button:hover{transform:translateY(-1px);filter:brightness(1.06)}
+    .access-button:active{transform:scale(.985)}
+    .access-error{min-height:18px;margin:2px 0 0;text-align:center;color:#ffb9c2;font-size:12px;line-height:1.4;font-weight:800}
+    .access-gate.is-unlocked{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .26s ease,visibility .26s ease}
+    body.access-locked{overflow:hidden}
+    body.access-locked > header,body.access-locked > main{filter:blur(8px);pointer-events:none;user-select:none}
+    @media(max-width:860px){
+      .hero{padding-bottom:58px;border-radius:0 0 30px 30px}.hero-copy{padding-top:58px}
+      .grid{grid-template-columns:1fr 1fr}.discard-groups{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      .shell{width:min(100% - 22px,1160px)}.topbar{align-items:flex-start}.brand img{width:138px}.tag{padding:8px 10px;font-size:10px}.hero-copy{padding-top:48px}
+      main{padding:54px 0 66px}section{margin-bottom:58px}.grid{grid-template-columns:1fr}.keyword-card{min-height:0}.discard-wrap,.footer-callout,.data-wrap{padding:25px;border-radius:28px}.future-block{min-height:0;padding:30px 26px;border-radius:28px}.discard-group{padding:18px}.section-head h2{font-size:34px}
+    }
+  </style>
+</head>
+<body class="access-locked">
+  <div class="access-gate" id="accessGate" role="dialog" aria-modal="true" aria-labelledby="accessTitle">
+    <div class="access-card">
+      <img class="access-logo" src="https://www.mindfly.com.br/assets/logobranco.png" alt="MindFly Digital" />
+      <h1 class="access-title" id="accessTitle">Senha para liberar acesso</h1>
+      <p class="access-subtitle">Conteúdo estratégico protegido para visualização.</p>
+      <form class="access-form" id="accessForm" autocomplete="off">
+        <label class="access-label" for="accessPassword">Senha de acesso</label>
+        <input class="access-input" id="accessPassword" type="password" placeholder="Digite a senha" autocomplete="current-password" />
+        <button class="access-button" type="submit">Acessar</button>
+        <p class="access-error" id="accessError" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+  <header class="hero">
+    <div class="shell">
+      <div class="topbar">
+        <a class="brand" href="https://mindfly.com.br/" aria-label="MindFly Digital">
+          <img src="https://www.mindfly.com.br/assets/logobranco.png" alt="MindFly Digital" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+          <span class="brand-fallback">MindFly Digital</span>
+        </a>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Google Search · palavras-chave</p>
+        <h1><span class="hero-line">Otimização de campanha <span class="gradient">Google Ads</span></span><span class="hero-line">Clinica Fisio Alto De Pinheiros</span></h1>
+        <p class="lead">Foram analisadas as palavras-chave com melhores resultados. Vamos convertê-las para correspondência exata e otimizar ainda mais a campanha, focando nas buscas que mais convertem e geram resultados.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section>
+      <div class="section-head">
+        <div class="section-num">01 · Vamos usar</div>
+        <div>
+          <h2>Palavras-chave que ficam na campanha</h2>
+          <p>As vencedoras serão priorizadas em <strong>correspondência exata</strong> para ganhar controle e reduzir buscas pouco relevantes.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="keyword-card"><span class="badge">Prioridade máxima</span><div class="keyword">[fisioterapia particular]</div><p class="reason">Principal sinal de demanda da campanha.</p></article>
+        <article class="keyword-card"><span class="badge">Prioridade máxima</span><div class="keyword">[clinica de fisioterapia perdizes]</div><p class="reason">Intenção local forte e consistente.</p></article>
+        <article class="keyword-card"><span class="badge">Prioridade máxima</span><div class="keyword">[clinica de fisioterapia pinheiros]</div><p class="reason">Busca local com alta qualidade.</p></article>
+        <article class="keyword-card"><span class="badge">Manter</span><div class="keyword">[fisioterapia pinheiros]</div><p class="reason">Boa combinação entre serviço e localização.</p></article>
+        <article class="keyword-card"><span class="badge">Teste controlado</span><div class="keyword">[fisioterapia alto de pinheiros]</div><p class="reason">Sinal local positivo; vale isolar em exata.</p></article>
+        <article class="keyword-card"><span class="badge">Teste controlado</span><div class="keyword">[fisioterapia perto de mim]</div><p class="reason">Intenção imediata; usar com controle de termo de pesquisa.</p></article>
+      </div>
+
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-num">02 · Novos testes</div>
+        <div>
+          <h2>Novas palavras para abrir oportunidade</h2>
+          <p>Termos ainda não usados na campanha, escolhidos por proximidade com os vencedores e por presença recorrente na oferta de clínicas da região.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="keyword-card test-card"><span class="badge">Extensão vencedora</span><div class="keyword">[fisioterapia particular pinheiros]</div><p class="reason">Une o termo mais forte ao bairro com histórico positivo.</p></article>
+        <article class="keyword-card test-card"><span class="badge">Extensão vencedora</span><div class="keyword">[fisioterapia particular perdizes]</div><p class="reason">Replica a lógica vencedora com intenção local.</p></article>
+        <article class="keyword-card test-card"><span class="badge">Novo serviço</span><div class="keyword">[fisioterapia ortopedica pinheiros]</div><p class="reason">Serviço recorrente entre clínicas locais.</p></article>
+        <article class="keyword-card test-card"><span class="badge">Novo serviço</span><div class="keyword">[fisioterapia esportiva pinheiros]</div><p class="reason">Busca específica, local e de alta intenção.</p></article>
+        <article class="keyword-card test-card"><span class="badge">Novo serviço</span><div class="keyword">[rpg pinheiros]</div><p class="reason">Categoria presente na oferta local e ainda não explorada com bairro.</p></article>
+        <article class="keyword-card test-card"><span class="badge">Novo serviço</span><div class="keyword">[rpg perdizes]</div><p class="reason">Expande a cobertura em uma praça já validada.</p></article>
+      </div>
+    </section>
+
+    <section class="data-wrap">
+      <div class="section-head">
+        <div class="section-num">03 · Dados das vencedoras</div>
+        <div>
+          <h2>Histórico de palavras com alto desempenho</h2>
+          <p>Dados que trazem tomada de decisão</p>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table class="performance-table" aria-label="Desempenho histórico das palavras-chave vencedoras">
+          <thead>
+            <tr>
+              <th>Palavra-chave</th>
+              <th>Impressões</th>
+              <th>Cliques</th>
+              <th>Conversões</th>
+              <th>CPC médio</th>
+              <th>Custo · todo período</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>fisioterapia particular</strong></td><td>16.547</td><td>838</td><td>71</td><td>R$ 6,81</td><td>R$ 5.707,49</td>
+            </tr>
+            <tr>
+              <td><strong>clinica de fisioterapia perdizes</strong></td><td>3.156</td><td>190</td><td>29</td><td>R$ 8,03</td><td>R$ 1.525,49</td>
+            </tr>
+            <tr>
+              <td><strong>clinica de fisioterapia pinheiros</strong></td><td>1.503</td><td>141</td><td>18,5</td><td>R$ 8,04</td><td>R$ 1.133,59</td>
+            </tr>
+            <tr>
+              <td><strong>fisioterapia pinheiros</strong></td><td>881</td><td>70</td><td>7</td><td>R$ 8,94</td><td>R$ 625,60</td>
+            </tr>
+            <tr>
+              <td><strong>fisioterapia perto de mim</strong></td><td>249</td><td>18</td><td>2</td><td>R$ 7,49</td><td>R$ 134,84</td>
+            </tr>
+            <tr>
+              <td><strong>fisioterapia vila romana</strong></td><td>109</td><td>18</td><td>1</td><td>R$ 4,59</td><td>R$ 82,57</td>
+            </tr>
+            <tr>
+              <td><strong>fisioterapia alto de pinheiros</strong></td><td>68</td><td>18</td><td>2</td><td>R$ 8,90</td><td>R$ 160,11</td>
+            </tr>
+            <tr>
+              <td><strong>clinica de fisioterapia butanta</strong></td><td>332</td><td>14</td><td>0</td><td>R$ 5,88</td><td>R$ 82,34</td>
+            </tr>
+            <tr>
+              <td><strong>clínica fisioterapia perto de mim</strong></td><td>133</td><td>9</td><td>0</td><td>R$ 6,45</td><td>R$ 58,02</td>
+            </tr>
+            <tr>
+              <td><strong>fisioterapeuta perto de mim</strong></td><td>158</td><td>7</td><td>0</td><td>R$ 13,84</td><td>R$ 96,90</td>
+            </tr>
+            <tr>
+              <td><strong>clinica de fisioterapia proximo a mim</strong></td><td>67</td><td>1</td><td>0</td><td>R$ 11,54</td><td>R$ 11,54</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="discard-wrap">
+      <div class="section-head">
+        <div class="section-num">04 · Descartadas</div>
+        <div>
+          <h2>Baixo desempenho ou pouca tração</h2>
+          <p>Não precisam continuar recebendo verba na forma atual. Algumas ideias podem voltar futuramente com outra construção.</p>
+        </div>
+      </div>
+
+      <div class="discard-groups">
+        <div class="discard-group">
+          <h3>Desativar como estão</h3>
+          <div class="chips">
+            <span class="chip">fisioterapia particular · ampla</span>
+            <span class="chip">clinica de fisioterapia perdizes · ampla</span>
+            <span class="chip">fisioterapia pinheiros · ampla</span>
+            <span class="chip">clinica de fisioterapia butanta</span>
+            <span class="chip">clínica fisioterapia perto de mim</span>
+            <span class="chip">fisioterapeuta perto de mim</span>
+            <span class="chip">clinica de fisioterapia proximo a mim</span>
+            <span class="chip">liberação miofascial perto de mim</span>
+            <span class="chip">fisioterapia esportiva perto de mim</span>
+            <span class="chip">fisioterapia vila romana</span>
+          </div>
+        </div>
+        <div class="discard-group">
+          <h3>Sem tração suficiente</h3>
+          <div class="chips">
+            <span class="chip">clinica de fisioterapia vila madalena</span>
+            <span class="chip">clinica de fisioterapia vila romana</span>
+            <span class="chip">fisioterapia joelho perto de mim</span>
+            <span class="chip">clinica rpg perto de mim</span>
+            <span class="chip">clinica de fisioterapia alto de pinheiros</span>
+            <span class="chip">fisioterapeuta particular</span>
+            <span class="chip">clinicas de fisioterapia perto de mim</span>
+            <span class="chip">clinica de fisioterapia jardins</span>
+            <span class="chip">clinica e fisioterapia lapa</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="future-block">
+      <div class="section-num">05 · Próximas oportunidades</div>
+      <h2>Campanhas mais específicas pedem páginas mais específicas.</h2>
+      <p>No futuro, podemos desenvolver landing pages dedicadas por tratamento e intenção de busca. A ideia é conectar cada anúncio a uma página com mensagem, benefícios, provas e chamada para ação mais alinhadas ao que a pessoa pesquisou, criando um fluxo de informação mais direto e com maior potencial de conversão.</p>
+      <div class="future-ideas">
+        <h3>Tratamentos e frentes para estudar</h3>
+        <div class="future-chips">
+          <span class="future-chip">Fisioterapia ortopédica</span>
+          <span class="future-chip">Fisioterapia esportiva</span>
+          <span class="future-chip">RPG / postura</span>
+          <span class="future-chip">Pós-operatório</span>
+          <span class="future-chip">Pilates clínico</span>
+          <span class="future-chip">Fisioterapia pélvica</span>
+          <span class="future-chip">Coluna, joelho e ombro</span>
+          <span class="future-chip">Liberação miofascial</span>
+          <span class="future-chip">DTM / ATM</span>
+        </div>
+      </div>
+      <span class="future-tag">Próxima frente para estudar</span>
+    </section>
+
+    <section class="footer-callout">
+      <p class="eyebrow">Direção final</p>
+      <h2>Campanha mais direcionada baseada em dados reais dos últimos valores já investidos em campanha no Google Ads.</h2>
+      <p>O histórico dos valores já investidos até hoje é um ativo importante: ele mostra, com dados reais, quais buscas merecem receber mais foco e quais devem deixar de consumir orçamento.</p>
+      <p>Primeiro, consolidar as vencedoras em exata. Depois, testar as novas combinações em grupos separados para saber rapidamente quais merecem escala.</p>
+      <p class="sources">Levantamento de mercado usado para os novos testes: clínicas e páginas locais de Pinheiros e Perdizes com oferta recorrente de fisioterapia ortopédica, esportiva e RPG.</p>
+    </section>
+  </main>
+  <script>
+    (() => {
+      const gate = document.getElementById('accessGate');
+      const form = document.getElementById('accessForm');
+      const input = document.getElementById('accessPassword');
+      const error = document.getElementById('accessError');
+      const expected = 'fisioaltodepinheiros';
+
+      const unlock = () => {
+        document.body.classList.remove('access-locked');
+        gate.classList.add('is-unlocked');
+        window.setTimeout(() => gate.remove(), 300);
+      };
+
+      window.addEventListener('load', () => input && input.focus());
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (input.value === expected) {
+          error.textContent = '';
+          unlock();
+          return;
+        }
+        error.textContent = 'Senha incorreta. Tente novamente.';
+        input.value = '';
+        input.focus();
+      });
+    })();
+  </script>
+</body>
+</html>
