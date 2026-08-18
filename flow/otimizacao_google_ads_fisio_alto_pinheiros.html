@@ -84,6 +84,7 @@
     .performance-table td{padding:16px;border-top:1px solid var(--line);color:var(--ink);font-size:12px;line-height:1.35;font-weight:700;text-align:right;white-space:nowrap}
     .performance-table td:first-child{text-align:left;white-space:normal;min-width:280px}
     .performance-table td:first-child strong{font-size:13px;letter-spacing:-.02em}
+    .mobile-table-hint{display:none}
     .future-block{position:relative;overflow:hidden;min-height:430px;padding:48px 50px;border-radius:34px;background:linear-gradient(135deg,#090817 0%,#151426 58%,#211C4A 100%);color:#F7F7FF;box-shadow:0 28px 80px rgba(21,20,38,.17)}
     .future-block:after{content:"";position:absolute;width:340px;height:340px;right:-130px;top:-160px;border-radius:999px;background:radial-gradient(circle,rgba(0,217,200,.16),transparent 68%)}
     .future-block .section-num{position:relative;z-index:1;color:#8b7dff;margin-bottom:18px}
@@ -126,6 +127,7 @@
     @media(max-width:560px){
       .shell{width:min(100% - 22px,1160px)}.topbar{align-items:flex-start}.brand img{width:138px}.tag{padding:8px 10px;font-size:10px}.hero-copy{padding-top:48px}
       main{padding:54px 0 66px}section{margin-bottom:58px}.grid{grid-template-columns:1fr}.keyword-card{min-height:0}.discard-wrap,.footer-callout,.data-wrap{padding:25px;border-radius:28px}.future-block{min-height:0;padding:30px 26px;border-radius:28px}.discard-group{padding:18px}.section-head h2{font-size:34px}
+      .mobile-table-hint{display:block;margin:12px 2px 0;color:var(--muted);font-size:11px;line-height:1.45;font-weight:800}
     }
   </style>
 </head>
@@ -255,6 +257,7 @@
           </tbody>
         </table>
       </div>
+      <p class="mobile-table-hint">Arraste a tabela para o lado e veja os dados</p>
     </section>
 
     <section class="discard-wrap">
