@@ -280,7 +280,6 @@
       .app,.block-print{display:none!important}
       .mobile-only-block{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:28px;background:#f6f7fb}
       .mobile-only-message{width:min(430px,100%);background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;text-align:center;box-shadow:var(--shadow)}
-      .mobile-only-icon{width:48px;height:48px;border:1px solid #cfd4dc;border-radius:14px;margin:0 auto 16px;display:grid;place-items:center;font-size:22px;background:#f7f8fa}
       .mobile-only-message h1{font-size:24px;margin:0 0 10px}
       .mobile-only-message p{margin:0;color:var(--muted);font-size:14px}
     }
@@ -457,7 +456,6 @@
     .mobile-only-block{background:linear-gradient(135deg,#090817,#211C4A)}
     .mobile-only-message{background:rgba(247,247,255,.07);border-color:rgba(247,247,255,.14);color:#fff;backdrop-filter:blur(14px)}
     .mobile-only-message p{color:rgba(247,247,255,.62)}
-    .mobile-only-icon{background:rgba(247,247,255,.08);border-color:rgba(247,247,255,.14)}
     @media(max-width:1000px){
       aside{background:linear-gradient(135deg,#090817,#211C4A)}
       .side-brand{display:none}
@@ -512,7 +510,6 @@
 
 <div class="mobile-only-block" role="alert" aria-live="polite">
   <div class="mobile-only-message">
-    <div class="mobile-only-icon">▣</div>
     <h1>Visualização disponível no computador</h1>
     <p>Esta apresentação foi preparada para navegador web em desktop ou notebook. Abra este link em um computador para visualizar o projeto.</p>
   </div>
@@ -544,6 +541,7 @@
       <button class="nav" data-screen="hubspot">Instalar no HubSpot</button>
       <button class="nav" data-screen="preview">Localizador</button>
       <button class="nav" data-screen="architecture">Arquitetura</button>
+      <button class="nav" data-screen="timeline">Prazo de entrega</button>
 
       <div class="group">Proposta comercial</div>
       <button class="nav" data-screen="scope">Escopo</button>
@@ -961,12 +959,26 @@
     <section id="architecture" class="screen">
       <div class="top"><div><div class="eyebrow">Visão técnica simplificada</div><h1>Arquitetura proposta</h1><p class="muted">A apresentação mostra as principais peças sem expor detalhes internos desnecessários de implementação.</p></div></div>
       <div class="grid g2">
-        <div class="card flat"><h2>1. Painel administrativo</h2><p class="muted"><strong>clinicas-skintec.mindfly.com.br</strong> (domínio operacional da MindFly) ou <strong>clinicas.skintec.com.br</strong> (domínio da Skintec) — login, equipamentos, médicos, clínicas, importações e códigos embed para adicionar nas páginas dos equipamentos.</p></div>
+        <div class="card flat"><h2>1. Painel administrativo</h2><p class="muted">Login, equipamentos, médicos, clínicas, importações e códigos embed para adicionar nas páginas dos equipamentos.</p></div>
         <div class="card flat"><h2>2. Aplicação</h2><p class="muted">Interface desenvolvida e hospedada pela MindFly.</p></div>
         <div class="card flat"><h2>3. Banco e autenticação</h2><p class="muted">Dados estruturados, usuários, permissões e relacionamentos entre médicos e equipamentos.</p></div>
         <div class="card flat"><h2>4. Localização</h2><p class="muted">Integração de mapa, endereços e proximidade.</p></div>
         <div class="card flat"><h2>5. Publicação</h2><p class="muted">Aplicação hospedada em ambiente de produção e conectada ao domínio definido.</p></div>
         <div class="card flat"><h2>6. Embeds</h2><p class="muted">Uma rota pública por equipamento, pronta para ser incorporada ao site.</p></div>
+      </div>
+    </section>
+
+    <section id="timeline" class="screen">
+      <div class="top"><div><div class="eyebrow">Cronograma do projeto</div><h1>Prazo de entrega</h1><p class="muted">A execução será organizada em etapas para manter desenvolvimento, integrações, testes e publicação avançando de forma contínua.</p></div></div>
+      <div class="highlight">
+        <div class="eyebrow" style="color:rgba(247,247,255,.68)">Estimativa de entrega</div>
+        <div class="bigprice">1 a 2 semanas úteis</div>
+        <p class="muted">Prazo estimado para concluir as tarefas previstas nesta proposta, considerando o andamento normal das validações e os acessos necessários para publicação.</p>
+      </div>
+      <div class="grid g3 section">
+        <div class="card flat"><h3>Construção</h3><p class="muted">Estrutura da aplicação e fluxos principais.</p></div>
+        <div class="card flat"><h3>Integrações</h3><p class="muted">Dados, mapa, planilhas e embeds.</p></div>
+        <div class="card flat"><h3>Validação e entrega</h3><p class="muted">Testes finais, ajustes e publicação.</p></div>
       </div>
     </section>
 
@@ -1037,13 +1049,13 @@
     <section id="external" class="screen">
       <div class="top"><div><div class="eyebrow">Infraestrutura</div><h1>Uso e eventuais custos adicionais</h1><p class="muted">A solução foi pensada para uma operação leve. No uso esperado do projeto, a tendência é permanecer dentro dos limites normais dos serviços utilizados.</p></div></div>
       <div class="grid g3">
-        <div class="card flat"><h3>Aplicação leve</h3><p class="muted">Sem armazenamento de imagens ou arquivos pesados, reduzindo o consumo de infraestrutura.</p></div>
-        <div class="card flat"><h3>Consumo acompanhado</h3><p class="muted">Tráfego e serviços de localização podem ser monitorados conforme o uso da ferramenta.</p></div>
-        <div class="card flat"><h3>Alerta antes de ajustes</h3><p class="muted">Se o volume crescer a ponto de exigir uma faixa maior de uso, a Skintec será avisada antes de qualquer mudança necessária.</p></div>
+        <div class="card flat"><h3>Aplicação leve</h3><p class="muted">Sem armazenamento de imagens ou arquivos pesados, mantendo a operação simples e eficiente.</p></div>
+        <div class="card flat"><h3>Uso dentro do esperado</h3><p class="muted">Para o volume previsto nesta primeira versão, não é esperado nenhum custo adicional de infraestrutura.</p></div>
+        <div class="card flat"><h3>Somente se houver grande escala</h3><p class="muted">Caso o tráfego cresça muito além do cenário previsto, a Skintec será avisada antes de qualquer necessidade de ajuste.</p></div>
       </div>
       <div class="card section">
         <h2>Quando poderia existir custo extra?</h2>
-        <p class="muted" style="margin-bottom:0">Somente em um cenário de tráfego ou consumo de serviços muito acima do previsto para a operação. É uma situação pouco provável no início do projeto e, caso o uso se aproxime de algum limite relevante, será sinalizado com antecedência para avaliação.</p>
+        <p class="muted" style="margin-bottom:0">Somente se a ferramenta alcançar um volume de acessos muito acima do previsto para esta operação. Esse cenário é pouco provável no início e, se acontecer, qualquer necessidade de adequação será comunicada previamente à Skintec.</p>
       </div>
     </section>
   </main>
