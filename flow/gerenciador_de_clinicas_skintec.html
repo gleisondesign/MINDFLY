@@ -540,12 +540,11 @@
       <button class="nav" data-screen="embeds">Embeds</button>
       <button class="nav" data-screen="hubspot">Instalar no HubSpot</button>
       <button class="nav" data-screen="preview">Localizador</button>
-      <button class="nav" data-screen="architecture">Arquitetura</button>
-      <button class="nav" data-screen="timeline">Prazo de entrega</button>
-
       <div class="group">Proposta comercial</div>
       <button class="nav" data-screen="scope">Escopo</button>
       <button class="nav" data-screen="tasks">Tarefas</button>
+      <button class="nav" data-screen="architecture">Arquitetura</button>
+      <button class="nav" data-screen="timeline">Prazo de entrega</button>
       <button class="nav" data-screen="values">Valores</button>
       <button class="nav" data-screen="deliverables">Entregáveis</button>
       <button class="nav" data-screen="external">Custos externos</button>
@@ -956,6 +955,29 @@
       </div>
     </section>
 
+    <section id="scope" class="screen">
+      <div class="top"><div><div class="eyebrow">Escopo funcional</div><h1>O que faz parte da primeira versão</h1><p class="muted">Funções necessárias para entregar o sistema em produção e permitir operação pela Skintec.</p></div></div>
+      <div class="grid g3">
+        <div class="card flat"><h3>Login e acesso</h3><ul><li>Login administrativo</li><li>Proteção das telas internas</li><li>Sessão do usuário</li></ul></div>
+        <div class="card flat"><h3>Dashboard</h3><ul><li>Indicadores principais</li><li>Status dos embeds</li><li>Atalhos operacionais</li></ul></div>
+        <div class="card flat"><h3>Equipamentos</h3><ul><li>Morpheus8</li><li>Oligio X</li><li>Deep Slim</li><li>Novos equipamentos</li></ul></div>
+        <div class="card flat"><h3>Médicos</h3><ul><li>CRM e especialidade</li><li>Clínica e endereço</li><li>WhatsApp e redes</li><li>Vários equipamentos</li></ul></div>
+        <div class="card flat"><h3>Excel</h3><ul><li>Modelo</li><li>Upload</li><li>Validação</li><li>Duplicados</li><li>Exportação</li></ul></div>
+        <div class="card flat"><h3>Localizador</h3><ul><li>Google Maps</li><li>Cidade/CEP</li><li>Proximidade</li><li>Embed por equipamento</li></ul></div>
+      </div>
+    </section>
+
+    <section id="tasks" class="screen">
+      <div class="top"><div><div class="eyebrow">Plano de execução</div><h1>Tarefas necessárias para o projeto acontecer</h1><p class="muted">O investimento cobre desenvolvimento, estrutura de dados, automações, integrações, validação e publicação da solução.</p></div></div>
+      <div class="grid">
+        <div class="task"><div class="task-head"><div><span class="pill">Etapa 1</span><h2 style="margin-top:10px">Frontend e experiência da aplicação</h2></div><div class="price">R$ 1.500</div></div><ul><li>Transformar o protótipo em aplicação organizada.</li><li>Criar rotas, componentes, formulários e navegação.</li><li>Garantir consistência visual e usabilidade.</li><li>Implementar estados de erro, carregamento e sucesso.</li></ul><div class="bar"><div class="fill" style="width:25%"></div></div></div>
+        <div class="task"><div class="task-head"><div><span class="pill">Etapa 2</span><h2 style="margin-top:10px">Dados, autenticação e regras do sistema</h2></div><div class="price">R$ 1.500</div></div><ul><li>Estrutura de dados e relacionamentos.</li><li>Login administrativo e proteção do painel.</li><li>Regras entre médicos, clínicas e equipamentos.</li><li>Permissões, validações e persistência dos dados.</li></ul><div class="bar"><div class="fill" style="width:25%"></div></div></div>
+        <div class="task"><div class="task-head"><div><span class="pill">Etapa 3</span><h2 style="margin-top:10px">Importação e exportação por Excel</h2></div><div class="price">R$ 1.100</div></div><ul><li>Planilha-base para download.</li><li>Upload e leitura dos dados.</li><li>Validação de erros e possíveis duplicidades.</li><li>Exportação geral e por equipamento.</li></ul><div class="bar"><div class="fill" style="width:18.33%"></div></div></div>
+        <div class="task"><div class="task-head"><div><span class="pill">Etapa 4</span><h2 style="margin-top:10px">Mapa, geolocalização e embeds</h2></div><div class="price">R$ 1.200</div></div><ul><li>Integração com serviço de mapas.</li><li>Conversão de endereços em localização.</li><li>Busca por cidade/CEP e proximidade.</li><li>Localizador público e código embed por equipamento.</li></ul><div class="bar"><div class="fill" style="width:20%"></div></div></div>
+        <div class="task"><div class="task-head"><div><span class="pill">Etapa 5</span><h2 style="margin-top:10px">Publicação, testes e entrega</h2></div><div class="price">R$ 700</div></div><ul><li>Configuração do ambiente de produção.</li><li>Publicação e conexão com domínio.</li><li>Testes funcionais e validação dos fluxos.</li><li>Ajustes finais de entrega.</li></ul><div class="bar"><div class="fill" style="width:11.67%"></div></div></div>
+      </div>
+    </section>
+
     <section id="architecture" class="screen">
       <div class="top"><div><div class="eyebrow">Visão técnica simplificada</div><h1>Arquitetura proposta</h1><p class="muted">A apresentação mostra as principais peças sem expor detalhes internos desnecessários de implementação.</p></div></div>
       <div class="grid g2">
@@ -979,29 +1001,6 @@
         <div class="card flat"><h3>Construção</h3><p class="muted">Estrutura da aplicação e fluxos principais.</p></div>
         <div class="card flat"><h3>Integrações</h3><p class="muted">Dados, mapa, planilhas e embeds.</p></div>
         <div class="card flat"><h3>Validação e entrega</h3><p class="muted">Testes finais, ajustes e publicação.</p></div>
-      </div>
-    </section>
-
-    <section id="scope" class="screen">
-      <div class="top"><div><div class="eyebrow">Escopo funcional</div><h1>O que faz parte da primeira versão</h1><p class="muted">Funções necessárias para entregar o sistema em produção e permitir operação pela Skintec.</p></div></div>
-      <div class="grid g3">
-        <div class="card flat"><h3>Login e acesso</h3><ul><li>Login administrativo</li><li>Proteção das telas internas</li><li>Sessão do usuário</li></ul></div>
-        <div class="card flat"><h3>Dashboard</h3><ul><li>Indicadores principais</li><li>Status dos embeds</li><li>Atalhos operacionais</li></ul></div>
-        <div class="card flat"><h3>Equipamentos</h3><ul><li>Morpheus8</li><li>Oligio X</li><li>Deep Slim</li><li>Novos equipamentos</li></ul></div>
-        <div class="card flat"><h3>Médicos</h3><ul><li>CRM e especialidade</li><li>Clínica e endereço</li><li>WhatsApp e redes</li><li>Vários equipamentos</li></ul></div>
-        <div class="card flat"><h3>Excel</h3><ul><li>Modelo</li><li>Upload</li><li>Validação</li><li>Duplicados</li><li>Exportação</li></ul></div>
-        <div class="card flat"><h3>Localizador</h3><ul><li>Google Maps</li><li>Cidade/CEP</li><li>Proximidade</li><li>Embed por equipamento</li></ul></div>
-      </div>
-    </section>
-
-    <section id="tasks" class="screen">
-      <div class="top"><div><div class="eyebrow">Plano de execução</div><h1>Tarefas necessárias para o projeto acontecer</h1><p class="muted">O investimento cobre desenvolvimento, estrutura de dados, automações, integrações, validação e publicação da solução.</p></div></div>
-      <div class="grid">
-        <div class="task"><div class="task-head"><div><span class="pill">Etapa 1</span><h2 style="margin-top:10px">Frontend e experiência da aplicação</h2></div><div class="price">R$ 1.500</div></div><ul><li>Transformar o protótipo em aplicação organizada.</li><li>Criar rotas, componentes, formulários e navegação.</li><li>Garantir consistência visual e usabilidade.</li><li>Implementar estados de erro, carregamento e sucesso.</li></ul><div class="bar"><div class="fill" style="width:25%"></div></div></div>
-        <div class="task"><div class="task-head"><div><span class="pill">Etapa 2</span><h2 style="margin-top:10px">Dados, autenticação e regras do sistema</h2></div><div class="price">R$ 1.500</div></div><ul><li>Estrutura de dados e relacionamentos.</li><li>Login administrativo e proteção do painel.</li><li>Regras entre médicos, clínicas e equipamentos.</li><li>Permissões, validações e persistência dos dados.</li></ul><div class="bar"><div class="fill" style="width:25%"></div></div></div>
-        <div class="task"><div class="task-head"><div><span class="pill">Etapa 3</span><h2 style="margin-top:10px">Importação e exportação por Excel</h2></div><div class="price">R$ 1.100</div></div><ul><li>Planilha-base para download.</li><li>Upload e leitura dos dados.</li><li>Validação de erros e possíveis duplicidades.</li><li>Exportação geral e por equipamento.</li></ul><div class="bar"><div class="fill" style="width:18.33%"></div></div></div>
-        <div class="task"><div class="task-head"><div><span class="pill">Etapa 4</span><h2 style="margin-top:10px">Mapa, geolocalização e embeds</h2></div><div class="price">R$ 1.200</div></div><ul><li>Integração com serviço de mapas.</li><li>Conversão de endereços em localização.</li><li>Busca por cidade/CEP e proximidade.</li><li>Localizador público e código embed por equipamento.</li></ul><div class="bar"><div class="fill" style="width:20%"></div></div></div>
-        <div class="task"><div class="task-head"><div><span class="pill">Etapa 5</span><h2 style="margin-top:10px">Publicação, testes e entrega</h2></div><div class="price">R$ 700</div></div><ul><li>Configuração do ambiente de produção.</li><li>Publicação e conexão com domínio.</li><li>Testes funcionais e validação dos fluxos.</li><li>Ajustes finais de entrega.</li></ul><div class="bar"><div class="fill" style="width:11.67%"></div></div></div>
       </div>
     </section>
 
