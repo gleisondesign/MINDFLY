@@ -1,0 +1,1207 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090817">
+  <meta name="description" content="Proposta do Gerenciador de Clinicas Skintec: gestao de medicos e equipamentos, importacao em massa, localizador por proximidade e integracao via embed no HubSpot.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Gerenciador de Clinicas Skintec | Proposta MindFly">
+  <meta property="og:description" content="Conheca a estrutura proposta para gerenciar clinicas, equipamentos e localizar especialistas diretamente nas paginas da Skintec.">
+  <meta property="og:image" content="https://www.mindfly.com.br/assets/mini2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gerenciador de Clinicas Skintec | Proposta MindFly">
+  <meta name="twitter:description" content="Gestao centralizada, importacao em massa, localizador e embeds por equipamento.">
+  <meta name="twitter:image" content="https://www.mindfly.com.br/assets/mini2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Gerenciador de Clínicas Skintec | Proposta MindFly</title>
+  <style>
+    :root{
+      --bg:#f6f7fb;--panel:#ffffff;--text:#15171c;--muted:#69707d;--line:#e5e7eb;
+      --accent:#111827;--soft:#eef0f4;--ok:#111827;--warn:#4b5563;--danger:#374151;
+      --shadow:0 18px 45px rgba(16,24,40,.08);--radius:22px
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg);color:var(--text);
+      -webkit-user-select:none;user-select:none;
+      -webkit-touch-callout:none
+    }
+    input,textarea{user-select:text;-webkit-user-select:text}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    img{pointer-events:none;-webkit-user-drag:none}
+    a{color:inherit}
+    .app{min-height:100vh;display:grid;grid-template-columns:255px 1fr}
+    aside{
+      position:sticky;top:0;height:100vh;padding:26px 18px;border-right:1px solid var(--line);
+      background:rgba(255,255,255,.94);backdrop-filter:blur(16px);overflow:auto
+    }
+    .menu-title{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800;margin:0 10px 16px}
+    nav{display:flex;flex-direction:column;gap:6px}
+    .nav{border:0;background:transparent;text-align:left;padding:11px 12px;border-radius:12px;color:var(--muted)}
+    .nav.active,.nav:hover{background:var(--soft);color:var(--text);font-weight:700}
+    .group{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;font-weight:800;margin:18px 10px 6px}
+    main{padding:34px;min-width:0}
+    .screen{display:none;animation:fade .18s ease}
+    .screen.active{display:block}
+    @keyframes fade{from{opacity:.3;transform:translateY(4px)}to{opacity:1;transform:none}}
+    .top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:22px}
+    .eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:800}
+    h1{font-size:34px;line-height:1.12;margin:7px 0 10px}
+    h2{font-size:21px;margin:0 0 7px}
+    h3{font-size:15px;margin:0}
+    p{line-height:1.55}
+    .muted{color:var(--muted)}
+    .actions{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{border:1px solid var(--line);background:#fff;padding:10px 14px;border-radius:12px;color:var(--text)}
+    .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .btn.danger{color:#374151;border-color:#d1d5db;background:#fff}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .flat{box-shadow:none}
+    .grid{display:grid;gap:16px}
+    .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .metric .label{font-size:13px;color:var(--muted)}
+    .metric .value{font-size:30px;font-weight:800;margin-top:8px}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border-radius:999px;background:var(--soft);font-size:12px;font-weight:700}
+    .pill.ok{background:#eef0f4;color:#111827}
+    .pill.warn{background:#f3f4f6;color:#4b5563}
+    .section{margin-top:18px}
+    .flow{display:grid;grid-template-columns:1fr 50px 1fr 50px 1fr;align-items:center;gap:10px}
+    .arrow{text-align:center;color:var(--muted);font-size:24px}
+    .task{border:1px solid var(--line);border-radius:18px;background:#fff;padding:18px}
+    .task-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+    .price{font-size:18px;font-weight:800;white-space:nowrap}
+    ul{margin:10px 0 0;padding-left:18px}
+    li{margin:5px 0;color:var(--muted);line-height:1.45}
+    .bar{height:10px;background:#eceff3;border-radius:999px;overflow:hidden;margin-top:10px}
+    .fill{height:100%;background:var(--accent);border-radius:999px}
+    .table{width:100%;border-collapse:collapse}
+    .table th,.table td{text-align:left;padding:13px 10px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:top}
+    .table th{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+    .rowlink{cursor:pointer}.rowlink:hover{background:#fafafa}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .field label{font-size:13px;font-weight:700}
+    input,select,textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 12px;color:var(--text)}
+    textarea{resize:vertical;min-height:96px}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+    .tab{border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 12px}
+    .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .tabpanel{display:none}.tabpanel.active{display:block}
+    .upload{border:1.5px dashed #cdd2da;border-radius:18px;padding:32px;text-align:center;background:#fbfcfe}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}.chip{background:var(--soft);border-radius:999px;padding:7px 10px;font-size:12px}
+    .code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;word-break:break-all;background:#0e1116;color:#e7eaf0;border-radius:14px;padding:14px;line-height:1.6}
+    .mapwrap{display:grid;grid-template-columns:380px 1fr;gap:14px}
+    .map{min-height:500px;position:relative;border-radius:20px;border:1px solid var(--line);overflow:hidden;background:
+      linear-gradient(#e9edf2 1px,transparent 1px),linear-gradient(90deg,#e9edf2 1px,transparent 1px),#f8fafc;background-size:38px 38px}
+    .road{position:absolute;background:#fff;border:1px solid #e4e8ee;border-radius:999px;transform:rotate(-18deg)}
+    .r1{width:78%;height:28px;left:8%;top:38%}.r2{width:62%;height:24px;left:27%;top:60%;transform:rotate(32deg)}
+    .pin{position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 10px;font-size:12px;box-shadow:0 8px 22px rgba(0,0,0,.08)}
+    .pin:before{content:"●";margin-right:6px}.pin.a{left:15%;top:20%}.pin.b{right:12%;top:28%}.pin.c{left:28%;bottom:18%}
+    .you{position:absolute;left:51%;top:49%;width:18px;height:18px;border-radius:50%;background:#111827;border:4px solid #fff;box-shadow:0 0 0 6px rgba(17,24,39,.14)}
+    .doctor{border:1px solid var(--line);border-radius:16px;padding:14px;background:#fff;margin-bottom:10px}
+    .doctor .head{display:flex;justify-content:space-between;gap:10px}
+    .highlight{background:var(--accent);color:#fff;border-radius:22px;padding:24px}
+    .highlight .muted{color:#d1d5db}.bigprice{font-size:44px;font-weight:900;margin-top:4px}
+    .check{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
+    .check:last-child{border-bottom:0}
+    .confidential{border:1px solid var(--line);background:#fff;border-radius:16px;padding:14px 16px;font-size:12px;color:var(--muted);line-height:1.5;margin-top:20px}
+    .toast{position:fixed;right:20px;bottom:20px;background:#111827;color:white;border-radius:12px;padding:12px 16px;box-shadow:var(--shadow);display:none;z-index:60}
+    .toast.show{display:block}
+    .modalback{position:fixed;inset:0;background:rgba(15,23,42,.42);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}
+    .modalback.show{display:flex}.modal{width:min(720px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:22px;padding:22px}
+    .block-print{display:none}
+    @media print{
+      body *{visibility:hidden!important}
+      .block-print,.block-print *{visibility:visible!important}
+      .block-print{display:block!important;position:absolute;inset:0;padding:40px;background:#fff;color:#111}
+      .block-print h1{font-size:28px}
+    }
+    @media(max-width:1000px){
+      .app{grid-template-columns:1fr}aside{height:auto;position:relative;border-right:0;border-bottom:1px solid var(--line)}
+      nav{flex-direction:row;flex-wrap:wrap}.group{width:100%}.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr 1fr}.mapwrap{grid-template-columns:1fr}
+    }
+    @media(max-width:650px){
+      main{padding:20px}.g2,.g3,.g4{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}
+      .top{flex-direction:column}.map{min-height:390px}h1{font-size:29px}
+    }
+
+
+
+    /* Visão geral - mapa da ferramenta */
+    .overview-map{max-width:1080px;margin:0 auto}
+    .overview-head{text-align:center;margin-bottom:22px}
+    .overview-head h1{margin-bottom:6px}
+    .overview-root{max-width:430px;margin:0 auto;border:1.5px solid var(--accent);background:var(--soft);border-radius:18px;padding:18px 20px;text-align:center;font-weight:850;font-size:18px}
+    .overview-stem{width:2px;height:28px;background:var(--line);margin:0 auto}
+    .overview-columns{display:grid;grid-template-columns:1fr 1fr;gap:24px;position:relative}
+    .overview-column{border:1px solid var(--line);border-radius:20px;background:#fff;padding:18px}
+    .overview-label{text-align:center;font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:850;margin-bottom:14px}
+    .overview-node{border:1px solid var(--line);border-radius:14px;background:#fff;padding:13px 14px;text-align:center}
+    .overview-node.main{border-color:#c9ced6;background:#f7f8fa}
+    .overview-node strong{display:block;font-size:14px}
+    .overview-node span{display:block;margin-top:4px;font-size:12px;color:var(--muted)}
+    .overview-down{text-align:center;color:#9ca3af;font-size:20px;line-height:24px;padding:3px 0}
+    .overview-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .overview-summary{margin-top:18px;border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px 16px;display:grid;grid-template-columns:1fr 36px 1fr 36px 1fr;gap:8px;align-items:center;text-align:center}
+    .overview-summary strong{display:block;font-size:13px}
+    .overview-summary span{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+    .overview-summary-arrow{color:#9ca3af;font-size:20px}
+    @media(max-width:760px){
+      .overview-columns{grid-template-columns:1fr}
+      .overview-summary{grid-template-columns:1fr}
+      .overview-summary-arrow{transform:rotate(90deg)}
+    }
+
+    /* HubSpot embed installation */
+    .hub-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:stretch}
+    .hub-step{border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden;min-height:265px}
+    .hub-step-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 14px;border-bottom:1px solid var(--line);background:#fbfcfe}
+    .hub-num{width:28px;height:28px;border-radius:9px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:900;flex:0 0 auto}
+    .hub-step-title{font-size:13px;font-weight:800;line-height:1.3}
+    .hub-mock{padding:14px}
+    .hub-browser{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+    .hub-browserbar{height:26px;display:flex;align-items:center;gap:5px;padding:0 9px;border-bottom:1px solid var(--line);background:#f8fafc}
+    .hub-dot{width:6px;height:6px;border-radius:50%;background:#cfd4dc}
+    .hub-editor{display:grid;grid-template-columns:64px 1fr;min-height:142px}
+    .hub-sidebar{border-right:1px solid var(--line);padding:9px 7px;background:#fafbfc}
+    .hub-mini-line{height:6px;border-radius:999px;background:#e5e7eb;margin:7px 0}
+    .hub-mini-line.dark{background:#9ca3af}.hub-mini-line.active{background:var(--accent)}
+    .hub-canvas{padding:11px;position:relative;background:#fff}
+    .hub-page-block{height:24px;border:1px solid var(--line);border-radius:7px;background:#fafafa;margin-bottom:7px}
+    .hub-page-block.embed{height:58px;border:1.5px dashed #9ca3af;background:#fbfcfe;display:grid;place-items:center;color:var(--muted);font-size:10px;font-weight:800}
+    .hub-toolbar{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:9px}
+    .hub-tool{font-size:9px;border:1px solid var(--line);border-radius:6px;padding:4px 6px;background:#fff;color:var(--muted)}
+    .hub-tool.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .hub-codebox{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:9px;line-height:1.45;border-radius:9px;background:#111827;color:#e5e7eb;padding:10px;word-break:break-all}
+    .hub-settings{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}
+    .hub-setting{border:1px solid var(--line);border-radius:8px;padding:7px;font-size:9px;color:var(--muted);background:#fff}
+    .hub-setting strong{display:block;color:var(--text);font-size:10px;margin-top:2px}
+    .hub-live{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+    .hub-live-head{padding:8px 9px;border-bottom:1px solid var(--line);font-size:10px;font-weight:800}
+    .hub-live-body{display:grid;grid-template-columns:42% 1fr;gap:7px;padding:8px}
+    .hub-results{display:grid;gap:5px}.hub-result{border:1px solid var(--line);border-radius:6px;height:27px;background:#fff}
+    .hub-map{min-height:92px;position:relative;border-radius:7px;border:1px solid var(--line);overflow:hidden;background:linear-gradient(#e9edf2 1px,transparent 1px),linear-gradient(90deg,#e9edf2 1px,transparent 1px),#f8fafc;background-size:18px 18px}
+    .hub-road{position:absolute;background:#fff;border:1px solid #e4e8ee;border-radius:999px;height:9px;width:85%;left:7%;top:44%;transform:rotate(-15deg)}
+    .hub-pin{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--accent);border:2px solid #fff}.hub-pin.a{left:23%;top:22%}.hub-pin.b{right:18%;top:36%}.hub-pin.c{left:48%;bottom:18%}
+    .hub-final{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:center}
+    .hub-checks{display:grid;gap:8px}.hub-check{display:flex;gap:9px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}.hub-check:last-child{border-bottom:0}
+    .hub-note{margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fbfcfe;font-size:12px;color:var(--muted);line-height:1.5}
+    @media(max-width:1150px){.hub-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:700px){.hub-flow,.hub-final{grid-template-columns:1fr}}
+
+    /* Refined public locator */
+    .locator-shell{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+    .locator-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:22px 22px 18px;border-bottom:1px solid var(--line)}
+    .locator-head h2{font-size:24px;margin:3px 0 5px}
+    .locator-product{padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:var(--soft);font-size:11px;font-weight:800;white-space:nowrap}
+    .locator-search{display:grid;grid-template-columns:1fr auto;gap:9px;padding:15px 22px;border-bottom:1px solid var(--line);background:#fafbfc}
+    .locator-search .searchbox{display:flex;align-items:center;gap:9px;border:1px solid var(--line);background:#fff;border-radius:13px;padding:0 13px;min-height:45px}
+    .locator-search .searchbox span{font-size:15px;color:var(--muted)}
+    .locator-search .searchbox input{border:0!important;padding:0!important;border-radius:0!important;outline:0;background:transparent}
+    .locator-search .btn{min-width:120px}
+    .locator-content{display:grid;grid-template-columns:minmax(310px,390px) 1fr;min-height:480px}
+    .locator-list{padding:18px;border-right:1px solid var(--line);background:#fff}
+    .locator-count{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;font-size:13px}
+    .locator-count strong{font-size:14px}
+    .locator-card{border:1px solid var(--line);border-radius:15px;padding:14px;margin-bottom:10px;background:#fff;transition:.15s ease}
+    .locator-card:hover{border-color:#c4c9d1;background:#fafbfc}
+    .locator-card:last-child{margin-bottom:0}
+    .locator-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .locator-name{font-size:14px;font-weight:800}
+    .locator-clinic{font-size:12px;color:var(--muted);margin-top:2px}
+    .locator-distance{font-size:11px;font-weight:800;padding:5px 7px;border-radius:999px;background:var(--soft);white-space:nowrap}
+    .locator-address{font-size:12px;color:var(--muted);margin:10px 0 0;line-height:1.45}
+    .locator-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:11px}
+    .locator-actions .btn{font-size:11px;padding:7px 9px;border-radius:9px}
+    .locator-map{position:relative;overflow:hidden;background:linear-gradient(#e8ebef 1px,transparent 1px),linear-gradient(90deg,#e8ebef 1px,transparent 1px),#f7f8fa;background-size:34px 34px;min-height:480px}
+    .locator-road{position:absolute;height:24px;border-radius:999px;background:#fff;border:1px solid #e2e5ea;box-shadow:0 3px 12px rgba(17,24,39,.04)}
+    .locator-road.one{width:82%;left:5%;top:34%;transform:rotate(-14deg)}
+    .locator-road.two{width:70%;right:4%;top:59%;transform:rotate(29deg)}
+    .locator-road.three{width:58%;left:18%;top:76%;transform:rotate(-4deg)}
+    .locator-pin{position:absolute;display:flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 9px;font-size:10px;font-weight:800;box-shadow:0 9px 22px rgba(17,24,39,.08)}
+    .locator-pin:before{content:"";width:7px;height:7px;border-radius:50%;background:#111827}
+    .locator-pin.one{left:16%;top:18%}.locator-pin.two{right:12%;top:29%}.locator-pin.three{left:31%;bottom:18%}
+    .locator-you{position:absolute;left:52%;top:49%;width:17px;height:17px;border-radius:50%;background:#111827;border:4px solid #fff;box-shadow:0 0 0 6px rgba(17,24,39,.12)}
+    .locator-map-label{position:absolute;right:14px;bottom:14px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 9px;font-size:10px;color:var(--muted)}
+
+    /* HubSpot result: desktop + mobile wireframes */
+    .hub-result-section{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow)}
+    .hub-result-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:16px}
+    .hub-result-head h2{margin:5px 0 0;font-size:20px}
+    .hub-result-head p{margin:4px 0 0;font-size:12px;color:var(--muted)}
+    .hub-preview-pair{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(220px,.55fr);gap:16px;align-items:end}
+    .hub-device-label{display:flex;justify-content:space-between;align-items:center;margin:0 0 7px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800}
+    .hub-device{border:1px solid var(--line);background:#fff;overflow:hidden}
+    .hub-device.web{border-radius:14px}
+    .hub-device.mobile{width:min(250px,100%);margin:0 auto;border-radius:25px;border:2px solid #cfd4dc;padding:7px;background:#f8f9fb}
+    .hub-device.mobile .hub-device-inner{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}
+    .hub-sitebar{height:24px;background:#f7f8fa;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:4px;padding:0 8px}
+    .hub-sitebar i{display:block;width:5px;height:5px;border-radius:50%;background:#cfd4dc}
+    .hub-site-content{padding:10px}
+    .hub-wire-title{height:7px;border-radius:999px;background:#9ca3af;width:34%;margin-bottom:6px}
+    .hub-wire-line{height:5px;border-radius:999px;background:#e1e4e8;margin:5px 0}
+    .hub-wire-line.a{width:76%}.hub-wire-line.b{width:58%}.hub-wire-line.c{width:86%}
+    .hub-embed-preview{margin-top:10px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+    .hub-embed-search{display:grid;grid-template-columns:1fr 46px;gap:5px;padding:7px;border-bottom:1px solid var(--line);background:#fafbfc}
+    .hub-embed-search span{height:20px;border:1px solid var(--line);border-radius:6px;background:#fff}
+    .hub-embed-search b{display:block;border-radius:6px;background:#111827}
+    .hub-embed-body{display:grid;grid-template-columns:38% 1fr;gap:6px;padding:7px}
+    .hub-embed-list{display:grid;gap:5px}.hub-embed-item{height:28px;border:1px solid var(--line);border-radius:6px;background:#fff}
+    .hub-embed-map{position:relative;min-height:108px;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:linear-gradient(#e8ebef 1px,transparent 1px),linear-gradient(90deg,#e8ebef 1px,transparent 1px),#f7f8fa;background-size:15px 15px}
+    .hub-embed-road{position:absolute;height:8px;border-radius:999px;background:#fff;border:1px solid #e3e6eb;width:83%;left:8%;top:45%;transform:rotate(-14deg)}
+    .hub-embed-pin{position:absolute;width:7px;height:7px;border-radius:50%;background:#111827;border:2px solid #fff}.hub-embed-pin.p1{left:24%;top:24%}.hub-embed-pin.p2{right:17%;top:39%}.hub-embed-pin.p3{left:46%;bottom:19%}
+    .hub-device.mobile .hub-site-content{padding:8px}
+    .hub-device.mobile .hub-wire-title{width:48%}
+    .hub-device.mobile .hub-embed-preview{margin-top:8px}
+    .hub-device.mobile .hub-embed-search{grid-template-columns:1fr 38px;padding:6px}
+    .hub-device.mobile .hub-embed-body{grid-template-columns:1fr;padding:6px}
+    .hub-device.mobile .hub-embed-map{min-height:86px;order:1}
+    .hub-device.mobile .hub-embed-list{order:2;grid-template-columns:1fr;gap:4px}
+    .hub-device.mobile .hub-embed-item{height:23px}
+    @media(max-width:900px){.locator-content{grid-template-columns:1fr}.locator-list{border-right:0;border-bottom:1px solid var(--line)}.hub-preview-pair{grid-template-columns:1fr}.hub-device.mobile{width:min(270px,100%)}}
+    @media(max-width:650px){.locator-head{flex-direction:column}.locator-search{grid-template-columns:1fr}.locator-search .btn{width:100%}.locator-map{min-height:360px}}
+
+
+    /* Bloqueio de visualizacao em celular */
+    .mobile-only-block{display:none}
+    @media(max-width:700px){
+      body{background:#f6f7fb}
+      .app,.block-print{display:none!important}
+      .mobile-only-block{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:28px;background:#f6f7fb}
+      .mobile-only-message{width:min(430px,100%);background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;text-align:center;box-shadow:var(--shadow)}
+      .mobile-only-icon{width:48px;height:48px;border:1px solid #cfd4dc;border-radius:14px;margin:0 auto 16px;display:grid;place-items:center;font-size:22px;background:#f7f8fa}
+      .mobile-only-message h1{font-size:24px;margin:0 0 10px}
+      .mobile-only-message p{margin:0;color:var(--muted);font-size:14px}
+    }
+
+    /* Importacao / exportacao */
+    .import-intro{max-width:760px;margin-top:7px}
+    .template-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .export-task{width:100%;text-align:left;display:block}
+    .export-task strong{display:block;margin-bottom:4px}
+
+    /* Embeds */
+    .embed-code{white-space:pre-wrap;word-break:break-word;font-size:11px;line-height:1.65;padding:16px}
+    .embed-card .actions{margin-top:12px}
+
+    /* Beneficios do embed */
+    .hub-benefits{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow)}
+    .hub-benefits-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:14px}
+    .hub-benefits-head h2{margin:5px 0 0}
+    .benefit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .benefit-item{border:1px solid var(--line);border-radius:15px;padding:14px;background:#fff;display:flex;gap:10px;align-items:flex-start}
+    .benefit-check{width:22px;height:22px;flex:0 0 22px;border-radius:7px;background:#111827;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:900}
+    .benefit-item strong{font-size:13px;display:block}
+    .benefit-item span{font-size:11px;color:var(--muted);display:block;margin-top:3px;line-height:1.4}
+
+    /* Localizador refinado - mesma paleta */
+    .locator-shell{overflow:hidden;border:1px solid #dfe3e8;border-radius:24px;background:#fff;box-shadow:0 18px 45px rgba(16,24,40,.07)}
+    .locator-head{padding:24px 24px 18px;display:flex;justify-content:space-between;align-items:flex-start;gap:18px;border-bottom:1px solid var(--line);background:#fff}
+    .locator-head h2{font-size:23px;margin:4px 0 5px}
+    .locator-product{border:1px solid #d5d9df;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800;background:#f7f8fa;white-space:nowrap}
+    .locator-search{padding:14px 18px;border-bottom:1px solid var(--line);background:#fafbfc;display:grid;grid-template-columns:1fr auto;gap:8px}
+    .locator-search .searchbox{display:flex;align-items:center;gap:9px;border:1px solid #d5d9df;border-radius:12px;padding:0 12px;background:#fff;min-height:43px}
+    .locator-search .searchbox span{font-size:15px;color:#4b5563}
+    .locator-search .searchbox input{border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important;background:transparent!important}
+    .locator-content{display:grid;grid-template-columns:minmax(320px,39%) 1fr;min-height:510px}
+    .locator-list{padding:17px;border-right:1px solid var(--line);background:#fff}
+    .locator-count{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;font-size:12px}
+    .locator-card{border:1px solid var(--line);border-radius:15px;padding:14px;margin-bottom:9px;background:#fff;transition:.15s ease}
+    .locator-card:hover{border-color:#c3c8cf;background:#fafbfc}
+    .locator-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .locator-name{font-size:14px;font-weight:850}
+    .locator-clinic{font-size:11px;color:var(--muted);margin-top:2px}
+    .locator-distance{font-size:10px;font-weight:850;padding:5px 7px;border-radius:999px;background:#eef0f4;white-space:nowrap}
+    .locator-address{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.45}
+    .locator-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+    .locator-actions .btn{font-size:10px;padding:7px 9px;border-radius:9px}
+    .locator-map{position:relative;overflow:hidden;min-height:510px;background:#f1f2f4}
+    .locator-map svg{position:absolute;inset:0;width:100%;height:100%}
+    .map-ui{position:absolute;z-index:3;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(17,24,39,.07)}
+    .map-zoom{right:14px;top:14px;border-radius:10px;overflow:hidden}
+    .map-zoom button{display:block;width:34px;height:32px;border:0;background:#fff;color:#111827;font-size:16px}
+    .map-zoom button+button{border-top:1px solid var(--line)}
+    .map-key{left:14px;bottom:14px;border-radius:10px;padding:8px 10px;font-size:10px;color:var(--muted)}
+    .map-key b{color:var(--text)}
+    .map-pin{position:absolute;z-index:4;transform:translate(-50%,-100%);background:#111827;color:#fff;border-radius:10px;padding:6px 8px;font-size:10px;font-weight:800;box-shadow:0 8px 18px rgba(17,24,39,.18)}
+    .map-pin:after{content:"";position:absolute;left:50%;bottom:-5px;transform:translateX(-50%);border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid #111827}
+    .map-pin.p1{left:26%;top:32%}.map-pin.p2{left:68%;top:43%}.map-pin.p3{left:50%;top:72%}
+    .map-user{position:absolute;z-index:4;left:48%;top:50%;width:17px;height:17px;border-radius:50%;background:#111827;border:4px solid #fff;box-shadow:0 0 0 6px rgba(17,24,39,.13)}
+    @media(max-width:900px){.benefit-grid{grid-template-columns:1fr 1fr}.locator-content{grid-template-columns:1fr}.locator-list{border-right:0;border-bottom:1px solid var(--line)}}
+
+    /* Direcao visual inspirada na base MindFly enviada */
+    :root{
+      --bg:#F7F7FF;
+      --panel:#FFFFFF;
+      --text:#151426;
+      --muted:#5c5877;
+      --line:rgba(21,20,38,.10);
+      --accent:#5945E8;
+      --accent2:#3726AF;
+      --accent-dark:#211C4A;
+      --teal:#00BFB1;
+      --soft:#F1F0FF;
+      --ok:#087d73;
+      --warn:#6f6595;
+      --danger:#7b4150;
+      --shadow:0 22px 64px rgba(21,20,38,.10);
+      --radius:28px;
+    }
+    html{background:var(--bg)}
+    body{font-family:Manrope,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    .app{grid-template-columns:270px 1fr}
+    aside{
+      padding:26px 18px;
+      border-right:0;
+      background:
+        radial-gradient(330px 240px at 90% 0%,rgba(89,69,232,.36),transparent 68%),
+        linear-gradient(180deg,#090817 0%,#151426 58%,#211C4A 100%);
+      color:#F7F7FF;
+      box-shadow:12px 0 40px rgba(21,20,38,.10)
+    }
+    .side-brand{padding:4px 10px 22px;border-bottom:1px solid rgba(247,247,255,.10);margin-bottom:18px}
+    .side-brand img{display:block;width:138px;height:auto;margin-bottom:15px}
+    .side-brand span{display:none;color:#fff;font-size:18px;font-weight:900;letter-spacing:-.04em;margin-bottom:12px}
+    .side-brand small{display:block;color:rgba(247,247,255,.54);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .menu-title,.group{color:rgba(247,247,255,.42)}
+    .nav{color:rgba(247,247,255,.68);font-weight:700;transition:.18s ease}
+    .nav:hover{background:rgba(247,247,255,.07);color:#fff}
+    .nav.active{background:rgba(89,69,232,.30);color:#fff;font-weight:900;box-shadow:inset 3px 0 0 var(--teal)}
+    main{padding:34px 38px 64px;max-width:1500px;width:100%}
+    .screen{animation:fade .24s ease}
+    .top{
+      position:relative;
+      overflow:hidden;
+      padding:30px 32px;
+      margin-bottom:26px;
+      border-radius:30px;
+      background:
+        radial-gradient(600px 270px at 100% 0%,rgba(89,69,232,.45),transparent 65%),
+        radial-gradient(420px 260px at 0% 120%,rgba(0,191,177,.13),transparent 70%),
+        linear-gradient(135deg,#090817 0%,#151426 56%,#211C4A 100%);
+      color:#F7F7FF;
+      box-shadow:0 26px 70px rgba(21,20,38,.14)
+    }
+    .top:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(247,247,255,.025) 1px,transparent 1px),linear-gradient(180deg,rgba(247,247,255,.018) 1px,transparent 1px);background-size:50px 50px;mask-image:linear-gradient(180deg,#000,transparent 95%)}
+    .top>*{position:relative;z-index:1}
+    .top .eyebrow{color:#b9b2ff}
+    .top h1{color:#fff;font-size:clamp(30px,3.4vw,48px);line-height:1.04;letter-spacing:-.05em;font-weight:900;margin:7px 0 12px}
+    .top .muted,.top p{color:rgba(247,247,255,.68)}
+    .top .pill{background:rgba(247,247,255,.10);color:#fff;border:1px solid rgba(247,247,255,.14)}
+    .top .btn{background:rgba(247,247,255,.10);border-color:rgba(247,247,255,.16);color:#fff}
+    .top .btn.primary{background:#fff;color:#151426;border-color:#fff}
+    .eyebrow{color:var(--accent);font-weight:900;letter-spacing:.11em}
+    h1,h2,h3{letter-spacing:-.035em}
+    h1{font-weight:900}
+    h2{font-weight:900}
+    h3{font-weight:850}
+    .card,.task,.hub-step,.hub-benefits,.hub-result-section,.locator-shell,.overview-column,.overview-summary{
+      border-color:var(--line);
+      box-shadow:var(--shadow)
+    }
+    .card,.task{border-radius:26px}
+    .card.flat{box-shadow:none;background:linear-gradient(180deg,#fff,#fbfbff)}
+    .btn{font-weight:800;border-radius:999px;transition:.18s ease}
+    .btn:hover{transform:translateY(-1px);border-color:rgba(89,69,232,.28)}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;box-shadow:0 12px 28px rgba(89,69,232,.22)}
+    .pill{background:rgba(89,69,232,.08);color:var(--accent2);font-weight:900}
+    .pill.ok{background:rgba(0,191,177,.11);color:#087d73}
+    .pill.warn{background:rgba(89,69,232,.08);color:#6b5fc2}
+    .table{border-collapse:separate;border-spacing:0}
+    .table th{background:#F1F0FF;color:var(--accent2);font-weight:900;padding:14px 12px}
+    .table th:first-child{border-radius:12px 0 0 12px}.table th:last-child{border-radius:0 12px 12px 0}
+    .table td{padding:15px 12px}
+    .rowlink:hover{background:#fbfaff}
+    input,select,textarea{border-color:rgba(21,20,38,.12);border-radius:14px;background:#fff}
+    input:focus,select:focus,textarea:focus{outline:none;border-color:rgba(89,69,232,.50);box-shadow:0 0 0 4px rgba(89,69,232,.07)}
+    .upload{border-color:rgba(89,69,232,.24);background:#fbfaff}
+    .code{background:#090817;color:#f2f1ff;box-shadow:inset 0 0 0 1px rgba(247,247,255,.05)}
+    .bar{background:#eceaf8}.fill{background:linear-gradient(90deg,var(--accent),var(--teal))}
+    .highlight{background:linear-gradient(135deg,#090817 0%,#211C4A 100%);box-shadow:0 24px 70px rgba(21,20,38,.18)}
+    .overview-head{text-align:left;margin-bottom:24px;padding:28px 30px;border-radius:28px;background:linear-gradient(135deg,#090817,#211C4A);color:#fff;box-shadow:0 24px 68px rgba(21,20,38,.14)}
+    .overview-head .eyebrow{color:#b9b2ff}.overview-head .muted{color:rgba(247,247,255,.62)!important}
+    .overview-root{border:0;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 16px 34px rgba(89,69,232,.22)}
+    .overview-node.main{border-color:rgba(89,69,232,.20);background:#f7f6ff}
+    .overview-column{border-radius:26px}
+    .hub-step{border-radius:26px;overflow:hidden}
+    .hub-step-top{background:#f7f6ff;padding:15px 16px}
+    .hub-num{background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 8px 18px rgba(89,69,232,.22)}
+    .hub-tool.active{background:var(--accent);border-color:var(--accent);color:#fff}
+    .hub-page-block.embed{border-color:rgba(89,69,232,.42);background:rgba(89,69,232,.05);color:var(--accent2)}
+    .benefit-check{background:rgba(0,191,177,.12)!important;color:#087d73!important}
+    .benefit-item{border-radius:18px;background:linear-gradient(180deg,#fff,#fbfbff)}
+    .locator-shell{border-radius:30px}
+    .locator-head{padding:26px 26px 20px;background:linear-gradient(180deg,#fff,#fbfbff)}
+    .locator-head .eyebrow{color:var(--accent)}
+    .locator-product{background:rgba(89,69,232,.08);color:var(--accent2);border-color:rgba(89,69,232,.15)}
+    .locator-search{background:#f7f6ff;padding:16px 26px}
+    .locator-card:hover{border-color:rgba(89,69,232,.30);background:#fbfaff}
+    .locator-distance{background:rgba(89,69,232,.08);color:var(--accent2)}
+    .locator-pin:before{background:var(--accent)}
+    .locator-you{background:var(--teal);box-shadow:0 0 0 7px rgba(0,191,177,.12)}
+    .locator-map{background:linear-gradient(rgba(89,69,232,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(89,69,232,.065) 1px,transparent 1px),#f9f9ff;background-size:34px 34px}
+    .locator-road{border-color:rgba(89,69,232,.09)}
+    .toast{background:#090817}
+    .confidential{background:#fbfbff;border-color:rgba(89,69,232,.10)}
+    .mobile-only-block{background:linear-gradient(135deg,#090817,#211C4A)}
+    .mobile-only-message{background:rgba(247,247,255,.07);border-color:rgba(247,247,255,.14);color:#fff;backdrop-filter:blur(14px)}
+    .mobile-only-message p{color:rgba(247,247,255,.62)}
+    .mobile-only-icon{background:rgba(247,247,255,.08);border-color:rgba(247,247,255,.14)}
+    @media(max-width:1000px){
+      aside{background:linear-gradient(135deg,#090817,#211C4A)}
+      .side-brand{display:none}
+      main{padding:26px}
+    }
+
+  
+
+    /* Bloqueio de acesso — mesma linguagem visual da referência MindFly */
+    .access-gate{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px;background:
+      radial-gradient(760px 430px at 92% 0%,rgba(89,69,232,.48),transparent 62%),
+      radial-gradient(620px 380px at 8% 108%,rgba(0,217,200,.14),transparent 68%),
+      linear-gradient(135deg,#090817 0%,#151426 52%,#211C4A 100%);color:#F7F7FF}
+    .access-gate:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(247,247,255,.025) 1px,transparent 1px),linear-gradient(180deg,rgba(247,247,255,.018) 1px,transparent 1px);background-size:62px 62px;mask-image:linear-gradient(180deg,#000,transparent 92%)}
+    .access-card{position:relative;z-index:1;width:min(470px,100%);padding:42px;border:1px solid rgba(247,247,255,.15);border-radius:34px;background:rgba(247,247,255,.075);box-shadow:0 34px 110px rgba(0,0,0,.32);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);text-align:center}
+    .access-logo{display:block;width:178px;max-width:70%;height:auto;margin:0 auto 26px}
+    .access-title{margin:0;color:#F7F7FF;font-size:clamp(24px,4vw,32px);line-height:1.08;letter-spacing:-.045em;font-weight:900}
+    .access-subtitle{margin:11px 0 24px;color:rgba(247,247,255,.62);font-size:13px;line-height:1.55;font-weight:700}
+    .access-form{display:grid;gap:12px;text-align:left}
+    .access-label{font-size:11px;line-height:1.2;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#c9c3ff}
+    .access-input{width:100%;height:56px;border:1px solid rgba(247,247,255,.16);border-radius:18px;padding:0 17px;background:rgba(247,247,255,.09);color:#fff;outline:none;font-size:16px;font-weight:700;transition:border-color .18s ease,background .18s ease,box-shadow .18s ease}
+    .access-input::placeholder{color:rgba(247,247,255,.34)}
+    .access-input:focus{border-color:rgba(0,217,200,.7);background:rgba(247,247,255,.12);box-shadow:0 0 0 4px rgba(0,217,200,.08)}
+    .access-button{height:56px;border:0;border-radius:999px;margin-top:4px;color:#fff;background:linear-gradient(135deg,#5945E8,#3726AF);font-size:14px;font-weight:900;letter-spacing:-.01em;cursor:pointer;box-shadow:0 18px 44px rgba(89,69,232,.34);transition:transform .18s ease,filter .18s ease}
+    .access-button:hover{transform:translateY(-1px);filter:brightness(1.06)}
+    .access-button:active{transform:scale(.985)}
+    .access-error{min-height:18px;margin:2px 0 0;text-align:center;color:#ffb9c2;font-size:12px;line-height:1.4;font-weight:800}
+    .access-gate.is-unlocked{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .26s ease,visibility .26s ease}
+    body.access-locked{overflow:hidden}
+    body.access-locked > .app{filter:blur(8px);pointer-events:none;user-select:none}
+    @media(max-width:780px){
+      .access-gate{display:none!important}
+      .mobile-only-block{z-index:100000}
+    }
+</style>
+</head>
+<body class="access-locked">
+
+<div class="access-gate" id="accessGate" role="dialog" aria-modal="true" aria-labelledby="accessTitle">
+  <div class="access-card">
+    <img class="access-logo" src="https://www.mindfly.com.br/assets/logobranco.png" alt="MindFly Digital">
+    <h1 class="access-title" id="accessTitle">Senha de acesso</h1>
+    <p class="access-subtitle">Apresentação protegida · Projeto Skintec</p>
+    <form class="access-form" id="accessForm" autocomplete="off">
+      <label class="access-label" for="accessPassword">Senha</label>
+      <input class="access-input" id="accessPassword" type="password" placeholder="Digite a senha" autocomplete="current-password">
+      <button class="access-button" type="submit">Acessar apresentação</button>
+      <p class="access-error" id="accessError" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<div class="mobile-only-block" role="alert" aria-live="polite">
+  <div class="mobile-only-message">
+    <div class="mobile-only-icon">▣</div>
+    <h1>Visualização disponível no computador</h1>
+    <p>Esta apresentação foi preparada para navegador web em desktop ou notebook. Abra este link em um computador para visualizar o projeto.</p>
+  </div>
+</div>
+<div class="block-print">
+  <h1>Conteúdo protegido</h1>
+  <p>Esta apresentação foi preparada para visualização digital. A impressão foi desabilitada nesta versão.</p>
+</div>
+
+<div class="app">
+  <aside>
+    <div class="side-brand">
+      <img src="https://www.mindfly.com.br/assets/logobranco.png" alt="MindFly Digital" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span>MindFly Digital</span>
+      <small>Projeto Skintec</small>
+    </div>
+    <div class="menu-title">Navegação</div>
+    <nav>
+      <div class="group">Projeto</div>
+      <button class="nav active" data-screen="overview">Visão geral</button>
+      <button class="nav" data-screen="login">Login</button>
+      <button class="nav" data-screen="dashboard">Dashboard</button>
+      <button class="nav" data-screen="equipments">Equipamentos</button>
+      <button class="nav" data-screen="equipmentCreate">Cadastrar equipamento</button>
+      <button class="nav" data-screen="doctors">Médicos</button>
+      <button class="nav" data-screen="doctorCreate">Cadastrar médico</button>
+      <button class="nav" data-screen="import">Importação / exportação</button>
+      <button class="nav" data-screen="embeds">Embeds</button>
+      <button class="nav" data-screen="hubspot">Instalar no HubSpot</button>
+      <button class="nav" data-screen="preview">Localizador</button>
+      <button class="nav" data-screen="architecture">Arquitetura</button>
+
+      <div class="group">Proposta comercial</div>
+      <button class="nav" data-screen="scope">Escopo</button>
+      <button class="nav" data-screen="tasks">Tarefas</button>
+      <button class="nav" data-screen="values">Valores</button>
+      <button class="nav" data-screen="deliverables">Entregáveis</button>
+      <button class="nav" data-screen="external">Custos externos</button>
+    </nav>
+  </aside>
+
+  <main>
+
+    <section id="overview" class="screen active">
+      <div class="overview-map">
+        <div class="overview-head">
+          <div class="eyebrow">Projeto Skintec</div>
+          <h1>Estrutura da ferramenta</h1>
+          <p class="muted" style="margin:0">Visão rápida das telas e do fluxo principal.</p>
+        </div>
+
+        <div class="overview-root">Gerenciador de clínicas Skintec</div>
+        <div class="overview-stem"></div>
+
+        <div class="overview-columns">
+          <div class="overview-column">
+            <div class="overview-label">Área administrativa</div>
+            <div class="overview-node"><strong>Login</strong><span>Acesso restrito</span></div>
+            <div class="overview-down">↓</div>
+            <div class="overview-node"><strong>Dashboard</strong><span>Resumo da operação</span></div>
+            <div class="overview-down">↓</div>
+            <div class="overview-pair">
+              <div class="overview-node"><strong>Equipamentos</strong><span>Cadastro e gestão</span></div>
+              <div class="overview-node"><strong>Médicos</strong><span>Base e filtros</span></div>
+            </div>
+            <div class="overview-down">↓</div>
+            <div class="overview-pair">
+              <div class="overview-node"><strong>Importação</strong><span>Planilhas</span></div>
+              <div class="overview-node"><strong>Embeds</strong><span>Por equipamento</span></div>
+            </div>
+          </div>
+
+          <div class="overview-column">
+            <div class="overview-label">Experiência pública</div>
+            <div class="overview-node"><strong>Página do equipamento</strong><span>Site da Skintec</span></div>
+            <div class="overview-down">↓</div>
+            <div class="overview-node"><strong>Embed</strong><span>Instalado no HubSpot</span></div>
+            <div class="overview-down">↓</div>
+            <div class="overview-node main"><strong>Localizador</strong><span>Busca por cidade ou CEP</span></div>
+            <div class="overview-down">↓</div>
+            <div class="overview-node"><strong>Especialistas próximos</strong><span>Mapa + lista + contato</span></div>
+          </div>
+        </div>
+
+        <div class="overview-summary">
+          <div><strong>Skintec gerencia</strong><span>dados e equipamentos</span></div>
+          <div class="overview-summary-arrow">→</div>
+          <div><strong>Sistema publica</strong><span>embed por produto</span></div>
+          <div class="overview-summary-arrow">→</div>
+          <div><strong>Usuário encontra</strong><span>especialistas próximos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="login" class="screen">
+      <div style="max-width:480px;margin:8vh auto 0" class="card">
+        <div class="eyebrow">Área restrita</div>
+        <h1 style="font-size:28px">Acessar painel</h1>
+        <p class="muted">Use seu e-mail e senha para gerenciar a base.</p>
+        <div class="grid section">
+          <div class="field"><label>E-mail</label><input id="loginEmail" value="marketing@skintec.com.br"></div>
+          <div class="field"><label>Senha</label><input id="loginPassword" type="password" value="12345678"></div>
+          <button class="btn primary" id="loginBtn">Entrar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="screen">
+      <div class="top"><div><div class="eyebrow">Painel administrativo</div><h1>Visão geral</h1><p class="muted">Resumo da operação e atalhos para as principais tarefas.</p></div>
+      <div class="actions"><button class="btn" data-jump="import">Importar Excel</button><button class="btn primary" data-jump="equipmentCreate">Novo equipamento</button></div></div>
+
+      <div class="grid g4">
+        <div class="card metric"><div class="label">Equipamentos</div><div class="value">3</div><span class="pill ok">Publicados</span></div>
+        <div class="card metric"><div class="label">Médicos cadastrados</div><div class="value">231</div><span class="pill">Com clínicas vinculadas</span></div>
+        <div class="card metric"><div class="label">Estados atendidos</div><div class="value">18</div><span class="pill">Cobertura nacional</span></div>
+        <div class="card metric"><div class="label">Embeds ativos</div><div class="value">3</div><span class="pill ok">Ativos</span></div>
+      </div>
+
+      <div class="grid g3 section">
+        <button class="card flat" data-jump="equipmentCreate" style="text-align:left"><h3>+ Novo equipamento</h3><p class="muted">Cadastre um novo produto.</p></button>
+        <button class="card flat" data-jump="doctorCreate" style="text-align:left"><h3>+ Novo médico</h3><p class="muted">Cadastre o profissional e sua clínica.</p></button>
+        <button class="card flat" data-jump="import" style="text-align:left"><h3>↑ Importar planilha</h3><p class="muted">Adicione vários médicos de uma vez.</p></button>
+      </div>
+    </section>
+
+    <section id="equipments" class="screen">
+      <div class="top"><div><div class="eyebrow">Gestão</div><h1>Equipamentos</h1><p class="muted">Cada equipamento possui sua própria rede e seu próprio código embed.</p></div>
+      <button class="btn primary" data-jump="equipmentCreate">+ Novo equipamento</button></div>
+
+      <div class="card">
+        <table class="table">
+          <thead><tr><th>Equipamento</th><th>Slug</th><th>Médicos</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr class="rowlink"><td><strong>Morpheus8</strong></td><td>morpheus8</td><td>86</td><td><span class="pill ok">Publicado</span></td><td><button class="btn" data-jump="equipmentCreate" data-toast="Morpheus8 aberto para edição.">Editar</button></td></tr>
+            <tr class="rowlink"><td><strong>Oligio X</strong></td><td>oligio-x</td><td>57</td><td><span class="pill ok">Publicado</span></td><td><button class="btn" data-jump="equipmentCreate" data-toast="Oligio X aberto para edição.">Editar</button></td></tr>
+            <tr class="rowlink"><td><strong>Deep Slim</strong></td><td>deep-slim</td><td>41</td><td><span class="pill ok">Publicado</span></td><td><button class="btn" data-jump="equipmentCreate" data-toast="Deep Slim aberto para edição.">Editar</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="equipmentCreate" class="screen">
+      <div class="top"><div><div class="eyebrow">Equipamentos / Novo</div><h1>Cadastrar equipamento</h1><p class="muted">O cadastro já prepara a estrutura para médicos e embed.</p></div><button class="btn" data-jump="equipments">Cancelar</button></div>
+      <div class="grid g2">
+        <div class="card"><h2>Dados principais</h2><div class="grid section">
+          <div class="field"><label>Nome do equipamento</label><input id="newEqName" placeholder="Nome do equipamento"></div>
+          <div class="field"><label>Slug</label><input placeholder="novo-equipamento"></div>
+          <div class="field"><label>Descrição interna</label><textarea></textarea></div>
+        </div></div>
+        <div class="card"><h2>Localizador</h2><div class="grid section">
+          <div class="field"><label>Raio inicial</label><select><option>25 km</option><option selected>50 km</option><option>100 km</option></select></div>
+          <div class="field"><label>Título do embed</label><input value="Encontre um especialista perto de você"></div>
+          <label><input type="checkbox" checked style="width:auto"> Mostrar WhatsApp</label>
+          <label><input type="checkbox" checked style="width:auto"> Mostrar Instagram e site</label>
+        </div></div>
+      </div>
+      <div class="actions section"><button class="btn primary" id="saveEquipment">Salvar equipamento</button><button class="btn" data-jump="import">Salvar e importar médicos</button></div>
+    </section>
+
+    <section id="doctors" class="screen">
+      <div class="top"><div><div class="eyebrow">Base geral</div><h1>Médicos</h1><p class="muted">Cada médico representa também sua clínica, endereço e canais de atendimento.</p></div>
+      <button class="btn primary" data-jump="doctorCreate">+ Novo médico</button></div>
+
+      <div class="card">
+        <div class="grid g3" style="margin-bottom:14px">
+          <div class="field"><label>Buscar</label><input id="doctorSearch" placeholder="Nome, clínica, cidade ou CRM"></div>
+          <div class="field"><label>Equipamento</label><select id="doctorFilter"><option value="">Todos</option><option>Morpheus8</option><option>Oligio X</option><option>Deep Slim</option></select></div>
+          <div class="field"><label>Status</label><select><option>Todos</option><option>Ativo</option><option>Inativo</option></select></div>
+        </div>
+        <table class="table" id="doctorTable">
+          <thead><tr><th>Médico</th><th>Clínica</th><th>Cidade</th><th>Equipamentos</th><th>Status</th><th>Ação</th></tr></thead>
+          <tbody>
+            <tr data-search="ana martins clinica dermatologica paulista sao paulo morpheus8 oligio x"><td>Dra. Ana Martins</td><td>Clínica Dermatológica Paulista</td><td>São Paulo, SP</td><td>Morpheus8 · Oligio X</td><td><span class="pill ok">Ativo</span></td><td><button class="btn" data-jump="doctorCreate" data-toast="Dra. Ana Martins aberta para edição.">Editar</button></td></tr>
+            <tr data-search="carlos silva instituto exemplo campinas morpheus8"><td>Dr. Carlos Silva</td><td>Instituto Exemplo</td><td>Campinas, SP</td><td>Morpheus8</td><td><span class="pill ok">Ativo</span></td><td><button class="btn" data-jump="doctorCreate" data-toast="Dr. Carlos Silva aberto para edição.">Editar</button></td></tr>
+            <tr data-search="mariana costa clinica belle curitiba deep slim oligio x"><td>Dra. Mariana Costa</td><td>Clínica Belle</td><td>Curitiba, PR</td><td>Deep Slim · Oligio X</td><td><span class="pill ok">Ativo</span></td><td><button class="btn" data-jump="doctorCreate" data-toast="Dra. Mariana Costa aberta para edição.">Editar</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="doctorCreate" class="screen">
+      <div class="top"><div><div class="eyebrow">Médicos / Novo</div><h1>Cadastrar médico</h1><p class="muted">O cadastro já inclui informações da clínica e equipamentos do profissional.</p></div><button class="btn" data-jump="doctors">Cancelar</button></div>
+      <div class="grid g2">
+        <div class="card"><h2>Dados do médico</h2><div class="grid section">
+          <div class="field"><label>Nome completo</label><input id="docName" placeholder="Dra. Ana Martins"></div>
+          <div class="grid g2"><div class="field"><label>CRM</label><input></div><div class="field"><label>Especialidade</label><input></div></div>
+          <div class="field"><label>Nome da clínica</label><input id="docClinic"></div>
+        </div></div>
+        <div class="card"><h2>Contato</h2><div class="grid section">
+          <div class="grid g2"><div class="field"><label>Telefone</label><input></div><div class="field"><label>WhatsApp</label><input></div></div>
+          <div class="field"><label>E-mail</label><input></div><div class="field"><label>Site</label><input></div><div class="field"><label>Instagram</label><input></div>
+        </div></div>
+        <div class="card"><h2>Endereço</h2><div class="grid section">
+          <div class="grid g2"><div class="field"><label>CEP</label><input></div><div class="field"><label>Estado</label><input value="SP"></div></div>
+          <div class="field"><label>Endereço</label><input></div>
+          <div class="grid g2"><div class="field"><label>Número</label><input></div><div class="field"><label>Cidade</label><input></div></div>
+        </div></div>
+        <div class="card"><h2>Equipamentos</h2><div class="grid section">
+          <label><input type="checkbox" style="width:auto"> Morpheus8</label>
+          <label><input type="checkbox" style="width:auto"> Oligio X</label>
+          <label><input type="checkbox" style="width:auto"> Deep Slim</label>
+          <label><input type="checkbox" checked style="width:auto"> Cadastro ativo</label>
+        </div></div>
+      </div>
+      <div class="actions section"><button class="btn primary" id="saveDoctor">Salvar médico</button><button class="btn" data-toast="Médico salvo. Formulário pronto para um novo cadastro.">Salvar e cadastrar outro</button></div>
+    </section>
+
+    <section id="import" class="screen">
+      <div class="top">
+        <div>
+          <div class="eyebrow">Operação em escala</div>
+          <h1>Importar e exportar dados</h1>
+          <p class="muted import-intro">Baixe a planilha-base, preencha todos os médicos que possuem o equipamento selecionado e importe a lista inteira de uma única vez.</p>
+        </div>
+      </div>
+      <div class="grid g2">
+        <div class="card">
+          <h2>Importar médicos</h2>
+          <p class="muted">Selecione o equipamento, preencha a planilha-base e envie o arquivo para validação.</p>
+          <div class="field section"><label>Equipamento</label><select id="importEquipment"><option>Morpheus8</option><option>Oligio X</option><option>Deep Slim</option></select></div>
+          <div class="template-actions"><button class="btn" data-download-template>↓ Baixar planilha-base Excel</button></div>
+          <div class="upload section"><div style="font-size:30px">▤</div><strong>Arquivo Excel</strong><p class="muted">Envie a planilha preenchida para validação.</p><button class="btn primary" id="fakeUpload">Selecionar arquivo</button></div>
+          <div id="importStatus" class="section"></div>
+        </div>
+        <div class="card">
+          <h2>Exportações</h2>
+          <p class="muted">Use os dados do sistema ou baixe um modelo pronto para novas importações.</p>
+          <div class="grid section">
+            <button class="task export-task" data-toast="Exportação de toda a base preparada."><strong>Exportar toda a base</strong><p class="muted">Médicos, endereços e equipamentos em uma única planilha.</p></button>
+            <button class="task export-task" data-toast="Exportação por equipamento preparada."><strong>Exportar por equipamento</strong><p class="muted">Somente os médicos vinculados ao equipamento selecionado.</p></button>
+            <button class="task export-task" data-download-template><strong>Baixar planilha-base</strong><p class="muted">Modelo Excel pronto para preencher com os médicos que possuem o equipamento selecionado.</p></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="embeds" class="screen">
+      <div class="top"><div><div class="eyebrow">Publicação</div><h1>Embeds por equipamento</h1><p class="muted">Cada equipamento possui um código próprio para inserir o localizador na página correspondente.</p></div></div>
+      <div class="grid">
+        <div class="card embed-card">
+          <div class="task-head"><div><h2>Morpheus8</h2><p class="muted">86 médicos vinculados</p></div><span class="pill ok">Ativo</span></div>
+          <pre class="code embed-code" id="embed-morpheus8">&lt;iframe src=&quot;https://clinicas-skintec.mindfly.com.br/embed/morpheus8&quot; width=&quot;100%&quot; height=&quot;650&quot; style=&quot;border:0;width:100%;&quot; loading=&quot;lazy&quot; title=&quot;Localizador Morpheus8&quot;&gt;&lt;/iframe&gt;</pre>
+          <div class="actions"><button class="btn primary" data-copy-target="embed-morpheus8">Copiar código</button><button class="btn" data-preview-product="Morpheus8" data-jump="preview">Visualizar</button></div>
+        </div>
+        <div class="card embed-card">
+          <div class="task-head"><div><h2>Oligio X</h2><p class="muted">57 médicos vinculados</p></div><span class="pill ok">Ativo</span></div>
+          <pre class="code embed-code" id="embed-oligio">&lt;iframe src=&quot;https://clinicas-skintec.mindfly.com.br/embed/oligio-x&quot; width=&quot;100%&quot; height=&quot;650&quot; style=&quot;border:0;width:100%;&quot; loading=&quot;lazy&quot; title=&quot;Localizador Oligio X&quot;&gt;&lt;/iframe&gt;</pre>
+          <div class="actions"><button class="btn primary" data-copy-target="embed-oligio">Copiar código</button><button class="btn" data-preview-product="Oligio X" data-jump="preview">Visualizar</button></div>
+        </div>
+        <div class="card embed-card">
+          <div class="task-head"><div><h2>Deep Slim</h2><p class="muted">41 médicos vinculados</p></div><span class="pill ok">Ativo</span></div>
+          <pre class="code embed-code" id="embed-deepslim">&lt;iframe src=&quot;https://clinicas-skintec.mindfly.com.br/embed/deep-slim&quot; width=&quot;100%&quot; height=&quot;650&quot; style=&quot;border:0;width:100%;&quot; loading=&quot;lazy&quot; title=&quot;Localizador Deep Slim&quot;&gt;&lt;/iframe&gt;</pre>
+          <div class="actions"><button class="btn primary" data-copy-target="embed-deepslim">Copiar código</button><button class="btn" data-preview-product="Deep Slim" data-jump="preview">Visualizar</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hubspot" class="screen">
+      <div class="top">
+        <div>
+          <div class="eyebrow">Publicação no site</div>
+          <h1>Como instalar o localizador no HubSpot</h1>
+          <p class="muted">Cada página de equipamento recebe o seu próprio embed. A instalação é feita uma única vez por página.</p>
+        </div>
+        <span class="pill ok">4 passos</span>
+      </div>
+
+      <div class="hub-flow">
+        <div class="hub-step">
+          <div class="hub-step-top"><div class="hub-num">1</div><div class="hub-step-title">Abrir a página do equipamento</div></div>
+          <div class="hub-mock">
+            <div class="hub-browser">
+              <div class="hub-browserbar"><span class="hub-dot"></span><span class="hub-dot"></span><span class="hub-dot"></span></div>
+              <div class="hub-editor">
+                <div class="hub-sidebar">
+                  <div class="hub-mini-line active" style="width:80%"></div>
+                  <div class="hub-mini-line" style="width:100%"></div>
+                  <div class="hub-mini-line" style="width:70%"></div>
+                  <div class="hub-mini-line" style="width:88%"></div>
+                </div>
+                <div class="hub-canvas">
+                  <div style="font-size:10px;font-weight:800;margin-bottom:8px">Morpheus8</div>
+                  <div class="hub-page-block"></div>
+                  <div class="hub-page-block"></div>
+                  <div class="hub-page-block embed">ÁREA DO LOCALIZADOR</div>
+                </div>
+              </div>
+            </div>
+            <p class="muted" style="font-size:12px;margin:10px 0 0">Conteúdo → Páginas do site → página do produto.</p>
+          </div>
+        </div>
+
+        <div class="hub-step">
+          <div class="hub-step-top"><div class="hub-num">2</div><div class="hub-step-title">Adicionar módulo HTML</div></div>
+          <div class="hub-mock">
+            <div class="hub-browser">
+              <div class="hub-browserbar"><span class="hub-dot"></span><span class="hub-dot"></span><span class="hub-dot"></span></div>
+              <div style="padding:12px">
+                <div class="hub-toolbar">
+                  <span class="hub-tool">Texto</span><span class="hub-tool">Imagem</span><span class="hub-tool active">HTML</span>
+                </div>
+                <div class="hub-page-block" style="height:30px"></div>
+                <div class="hub-page-block embed">MÓDULO HTML</div>
+                <div class="hub-page-block" style="height:20px;margin-top:8px"></div>
+              </div>
+            </div>
+            <p class="muted" style="font-size:12px;margin:10px 0 0">Adicionar um <strong>módulo HTML</strong> na posição onde o localizador deve aparecer.</p>
+          </div>
+        </div>
+
+        <div class="hub-step">
+          <div class="hub-step-top"><div class="hub-num">3</div><div class="hub-step-title">Colar o código do equipamento</div></div>
+          <div class="hub-mock">
+            <div class="hub-codebox">&lt;iframe<br>&nbsp;src=&quot;https://.../embed/morpheus8&quot;<br>&nbsp;width=&quot;100%&quot;<br>&nbsp;height=&quot;650&quot;<br>&nbsp;loading=&quot;lazy&quot;&gt;<br>&lt;/iframe&gt;</div>
+            <div class="hub-settings">
+              <div class="hub-setting">Largura<strong>100%</strong></div>
+              <div class="hub-setting">Altura<strong>ajustada</strong></div>
+              <div class="hub-setting">Carregamento<strong>Lazy</strong></div>
+              <div class="hub-setting">Produto<strong>Morpheus8</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hub-step">
+          <div class="hub-step-top"><div class="hub-num">4</div><div class="hub-step-title">Publicar e testar</div></div>
+          <div class="hub-mock">
+            <div class="hub-live">
+              <div class="hub-live-head">Página publicada</div>
+              <div style="padding:8px;border-bottom:1px solid var(--line)">
+                <div class="hub-mini-line dark" style="width:42%"></div>
+                <div class="hub-mini-line" style="width:82%"></div>
+              </div>
+              <div class="hub-live-body">
+                <div class="hub-results"><div class="hub-result"></div><div class="hub-result"></div><div class="hub-result"></div></div>
+                <div class="hub-map"><div class="hub-road"></div><span class="hub-pin a"></span><span class="hub-pin b"></span><span class="hub-pin c"></span></div>
+              </div>
+            </div>
+            <p class="muted" style="font-size:12px;margin:10px 0 0">Revisar desktop/mobile e então atualizar a página.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hub-benefits">
+        <div class="hub-benefits-head">
+          <div>
+            <div class="eyebrow">Vantagens da solução</div>
+            <h2>Simples de publicar e fácil de manter</h2>
+          </div>
+          <span class="pill">Integração leve</span>
+        </div>
+        <div class="benefit-grid">
+          <div class="benefit-item"><div class="benefit-check">✓</div><div><strong>Um embed por equipamento</strong><span>Cada página recebe o localizador correto.</span></div></div>
+          <div class="benefit-item"><div class="benefit-check">✓</div><div><strong>Atualização centralizada</strong><span>Alterações no painel refletem no localizador.</span></div></div>
+          <div class="benefit-item"><div class="benefit-check">✓</div><div><strong>Sem retrabalho no site</strong><span>Não é preciso editar a página a cada mudança de médico.</span></div></div>
+          <div class="benefit-item"><div class="benefit-check">✓</div><div><strong>Responsivo</strong><span>O localizador se adapta ao espaço da página.</span></div></div>
+          <div class="benefit-item"><div class="benefit-check">✓</div><div><strong>Busca por proximidade</strong><span>O usuário encontra opções próximas com rapidez.</span></div></div>
+          <div class="benefit-item"><div class="benefit-check">✓</div><div><strong>Pronto para crescer</strong><span>Novos equipamentos podem receber novos embeds.</span></div></div>
+        </div>
+      </div>
+
+      <div class="hub-note"><strong>Instalação simples:</strong> o iframe é inserido diretamente em um módulo HTML do HubSpot. Depois, basta revisar a página em desktop e mobile antes de publicar.</div>
+    </section>
+
+    <section id="preview" class="screen">
+      <div class="top">
+        <div>
+          <div class="eyebrow">Prévia pública</div>
+          <h1>Localizador de especialistas</h1>
+          <p class="muted">Exemplo do componente incorporado às páginas dos equipamentos.</p>
+        </div>
+      </div>
+
+      <div class="locator-shell">
+        <div class="locator-head">
+          <div>
+            <div class="eyebrow">Encontre perto de você</div>
+            <h2 id="locatorTitle">Especialistas em Morpheus8</h2>
+            <div class="muted" style="font-size:12px">Digite sua cidade ou CEP para encontrar profissionais próximos.</div>
+          </div>
+          <div class="locator-product">Morpheus8</div>
+        </div>
+
+        <div class="locator-search">
+          <div class="searchbox"><span>⌖</span><input id="location" value="São Paulo, SP" aria-label="Cidade ou CEP"></div>
+          <button class="btn primary" id="search">Buscar especialistas</button>
+        </div>
+
+        <div class="locator-content">
+          <div class="locator-list">
+            <div class="locator-count"><strong id="resultCount">3 especialistas encontrados</strong><span class="muted">ordenados por proximidade</span></div>
+
+            <div class="locator-card">
+              <div class="locator-card-top"><div><div class="locator-name">Dra. Ana Martins</div><div class="locator-clinic">Clínica Dermatológica Paulista</div></div><span class="locator-distance">1,8 km</span></div>
+              <div class="locator-address">Av. Paulista, 1000 · São Paulo, SP</div>
+              <div class="locator-actions"><button class="btn primary" data-toast="Dra. Ana destacada no mapa.">Ver no mapa</button><button class="btn">WhatsApp</button><button class="btn">Site</button></div>
+            </div>
+
+            <div class="locator-card">
+              <div class="locator-card-top"><div><div class="locator-name">Dr. Carlos Silva</div><div class="locator-clinic">Instituto Exemplo</div></div><span class="locator-distance">4,2 km</span></div>
+              <div class="locator-address">Rua Exemplo, 245 · São Paulo, SP</div>
+              <div class="locator-actions"><button class="btn">Ver no mapa</button><button class="btn">WhatsApp</button><button class="btn">Site</button></div>
+            </div>
+
+            <div class="locator-card">
+              <div class="locator-card-top"><div><div class="locator-name">Dra. Mariana Costa</div><div class="locator-clinic">Clínica Belle</div></div><span class="locator-distance">7,1 km</span></div>
+              <div class="locator-address">Alameda Exemplo, 78 · São Paulo, SP</div>
+              <div class="locator-actions"><button class="btn">Ver no mapa</button><button class="btn">WhatsApp</button><button class="btn">Site</button></div>
+            </div>
+          </div>
+
+          <div class="locator-map" aria-label="Mapa ilustrativo com especialistas próximos">
+            <svg viewBox="0 0 760 520" preserveAspectRatio="none" aria-hidden="true">
+              <rect width="760" height="520" fill="#f3f4f6"/>
+              <g fill="#e7e9ed" stroke="#dde1e6" stroke-width="1">
+                <rect x="32" y="38" width="112" height="72" rx="8"/><rect x="170" y="30" width="126" height="92" rx="8"/><rect x="324" y="42" width="104" height="66" rx="8"/><rect x="459" y="27" width="124" height="89" rx="8"/><rect x="610" y="45" width="115" height="70" rx="8"/>
+                <rect x="42" y="153" width="93" height="91" rx="8"/><rect x="167" y="148" width="145" height="78" rx="8"/><rect x="346" y="143" width="100" height="96" rx="8"/><rect x="480" y="151" width="108" height="72" rx="8"/><rect x="625" y="146" width="92" height="91" rx="8"/>
+                <rect x="29" y="290" width="121" height="81" rx="8"/><rect x="181" y="280" width="99" height="103" rx="8"/><rect x="314" y="292" width="132" height="76" rx="8"/><rect x="480" y="276" width="100" height="102" rx="8"/><rect x="614" y="290" width="112" height="82" rx="8"/>
+                <rect x="48" y="417" width="109" height="65" rx="8"/><rect x="193" y="416" width="124" height="72" rx="8"/><rect x="353" y="407" width="112" height="79" rx="8"/><rect x="500" y="416" width="94" height="65" rx="8"/><rect x="632" y="411" width="92" height="73" rx="8"/>
+              </g>
+              <g fill="none" stroke="#ffffff" stroke-linecap="round">
+                <path d="M-25 132 C155 113 276 147 420 123 S650 92 790 112" stroke-width="24"/>
+                <path d="M105 -20 C122 105 116 220 148 331 S190 464 205 555" stroke-width="20"/>
+                <path d="M390 -20 C380 105 398 212 385 330 S380 442 407 555" stroke-width="18"/>
+                <path d="M655 -30 C630 94 640 208 616 327 S600 438 625 550" stroke-width="20"/>
+                <path d="M-20 267 C157 253 271 264 419 253 S642 242 785 271" stroke-width="20"/>
+                <path d="M-10 397 C150 377 284 402 421 386 S641 372 780 392" stroke-width="18"/>
+              </g>
+              <g fill="none" stroke="#cfd4da" stroke-width="2" stroke-dasharray="4 5" opacity=".8">
+                <path d="M0 132 C155 113 276 147 420 123 S650 92 760 112"/>
+                <path d="M148 0 C122 105 116 220 148 331 S190 464 205 520"/>
+                <path d="M385 0 C380 105 398 212 385 330 S380 442 407 520"/>
+                <path d="M616 0 C630 94 640 208 616 327 S600 438 625 520"/>
+              </g>
+              <g fill="#9ca3af" font-family="Arial, sans-serif" font-size="11">
+                <text x="245" y="89">Paulista</text><text x="505" y="337">Jardins</text><text x="67" y="340">Bela Vista</text><text x="543" y="82">Centro</text>
+              </g>
+            </svg>
+            <div class="map-pin p1">Dra. Ana</div><div class="map-pin p2">Dr. Carlos</div><div class="map-pin p3">Dra. Mariana</div><div class="map-user"></div>
+            <div class="map-ui map-zoom"><button type="button">+</button><button type="button">−</button></div>
+            <div class="map-ui map-key"><b>●</b> Sua localização &nbsp; · &nbsp; Mapa ilustrativo</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="screen">
+      <div class="top"><div><div class="eyebrow">Visão técnica simplificada</div><h1>Arquitetura proposta</h1><p class="muted">A apresentação mostra as principais peças sem expor detalhes internos desnecessários de implementação.</p></div></div>
+      <div class="grid g2">
+        <div class="card flat"><h2>1. Painel administrativo</h2><p class="muted"><strong>clinicas-skintec.mindfly.com.br</strong> (domínio operacional da MindFly) ou <strong>clinicas.skintec.com.br</strong> (domínio da Skintec) — login, equipamentos, médicos, clínicas, importações e códigos embed para adicionar nas páginas dos equipamentos.</p></div>
+        <div class="card flat"><h2>2. Aplicação</h2><p class="muted">Interface desenvolvida e hospedada pela MindFly.</p></div>
+        <div class="card flat"><h2>3. Banco e autenticação</h2><p class="muted">Dados estruturados, usuários, permissões e relacionamentos entre médicos e equipamentos.</p></div>
+        <div class="card flat"><h2>4. Localização</h2><p class="muted">Integração de mapa, endereços e proximidade.</p></div>
+        <div class="card flat"><h2>5. Publicação</h2><p class="muted">Aplicação hospedada em ambiente de produção e conectada ao domínio definido.</p></div>
+        <div class="card flat"><h2>6. Embeds</h2><p class="muted">Uma rota pública por equipamento, pronta para ser incorporada ao site.</p></div>
+      </div>
+    </section>
+
+    <section id="scope" class="screen">
+      <div class="top"><div><div class="eyebrow">Escopo funcional</div><h1>O que faz parte da primeira versão</h1><p class="muted">Funções necessárias para entregar o sistema em produção e permitir operação pela Skintec.</p></div></div>
+      <div class="grid g3">
+        <div class="card flat"><h3>Login e acesso</h3><ul><li>Login administrativo</li><li>Proteção das telas internas</li><li>Sessão do usuário</li></ul></div>
+        <div class="card flat"><h3>Dashboard</h3><ul><li>Indicadores principais</li><li>Status dos embeds</li><li>Atalhos operacionais</li></ul></div>
+        <div class="card flat"><h3>Equipamentos</h3><ul><li>Morpheus8</li><li>Oligio X</li><li>Deep Slim</li><li>Novos equipamentos</li></ul></div>
+        <div class="card flat"><h3>Médicos</h3><ul><li>CRM e especialidade</li><li>Clínica e endereço</li><li>WhatsApp e redes</li><li>Vários equipamentos</li></ul></div>
+        <div class="card flat"><h3>Excel</h3><ul><li>Modelo</li><li>Upload</li><li>Validação</li><li>Duplicados</li><li>Exportação</li></ul></div>
+        <div class="card flat"><h3>Localizador</h3><ul><li>Google Maps</li><li>Cidade/CEP</li><li>Proximidade</li><li>Embed por equipamento</li></ul></div>
+      </div>
+    </section>
+
+    <section id="tasks" class="screen">
+      <div class="top"><div><div class="eyebrow">Plano de execução</div><h1>Tarefas necessárias para o projeto acontecer</h1><p class="muted">O investimento cobre desenvolvimento, estrutura de dados, automações, integrações, validação e publicação da solução.</p></div></div>
+      <div class="grid">
+        <div class="task"><div class="task-head"><div><span class="pill">Etapa 1</span><h2 style="margin-top:10px">Frontend e experiência da aplicação</h2></div><div class="price">R$ 1.500</div></div><ul><li>Transformar o protótipo em aplicação organizada.</li><li>Criar rotas, componentes, formulários e navegação.</li><li>Garantir consistência visual e usabilidade.</li><li>Implementar estados de erro, carregamento e sucesso.</li></ul><div class="bar"><div class="fill" style="width:25%"></div></div></div>
+        <div class="task"><div class="task-head"><div><span class="pill">Etapa 2</span><h2 style="margin-top:10px">Dados, autenticação e regras do sistema</h2></div><div class="price">R$ 1.500</div></div><ul><li>Estrutura de dados e relacionamentos.</li><li>Login administrativo e proteção do painel.</li><li>Regras entre médicos, clínicas e equipamentos.</li><li>Permissões, validações e persistência dos dados.</li></ul><div class="bar"><div class="fill" style="width:25%"></div></div></div>
+        <div class="task"><div class="task-head"><div><span class="pill">Etapa 3</span><h2 style="margin-top:10px">Importação e exportação por Excel</h2></div><div class="price">R$ 1.100</div></div><ul><li>Planilha-base para download.</li><li>Upload e leitura dos dados.</li><li>Validação de erros e possíveis duplicidades.</li><li>Exportação geral e por equipamento.</li></ul><div class="bar"><div class="fill" style="width:18.33%"></div></div></div>
+        <div class="task"><div class="task-head"><div><span class="pill">Etapa 4</span><h2 style="margin-top:10px">Mapa, geolocalização e embeds</h2></div><div class="price">R$ 1.200</div></div><ul><li>Integração com serviço de mapas.</li><li>Conversão de endereços em localização.</li><li>Busca por cidade/CEP e proximidade.</li><li>Localizador público e código embed por equipamento.</li></ul><div class="bar"><div class="fill" style="width:20%"></div></div></div>
+        <div class="task"><div class="task-head"><div><span class="pill">Etapa 5</span><h2 style="margin-top:10px">Publicação, testes e entrega</h2></div><div class="price">R$ 700</div></div><ul><li>Configuração do ambiente de produção.</li><li>Publicação e conexão com domínio.</li><li>Testes funcionais e validação dos fluxos.</li><li>Ajustes finais de entrega.</li></ul><div class="bar"><div class="fill" style="width:11.67%"></div></div></div>
+      </div>
+    </section>
+
+    <section id="values" class="screen">
+      <div class="top"><div><div class="eyebrow">Composição do investimento</div><h1>Investimento total: R$ 6.000</h1><p class="muted">O valor contempla as frentes técnicas necessárias para entregar a solução funcional, integrada e pronta para uso.</p></div></div>
+      <div class="card">
+        <table class="table">
+          <thead><tr><th>Frente</th><th>Entrega</th><th>Valor</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Frontend e experiência</strong></td><td>Aplicação baseada no protótipo, organizada, responsiva e navegável.</td><td><strong>R$ 1.500</strong></td></tr>
+            <tr><td><strong>Dados + segurança</strong></td><td>Banco, autenticação, relacionamentos, regras e proteção administrativa.</td><td><strong>R$ 1.500</strong></td></tr>
+            <tr><td><strong>Excel</strong></td><td>Planilha-base, importação, validação, duplicidades e exportação.</td><td><strong>R$ 1.100</strong></td></tr>
+            <tr><td><strong>Mapa + embeds</strong></td><td>Geolocalização, proximidade, localizador público e integração por embed.</td><td><strong>R$ 1.200</strong></td></tr>
+            <tr><td><strong>Publicação e QA</strong></td><td>Deploy, domínio, testes funcionais e ajustes finais.</td><td><strong>R$ 700</strong></td></tr>
+            <tr><td colspan="2"><strong>INVESTIMENTO TOTAL</strong></td><td><strong style="font-size:20px">R$ 6.000</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid g3 section">
+        <div class="card flat"><h3>Estrutura completa</h3><p class="muted">Interface, dados, autenticação, mapas e integrações trabalhando em conjunto.</p></div>
+        <div class="card flat"><h3>Operação independente</h3><p class="muted">A Skintec mantém a base atualizada diretamente pelo painel.</p></div>
+        <div class="card flat"><h3>Pronto para evoluir</h3><p class="muted">A mesma estrutura pode acompanhar novos equipamentos e novas necessidades.</p></div>
+      </div>
+    </section>
+
+    <section id="deliverables" class="screen">
+      <div class="top"><div><div class="eyebrow">Entrega final</div><h1>O que a Skintec recebe</h1><p class="muted">Uma primeira versão funcional e pronta para operação.</p></div></div>
+      <div class="grid g2">
+        <div class="card">
+          <div class="check"><b>✓</b><div><strong>Painel administrativo</strong><div class="muted">Login, dashboard e gerenciamento.</div></div></div>
+          <div class="check"><b>✓</b><div><strong>Equipamentos</strong><div class="muted">Morpheus8, Oligio X, Deep Slim e novos produtos.</div></div></div>
+          <div class="check"><b>✓</b><div><strong>Médicos</strong><div class="muted">Profissional, clínica, endereço e contatos.</div></div></div>
+          <div class="check"><b>✓</b><div><strong>Excel</strong><div class="muted">Importação e exportação da base.</div></div></div>
+        </div>
+        <div class="card">
+          <div class="check"><b>✓</b><div><strong>Localização</strong><div class="muted">Mapa e busca por proximidade.</div></div></div>
+          <div class="check"><b>✓</b><div><strong>Embeds</strong><div class="muted">Um código para cada equipamento.</div></div></div>
+          <div class="check"><b>✓</b><div><strong>Responsividade</strong><div class="muted">Desktop e mobile.</div></div></div>
+          <div class="check"><b>✓</b><div><strong>Publicação</strong><div class="muted">Configuração em ambiente de produção.</div></div></div>
+        </div>
+      </div>
+      <div class="highlight section"><div class="eyebrow" style="color:#d1d5db">Investimento final</div><div class="bigprice">R$ 6.000</div><p class="muted">Primeira versão funcional conforme escopo desta apresentação.</p></div>
+    </section>
+
+    <section id="external" class="screen">
+      <div class="top"><div><div class="eyebrow">Infraestrutura</div><h1>Uso e eventuais custos adicionais</h1><p class="muted">A solução foi pensada para uma operação leve. No uso esperado do projeto, a tendência é permanecer dentro dos limites normais dos serviços utilizados.</p></div></div>
+      <div class="grid g3">
+        <div class="card flat"><h3>Aplicação leve</h3><p class="muted">Sem armazenamento de imagens ou arquivos pesados, reduzindo o consumo de infraestrutura.</p></div>
+        <div class="card flat"><h3>Consumo acompanhado</h3><p class="muted">Tráfego e serviços de localização podem ser monitorados conforme o uso da ferramenta.</p></div>
+        <div class="card flat"><h3>Alerta antes de ajustes</h3><p class="muted">Se o volume crescer a ponto de exigir uma faixa maior de uso, a Skintec será avisada antes de qualquer mudança necessária.</p></div>
+      </div>
+      <div class="card section">
+        <h2>Quando poderia existir custo extra?</h2>
+        <p class="muted" style="margin-bottom:0">Somente em um cenário de tráfego ou consumo de serviços muito acima do previsto para a operação. É uma situação pouco provável no início do projeto e, caso o uso se aproxime de algum limite relevante, será sinalizado com antecedência para avaliação.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div id="toast" class="toast"></div>
+
+
+<script>
+(() => {
+  const gate = document.getElementById('accessGate');
+  const form = document.getElementById('accessForm');
+  const input = document.getElementById('accessPassword');
+  const error = document.getElementById('accessError');
+  const expected = 'skintec';
+
+  const unlock = () => {
+    document.body.classList.remove('access-locked');
+    gate.classList.add('is-unlocked');
+    window.setTimeout(() => gate.remove(), 300);
+  };
+
+  window.addEventListener('load', () => {
+    if (window.matchMedia('(min-width: 781px)').matches && input) input.focus();
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (input.value === expected) {
+      error.textContent = '';
+      unlock();
+      return;
+    }
+    error.textContent = 'Senha incorreta. Tente novamente.';
+    input.value = '';
+    input.focus();
+  });
+})();
+</script>
+
+<script>
+(function(){
+  const screens=[...document.querySelectorAll('.screen')];
+  const navs=[...document.querySelectorAll('.nav')];
+  const toast=document.getElementById('toast');
+
+  function show(id){
+    screens.forEach(s=>s.classList.toggle('active',s.id===id));
+    navs.forEach(n=>n.classList.toggle('active',n.dataset.screen===id));
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function notify(text){
+    toast.textContent=text;
+    toast.classList.add('show');
+    clearTimeout(window.__t);
+    window.__t=setTimeout(()=>toast.classList.remove('show'),1800);
+  }
+
+  navs.forEach(n=>n.addEventListener('click',()=>show(n.dataset.screen)));
+  document.querySelectorAll('[data-jump]').forEach(el=>el.addEventListener('click',()=>show(el.dataset.jump)));
+  document.querySelectorAll('[data-toast]').forEach(el=>el.addEventListener('click',()=>notify(el.dataset.toast)));
+
+  document.getElementById('loginBtn').addEventListener('click',()=>{
+    const e=document.getElementById('loginEmail').value.trim();
+    const p=document.getElementById('loginPassword').value.trim();
+    if(!e||!p){notify('Preencha e-mail e senha.');return;}
+    show('dashboard');notify('Login realizado.');
+  });
+
+  document.getElementById('saveEquipment').addEventListener('click',()=>{
+    const n=document.getElementById('newEqName').value.trim();
+    if(!n){notify('Informe o nome do equipamento.');return;}
+    notify('Equipamento salvo.');show('equipments');
+  });
+
+  document.getElementById('saveDoctor').addEventListener('click',()=>{
+    const n=document.getElementById('docName').value.trim();
+    const c=document.getElementById('docClinic').value.trim();
+    if(!n||!c){notify('Informe nome do médico e clínica.');return;}
+    notify('Médico salvo.');show('doctors');
+  });
+
+  const doctorSearch=document.getElementById('doctorSearch');
+  const doctorFilter=document.getElementById('doctorFilter');
+  function filterDoctors(){
+    const q=doctorSearch.value.toLowerCase().trim();
+    const f=doctorFilter.value.toLowerCase();
+    document.querySelectorAll('#doctorTable tbody tr').forEach(r=>{
+      const t=r.dataset.search||'';
+      r.style.display=(!q||t.includes(q))&&(!f||t.includes(f))?'':'none';
+    });
+  }
+  doctorSearch.addEventListener('input',filterDoctors);
+  doctorFilter.addEventListener('change',filterDoctors);
+
+  document.getElementById('fakeUpload').addEventListener('click',()=>{
+    document.getElementById('importStatus').innerHTML='<div class="task"><strong>base-medicos.xlsx</strong><p class="muted">128 linhas analisadas.</p><div class="actions"><span class="pill ok">121 válidas</span><span class="pill warn">5 revisar</span><span class="pill">2 duplicadas</span></div></div>';
+    notify('Planilha analisada.');
+  });
+
+  document.getElementById('search').addEventListener('click',()=>{
+    const loc=document.getElementById('location').value.trim()||'sua região';
+    document.getElementById('resultCount').textContent='3 médicos encontrados próximos de '+loc;
+    notify('Resultados atualizados.');
+  });
+
+
+  const excelTemplate="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,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";
+  document.querySelectorAll('[data-download-template]').forEach(btn=>btn.addEventListener('click',()=>{
+    const a=document.createElement('a');
+    a.href=excelTemplate;
+    a.download='skintec-planilha-base-medicos.xlsx';
+    document.body.appendChild(a);a.click();a.remove();
+    notify('Planilha-base preparada para download.');
+  }));
+
+  document.querySelectorAll('[data-copy-target]').forEach(btn=>btn.addEventListener('click',async()=>{
+    const el=document.getElementById(btn.dataset.copyTarget);
+    const text=el?el.textContent.trim():'';
+    try{
+      if(navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(text);
+      else{const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();}
+      notify('Código embed copiado.');
+    }catch(e){notify('Selecione e copie o código manualmente.');}
+  }));
+
+  document.querySelectorAll('[data-preview-product]').forEach(btn=>btn.addEventListener('click',()=>{
+    const product=btn.dataset.previewProduct;
+    const productPill=document.querySelector('.locator-product');
+    const title=document.getElementById('locatorTitle');
+    if(productPill) productPill.textContent=product;
+    if(title) title.textContent='Especialistas em '+product;
+  }));
+
+  // Proteções locais de conveniência. Não são segurança absoluta.
+  document.addEventListener('contextmenu',e=>e.preventDefault());
+  document.addEventListener('dragstart',e=>e.preventDefault());
+  document.addEventListener('selectstart',e=>{
+    const tag=(e.target.tagName||'').toLowerCase();
+    if(tag!=='input'&&tag!=='textarea') e.preventDefault();
+  });
+
+  document.addEventListener('keydown',e=>{
+    const k=e.key.toLowerCase();
+    const blocked =
+      (e.ctrlKey && ['c','u','s','p','a'].includes(k)) ||
+      (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(k)) ||
+      e.key==='F12';
+    if(blocked){
+      e.preventDefault();
+      e.stopPropagation();
+      notify('Ação desabilitada nesta apresentação.');
+    }
+  },true);
+
+  window.addEventListener('beforeprint',()=>notify('Impressão desabilitada nesta versão.'));
+})();
+</script>
+</body>
+</html>
