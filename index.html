@@ -12025,10 +12025,10 @@
             <strong class="mfcnt-selection-value" data-mfcnt-selection></strong>
           </div>
 
-          <a class="mfcnt-book" data-mfcnt-book aria-disabled="true" target="_blank" rel="noopener noreferrer">
-            <span data-i18n="mfcnt.book">AGENDAR CALL</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
-          </a>
+        <a class="mfcnt-book" data-mfcnt-book href="https://wa.me/5511986912169" aria-disabled="true" tabindex="-1" target="_blank" rel="noopener noreferrer">
+          <span data-i18n="mfcnt.book">AGENDAR CALL</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
         </div>
 
         <p class="mfcnt-note" data-i18n="mfcnt.note">O Agendamento e confirmado apos envio no whatsapp</p>
@@ -12238,8 +12238,9 @@
         const day = getSelectedDay();
         if (!day || !Number.isInteger(selectedHour)) {
           selectionBox.textContent = t("mfcnt.selection.empty");
-          bookLink.removeAttribute("href");
+          bookLink.href = `https://wa.me/${WHATSAPP_NUMBER}`;
           bookLink.setAttribute("aria-disabled", "true");
+          bookLink.setAttribute("tabindex", "-1");
           return;
         }
 
@@ -12252,6 +12253,7 @@
         selectionBox.textContent = summary;
         bookLink.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
         bookLink.setAttribute("aria-disabled", "false");
+        bookLink.removeAttribute("tabindex");
         if (statusBox) statusBox.textContent = `${t("mfcnt.status.selected")}: ${summary}`;
       };
 
